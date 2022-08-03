@@ -1,0 +1,26 @@
+{
+  "obsidian-git:push": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "B"
+    }
+  ],
+  "obsidian-git:pull": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "L"
+    }
+  ],
+  "obsidian-git:push2": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "H"
+    }
+  ]
+}
