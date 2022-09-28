@@ -9,7 +9,7 @@
         "state": {
           "type": "image",
           "state": {
-            "file": "Images/Pasted image 20220426184409.png"
+            "file": "Pasted Images/Pasted image 20220504005226.png"
           }
         }
       }
@@ -75,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20220426184409.png",
+                "file": "Pasted Images/Pasted image 20220504005226.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20220426184409.png",
+                "file": "Pasted Images/Pasted image 20220504005226.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20220426184409.png"
+                "file": "Pasted Images/Pasted image 20220504005226.png"
               }
             }
           }
@@ -128,15 +128,15 @@
   },
   "active": "7bb4ee32d5389356",
   "lastOpenFiles": [
+    "Pasted Images/Pasted image 20220504005525.png",
+    "Pasted Images/Pasted image 20220505204358.png",
+    "OFFSEC Proving Grounds Banzai2 (intermediate) Linux Box/Privilege Escalation Steps.md",
+    "Banzai (Intermediate) Linux Box/Enumeration.md",
+    "Images/Pasted image 20220426185618.png",
+    "Images/Pasted image 20220426153819 1.png",
+    "Images/Pasted image 20220426184409.png",
     "Images/Pasted image 20220426185044.png",
     "Images/Pasted image 20220426153819 2.png",
-    "Banzai (Intermediate) Linux Box/Privilege Escalation Steps.md",
-    "Banzai (Intermediate) Linux Box/Exploitation Steps.md",
-    "Banzai (Intermediate) Linux Box/Attack Surface.md",
-    "Banzai (Intermediate) Linux Box/Enumeration.md",
-    "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md",
-    "OFFSEC Proving Grounds Banzai2 (intermediate) Linux Box/Privilege Escalation Steps.md",
-    "OFFSEC Proving Grounds Banzai2 (intermediate) Linux Box/Exploiatation Steps.md",
-    "OFFSEC Proving Grounds Banzai2 (intermediate) Linux Box/Enumeration.md"
+    "Banzai (Intermediate) Linux Box/Privilege Escalation Steps.md"
   ]
 }
