@@ -1,15 +1,15 @@
 {
   "main": {
-    "id": "f1daeef22d0e2cf2",
+    "id": "958765b05d10d7fe",
     "type": "split",
     "children": [
       {
-        "id": "dc374c87280d5b57",
+        "id": "7bb4ee32d5389356",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Offensive-Security-Proving-Grounds-Boxes/Offensive-Security-Practice-Boxes/Banzai (Intermediate) Linux Box/Enumeration.md",
+            "file": "Banzai (Intermediate) Linux Box/Exploitation Steps.md",
             "mode": "source",
             "source": false
           }
@@ -19,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "4c26646d03f74814",
+    "id": "64f2ccdf6860edf4",
     "type": "split",
     "children": [
       {
-        "id": "24ea7b613d0c14bd",
+        "id": "818db928a2e0d141",
         "type": "tabs",
         "children": [
           {
-            "id": "ed4d242e8cdbf88e",
+            "id": "36fe7cca0c50b180",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,7 +35,7 @@
             }
           },
           {
-            "id": "0db12e6b814c0e16",
+            "id": "7c7e82a3023b528f",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -50,7 +50,7 @@
             }
           },
           {
-            "id": "07db85dfdc939e9e",
+            "id": "f9ee2f6b2e0218b5",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -61,23 +61,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 401.5
   },
   "right": {
-    "id": "c795f85923e603c5",
+    "id": "bc54cb1e78738750",
     "type": "split",
     "children": [
       {
-        "id": "e2006361f655d899",
+        "id": "35b7b4ff07d0aafd",
         "type": "tabs",
         "children": [
           {
-            "id": "a376f2ce8146f2dc",
+            "id": "011fdd753b06a6b2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Offensive-Security-Proving-Grounds-Boxes/Offensive-Security-Practice-Boxes/Banzai (Intermediate) Linux Box/Enumeration.md",
+                "file": "Banzai (Intermediate) Linux Box/Exploitation Steps.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,19 +89,19 @@
             }
           },
           {
-            "id": "8e40f84ba5358ec7",
+            "id": "19e3f4aec0009b14",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Offensive-Security-Proving-Grounds-Boxes/Offensive-Security-Practice-Boxes/Banzai (Intermediate) Linux Box/Enumeration.md",
+                "file": "Banzai (Intermediate) Linux Box/Exploitation Steps.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "9fa2241e3287f2e4",
+            "id": "3bcb97f1fff2a5f5",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -112,12 +112,12 @@
             }
           },
           {
-            "id": "1da0629395081146",
+            "id": "4b4f9a74bf0be145",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Offensive-Security-Proving-Grounds-Boxes/Offensive-Security-Practice-Boxes/Banzai (Intermediate) Linux Box/Enumeration.md"
+                "file": "Banzai (Intermediate) Linux Box/Exploitation Steps.md"
               }
             }
           }
@@ -128,8 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "dc374c87280d5b57",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
-    "Offensive-Security-Proving-Grounds-Boxes/Offensive-Security-Practice-Boxes/Banzai (Intermediate) Linux Box/Attack Surface.md"
+    "Fail (Intermediate) Linux Box/Exploitation.md",
+    "Fail (Intermediate) Linux Box/Enumeration.md",
+    "Fail (Intermediate) Linux Box/Attack Surface.md",
+    "Banzai (Intermediate) Linux Box/Enumeration.md",
+    "Banzai (Intermediate) Linux Box/Exploitation Steps.md",
+    "Banzai (Intermediate) Linux Box/Privilege Escalation Steps.md",
+    "ClamAV (Easy) Linux Box/Enumeration.md",
+    "ClamAV (Easy) Linux Box/Attack Surface.md",
+    "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md",
+    "Banzai (Intermediate) Linux Box/Attack Surface.md"
   ]
 }

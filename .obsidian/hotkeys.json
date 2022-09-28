@@ -1,0 +1,26 @@
+{
+  "obsidian-git:push": [
+    {
+      "modifiers": [
+        "Meta"
+      ],
+      "key": "B"
+    }
+  ],
+  "obsidian-git:push2": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "H"
+    }
+  ],
+  "obsidian-git:pull": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "L"
+    }
+  ]
+}
