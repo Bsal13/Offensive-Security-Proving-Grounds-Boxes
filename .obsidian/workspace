@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algeron (Easy) Windows Box/Enumeration.md",
+            "file": "Algeron (Easy) Windows Box/Exploitation Steps.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algeron (Easy) Windows Box/Enumeration.md",
+                "file": "Algeron (Easy) Windows Box/Exploitation Steps.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algeron (Easy) Windows Box/Enumeration.md",
+                "file": "Algeron (Easy) Windows Box/Exploitation Steps.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algeron (Easy) Windows Box/Enumeration.md"
+                "file": "Algeron (Easy) Windows Box/Exploitation Steps.md"
               }
             }
           }
@@ -130,8 +130,8 @@
   },
   "active": "7bb4ee32d5389356",
   "lastOpenFiles": [
-    "Algeron (Easy) Windows Box/Attack Surface.md",
     "Algeron (Easy) Windows Box/Enumeration.md",
+    "Algeron (Easy) Windows Box/Attack Surface.md",
     "Algeron (Easy) Windows Box/Rustscan & NMAP Scan.md",
     "Algeron (Easy) Windows Box/Exploitation Steps.md",
     "Algeron (Easy) Windows Box/Privilege Escalation.md",
