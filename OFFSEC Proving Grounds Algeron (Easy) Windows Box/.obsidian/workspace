@@ -1,0 +1,137 @@
+{
+  "main": {
+    "id": "1ee028127f10c00a",
+    "type": "split",
+    "children": [
+      {
+        "id": "44c2e87cbda481f8",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Privilege Escalation.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "36b9e848d0524d8a",
+    "type": "split",
+    "children": [
+      {
+        "id": "9dbc1e98d463d105",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6cda733384acd462",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "1aa0979083c37888",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "290cb2315696198d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "99015ff7a24ee166",
+    "type": "split",
+    "children": [
+      {
+        "id": "1456f4e8d9980668",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f7562ac2408ff1f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Privilege Escalation.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5e7d3a0411c796cb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Privilege Escalation.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b590ee8740f48ce0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a859528f32932fc9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Privilege Escalation.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "44c2e87cbda481f8",
+  "lastOpenFiles": [
+    "Enumeration.md",
+    "Exploitation Steps.md",
+    "Attack Surface.md"
+  ]
+}
