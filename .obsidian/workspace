@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md",
+            "file": "Algeron (Easy) Windows Box2.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md",
+                "file": "Algeron (Easy) Windows Box2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md",
+                "file": "Algeron (Easy) Windows Box2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md"
+                "file": "Algeron (Easy) Windows Box2.md"
               }
             }
           }
@@ -130,9 +130,9 @@
   },
   "active": "9022170bc71cb616",
   "lastOpenFiles": [
+    "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md",
     "Banzai (Intermediate) Linux Box/Exploitation Steps.md",
     "Banzai (Intermediate) Linux Box/Enumeration.md",
-    "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md",
     "Banzai (Intermediate) Linux Box/Privilege Escalation Steps.md",
     "Algeron (Easy) Windows Box/Exploitation Steps.md",
     "Algeron (Easy) Windows Box/Enumeration.md",
