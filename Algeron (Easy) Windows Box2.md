@@ -171,7 +171,7 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020220929114910.png)
 
-![](../Images/Pasted%20image%2020220710192852.png)
+![](Pasted%20image%2020220929115005.png)
 
 
 ---
