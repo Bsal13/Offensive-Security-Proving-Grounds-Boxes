@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -129,7 +128,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7c7e82a3023b528f",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
     "Shakabra (Easy) Linux Box/Attack Surface.md",
     "Algeron (Easy) Windows Box2.md",
