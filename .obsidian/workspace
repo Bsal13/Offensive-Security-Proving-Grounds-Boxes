@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"![[Pasted image 20220929112935.png]]\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -128,7 +129,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9022170bc71cb616",
+  "active": "7c7e82a3023b528f",
   "lastOpenFiles": [
     "Shakabra (Easy) Linux Box/Attack Surface.md",
     "Algeron (Easy) Windows Box2.md",
