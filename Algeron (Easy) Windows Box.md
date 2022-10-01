@@ -164,13 +164,13 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221001120904.png)
 
-![](Pasted%20image%2020221001120943.png)
+![](Images/Pasted%20image%2020221001120943.png)
 
 #### - Googled "2019-7214 github" and found the following exploit with better comments for the exploit:
 
-![](Pasted%20image%2020221001121009.png)
+![](Images/Pasted%20image%2020221001121009.png)
 
-![](Pasted%20image%2020221001114541.png)
+![](Images/Pasted%20image%2020221001121219.png)
 
 
 ---
@@ -235,7 +235,7 @@ s.close()
 
 #### -Typed "python3 exploit.py" on my kali machine and received a reverse shell runing as nt authority\system:
 
-![](Pasted%20image%2020221001114618.png)
+![](Images/Pasted%20image%2020221001121328.png)
 
 ---
 
