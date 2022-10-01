@@ -145,12 +145,12 @@ Enumerated top 200 UDP ports:
 
 #### Typed "mput reverse_shell.php" to upload the reverse shell into the ftp server on directory "/js":
 
-![](../Images/Pasted%20image%2020220605135414.png)
+![](Pasted%20image%2020221001095230.png)
 
-#### Navigated to http://192.168.143.56:8295/js/ and found the reverse shell uploaded on the page and clicked the link and received a reverse shell on penelope:
+#### Navigated to http://192.168.143.56:8295/js/ and found the reverse shell uploaded on the page and clicked the link and received a reverse shell on penelope listener:
 
-![](../Images/Pasted%20image%2020220605135439.png)
-![](../Images/Pasted%20image%2020220605135448.png)
+![](Pasted%20image%2020221001095356.png)
+![](Pasted%20image%2020221001095428.png)
 
 
 ---
@@ -161,11 +161,11 @@ Enumerated top 200 UDP ports:
 
 #### Navigated to directory "/var/www" and found "config.php" file and cat'd the file and found user "root" and password "EscalateRaftHubris123":
 
-![](../Images/Pasted%20image%2020220605135538.png)
+![](Pasted%20image%2020221001095458.png)
 
 #### Typed "netsat –tulpn" and found port "3306" (mysql) listening on localhost:
 
-![](../Images/Pasted%20image%2020220605135719.png)
+![](Pasted%20image%2020221001095532.png)
 
 ## Port 3306
 
