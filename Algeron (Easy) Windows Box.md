@@ -154,7 +154,7 @@ Enumerated top 200 UDP ports:
 
 #### - Navigate to"http://192.168.114.65:9998'' and get directed to the following login page running Smartermail:
 
-![](Pasted%20image%2020220929113604.png)
+![](Pasted%20image%2020221001113325.png)
 
 #### - Typed "searchsploit smartermail" and found the following remote code execution script:
 
