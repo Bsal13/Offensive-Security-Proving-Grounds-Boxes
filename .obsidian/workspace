@@ -7,11 +7,9 @@
         "id": "9022170bc71cb616",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Authby (Intermediate) Linux Box.md",
-            "mode": "source",
-            "source": false
+            "file": "Images/Pasted image 20221001114759.png"
           }
         }
       }
@@ -77,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Authby (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221001114759.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Authby (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221001114759.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Authby (Intermediate) Linux Box.md"
+                "file": "Images/Pasted image 20221001114759.png"
               }
             }
           }
@@ -128,10 +126,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9022170bc71cb616",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
-    "Algeron (Easy) Windows Box.md",
     "Authby (Intermediate) Linux Box.md",
+    "Algeron (Easy) Windows Box.md",
     "Banzai (Intermediate) Linux Box.md",
     "README.md",
     "Images/Pasted image 20221001113325.png",
