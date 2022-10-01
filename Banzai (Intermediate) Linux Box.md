@@ -118,13 +118,13 @@ Enumerated top 200 UDP ports:
 #### Navigated to "/usr/share/seclists/Passwords/ftp-betterdefaultpasslist.txt" and cat'd the file and placed the usernames:passwords into a file named "ftp_common_passwords.txt"
 
 ![](Pasted%20image%2020221001094042.png)
-![](../Images/Pasted%20image%2020220605134810.png)
-![](../Images/Pasted%20image%2020220605134818.png)
+![](Pasted%20image%2020221001094414.png)
+![](Pasted%20image%2020221001094507.png)
 
 #### Typed "hydra -f -C ftp_common_passwords.txt 192.168.177.56 ftp" which "-C" flag allows inputting a username and password with the following combo list:
 "username:password" and found ftp server username is "admin" and password is "admin"
 
-![](../Images/Pasted%20image%2020220605134846.png)
+![](Pasted%20image%2020221001094549.png)
 
 ---
 
