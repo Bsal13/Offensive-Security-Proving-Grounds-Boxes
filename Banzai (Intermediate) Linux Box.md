@@ -171,7 +171,7 @@ Enumerated top 200 UDP ports:
 
 #### Typed "mysql –u root –p" and logged in with the found password for mysql "EscalateRaftHubris123":
 
-![](../Images/Pasted%20image%2020220605135743.png)
+![](Pasted%20image%2020221001095708.png)
 
 
 
@@ -180,12 +180,12 @@ Enumerated top 200 UDP ports:
 
 #### Googled "mysql root privilege escalation" as I was able to login with root in Mysql and found the following webpage listing the steps to escalate privileges:
 
-![](../Images/Pasted%20image%2020220605141120.png)
-![](../Images/Pasted%20image%2020220605150109.png)
-![](../Images/Pasted%20image%2020220605150123.png)
-![](../Images/Pasted%20image%2020220605150134.png)
-![](../Images/Pasted%20image%2020220605150150.png)
-![](../Images/Pasted%20image%2020220605150158.png)
+![](Pasted%20image%2020221001095752.png)
+![](Pasted%20image%2020221001095822.png)
+![](Pasted%20image%2020221001095848.png)
+![](Pasted%20image%2020221001095931.png)
+![](Pasted%20image%2020221001100004.png)
+![](Pasted%20image%2020221001100029.png)
 
 #### Typed "searchsploit -m linux/local/1518.c" to place exploit on my kali machine
 
@@ -199,7 +199,7 @@ Enumerated top 200 UDP ports:
 
 #### Typed "mysql –u root –p" and logged in with the found password for mysql "EscalateRaftHubris123" to login into mysql:
 
-![](../Images/Pasted%20image%2020220605152058.png)
+![](Pasted%20image%2020221001100055.png)
 
 #### Typed "show variables like '%plugin%';" to show the current plugin directory in the database
 
