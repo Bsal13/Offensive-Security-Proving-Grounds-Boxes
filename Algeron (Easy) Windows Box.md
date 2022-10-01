@@ -158,7 +158,7 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "searchsploit smartermail" and found the following remote code execution script:
 
-![](Pasted%20image%2020221001113915.png)
+![](Images/Pasted%20image%2020221001120543.png)
 
 #### - Googled "windows/remote/49216.py" and found the following edb exploit:
 
