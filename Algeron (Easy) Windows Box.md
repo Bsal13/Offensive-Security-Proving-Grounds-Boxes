@@ -162,15 +162,15 @@ Enumerated top 200 UDP ports:
 
 #### - Googled "windows/remote/49216.py" and found the following edb exploit:
 
-![](Pasted%20image%2020220929114647.png)
+![](Pasted%20image%2020221001114135.png)
 
-![](Pasted%20image%2020220929114826.png)
+![](Pasted%20image%2020221001114407.png)
 
 #### - Googled "2019-7214 github" and found the following exploit with better comments for the exploit:
 
-![](Pasted%20image%2020220929114910.png)
+![](Pasted%20image%2020221001114433.png)
 
-![](Pasted%20image%2020220929115005.png)
+![](Pasted%20image%2020221001114541.png)
 
 
 ---
