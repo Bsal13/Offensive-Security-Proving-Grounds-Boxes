@@ -133,11 +133,11 @@ Enumerated top 200 UDP ports:
 
 #### Logged into ftp server with username "admin" and password "admin" and found directory "/js" found accessible in the gobuster scan above:
 
-![](../Images/Pasted%20image%2020220605134936.png)
+![](Pasted%20image%2020221001094625.png)
 
 #### Typed "lcd" in ftp server and found I was in local directory "/home/kali":
 
-![](../Images/Pasted%20image%2020220605135123.png)
+![](Pasted%20image%2020221001094655.png)
 
 #### Created php pentest reverse shell script in vim file named "reverse_shell.php" on my kali machine in the "/home/kali"directory
 
