@@ -109,7 +109,7 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020220930213106.png)
 
-![](../Images/Pasted%20image%2020220605134629.png)
+![](Pasted%20image%2020221001093953.png)
 
 ## Port 21
 
@@ -117,7 +117,7 @@ Enumerated top 200 UDP ports:
 
 #### Navigated to "/usr/share/seclists/Passwords/ftp-betterdefaultpasslist.txt" and cat'd the file and placed the usernames:passwords into a file named "ftp_common_passwords.txt"
 
-![](../Images/Pasted%20image%2020220605134715.png)
+![](Pasted%20image%2020221001094042.png)
 ![](../Images/Pasted%20image%2020220605134810.png)
 ![](../Images/Pasted%20image%2020220605134818.png)
 
