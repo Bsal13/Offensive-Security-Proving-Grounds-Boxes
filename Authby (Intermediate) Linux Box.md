@@ -2,7 +2,6 @@
 Alias: Authby
 Date: 6/22/22
 Platform: Windows
-Category: 
 Difficulty: Intermediate
 Tags: #simplephpbackdoorRCE #MS11-046 #.htaccess #rootdirectorylocationsWWW #rootdirectorylocationsHTDOCS #rootdirectorylocationsPUBLIC_HTML
 Status: Finished

@@ -2,7 +2,6 @@
 Alias: Algeron
 Date: 7/10/2022
 Platform: Windows
-Category:
 Difficulty: Easy
 Tags: #CVE2019-7214 #RCE #SmarterMailBuild6985
 Status: Finished
