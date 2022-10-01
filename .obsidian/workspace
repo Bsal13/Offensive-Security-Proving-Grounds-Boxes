@@ -7,9 +7,11 @@
         "id": "9022170bc71cb616",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "Images/Pasted image 20220930213106.png"
+            "file": "Algeron (Easy) Windows Box.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -75,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20220930213106.png",
+                "file": "Algeron (Easy) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20220930213106.png",
+                "file": "Algeron (Easy) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -115,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20220930213106.png"
+                "file": "Algeron (Easy) Windows Box.md"
               }
             }
           }
@@ -126,8 +128,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "36fe7cca0c50b180",
+  "active": "9022170bc71cb616",
   "lastOpenFiles": [
+    "Images/Pasted image 20220930213106.png",
     "Banzai (Intermediate) Linux Box.md",
     "Algeron (Easy) Windows Box.md",
     "Authby (Intermediate) Linux Box.md",
@@ -136,7 +139,6 @@
     "Banzai (Intermediate) Linux Box/Rust Scan & NMAP Scan.md",
     "Banzai (Intermediate) Linux Box/Privilege Escalation Steps.md",
     "Banzai (Intermediate) Linux Box/Exploitation Steps.md",
-    "Algeron (Easy) Windows Box2.md",
-    "Shakabra (Easy) Linux Box/Attack Surface.md"
+    "Algeron (Easy) Windows Box2.md"
   ]
 }
