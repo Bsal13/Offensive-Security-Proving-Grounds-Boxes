@@ -139,27 +139,27 @@ Enumerated top 200 UDP ports:
 
 #### -Logged in to FTP as anonymous and found user admin listed in "accounts":
 
-![](../Images/Pasted%20image%2020220617022948.png)
+![](Pasted%20image%2020221001114759.png)
 
 #### -Attempted to login via FTP as username "admin" and password "admin" and found the following files and then downloaded them to my kali machine:
 
-![](../Images/Pasted%20image%2020220617023326.png)
+![](Pasted%20image%2020221001114845.png)
 
 #### -Cat'd ".htpasswd" file and found the following "offsec" user and the hashed password:
 
-![](../Images/Pasted%20image%2020220617024410.png)
+![](Pasted%20image%2020221001114935.png)
 
 #### - Cat'd ".htaccess" and found:
 
-![](../Images/Pasted%20image%2020220617231256.png)
+![](Pasted%20image%2020221001115013.png)
 
 #### -Googled "what is a .htaccess file" and found it is located in a root directory:
 
-![](../Images/Pasted%20image%2020220617232242.png)
+![](Pasted%20image%2020221001115038.png)
 
 #### -Typed "john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt" to crack the hash and password "elite" was received:
 
-![](../Images/Pasted%20image%2020220617024646.png)
+![](Pasted%20image%2020221001115111.png)
 
 ## Port 242
 

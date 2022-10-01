@@ -235,7 +235,7 @@ s.close()
 
 #### -Typed "python3 exploit.py" on my kali machine and received a reverse shell runing as nt authority\system:
 
-![](../Images/Pasted%20image%2020220710202833.png)
+![](Pasted%20image%2020221001114618.png)
 
 ---
 
