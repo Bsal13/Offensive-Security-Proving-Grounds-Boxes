@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ClamAV (Easy) Linux Box/Enumeration.md",
+            "file": "ClamAV (Easy) Linux Box/Exploitation.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ClamAV (Easy) Linux Box/Enumeration.md",
+                "file": "ClamAV (Easy) Linux Box/Exploitation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ClamAV (Easy) Linux Box/Enumeration.md",
+                "file": "ClamAV (Easy) Linux Box/Exploitation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ClamAV (Easy) Linux Box/Enumeration.md"
+                "file": "ClamAV (Easy) Linux Box/Exploitation.md"
               }
             }
           }
@@ -130,8 +130,8 @@
   },
   "active": "9022170bc71cb616",
   "lastOpenFiles": [
-    "ClamAV (Easy) Linux Box/Exploitation.md",
     "ClamAV (Easy) Linux Box/Enumeration.md",
+    "ClamAV (Easy) Linux Box/Exploitation.md",
     "ClamAV (Easy) Linux Box/Attack Surface.md",
     "ClamAV (Easy) Linux Box/Privilege Escalation.md",
     "Banzai (Intermediate) Linux Box.md",
