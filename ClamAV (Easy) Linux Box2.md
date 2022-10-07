@@ -194,7 +194,7 @@ Enumerated top 200 UDP ports:
 ## Sendmail with clamav-milter < 0.91.2 -Remote Code Execution exploit
 
 #### -As the box is called "ClamAV" I ran searchsploit "ClamAV" and found the following: 
-![](Pasted%20image%2020221007102540.png)
+![](Pasted%20image%2020221007131752.png)
 
 #### -As the NMAP scan I ran showed port 25 was running version "Sendmail" I tried the "Sendmail with clamav-milter < 0.91.2 - Remote Command Execution" exploit.
 
