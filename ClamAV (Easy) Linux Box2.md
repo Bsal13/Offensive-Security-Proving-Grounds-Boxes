@@ -194,21 +194,21 @@ Enumerated top 200 UDP ports:
 ## Sendmail with clamav-milter < 0.91.2 -Remote Code Execution exploit
 
 #### -As the box is called "ClamAV" I ran searchsploit "ClamAV" and found the following: 
-![](Pasted%20image%2020221007131752.png)
+![](Images/Pasted%20image%2020221007131752.png)
 
 #### -As the NMAP scan I ran showed port 25 was running version "Sendmail" I tried the "Sendmail with clamav-milter < 0.91.2 - Remote Command Execution" exploit.
 
-![](Pasted%20image%2020221007131859.png)
+![](Images/Pasted%20image%2020221007131859.png)
 
 #### -Typed "searchsploit –m multiple/remote/4761.pl" to copy exploit to the directory I was in. Then typed "cat 4761.pl" to read the script and found the following advising to provide a host to connect to and showing port 31337 and ran an NMAP scan to confirm if the port was open and found it to be closed: 
 
-![](Pasted%20image%2020221007132014.png)
-![](Pasted%20image%2020221007132057.png)
+![](Images/Pasted%20image%2020221007132014.png)
+![](Images/Pasted%20image%2020221007132057.png)
 
 #### -Typed "perl 4761.pl 192.168.229.42" as the ".pl" is a perl extension and received the following output. I then ran another NMAP scan on port 31137 to confirm if it is open and found it to be opened: 
 
-![](Pasted%20image%2020221008215215.png)
-![](Pasted%20image%2020221008215315.png)
+![](Images/Pasted%20image%2020221008215215.png)
+![](Images/Pasted%20image%2020221008215315.png)
 
 
 ---
@@ -216,7 +216,7 @@ Enumerated top 200 UDP ports:
 # Exploitation
 #### -Typed "nc 192.168.229.42 31337 " and received a root shell: 
 
-![](Pasted%20image%2020221008215351.png)
+![](Images/Pasted%20image%2020221008215351.png)
 
 ---
 
