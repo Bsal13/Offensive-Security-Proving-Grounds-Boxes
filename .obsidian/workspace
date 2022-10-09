@@ -7,8 +7,12 @@
         "id": "9022170bc71cb616",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Proving Grounds DVR-4 2 (Intermediate) Windows Box.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Proving Grounds DVR-4 2 (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Proving Grounds DVR-4 2 (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Proving Grounds DVR-4 2 (Intermediate) Windows Box.md"
+              }
             }
           }
         ]
@@ -120,8 +128,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "36fe7cca0c50b180",
+  "active": "9022170bc71cb616",
   "lastOpenFiles": [
+    "Craft2 (Intermediate) Windows Box.md",
     "ClamAV (Easy) Linux Box2.md",
     "ClamAV (Easy) Linux Box/Attack Surface.md",
     "Images/Pasted image 20221007131752.png",
@@ -130,7 +139,6 @@
     "ClamAV (Easy) Linux Box/Privilege Escalation.md",
     "Banzai (Intermediate) Linux Box.md",
     "Authby (Intermediate) Linux Box.md",
-    "Images/Pasted image 20221001120943.png",
-    "Algeron (Easy) Windows Box.md"
+    "Images/Pasted image 20221001120943.png"
   ]
 }
