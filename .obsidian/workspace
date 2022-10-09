@@ -7,10 +7,8 @@
         "id": "9022170bc71cb616",
         "type": "leaf",
         "state": {
-          "type": "image",
-          "state": {
-            "file": "Images/Pasted image 20221007131752.png"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -75,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20221007131752.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20221007131752.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -114,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Images/Pasted image 20221007131752.png"
-              }
+              "state": {}
             }
           }
         ]
@@ -126,17 +120,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "36fe7cca0c50b180",
+  "active": "9022170bc71cb616",
   "lastOpenFiles": [
-    "ClamAV (Easy) Linux Box/Enumeration.md",
     "ClamAV (Easy) Linux Box2.md",
-    "ClamAV (Easy) Linux Box/Exploitation.md",
     "ClamAV (Easy) Linux Box/Attack Surface.md",
+    "Images/Pasted image 20221007131752.png",
+    "ClamAV (Easy) Linux Box/Enumeration.md",
+    "ClamAV (Easy) Linux Box/Exploitation.md",
     "ClamAV (Easy) Linux Box/Privilege Escalation.md",
     "Banzai (Intermediate) Linux Box.md",
     "Authby (Intermediate) Linux Box.md",
     "Images/Pasted image 20221001120943.png",
-    "Algeron (Easy) Windows Box.md",
-    "Images/Pasted image 20221001114759.png"
+    "Algeron (Easy) Windows Box.md"
   ]
 }
