@@ -193,7 +193,7 @@ Enumerated top 200 UDP ports:
 
 #### - Per the NMAP scan I navigated to "http://192.168.109.179:8080" and found the following webpage:
 
-
+![](Pasted%20image%2020221009165921.png)
 
 ---
 
