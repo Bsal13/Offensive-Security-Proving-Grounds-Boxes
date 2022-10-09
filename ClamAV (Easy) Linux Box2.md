@@ -207,7 +207,7 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "perl 4761.pl 192.168.229.42" as the ".pl" is a perl extension and received the following output. I then ran another NMAP scan on port 31137 to confirm if it is open and found it to be opened: 
 
-![](Pasted%20image%2020221007102923.png)
+![](Pasted%20image%2020221008215215.png)
 ![](Pasted%20image%2020221007125300.png)
 
 
