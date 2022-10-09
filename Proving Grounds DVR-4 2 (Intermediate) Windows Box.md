@@ -2,14 +2,13 @@
 Alias: DVR-4
 Date: 8/21/2022
 Platform: Windows
-C
-Difficulty:
+Difficulty: Intermediate
 Tags:
-Status:
-IP: 
+Status: Finished
+IP: 192.168.122.179
 ---
 
-# {{title}}
+# {{DVR-4}}
 
 
 # Resolution summary
