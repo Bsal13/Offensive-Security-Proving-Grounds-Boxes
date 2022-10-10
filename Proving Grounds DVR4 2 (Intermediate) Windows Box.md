@@ -299,6 +299,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 ![](Pasted%20image%2020221009201710.png)
 
+#### - Navigated to the viewer users directory and found the netcat executable was installed:
+
+![](Pasted%20image%2020221009202007.png)
+
+#### - Setup a netcat listener to listen on port 443 
+
+#### -As we are going to attempt to login as a different user (Administrator) I googled "how to run a program as a different user in windows command line" :
+
 
 
 ## Privilege Escalation vector
