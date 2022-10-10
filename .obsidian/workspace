@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"![[Pasted image 20220929112935.png]]\"",
+                "query": "tag:#IdentifyHashID",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -130,6 +130,7 @@
   },
   "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Proving Grounds DVR4 2 (Intermediate) Windows Box.md",
     "Craft2 (Intermediate) Windows Box.md",
     "ClamAV (Easy) Linux Box2.md",
     "ClamAV (Easy) Linux Box/Attack Surface.md",
@@ -138,7 +139,6 @@
     "ClamAV (Easy) Linux Box/Exploitation.md",
     "ClamAV (Easy) Linux Box/Privilege Escalation.md",
     "Banzai (Intermediate) Linux Box.md",
-    "Authby (Intermediate) Linux Box.md",
-    "Images/Pasted image 20221001120943.png"
+    "Authby (Intermediate) Linux Box.md"
   ]
 }

