@@ -274,6 +274,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 #### - I then found a "Argus Serveillance DVR" directory and navigated into it:
 
+![](Pasted%20image%2020221009193752.png)
+
+#### - I then found the DVRParams (.ini) configuration file:
 
 
 ## Privilege Escalation vector
