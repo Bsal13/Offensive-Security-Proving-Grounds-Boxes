@@ -16,7 +16,8 @@ IP: 192.168.122.179
 - Text
 
 ## Improved skills
-- skill 1
+- Command for searching for hidden directories using CMD
+- 
 - skill 2
 
 ## Used tools
@@ -254,6 +255,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 # Privilege Escalation
 ## Local Enumeration
+
 #### - Per the previous searchploit we ran for argus surveillance we found the following "Weak password encryption" python script:
 
 ![](Pasted%20image%2020221009192206.png)
@@ -264,7 +266,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 ![](Pasted%20image%2020221009192437.png)
 
-#### - Ran a privilege escalation script but couldn't find anything interseting
+#### - Ran a privilege escalation script but couldn't find anything interesting
 
 #### - Typed "dir /a" in the C: directory to find any hidden directorys/files and found hidden directory "ProgramData"
 
