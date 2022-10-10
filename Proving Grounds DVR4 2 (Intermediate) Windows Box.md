@@ -19,7 +19,9 @@ IP: 192.168.122.179
 - Utilized found user "viewer" and private SSH key to login to a windows shell
 - Found a user "Administrator" and a hashed/encrypted password in Argus Surveillance DVR configuration file
 - Found a weak password encryption script for Argus Surviellance utilizing searchsploit
-- Referencing the weak
+- Referencing the weak password encryption script I was able to find all but one character of the password as the script stated it did not add special characters
+- Researched the syntax to utilize to login to a program as a different user
+- Utilized the "runas" syntax to login to Admi
 - Text
 
 ## Improved skills
