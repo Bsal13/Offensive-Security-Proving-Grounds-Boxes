@@ -3,7 +3,7 @@ Alias: DVR-4
 Date: 8/21/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys #WindowsProgramConfigurationFile 
+Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys #WindowsProgramConfigurationFile #IdentifyHashID
 Status: Finished
 IP: 192.168.122.179
 ---
@@ -286,6 +286,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 #### - Attempted to type "hashid ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8" to identify the hash but received an Uknown hash:
 
 ![](Pasted%20image%2020221009201200.png)
+
+#### - Remembered the "Weak password encryption" exploit/script found earlier. Typed "vim 50130.py" and input the encrypted password into the script:
+
+![](Pasted%20image%2020221009201411.png)
+
+#### - Typed "python 50130.py" to run the script and found the mostly decrypted password to be "14WatchD0g". Although the script is unable to decode the last string of characters:
+
+![](Pasted%20image%2020221009201544.png)
+
+#### - Reading through the script we find the coder of the script was "too lazy to add special characters":
+
+![](Pasted%20image%2020221009201710.png)
 
 
 
