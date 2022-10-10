@@ -262,6 +262,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 ![](Pasted%20image%2020221009192437.png)
 
+#### - Ran a privilege escalation script but couldn't find anything interseting
+
+#### - Typed "dir /a" in the C: directory to find any hidden directorys/files and found hidden directory "ProgramData"
+
+![](Pasted%20image%2020221009192857.png)
+
+#### - Changed to directory "ProgramData" and foud the following directorys. I then navigated into the "PY_Software" directory:
+
+![](Pasted%20image%2020221009193059.png)
+
 
 
 ## Privilege Escalation vector
