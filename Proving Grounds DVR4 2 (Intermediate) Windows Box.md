@@ -17,14 +17,16 @@ IP: 192.168.122.179
 - Located CVE 2018-15745 directory traversal exploit for the program Argus Surveillance running on port 8080
 - The directory traversal exploit helped to uncover a private SSH key
 - Utilized found user "viewer" and private SSH key to login to a windows shell
-- 
+- Found a user "Administrator" and a hashed/encrypted password in Argus Surveillance DVR configuration file
+- Found a weak password encryption script for Argus Surviellance utilizing searchsploit
+- Referencing the weak
 - Text
 
 ## Improved skills
 - Command for searching for hidden directories using CMD
 - Learned what certain URL encoded characters were
 - Learned how to to run a program as a different user in windows command line
-- skill 2
+
 
 ## Used tools
 - nmap
