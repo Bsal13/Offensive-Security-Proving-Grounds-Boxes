@@ -195,6 +195,10 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221009165921.png)
 
+
+#### - Navigated to the "Users" section and found the following user "viewer"
+
+
 ---
 
 # Exploitation
