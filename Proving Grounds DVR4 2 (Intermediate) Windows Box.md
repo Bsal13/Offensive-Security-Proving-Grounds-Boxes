@@ -272,6 +272,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 ![](Pasted%20image%2020221009193059.png)
 
+#### - I then found a "Argus Serveillance DVR" directory and navigated into it:
+
 
 
 ## Privilege Escalation vector
