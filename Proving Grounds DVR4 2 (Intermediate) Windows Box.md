@@ -17,7 +17,7 @@ IP: 192.168.122.179
 
 ## Improved skills
 - Command for searching for hidden directories using CMD
-- 
+- Learned how to to run a program as a different user in windows command line
 - skill 2
 
 ## Used tools
@@ -179,7 +179,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Enumerated open TCP ports:
 ```bash
-
+8080
 ```
 
 Enumerated top 200 UDP ports:
