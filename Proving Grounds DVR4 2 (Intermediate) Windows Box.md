@@ -3,7 +3,7 @@ Alias: DVR-4
 Date: 8/21/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags:
+Tags: #WindowsDirectoryTraversalExploit
 Status: Finished
 IP: 192.168.122.179
 ---
@@ -204,11 +204,23 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Argus Surveillance
+## Argus Surveillance windows traversal exploit
 
 #### - Typed "searchsploit argus surveillance" and found the following exploit:
 
 ![](Pasted%20image%2020221009190548.png)
+
+#### - Typed "searchsploit -m windows_x86/webapps/45296.txt" and found the following ouput showing a directory Traversal exploit:
+
+![](Pasted%20image%2020221009190910.png)
+
+#### - Googled "url encoded characters" and found the following webpage showing character "." will be used as %2E and character "/" used as %2F:
+
+![](Pasted%20image%2020221009191130.png)
+
+
+
+
 ---
 
 # Lateral Movement to user
