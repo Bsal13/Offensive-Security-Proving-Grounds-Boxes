@@ -227,7 +227,12 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221009191611.png)
 
+#### - Typed "cat id_rsa" and found the following private ssh key:
 
+![](Pasted%20image%2020221009191813.png)
+
+#### - Typed "ssh viewer@192.168.122.179 -i id_rsa" and was connected to an ssh session as user "viewer":
+![](Pasted%20image%2020221009191954.png)
 
 
 
@@ -247,7 +252,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+#### - Per the previous searchploit we ran for argus surveillance we found the following "Weak password encryption" python script:
+
+![](Pasted%20image%2020221009192206.png)
+
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
