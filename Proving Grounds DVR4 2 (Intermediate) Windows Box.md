@@ -3,7 +3,7 @@ Alias: DVR-4
 Date: 8/21/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys
+Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys #WindowsProgramConfigurationFile 
 Status: Finished
 IP: 192.168.122.179
 ---
@@ -279,6 +279,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 #### - I then found the DVRParams (.ini) configuration file:
 
 ![](Pasted%20image%2020221009194221.png)
+
+#### - I then typed "type DVRParams.ini" to read the contents of the configuration file and found the following "adminstrator" user and hashed or encrypted password "ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8":
+![](Pasted%20image%2020221009201025.png)
+
+#### - Attempted to type "hashid ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8" to identify the hash but received an Uknown hash:
+
+![](Pasted%20image%2020221009201200.png)
+
 
 
 ## Privilege Escalation vector
