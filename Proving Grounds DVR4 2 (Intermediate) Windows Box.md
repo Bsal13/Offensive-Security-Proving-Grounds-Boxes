@@ -15,17 +15,20 @@ IP: 192.168.122.179
 - Navigated to webpage found on port 8080
 - Located a user named "viewer"
 - Located CVE 2018-15745 directory traversal exploit for the program Argus Surveillance running on port 8080
+- The directory traversal exploit helped to uncover a private SSH key
+- Utilized found user "viewer" and private SSH key to login to a windows shell
 - 
 - Text
 
 ## Improved skills
 - Command for searching for hidden directories using CMD
+- Learned what certain URL encoded characters were
 - Learned how to to run a program as a different user in windows command line
 - skill 2
 
 ## Used tools
 - nmap
-- gobuster
+- 
 
 ---
 
@@ -240,19 +243,6 @@ Enumerated top 200 UDP ports:
 #### - Typed "ssh viewer@192.168.122.179 -i id_rsa" and was connected to an ssh session as user "viewer":
 ![](Pasted%20image%2020221009191954.png)
 
-
-
-
-
-
----
-
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
 ---
 
