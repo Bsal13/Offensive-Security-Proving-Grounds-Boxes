@@ -3,7 +3,7 @@ Alias: DVR-4
 Date: 8/21/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey
+Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys
 Status: Finished
 IP: 192.168.122.179
 ---
@@ -255,6 +255,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 #### - Per the previous searchploit we ran for argus surveillance we found the following "Weak password encryption" python script:
 
 ![](Pasted%20image%2020221009192206.png)
+
+#### - Typed "searchsploit -m windows/local/50130.py" to copy the python script on my kali machine
+
+#### - Typed "cat 50130.py" and found the following contents:
+
+![](Pasted%20image%2020221009192437.png)
 
 
 
