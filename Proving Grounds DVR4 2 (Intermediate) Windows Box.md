@@ -12,7 +12,10 @@ IP: 192.168.122.179
 
 
 # Resolution summary
-- Text
+- Navigated to webpage found on port 8080
+- Located a user named "viewer"
+- Located CVE 2018-15745 directory traversal exploit for the program Argus Surveillance running on port 8080
+- 
 - Text
 
 ## Improved skills
@@ -205,7 +208,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Argus Surveillance windows traversal exploit
+## CVE 2018-15745 - Argus Surveillance DVR 4.0.0.0 - Directory Traversal
 
 #### - Typed "searchsploit argus surveillance" and found the following exploit:
 
