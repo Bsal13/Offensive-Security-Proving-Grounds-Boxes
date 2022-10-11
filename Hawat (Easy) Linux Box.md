@@ -22,6 +22,7 @@ IP: 192.168.151.147
 ## Used tools
 - nmap
 - rustscan
+- feroxbuster
 
 ---
 
@@ -352,6 +353,19 @@ Enumerated top 200 UDP ports:
 ##  Port 50080 - Apache httpd 2.4.46 ((Unix) PHP/7.4.15) 
 
 #### -Ran feroxbuster scan [feroxbuster -u http://192.168.65.147:50080 -C 401 403 405] and found directory "/cloud"
+
+![](Pasted%20image%2020221011100749.png)
+
+
+#### -Navigated to http://192.168.65.147:50080/cloud and found the following login php page:
+![](Pasted%20image%2020221011100923.png)
+
+#### -Attempted to utilize username admin and password admin and was able to login as admin 
+
+#### -Clicked on the issuetracker.zip file 
+![](Pasted%20image%2020221011101035.png)
+
+
 
 ---
 
