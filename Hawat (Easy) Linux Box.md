@@ -1,5 +1,5 @@
 ---
-Alias: {{title}}
+Alias: Hawat
 Date: {{date}}
 Platform: 
 Category:
