@@ -387,6 +387,29 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221011102716.png)
 
+#### -Located the following information:
+#### "/issue/checkByPriority" directory
+#### Credentials User "issue_user" and password "ManagementInsideOld797"
+#### Issue Tracker connects to mysql database per the following line of code:
+#### "jdbc:mysql://localhost:3306/issue_tracker"
+
+![](Pasted%20image%2020221011102828.png)
+
+#### -Additionaly, I found "priority" as a parameter in the "/issue/checkByPriority" directory and should be vulnerable to sql injection:
+
+![](Pasted%20image%2020221011102910.png)
+
+## Port 30455 - HTTP nginx 1.18.0 
+
+#### -Ran feroxbuster scan and found the following:
+
+![](Pasted%20image%2020221011103134.png)
+
+#### -Navigated to http://192.168.241.147:30455/phpinfo.php and found "/srv/http" showing the directory of the webserver:
+
+![](Pasted%20image%2020221011103221.png)
+
+
 
 ---
 
