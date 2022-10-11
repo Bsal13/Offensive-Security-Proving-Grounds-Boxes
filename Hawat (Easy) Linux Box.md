@@ -409,6 +409,25 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221011103221.png)
 
+## Port 17445 - HTTP uknown
+
+#### -Navigated to http://192.168.65.147:17445/ and found the following wepage showing as "Issue Tracker"
+
+![](Pasted%20image%2020221011103451.png)
+
+#### -Clicked the "Register" link and registered and signed in with the credentials I created
+#### -Navigated to directory "/issue/checkByPriority" per the findings this directory existed from analyzing the source code in the "IssueControler.java" file and was directed to the following web page:
+
+![](Pasted%20image%2020221011103541.png)
+
+#### -As we know the directory "/issue/checkByPriority" exists I navigated to Burpsuite to confirm what is going on in the background. Forwarded the request to "repeater" and found the following showing that "POST" is allowed:
+
+![](Pasted%20image%2020221011103632.png)
+
+#### -Changed "GET" to "POST" and found the error code changed from "405" to "400"
+
+![](Pasted%20image%2020221011103739.png)
+
 
 
 ---
