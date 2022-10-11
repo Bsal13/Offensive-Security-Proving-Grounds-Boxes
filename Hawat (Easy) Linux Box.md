@@ -371,6 +371,22 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221011102057.png)
 
+#### -Navigated throught the following source code folders for the "issuetracker.zip" file and found "IssueControler.java" file:
+
+![](Pasted%20image%2020221011102341.png)
+
+![](Pasted%20image%2020221011102413.png)
+
+![](Pasted%20image%2020221011102447.png)
+
+![](Pasted%20image%2020221011102523.png)
+
+![](Pasted%20image%2020221011102555.png)
+
+![](Pasted%20image%2020221011102626.png)
+
+![](Pasted%20image%2020221011102716.png)
+
 
 ---
 
