@@ -338,7 +338,7 @@ Nmap done: 1 IP address (1 host up) scanned in 29.53 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+50080
 ```
 
 Enumerated top 200 UDP ports:
@@ -349,8 +349,9 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+##  Port 50080 - Apache httpd 2.4.46 ((Unix) PHP/7.4.15) 
+
+#### -Ran feroxbuster scan [feroxbuster -u http://192.168.65.147:50080 -C 401 403 405] and found directory "/cloud"
 
 ---
 
