@@ -365,6 +365,11 @@ Enumerated top 200 UDP ports:
 #### -Clicked on the issuetracker.zip file 
 ![](Pasted%20image%2020221011101035.png)
 
+#issuetracker
+
+#### -The following webpage came up and clicked the 3 dots and clicked "Descargar" which allowed me to save the zip file to my kali machine:
+
+![](Pasted%20image%2020221011102057.png)
 
 
 ---
