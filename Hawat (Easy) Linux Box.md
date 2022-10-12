@@ -407,10 +407,10 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221011103134.png)
 
-#### -Navigated to http://192.168.241.147:30455/phpinfo.php and found "/srv/http" showing the directory of the webserver:
+#### -Navigated to http://192.168.241.147:30455/phpinfo.php and found "/srv/http" showing the root directory of the webserver:
 
 ![](Images/Pasted%20image%2020221011103221.png)
-
+#webserverrootdirec
 ## Port 17445 - HTTP uknown
 
 #### -Navigated to http://192.168.65.147:17445/ and found the following wepage showing as "Issue Tracker"
