@@ -3,7 +3,7 @@ Alias: Hawat
 Date: 5/08/2022
 Platform: Linux
 Difficulty: Easy
-Tags: #issuetracker 
+Tags: #issuetracker #webserverrootdirectory #GETtoPOSTChangeInBurpsuite #SQLinjection #php-reverse-shell-php
 Status: Finished
 IP: 192.168.151.147
 ---
@@ -410,7 +410,7 @@ Enumerated top 200 UDP ports:
 #### -Navigated to http://192.168.241.147:30455/phpinfo.php and found "/srv/http" showing the root directory of the webserver:
 
 ![](Images/Pasted%20image%2020221011103221.png)
-#webserverrootdirec
+#webserverrootdirectory
 ## Port 17445 - HTTP uknown
 
 #### -Navigated to http://192.168.65.147:17445/ and found the following wepage showing as "Issue Tracker"
