@@ -17,7 +17,8 @@ IP: 192.168.151.147
 
 ## Improved skills
 - Password guessing
-- Analy
+- Analyzing code
+- Changing methods in burpsuite to 
 - skill 2
 
 ## Used tools
