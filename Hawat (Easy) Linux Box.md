@@ -25,9 +25,9 @@ IP: 192.168.151.147
 - Found method "POST" was allowed
 - Changed method to "POST" in repeater and found the error code changed to 400
 - Googled sq injection reverse shell and retreived the syntax
+- Added the priority parameter and the found syntax placing it into the root directory of the web server and url encoded the syntax into burpsuite to retreive command injection from the webpage
 - 
-- 
-- Text
+
 
 ## Improved skills
 - Password guessing
