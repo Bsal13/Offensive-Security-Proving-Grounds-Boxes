@@ -16,7 +16,8 @@ IP: 192.168.151.147
 - Guessed login credentials and was able to login as administrator
 - Found issue tracker zip file
 - Dowloaded file to Kali machine and read the source code
-- From analyzing source code found the program connects to a mysql database and has a priority parameter
+- From analyzing source code found the program connects to a mysql database and has a priority parameter. Additionally found "/issue/checkByPriority" directory
+- 
 - 
 - Text
 
