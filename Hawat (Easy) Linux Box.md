@@ -22,7 +22,7 @@ IP: 192.168.151.147
 - Navigated to /issue/checkByPriority directory and received a 405 error
 - Brought up burpsuite to see what is going on in the background and sent the web page for port 17455 for directory /issue/checkByPriority to repeater
 - Found method "POST" was allowed
-- Changed method to "POST" in r
+- Changed method to "POST" in repeater and found the error code changed to 
 - 
 - Text
 
