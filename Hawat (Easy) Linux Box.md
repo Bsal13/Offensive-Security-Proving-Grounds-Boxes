@@ -14,7 +14,9 @@ IP: 192.168.151.147
 # Resolution summary
 - Ran feroxbuster for port 50080 and was able to locate a cloud php login webpage
 - Guessed login credentials and was able to login as administrator
-- Found hvvvvvhvvvv
+- Found issue tracker zip file
+- Dowloaded file to Kali machine and read the source code
+- From analyzing source code found it 
 - Text
 
 ## Improved skills
