@@ -26,7 +26,9 @@ IP: 192.168.151.147
 - Changed method to "POST" in repeater and found the error code changed to 400
 - Googled sq injection reverse shell and retreived the syntax
 - Added the priority parameter and the found syntax placing it into the root directory of the web server and url encoded the syntax into burpsuite to retreive command injection from the webpage
-- 
+- Confirmed we can run OS commands on from webpage
+- Downloaded a php reverse shell to target naming the reverse shell with a .php extension
+- Setup a netcat listener on Kali and ran the reverse shell php script wh
 
 
 ## Improved skills
