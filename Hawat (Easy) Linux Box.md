@@ -18,7 +18,8 @@ IP: 192.168.151.147
 ## Improved skills
 - Password guessing
 - Analyzing code
-- Changing methods in burpsuite to 
+- Changing methods in burpsuite to receive alternate webpage
+- Locating root web server directory
 - skill 2
 
 ## Used tools
@@ -413,6 +414,7 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221011103221.png)
 #webserverrootdirectory
+
 ## Port 17445 - HTTP uknown
 
 #### -Navigated to http://192.168.65.147:17445/ and found the following wepage showing as "Issue Tracker"
