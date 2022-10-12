@@ -28,7 +28,7 @@ IP: 192.168.151.147
 - Added the priority parameter and the found syntax placing it into the root directory of the web server and url encoded the syntax into burpsuite to retreive command injection from the webpage
 - Confirmed we can run OS commands on from webpage
 - Downloaded a php reverse shell to target naming the reverse shell with a .php extension
-- Setup a netcat listener on Kali and ran the reverse shell php script wh
+- Setup a netcat listener on Kali; ran the reverse shell php script and received a root shell
 
 
 ## Improved skills
@@ -36,7 +36,7 @@ IP: 192.168.151.147
 - Analyzing code
 - Changing methods in burpsuite to receive alternate webpage
 - Locating root web server directory
-- skill 2
+
 
 ## Used tools
 - nmap
