@@ -17,13 +17,14 @@ IP: 192.168.151.147
 - Found issue tracker zip file
 - Dowloaded file to Kali machine and read the source code
 - From analyzing source code found the program connects to a mysql database and has a priority parameter. Additionally found "/issue/checkByPriority" directory
-- Ran feroxbuster for port 30455 and was able to locte 
+- Ran feroxbuster for port 30455 and was able to locate the index.php page showing the root directory 
 - Navigated to http port 17445 and found the issue tracker program running on the webpage
 - Registered and logged in with setup credentials
 - Navigated to /issue/checkByPriority directory and received a 405 error
 - Brought up burpsuite to see what is going on in the background and sent the web page for port 17455 for directory /issue/checkByPriority to repeater
 - Found method "POST" was allowed
-- Changed method to "POST" in repeater and found the error code changed to 
+- Changed method to "POST" in repeater and found the error code changed to 400
+- 
 - 
 - Text
 
