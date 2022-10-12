@@ -3,7 +3,7 @@ Alias: Hawat
 Date: 5/08/2022
 Platform: Linux
 Difficulty: Easy
-Tags:
+Tags: 
 Status: Finished
 IP: 192.168.151.147
 ---
@@ -340,6 +340,8 @@ Nmap done: 1 IP address (1 host up) scanned in 29.53 seconds
 Enumerated open TCP ports:
 ```bash
 50080
+30455
+17445
 ```
 
 Enumerated top 200 UDP ports:
