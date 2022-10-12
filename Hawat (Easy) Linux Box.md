@@ -12,7 +12,9 @@ IP: 192.168.151.147
 
 
 # Resolution summary
-- Text
+- Ran feroxbuster for port 50080 and was able to locate a cloud php login webpage
+- Guessed login credentials and was able to login as administrator
+- v
 - Text
 
 ## Improved skills
