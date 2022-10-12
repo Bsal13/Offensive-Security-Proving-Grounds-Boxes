@@ -3,7 +3,7 @@ Alias: Hawat
 Date: 5/08/2022
 Platform: Linux
 Difficulty: Easy
-Tags: 
+Tags: #issuetracker 
 Status: Finished
 IP: 192.168.151.147
 ---
