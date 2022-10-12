@@ -16,7 +16,8 @@ IP: 192.168.151.147
 - Text
 
 ## Improved skills
-- skill 1
+- Password guessing
+- Analy
 - skill 2
 
 ## Used tools
