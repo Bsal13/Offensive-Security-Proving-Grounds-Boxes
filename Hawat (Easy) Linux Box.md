@@ -430,6 +430,10 @@ Enumerated top 200 UDP ports:
 
 #GETtoPOSTChangeInBurpsuite
 
+---
+
+# Exploitation
+## SQL Injection in Burpsuite
 #### -Googled "sql injection reverse shell" and found the following web page showing the following commands to upload a cmd.php page to the server in order to get command execution:
 
 ![](Pasted%20image%2020221011103839.png)
@@ -449,11 +453,6 @@ Enumerated top 200 UDP ports:
 
 #sqlinjection
 
----
-
-# Exploitation
-## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
 ---
 
