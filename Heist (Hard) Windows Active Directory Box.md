@@ -3,7 +3,7 @@ Alias: Heist
 Date: 9/9/2022
 Platform: Windows
 Difficulty: Hard
-Tags: #SSRFvulnerability 
+Tags: #SSRFvulnerability #responder #evil-winrm  #Winrmshell
 Status: Finished
 IP: 192.168.231.165 
 ---
