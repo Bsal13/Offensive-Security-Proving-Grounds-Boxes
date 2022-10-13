@@ -430,6 +430,30 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
 #### - Clicked the hamburger icon in the upper left hand corner of bloodhound and then clicked the "Analysis"tab to see a list of pre-built queries.
 
+![](Pasted%20image%2020221012214126.png)
+
+#### - Going from the bottom up on this list, nothing was providing data until I got to **Shortest Paths to High Value Targets**, which revealed nothing interesting about my current user; however, it did show some interesting info on the service account.
+
+![](Pasted%20image%2020221012214301.png)
+#ADservicecanreadGMSApassword #GMSA #GroupManagedServiceAccount
+
+#### - This shows that the **svc_apache** service account can read the GMSA password, which means that the **svc_apache** account is a Group Managed Service Account (gMSA).
+
+#### - Using the following PowerShell command, we can confirm that this account is a service account with GMSA enabled:
+
+Get-ADServiceAccount -Filter * | where-object {$_.ObjectClass -eq "msDS-GroupManagedServiceAccount"}
+
+![](Pasted%20image%2020221012214423.png)
+
+#### - This shows that members of Web Admins group can retrieve the gMSA password. Earlier during the manual enumeration, we saw that our current user **enox** was a member of this group! This also shows that the svc_apache account is in the remote users group, which means that once we extract the gMSA password, we can remote in with this account using evil-winrm.
+
+#### - Just to be certain, we can double check that our user is in the Web Admins group using the following command:
+
+Get-ADGroupMember 'Web Admins'
+
+![](Pasted%20image%2020221012214545.png)
+
+
 
 
 
