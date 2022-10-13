@@ -368,6 +368,8 @@ Enumerated top 200 UDP ports:
 
 responder -I tun0 -wv
 
+#responder
+
 #### - Next, we need to send a request to our IP on a port that is not open and we should get a hash in our Responder window. For this example, I just forwarded the request to my IP without specifying a port since my web server is on port 445 and this request will target port 80, which is not open.
 
 ![](Pasted%20image%2020221012181516.png)
