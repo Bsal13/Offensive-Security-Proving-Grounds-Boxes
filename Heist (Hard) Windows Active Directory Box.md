@@ -18,6 +18,8 @@ IP: 192.168.231.165
 - Cracked hashed password utilizing hashcat
 - Utilized  evil-winrm to login to a session with the retreived users credentials
 - Retrieved all computers, domains, grops and user information in json format utilizing bloodhound-python
+- Found scv_apache account can read the GMSA password utilizing bloodhound
+- 
 
 ## Improved skills
 - Active Directory enumeration
