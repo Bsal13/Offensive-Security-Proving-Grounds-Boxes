@@ -1,5 +1,5 @@
 ---
-Alias: {{title}}
+Alias: Craft
 Date: {{date}}
 Platform: 
 Category:
