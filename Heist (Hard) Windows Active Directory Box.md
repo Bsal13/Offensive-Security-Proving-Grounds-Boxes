@@ -14,7 +14,10 @@ IP: 192.168.231.165
 
 # Resolution summary
 - Located a webpage on port 8080 which is vulnerable to SSRF
-- Utilized Responder to exploit the SSRF vulnerability; retreive 
+- Utilized Responder to exploit the SSRF vulnerability; retreive username and etNTLMv2 hashed password
+- Cracked hashed password utilizing hashcat
+- Utilized  evil-winrm to login to a session with the retreived users credentials
+- 
 
 ## Improved skills
 - Active Directory enumeration
@@ -31,6 +34,7 @@ IP: 192.168.231.165
 - Crackmapexec
 - evil-winrm
 - GMSAPasswordReader.exe
+- hashcat
 
 ---
 
