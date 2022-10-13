@@ -1,11 +1,10 @@
 ---
 Alias: Craft
-Date: {{date}}
-Platform: 
-Category:
-Difficulty:
+Date: 9/14/2022
+Platform: Windows
+Difficulty: Intermediate
 Tags:
-Status:
+Status: Finished
 IP: 
 ---
 
