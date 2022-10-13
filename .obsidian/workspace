@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Heist (Hard) Windows Box.md",
+            "file": "Craft (Intermediate) Windows Box.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Heist (Hard) Windows Box.md",
+                "file": "Craft (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Heist (Hard) Windows Box.md",
+                "file": "Craft (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Heist (Hard) Windows Box.md"
+                "file": "Craft (Intermediate) Windows Box.md"
               }
             }
           }
@@ -128,7 +128,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9022170bc71cb616",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
     "Hawat (Easy) Linux Box.md",
     "Pasted Images/Pasted image 20220601152426.png",
