@@ -333,6 +333,18 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.231.165:8080/" and found the following webpage:
 
+![](Pasted%20image%2020221012174609.png)
+
+
+#### -Typed "updog -p 445" on kali machine to fire up an HTTP Server
+
+#### - Typed "http://[Kali IP]:445" into the "Enter URL" bar and clicked the search icon
+
+![](Pasted%20image%2020221012174728.png)
+
+#### - I was able to access my server. This confirmed that this server is vulnerable to SSRF
+
+![](Pasted%20image%2020221012174847.png)
 
 
 
