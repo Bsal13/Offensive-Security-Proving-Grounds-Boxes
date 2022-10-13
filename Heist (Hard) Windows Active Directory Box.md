@@ -365,13 +365,6 @@ Enumerated top 200 UDP ports:
 
 #### - With this information, we should be able to setup Responder to create a spoofed WPAD proxy server and then search for an arbitrary domain using the URL search bar on the web server. After the request is made, we should see responder intercept the request and dump the hash of the user who owns the webserver.
 
-
-#### - Typed "net user enox" and noted current user "enox" is a part of "Web Admins" group memberships
-
-![](Pasted%20image%2020221012182010.png)
-
-
-
 ---
 
 # Exploitation
@@ -410,7 +403,7 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 #### - Typed "evil-winrm -i 192.168.123.165 -u enox -p california" and received the below winrm shell:
 
 ![](Pasted%20image%2020221012212318.png)
-
+#evil-winrm  #Winrmshell
 
 
 ---
