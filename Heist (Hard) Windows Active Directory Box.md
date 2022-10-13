@@ -20,7 +20,8 @@ IP: 192.168.231.165
 - Retrieved all computers, domains, grops and user information in json format utilizing bloodhound-python
 - Found scv_apache account can read the GMSA password utilizing bloodhound
 - Utilized GMSAPasswordReader.exe to read svc_apache's NTML hash
-- Utilized user svc_apache 
+- Utilized user svc_apache and NTLM has to login to an evil-winrm session
+- 
 
 ## Improved skills
 - Active Directory enumeration
