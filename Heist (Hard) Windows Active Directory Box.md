@@ -3,7 +3,7 @@ Alias: Heist
 Date: 9/9/2022
 Platform: Windows
 Difficulty: Hard
-Tags: #SSRFvulnerability #responder #evil-winrm  #Winrmshell
+Tags: #SSRFvulnerability #responder #evil-winrm  #Winrmshell #Windowsuserenumeration
 Status: Finished
 IP: 192.168.231.165 
 ---
@@ -420,10 +420,12 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 #### - Typed "net user enox" and noted current user "enox" is a part of "Web Admins" group memberships
 
 ![](Pasted%20image%2020221012182010.png)
+#Windowsuserenumeration
 
 #### - Attempted to enumerate Privelege Escalation vectors by utilizing PowerUp.ps1 and other privilege escalation scripts but found nothing
 
 #### - Typed "sudo neo4j console"  on my kali machine and logged into the console using my neo4j credentials
+#ne
 
 #### - Navigated to another terminal on my kali machine and typed "bloodhound" and logged into bloodhound utilizing my neo4j credentials
 
