@@ -3,7 +3,7 @@ Alias: Heist
 Date: 9/9/2022
 Platform: Windows
 Difficulty: Hard
-Tags: #SSRFvulnerability #responder #evil-winrm  #Winrmshell #Windowsuserenumeration #neo4jconsole #bloodhound #ADservicecanreadGMSApassword #GMSA #GroupManagedServiceAccount
+Tags: #SSRFvulnerability #responder #evil-winrm  #Winrmshell #Windowsuserenumeration #neo4jconsole #bloodhound #ADservicecanreadGMSApassword #GMSA #GroupManagedServiceAccount #rc4_hmac #SeRestorePrivilegeEnabledPrivelegeEscalation
 
 Status: Finished
 IP: 192.168.231.165 
@@ -449,7 +449,8 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 #ADservicecanreadGMSApassword #GMSA #GroupManagedServiceAccount
 
 #### - This shows that the **svc_apache** service account can read the GMSA password, which means that the **svc_apache** account is a Group Managed Service Account (gMSA).
-#GMSA
+#GMSApassword
+
 #### - Using the following PowerShell command, we can confirm that this account is a service account with GMSA enabled:
 
 Get-ADServiceAccount -Filter * | where-object {$_.ObjectClass -eq "msDS-GroupManagedServiceAccount"}
@@ -478,7 +479,7 @@ Get-ADGroupMember 'Web Admins'
 #### - Typed .\GMSAPasswordReader.exe --AccountName 'svc_apache' and retreived the following  NTLM hash:
 
 ![](Pasted%20image%2020221012215649.png)
-
+#GMSApasswordReader.exe
 #### - The rc4_hmac hash is the same as the NT hash, they are interchangeable.
 #rc4_hmac
 
