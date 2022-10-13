@@ -415,9 +415,27 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
 ![](Pasted%20image%2020221012182010.png)
 
+#### - Attempted to enumerate Privelege Escalation vectors by utilizing PowerUp.ps1 and other privilege escalation scripts but found nothing
+
+#### - Typed "sudo neo4j console"  on my kali machine and logged into the console using my neo4j credentials
+
+#### - Navigated to another terminal on my kali machine and typed "bloodhound" and logged into bloodhound utilizing my neo4j credentials
+
+#### - Navigated back to another terminal session on my kali machine and typed "bloodhound-python -u enox -p california -ns 192.168.81.165 -d heist.offsec -c all" and retreived the following computers, domains, groups and users information in .json format from the target machine in order to upload the information to bloodhound:
+
+![](Pasted%20image%2020221012213928.png)
+![](Pasted%20image%2020221012214003.png)
+
+#### - Navigated to bloodhound and clicked "upload data". Then highlighted all the .json files and clicked open.  The target machines actived directory information was uploaded to bloodhound.
+
+#### - Clicked the hamburger icon in the upper left hand corner of bloodhound and then clicked the "Analysis"tab to see a list of pre-built queries.
+
+
+
 
 ## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+
 
 ---
 
