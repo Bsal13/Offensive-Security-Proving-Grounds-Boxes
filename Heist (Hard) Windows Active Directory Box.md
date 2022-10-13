@@ -476,9 +476,22 @@ Get-ADGroupMember 'Web Admins'
 
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+#### - Typed whoami /priv and found SeRestorePrivilege is enabled:
+
+![](Pasted%20image%2020221012220215.png)
+#SeRestorePrivilegeEnabledPrivelegeEscalation
+
+#### - Googled "SeRestorePrivilege privilege escalation" and found the following Hacktricks page showing the steps to escalate privileges:
+
+![](Pasted%20image%2020221012220333.png)
+
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## SeRestorePrivilege privilege escalation
+
+#### - Navigated to "C:\Windows\system32" and located Utilman.exe:
+![](Pasted%20image%2020221012220556.png)
+
+
 
 ---
