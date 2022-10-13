@@ -3,7 +3,8 @@ Alias: Heist
 Date: 9/9/2022
 Platform: Windows
 Difficulty: Hard
-Tags: #SSRFvulnerability #responder #evil-winrm  #Winrmshell #Windowsuserenumeration
+Tags: #SSRFvulnerability #responder #evil-winrm  #Winrmshell #Windowsuserenumeration #neo4jconsole #bloodhound #ADservicecanreadGMSApassword #GMSA #GroupManagedServiceAccount
+
 Status: Finished
 IP: 192.168.231.165 
 ---
@@ -29,6 +30,7 @@ IP: 192.168.231.165
 - Neo4j console
 - Crackmapexec
 - evil-winrm
+- GMSAPasswordReader.exe
 
 ---
 
@@ -425,9 +427,10 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 #### - Attempted to enumerate Privelege Escalation vectors by utilizing PowerUp.ps1 and other privilege escalation scripts but found nothing
 
 #### - Typed "sudo neo4j console"  on my kali machine and logged into the console using my neo4j credentials
-#ne
+#neo4jconsole
 
 #### - Navigated to another terminal on my kali machine and typed "bloodhound" and logged into bloodhound utilizing my neo4j credentials
+#bloodhound
 
 #### - Navigated back to another terminal session on my kali machine and typed "bloodhound-python -u enox -p california -ns 192.168.81.165 -d heist.offsec -c all" and retreived the following computers, domains, groups and users information in .json format from the target machine in order to upload the information to bloodhound:
 
@@ -446,7 +449,7 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 #ADservicecanreadGMSApassword #GMSA #GroupManagedServiceAccount
 
 #### - This shows that the **svc_apache** service account can read the GMSA password, which means that the **svc_apache** account is a Group Managed Service Account (gMSA).
-
+#GMSA
 #### - Using the following PowerShell command, we can confirm that this account is a service account with GMSA enabled:
 
 Get-ADServiceAccount -Filter * | where-object {$_.ObjectClass -eq "msDS-GroupManagedServiceAccount"}
