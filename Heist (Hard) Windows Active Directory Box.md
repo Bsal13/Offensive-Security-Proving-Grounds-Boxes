@@ -458,6 +458,12 @@ Get-ADGroupMember 'Web Admins'
 
 #### - Googled "gMSA password extraction tool github" and found the following tool to extract the NT hash from the active directory:
 
+![](Pasted%20image%2020221012215446.png)
+
+![](Pasted%20image%2020221012215548.png)
+
+
+
 
 
 ---
