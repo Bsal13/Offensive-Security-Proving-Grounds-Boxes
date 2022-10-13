@@ -13,7 +13,7 @@ IP: 192.168.231.165
 
 
 # Resolution summary
-- Text
+- Located a webpage on port 8080 which is vulnerable to SSRF
 - Text
 
 ## Improved skills
