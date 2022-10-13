@@ -1,6 +1,6 @@
 ---
 Alias: Heist
-Date: 
+Date: 9/9/2022
 Platform: Windows
 Difficulty: Hard
 Tags:

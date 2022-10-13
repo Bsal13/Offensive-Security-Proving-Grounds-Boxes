@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Heist (Hard) Windows Box.md",
+            "file": "Heist (Hard) Windows Active Directory Box.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Heist (Hard) Windows Box.md",
+                "file": "Heist (Hard) Windows Active Directory Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Heist (Hard) Windows Box.md",
+                "file": "Heist (Hard) Windows Active Directory Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Heist (Hard) Windows Box.md"
+                "file": "Heist (Hard) Windows Active Directory Box.md"
               }
             }
           }
