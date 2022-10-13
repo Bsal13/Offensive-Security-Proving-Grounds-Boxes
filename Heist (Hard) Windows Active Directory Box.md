@@ -3,7 +3,7 @@ Alias: Heist
 Date: 9/9/2022
 Platform: Windows
 Difficulty: Hard
-Tags:
+Tags: #SSRFvulnerability 
 Status: Finished
 IP: 192.168.231.165 
 ---
@@ -16,13 +16,19 @@ IP: 192.168.231.165
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- Active Directory enumeration
+- Bloodhound tool enumerating
+- crackmapexec enumerating 
 
 ## Used tools
 - nmap
 - rustscan
-- 
+- rdesktop
+- Responder
+- Bloodhound
+- Neo4j console
+- Crackmapexec
+- evil-winrm
 
 ---
 
