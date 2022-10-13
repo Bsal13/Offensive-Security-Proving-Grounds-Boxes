@@ -345,6 +345,10 @@ Enumerated top 200 UDP ports:
 #### - I was able to access my server. This confirmed that this server is vulnerable to SSRF
 
 ![](Pasted%20image%2020221012174847.png)
+![](Pasted%20image%2020221012180025.png)
+#SSRFvulnerability
+
+#### - Clicking on any of my files makes the URL try to navigate to it as a sub directory off of the main page; for example clicking on utils.py file brings us to "http://192.168.231.165:8080/utils.py" which obviously doesn't exist:
 
 
 
