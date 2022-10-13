@@ -21,7 +21,8 @@ IP: 192.168.231.165
 
 ## Used tools
 - nmap
-- LibreOffice
+- rustscan
+- 
 
 ---
 
@@ -317,7 +318,7 @@ Nmap done: 1 IP address (1 host up) scanned in 101.06 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+8080
 ```
 
 Enumerated top 200 UDP ports:
@@ -328,7 +329,11 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - Apache httpd 2.4.48
+## Port 8080
+
+#### -Navigated to "http://192.168.231.165:8080/" and found the following webpage:
+
+
 
 
 ---
