@@ -350,6 +350,30 @@ Enumerated top 200 UDP ports:
 
 #### - Clicking on any of my files makes the URL try to navigate to it as a sub directory off of the main page; for example clicking on utils.py file brings us to "http://192.168.231.165:8080/utils.py" which obviously doesn't exist:
 
+![](Pasted%20image%2020221012181158.png)
+
+#### - However, by adding the filename in the initial search it reads the file I select but does not execute it.
+
+![](Pasted%20image%2020221012181305.png)
+
+![](Pasted%20image%2020221012181352.png)
+
+#### - It appears we will not be able to get command execution by accessing files on our web server directly; however, the second part of the description on SSRF attacks above seems interesting: In some cases, an SSRF vulnerability may allow an attacker to force the server to connect to arbitrary external systems, potentially leaking sensitive data such as authorization credentials. 
+
+#### A specific tool that can be used to intercept authorization credentials when an arbitrary connection is made to a system is **Responder**.
+
+#### - With this information, we should be able to setup Responder to create a spoofed WPAD proxy server and then search for an arbitrary domain using the URL search bar on the web server. After the request is made, we should see responder intercept the request and dump the hash of the user who owns the webserver.
+
+#### - Fire up Responder with the following command:
+
+responder -I tun0 -wv
+
+#### - Next, we need to send a request to our IP on a port that is not open and we should get a hash in our Responder window. For this example, I just forwarded the request to my IP without specifying a port since my web server is on port 445 and this request will target port 80, which is not open.
+
+![](Pasted%20image%2020221012181516.png)
+
+#### - After sending the request we receive a NetNTLMv2 hash for the user **enox** comes in to our Responder output.
+
 
 
 ---
