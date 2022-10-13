@@ -17,7 +17,7 @@ IP: 192.168.231.165
 - Utilized Responder to exploit the SSRF vulnerability; retreive username and etNTLMv2 hashed password
 - Cracked hashed password utilizing hashcat
 - Utilized  evil-winrm to login to a session with the retreived users credentials
-- 
+- Retrieved all computers, domains, grops and user information in json format utilizing bloodhound-python
 
 ## Improved skills
 - Active Directory enumeration
@@ -35,6 +35,7 @@ IP: 192.168.231.165
 - evil-winrm
 - GMSAPasswordReader.exe
 - hashcat
+- bloodhound-python
 
 ---
 
