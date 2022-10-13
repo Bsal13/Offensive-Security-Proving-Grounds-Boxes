@@ -14,7 +14,7 @@ IP: 192.168.231.165
 
 # Resolution summary
 - Located a webpage on port 8080 which is vulnerable to SSRF
-- Text
+- Utilized Responder to exploit the SSRF vulnerability; retreive 
 
 ## Improved skills
 - Active Directory enumeration
