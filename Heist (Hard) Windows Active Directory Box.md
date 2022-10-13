@@ -401,8 +401,8 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
+#### - Typed crackmapexec winrm 192.168.123.165 -d heist.offsec -u enox -p california -x "whoami" and found user "heist/enox" is running on the target machine:
 ---
 
 # Lateral Movement to user
