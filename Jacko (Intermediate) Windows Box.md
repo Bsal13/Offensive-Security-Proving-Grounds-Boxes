@@ -123,8 +123,18 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Port 8082 - H2 database http console
+
+#### - Navigated to "http://192.168.195.66:8082" and found the following:
+
+![](Pasted%20image%2020221014085548.png)
+
+#### -Googled "H2 database http console default credentials" and found the following showing username "sa" and password is blank:
+![](Pasted%20image%2020221014085635.png)
+![](../Images/Pasted%20image%2020220628031841.png)
+
+
+
 
 ---
 
