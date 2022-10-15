@@ -133,7 +133,9 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221014085635.png)
 ![](../Images/Pasted%20image%2020220628031841.png)
 
+#### -Logged into the following H2 database with username "sa" and password left as blank and found the following web page:
 
+![](Pasted%20image%2020221014211701.png)
 
 
 ---
