@@ -50,6 +50,10 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221015215909.png)
 
+#### -Found share "fox" typing "nmap -sV --script "rsync-list-modules" -p 873 192.168.143.126":
+
+
+
 ---
 
 # Exploitation
