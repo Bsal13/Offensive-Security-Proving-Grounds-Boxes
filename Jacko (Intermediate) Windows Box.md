@@ -15,7 +15,8 @@ IP: 192.168.172.66
 - Connected to target ip via port 8082 via web browser and found H2 database http console
 - Google default credentials of H2 database http console and logged in utilizing the default credentials
 - Found exploit database H2 database http console exploit
-- Followed the 
+- Followed the exploit details and received command execution
+- 
 
 ## Improved skills
 - skill 1
