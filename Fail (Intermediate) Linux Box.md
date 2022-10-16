@@ -120,6 +120,18 @@ Enumerated top 200 UDP ports:
 
 #### -Googled "fail2ban privilege escalation" and found the following webpage showing the steps to escalate privileges:
 
+![](Pasted%20image%2020221016091817.png)
+
+![](Pasted%20image%2020221016091921.png)
+
+![](Pasted%20image%2020221016092000.png)
+
+![](Pasted%20image%2020221016092047.png)
+
+![](Pasted%20image%2020221016092139.png)
+
+![](Pasted%20image%2020221016092235.png)
+
 
 
 
