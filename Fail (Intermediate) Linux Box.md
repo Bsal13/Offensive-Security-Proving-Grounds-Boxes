@@ -52,6 +52,12 @@ Enumerated top 200 UDP ports:
 
 #### -Found share "fox" typing "nmap -sV --script "rsync-list-modules" -p 873 192.168.143.126":
 
+![](Pasted%20image%2020221015220513.png)
+#Rsync 
+
+#### -Per googling port 873 enumeration I found the below web page showing how to list files/directory from rsync server
+
+
 
 
 ---
