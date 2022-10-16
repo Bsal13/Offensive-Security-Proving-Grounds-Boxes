@@ -65,6 +65,16 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221015221356.png)
 
+![](Pasted%20image%2020221015221635.png)
+
+#### -Found nothing interesting reading the files
+	
+#### -Tested if I can upload files users "fox" home directory by typing "echo "hello world" > testfile.txt" and typing "rsync testfile.txt -r 192.168.143.126::fox" to see if it uploaded to fox's home directory. And I found I can:
+
+![](Pasted%20image%2020221015221837.png)
+
+#### -The directions how to find out how to do this was found on the previous website showing the following: 
+
 
 
 
