@@ -279,6 +279,8 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 80 - HTTP (Apache)
 #### -Per the nmap scan I navigated to http://192.168.56.117:50000 and found the following webpage:
+
+
 ---
 
 # Exploitation
