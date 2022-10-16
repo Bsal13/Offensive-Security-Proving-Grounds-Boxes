@@ -16,7 +16,10 @@ IP: 192.168.172.66
 - Google default credentials of H2 database http console and logged in utilizing the default credentials
 - Found exploit database H2 database http console exploit
 - Followed the exploit details and received command execution
-- 
+- Downloaded a reverse shell binary from the found command execution
+- Received a shell back
+- Found SeImpersonatePrivilege was enabled on the target machine
+- Utilized printspoofer64.exe binary to escalate privileges to 
 
 ## Improved skills
 - skill 1
