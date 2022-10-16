@@ -5,23 +5,23 @@ Platform: Linux
 Difficulty: Intermediate
 Tags:
 Status: Finished
-IP: 
+IP: 192.168.143.126
 ---
 
 # {{Fail}}
 
 
 # Resolution summary
-- Text
+- Located Rsync share
 - Text
 
 ## Improved skills
-- skill 1
+- Locating Rsync shares
 - skill 2
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
 
 ---
 
@@ -135,7 +135,7 @@ Enumerated top 200 UDP ports:
 #### -Found share "fox" typing "nmap -sV --script "rsync-list-modules" -p 873 192.168.143.126":
 
 ![](Pasted%20image%2020221015220513.png)
-#Rsync 
+#RsyncShare
 
 #### -Per googling port 873 enumeration I found the below web page showing how to list files/directory from rsync server
 
