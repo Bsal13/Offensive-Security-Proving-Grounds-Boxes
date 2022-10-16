@@ -280,6 +280,10 @@ Enumerated top 200 UDP ports:
 ## Port 80 - HTTP (Apache)
 #### -Per the nmap scan I navigated to http://192.168.56.117:50000 and found the following webpage:
 
+![](Pasted%20image%2020221016140831.png)
+
+#### -Navigated to http://192.168.56.117:50000/verify as the previous webpage showed a "/verify" directory:
+
 
 ---
 
