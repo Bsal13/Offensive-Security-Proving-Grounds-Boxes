@@ -7,11 +7,9 @@
         "id": "9022170bc71cb616",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Fail (Intermediate) Linux Box/Privilege Escalation.md",
-            "mode": "source",
-            "source": false
+            "file": "Pasted Images/Pasted image 20220530131219.png"
           }
         }
       }
@@ -57,8 +55,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Privilege Escalation.md",
+                "file": "Pasted Images/Pasted image 20220530131219.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Privilege Escalation.md",
+                "file": "Pasted Images/Pasted image 20220530131219.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Privilege Escalation.md"
+                "file": "Pasted Images/Pasted image 20220530131219.png"
               }
             }
           }
@@ -131,15 +128,15 @@
   },
   "active": "9022170bc71cb616",
   "lastOpenFiles": [
-    "Fail (Intermediate) Linux Box/Enumeration.md",
-    "Fail (Intermediate) Linux Box/Privilege Escalation.md",
-    "Fail (Intermediate) Linux Box/Exploitation.md",
-    "Fail (Intermediate) Linux Box/Attack Surface.md",
-    "MeatHead (Hard) Windows Machine.md",
-    "Hetemit (Intermediate) Linux Box/Privilege Escalation Steps.md",
-    "Hetemit (Intermediate) Linux Box/Exploitation Steps.md",
-    "Hetemit (Intermediate) Linux Box/Attack Surface.md",
-    "Hetemit (Intermediate) Linux Box/Enumeration.md",
-    "Images/Pasted image 20221015185953.png"
+    "Pasted Images/Pasted image 20220510190123.png",
+    "Pasted Images/Pasted image 20220510190002.png",
+    "Pasted Images/Pasted image 20220510185841.png",
+    "Pasted Images/Pasted image 20220510185811.png",
+    "Pasted Images/Pasted image 20220510184001.png",
+    "Pasted Images/Pasted image 20220510184030.png",
+    "Pasted Images/Pasted image 20220510184344.png",
+    "Pasted Images/Pasted image 20220504004901.png",
+    "Pasted Images/Pasted image 20220504003742.png",
+    "Fail (Intermediate) Linux Box/Enumeration.md"
   ]
 }
