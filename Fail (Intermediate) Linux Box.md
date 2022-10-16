@@ -75,6 +75,10 @@ Enumerated top 200 UDP ports:
 
 #### -The directions how to find out how to do this was found on the previous website showing the following: 
 
+![](Pasted%20image%2020221015222046.png)
+
+#### -Googled "port 873 enumeration" and found the following page from hacktricks showing how to copy all files from your  local machine to the rsync server:
+
 
 
 
