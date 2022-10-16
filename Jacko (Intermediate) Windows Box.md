@@ -112,6 +112,7 @@ Nmap done: 1 IP address (1 host up) scanned in 52.99 seconds
 
 Enumerated open TCP ports:
 ```bash
+8082
 
 ```
 
