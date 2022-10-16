@@ -131,13 +131,14 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221016092139.png)
 
 ![](Pasted%20image%2020221016092235.png)
+#Fail2BanPrivilegeEscalation 
 
-
-
-
+---
 
 ## Privilege Escalation vector
 ## Fail2Ban group privelege escalation
+
+#### -Per steps above I navigated to "/etc/fail2ban/action.d" folder and typed "ls –la" and found group "fail2ban" has write priviliges on file "iptables-multiport-log.conf":
 
 
 
