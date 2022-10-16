@@ -291,8 +291,8 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Name of the technique
 ## os.system  Command Execution
+
 #### -As found from the nmap scan port 50000 is running python 3.6 I typed "os" as a module and find the following showing the existence of it running python 3.6 module:
 ![](Pasted%20image%2020221016153044.png)
 
