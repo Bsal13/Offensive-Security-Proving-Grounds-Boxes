@@ -284,7 +284,7 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to http://192.168.56.117:50000/verify as the previous webpage showed a "/verify" directory:
 
-
+![](../Pasted%20Images/Pasted%20image%2020220601140609.png)
 ---
 
 # Exploitation
