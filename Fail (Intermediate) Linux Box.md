@@ -16,7 +16,8 @@ IP: 192.168.143.126
 - Found I can upload files to user fox's home directory (found in the rsync share)
 - Created an authorized_keys file in fox's home directory so I could login via SSH session
 - Found user is part of the fail2ban group
-- Located a privilege escalation
+- Googled steps to escalate privileges with a user being part of the fail2ban group
+- Followed the privilege escalation steps and received root shell
 
 ## Improved skills
 - Locating Rsync shares
@@ -234,5 +235,7 @@ Enumerated top 200 UDP ports:
 #### -Ran a "penelope" listener on kali machine listening on port 85
 
 #### -Typed "ssh @fox192.168.236.126" and typed in random passwords just to make "fail2ban" block my IP found in the steps to escalate privileges on the aforementioned website and then received a root shell on my "penelope" listener: 
+
+![](Pasted%20image%2020221016111525.png)
 ---
 
