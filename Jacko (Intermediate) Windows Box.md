@@ -19,7 +19,7 @@ IP: 192.168.172.66
 - Downloaded a reverse shell binary from the found command execution
 - Received a shell back
 - Found SeImpersonatePrivilege was enabled on the target machine
-- Utilized printspoofer64.exe binary to escalate privileges to 
+- Utilized printspoofer64.exe binary to escalate privileges to nt authority\system
 
 ## Improved skills
 - skill 1
