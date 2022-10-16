@@ -285,7 +285,11 @@ Enumerated top 200 UDP ports:
 #### -Navigated to http://192.168.56.117:50000/verify as the previous webpage showed a "/verify" directory:
 ![](Pasted%20image%2020221016152718.png)
 
+#### -Typed "curl –X post –data "code=2*2" http://192.168.56.117:50000/verify" and found the following output showing the application performs evaluation:
+![](Pasted%20image%2020221016152913.png)
 
+#### -As found from the nmap scan port 50000 is running python 3.6 I typed "os" as a module and find the following showing the existence of it running python 3.6 module:
+![](Pasted%20image%2020221016153044.png)
 
 ---
 
