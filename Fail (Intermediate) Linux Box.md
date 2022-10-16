@@ -57,6 +57,14 @@ Enumerated top 200 UDP ports:
 
 #### -Per googling port 873 enumeration I found the below web page showing how to list files/directory from rsync server
 
+![](Pasted%20image%2020221015220950.png)
+
+![](Pasted%20image%2020221015221123.png)
+
+#### -Typed "rsync -r 192.168.143.126::fox " and found the below files/directories showing user "fox" home directory and then downloaded all files/directories onto local machine by typing "rsync -av fox@192.168.143.126::fox/ ."
+
+![](Pasted%20image%2020221015221356.png)
+
 
 
 
