@@ -12,7 +12,7 @@ IP: 192.168.172.66
 
 
 # Resolution summary
-- Text
+- Navigated to target ip via port 8082
 - Text
 
 ## Improved skills
