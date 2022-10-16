@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Fail (Intermediate) Linux Box/Privilege Escalation.md",
-            "mode": "source",
+            "file": "Fail (Intermediate) Linux Box.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Privilege Escalation.md",
+                "file": "Fail (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Privilege Escalation.md",
+                "file": "Fail (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Privilege Escalation.md"
+                "file": "Fail (Intermediate) Linux Box.md"
               }
             }
           }
@@ -130,10 +130,10 @@
   },
   "active": "9022170bc71cb616",
   "lastOpenFiles": [
+    "Fail (Intermediate) Linux Box/Privilege Escalation.md",
+    "Fail (Intermediate) Linux Box.md",
     "Fail (Intermediate) Linux Box/Exploitation.md",
     "Pasted image 20221015220513.png",
-    "Fail (Intermediate) Linux Box.md",
-    "Fail (Intermediate) Linux Box/Privilege Escalation.md",
     "Fail (Intermediate) Linux Box/Enumeration.md",
     "Nibbles (Intermediate) Linux Box/Enumeration.md",
     "Nibbles (Intermediate) Linux Box/Exploitation.md",
