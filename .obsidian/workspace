@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Fail (Intermediate) Linux Box/Enumeration.md",
+            "file": "Fail (Intermediate) Linux Box.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Enumeration.md",
+                "file": "Fail (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Enumeration.md",
+                "file": "Fail (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fail (Intermediate) Linux Box/Enumeration.md"
+                "file": "Fail (Intermediate) Linux Box.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "9022170bc71cb616",
   "lastOpenFiles": [
+    "MeatHead (Hard) Windows Machine.md",
+    "Fail (Intermediate) Linux Box.md",
+    "Fail (Intermediate) Linux Box/Enumeration.md",
     "Fail (Intermediate) Linux Box/Attack Surface.md",
     "Pasted Images/Pasted image 20220530131219.png",
     "Pasted Images/Pasted image 20220510190123.png",
     "Pasted Images/Pasted image 20220510190002.png",
     "Pasted Images/Pasted image 20220510185841.png",
     "Pasted Images/Pasted image 20220510185811.png",
-    "Pasted Images/Pasted image 20220510184001.png",
-    "Pasted Images/Pasted image 20220510184030.png",
-    "Pasted Images/Pasted image 20220510184344.png",
-    "Pasted Images/Pasted image 20220504004901.png"
+    "Pasted Images/Pasted image 20220510184001.png"
   ]
 }
