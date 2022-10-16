@@ -3,7 +3,7 @@ Alias: Jacko
 Date: 6/30/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags:
+Tags: #H2Database1.4.199-JNICodeExecution 
 Status: Finished
 IP: 192.168.172.66 
 ---
@@ -22,7 +22,7 @@ IP: 192.168.172.66
 - Utilized printspoofer64.exe binary to escalate privileges to nt authority\system
 
 ## Improved skills
-- skill 1
+- ski
 - skill 2
 
 ## Used tools
