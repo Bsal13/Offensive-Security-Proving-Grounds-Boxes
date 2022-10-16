@@ -15,7 +15,8 @@ IP: 192.168.143.126
 - Located Rsync share
 - Found I can upload files to user fox's home directory (found in the rsync share)
 - Created an authorized_keys file in fox's home directory so I could login via SSH session
-- 
+- Found user is part of the fail2ban group
+- Located a privilege escalation
 
 ## Improved skills
 - Locating Rsync shares
