@@ -5,10 +5,10 @@ Platform: Linux
 Difficulty: Intermediate
 Tags:
 Status: Finished
-IP: 
+IP: 192.168.56.117
 ---
 
-# {{title}}
+# {{Hetemit}}
 
 
 # Resolution summary
@@ -21,7 +21,7 @@ IP:
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
 
 ---
 
@@ -277,7 +277,8 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
+## Port 5000 Werkzeug httpd 1.0.1
+
 #### -Per the nmap scan I navigated to http://192.168.56.117:50000 and found the following webpage:
 
 ![](Pasted%20image%2020221016140831.png)
@@ -347,16 +348,13 @@ WantedBy=multi-user.target
 
 ![](Pasted%20image%2020221016185352.png)
 
-#### - Downloaded a reverse shell named "reverse.sh" in the "/home/cmeeks/restjson_hetemit"
+#### - Downloaded a reverse shell named "reverse.sh" in the "/home/cmeeks/restjson_hetemit/" directory
+
 #### -As "services" require to be restarted/system reboot to refresh whatever changes I made to the service app I typed "sudo /sbin/reboot" and system was rebooted
 
 #### -I then got another reverse listener set up with port 1800 and received a root shell:
 
-
+![](Pasted%20image%2020221016193909.png)
 
 ---
 
-# Trophy & Loot
-user.txt
-
-root.txt
