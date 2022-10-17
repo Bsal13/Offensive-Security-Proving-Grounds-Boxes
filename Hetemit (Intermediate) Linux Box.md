@@ -347,6 +347,10 @@ WantedBy=multi-user.target
 
 ![](Pasted%20image%2020221016185352.png)
 
+#### -As "services" require to be restarted/system reboot to refresh whatever changes I made to the service app I typed "sudo /sbin/reboot" and system was rebooted
+
+#### -I then got another reverse listener set up with port 1800 and received a root shell:
+
 
 
 ---
