@@ -322,7 +322,28 @@ User cmeeks may run the following commands on hetemit:
 ![](Pasted%20image%2020221016173419.png)
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Modifiable pythonapp.service
+
+#### -Typed vi "/etc/systemd/system/pythonapp.service" and found the following:
+
+[Unit]
+Description=Python App
+After=network-online.target
+ 
+[Service]
+Type=simple
+WorkingDirectory=/home/cmeeks/restjson_hetemit
+ExecStart=flask run -h 0.0.0.0 -p 50000
+TimeoutSec=30
+RestartSec=15s
+User=cmeeks
+ExecReload=/bin/kill -USR1 $MAINPID
+Restart=on-failure
+ 
+[Install]
+WantedBy=multi-user.target
+
+#### -Modified the ExecStart and User lines, and removed the WorkingDirectory= line:
 
 ---
 
