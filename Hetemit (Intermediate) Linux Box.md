@@ -12,7 +12,8 @@ IP: 192.168.56.117
 
 
 # Resolution summary
-- Text
+- Found an application that performs evaluation on port 50000
+- 
 - Text
 
 ## Improved skills
@@ -277,7 +278,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 5000 Werkzeug httpd 1.0.1
+## Port 50000 Werkzeug httpd 1.0.1
 
 #### -Per the nmap scan I navigated to http://192.168.56.117:50000 and found the following webpage:
 
