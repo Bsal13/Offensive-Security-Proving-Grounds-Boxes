@@ -3,7 +3,7 @@ Alias: Hetemit
 Date: 7/18.2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #os.systemCommandExecution
 Status: Finished
 IP: 192.168.56.117
 ---
@@ -20,7 +20,7 @@ IP: 192.168.56.117
 
 ## Improved skills
 - Learned curl -X POST --data option "code= " option
-- os.system comman
+- os.system commands
 - skill 2
 
 ## Used tools
