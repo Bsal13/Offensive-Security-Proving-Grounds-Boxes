@@ -45,7 +45,10 @@ Enumerated top 200 UDP ports:
 
 # Enumeration
 ## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Navigated to http://192.168.143.125:8080 and found the following web page and clicked on a link of a user's hauiku on the web page and right clicked and clicked "view page source" and found it had directory "/api"
+
+![](Pasted%20image%2020221016220003.png)
 
 ---
 
