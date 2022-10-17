@@ -345,6 +345,10 @@ WantedBy=multi-user.target
 
 #### -Modified the ExecStart and User lines, and removed the WorkingDirectory= line:
 
+![](Pasted%20image%2020221016185352.png)
+
+
+
 ---
 
 # Trophy & Loot
