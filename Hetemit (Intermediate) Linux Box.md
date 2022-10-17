@@ -17,7 +17,8 @@ IP: 192.168.56.117
 - Text
 
 ## Improved skills
-- skill 1
+- Learned curl -X POST --data option "code= " option
+- 
 - skill 2
 
 ## Used tools
@@ -287,7 +288,7 @@ Enumerated top 200 UDP ports:
 #### -Navigated to http://192.168.56.117:50000/verify as the previous webpage showed a "/verify" directory:
 ![](Pasted%20image%2020221016152718.png)
 
-#### -Typed "curl –X post –data "code=2*2" http://192.168.56.117:50000/verify" and found the following output showing the application performs evaluation:
+#### -Typed "curl –X post –-data "code=2*2" http://192.168.56.117:50000/verify" and found the following output showing the application performs evaluation:
 ![](Pasted%20image%2020221016152913.png)
 
 ---
