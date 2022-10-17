@@ -1,6 +1,6 @@
 ---
 Alias: Hunit
-Date: {{date}}
+Date: 6/1/2022
 Platform: Linux
 Difficulty: Intermediate
 Tags:

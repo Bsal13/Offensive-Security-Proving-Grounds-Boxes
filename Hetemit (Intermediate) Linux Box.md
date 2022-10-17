@@ -1,6 +1,6 @@
 ---
 Alias: Hetemit
-Date: 7/18.2022
+Date: 7/18/2022
 Platform: Linux
 Difficulty: Intermediate
 Tags: #os.systemCommandExecution #sudo/sbin/reboot

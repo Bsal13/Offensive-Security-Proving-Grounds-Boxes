@@ -130,15 +130,15 @@
   },
   "active": "9022170bc71cb616",
   "lastOpenFiles": [
-    "Hunit (Intermediate)  Linux Box/Privilege Escalation.md",
-    "Hunit (Intermediate)  Linux Box/Exploitation.md",
     "Hunit (Intermediate)  Linux Box/Enumeration.md",
+    "Hunit (Intermediate) Linux Box.md",
     "Hunit (Intermediate)  Linux Box/Attack Surface.md",
-    "Images/Pasted image 20221016195553.png",
-    "Images/Pasted image 20221016140831.png",
+    "Hunit (Intermediate)  Linux Box/Privilege Escalation.md",
     "Hetemit (Intermediate) Linux Box.md",
-    "Hetemit (Intermediate) Linux Box/Privilege Escalation Steps.md",
-    "Hetemit (Intermediate) Linux Box/Exploitation Steps.md",
-    "Hetemit (Intermediate) Linux Box/Enumeration.md"
+    "Heist (Hard) Windows Active Directory Box.md",
+    "Fail (Intermediate) Linux Box.md",
+    "Hunit (Intermediate)  Linux Box/Exploitation.md",
+    "Images/Pasted image 20221016195553.png",
+    "Images/Pasted image 20221016140831.png"
   ]
 }
