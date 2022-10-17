@@ -16,13 +16,12 @@ IP: 192.168.56.117
 -  Typed curl -X post --data "code=os" to confirm if the application was running python as the nmap showed it was
 - Ran an os.system netcat command to from curl and received a reverse shell
 - Found a pythonapp.service was writable by our user
-- 
-- Text
+- Modified the pythonapp.service to start a reverse shell as root and received a root shell
+
 
 ## Improved skills
 - Learned curl -X POST --data option "code= " option
 - os.system commands
-- skill 2
 
 ## Used tools
 - nmap
@@ -271,7 +270,7 @@ Nmap done: 1 IP address (1 host up) scanned in 227.76 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+50000
 ```
 
 Enumerated top 200 UDP ports:
