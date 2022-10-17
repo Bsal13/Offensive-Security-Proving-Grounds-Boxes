@@ -15,6 +15,7 @@ IP: 192.168.56.117
 - Found an application that performs evaluation on port 50000
 -  Typed curl -X post --data "code=os" to confirm if the application was running python as the nmap showed it was
 - Ran an os.system netcat command to from curl and received a reverse shell
+- Found a pythonapp.service was writable by our user
 - 
 - Text
 
