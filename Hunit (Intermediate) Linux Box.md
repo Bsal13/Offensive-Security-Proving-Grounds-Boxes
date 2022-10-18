@@ -89,6 +89,14 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221017180046.png)
 
+#### -Set up git identity by typing git config --global user.name "dademola" AND git config --global user.email "dademola@hunit.(none)"
+
+![](Pasted%20image%2020221017180308.png)
+
+#### -Typed "echo "touch /tmp/gitscript-test" >> backups.sh" and "chmod +x backups.sh" to inject a test instruction into the "backups.sh" file and to make it executable:
+
+![](Pasted%20image%2020221017180606.png)
+
 
 
 ## Privilege Escalation vector
