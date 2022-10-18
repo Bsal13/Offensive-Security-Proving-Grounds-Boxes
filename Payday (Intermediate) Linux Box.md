@@ -20,8 +20,7 @@ IP: 192.168.170.39
 - Found we were able to read /etc/passwd
 - Found username and guessed password to login via SSH session
 - Found user can run sudo with any command
-- Escalated privileges by running us 
-- Text
+- Escalated privileges by running su root and received a root shell
 
 ## Improved skills
 - Password guessing
@@ -220,10 +219,10 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to the admin login page and attempted to login in with credentials "test" "test" and "admin" "password" then "admin" "admin" and I was able to login: 
 
-![](Pasted%20image%2020221018124838.png)
-![](Pasted%20image%2020221018124945.png)
+![](Images/Pasted%20image%2020221018124838.png)
+![](Images/Pasted%20image%2020221018124945.png)
 
-![](Pasted%20image%2020221018125058.png)
+![](Images/Pasted%20image%2020221018125058.png)
 #CS-cart
 
 #### -I also checked the users in the cscart database and found the following users: 
@@ -234,9 +233,9 @@ customer, customer
 
 #### -Navigated to "upgrade center" and found the current version of CS-Cart it was running was "version 1.3.3": 
 
-![](Pasted%20image%2020221018125237.png)
+![](Images/Pasted%20image%2020221018125237.png)
 
-![](Pasted%20image%2020221018125326.png)
+![](Images/Pasted%20image%2020221018125326.png)
 
 ---
 
@@ -245,41 +244,41 @@ customer, customer
 
 #### -Ran "searchsploit CS-Cart" and found the following "Authenticated RCE" exploit: 
 
-![](Pasted%20image%2020221018125459.png)
+![](Images/Pasted%20image%2020221018125459.png)
 #CS-cart1.3.3AuthenticatedRCE
 #### -Googled "CS-Cart 1.3.3 Authenticated RCE Github" and found the following link and navigated to it and showed the following steps: 
 
-![](Pasted%20image%2020221018125642.png)
+![](Images/Pasted%20image%2020221018125642.png)
 
-![](Pasted%20image%2020221018125727.png)
+![](Images/Pasted%20image%2020221018125727.png)
 
 #### -Typed "locate webshells" on kali machine and found "/usr/share/webshells/php/php-reverse-shell.php" and typed cat "/usr/share/webshells/php/php-reverse-shell.php" and copied contents into a file called "reverse.phtml" and changed the "ip" and "port" number in script: 
 
-![](Pasted%20image%2020221018125837.png)
+![](Images/Pasted%20image%2020221018125837.png)
 
-![](Pasted%20image%2020221018125919.png)
+![](Images/Pasted%20image%2020221018125919.png)
 
-![](Pasted%20image%2020221018125957.png)
+![](Images/Pasted%20image%2020221018125957.png)
 
 #### -Set up a "penelope" listener on port 80
 
-![](Pasted%20image%2020221018130054.png)
+![](Images/Pasted%20image%2020221018130054.png)
 
 #### -Navigated to "template editor" as the steps previously stated to navigate to
 
-![](Pasted%20image%2020221018130158.png)
+![](Images/Pasted%20image%2020221018130158.png)
 
 #### -Uploaded file "reverse.phtml" 
 
-![](Pasted%20image%2020221018130321.png)
+![](Images/Pasted%20image%2020221018130321.png)
 
-![](Pasted%20image%2020221018130358.png)
+![](Images/Pasted%20image%2020221018130358.png)
 
 #### -Navigated to http://192.168.76.39/skins/reverse.phtml as shown in previous exploit steps other than having my file being named differently and navigated back to penelope listener and received a reverse shell: 
 
 ![](../Pasted%20Images/Pasted%20image%2020220521191124.png)
 
-![](Pasted%20image%2020221018130526.png)
+![](Images/Pasted%20image%2020221018130526.png)
 
 ---
 
@@ -304,7 +303,7 @@ I attempted to ssh with user patrick and tried password patrick
 ## Lateral Movement vector
 ## SSH'd into found username from reading /etc/passwd and password guessing
 
-![](Pasted%20image%2020221018130838.png)
+![](Images/Pasted%20image%2020221018130838.png)
 
 ---
 
@@ -312,12 +311,12 @@ I attempted to ssh with user patrick and tried password patrick
 ## Local Enumeration
 
 #### -When I typed sudo –l it showed I was able to run all commands with sudo 
-![](Pasted%20image%2020221018131128.png)
+![](Images/Pasted%20image%2020221018131128.png)
 
 
 ## Privilege Escalation vector
 ## Found user is able to run sudo for ALL commands
 
 #### -Typed "sudo su" and got a root shell: 
-![](Pasted%20image%2020221018131204.png)
+![](Images/Pasted%20image%2020221018131204.png)
 ---
