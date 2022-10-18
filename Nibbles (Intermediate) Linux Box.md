@@ -3,7 +3,7 @@ Alias: Nibbles
 Date: 5/30/22
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #PostgreSQLRCEexploit #FindSUIDprivilegeEscalation 
 Status: Finished
 IP: 192.168.236.47
 ---
@@ -16,12 +16,12 @@ IP: 192.168.236.47
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- psql tool enumeration
+- PostgreSQL default credentials finding
 
 ## Used tools
 - nmap
-- 
+- psql
 
 ---
 
@@ -123,7 +123,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 Enumerated open TCP ports:
 ```bash
-
+5437
 ```
 
 Enumerated top 200 UDP ports:
