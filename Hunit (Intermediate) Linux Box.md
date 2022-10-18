@@ -83,6 +83,12 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221017175529.png)
 
+![](Pasted%20image%2020221017175722.png)
+
+#### -Now we can review the contents of "backups.sh" file which shows as a place holder file:
+
+![](Pasted%20image%2020221017180046.png)
+
 
 
 ## Privilege Escalation vector
