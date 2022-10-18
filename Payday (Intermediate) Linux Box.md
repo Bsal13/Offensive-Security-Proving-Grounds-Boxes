@@ -5,10 +5,10 @@ Platform: Linux
 Difficulty: Intermediate
 Tags:
 Status: Finished
-IP: 
+IP: 192.168.170.39 
 ---
 
-# {{title}}
+# {{Payday}}
 
 
 # Resolution summary
@@ -206,8 +206,15 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Port 80 - Apache httpd 2.2.4
+
+#### --Found directory "/admin/login.php" via nikto scan and advises "may allow user admin accounts to be inserted without proper authentication. Attempt to log in with user 'test' password 'test' to verify."
+
+#### -Navigated to the admin login page and attempted to login in with credentials "test" "test" and "admin" "password" then "admin" "admin" and I was able to login: 
+
+![](Pasted%20image%2020221018124838.png)
+![](Pasted%20image%2020221018124945.png)
+
 
 ---
 
