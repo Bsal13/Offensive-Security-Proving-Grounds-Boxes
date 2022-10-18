@@ -13,8 +13,9 @@ IP: 192.168.236.47
 
 # Resolution summary
 - Logged into PostgreSQL with default credentials
-- Found PostgreSQL exploit and 
-- Text
+- Ran a found PostgreSQL exploit and received a shell
+- Located SUID /usr/bin/find on the target machine
+- Found "find" bin in the GTFOBINS website and went throught the steps to escalate privileges and received a root shell
 
 ## Improved skills
 - psql tool enumeration
