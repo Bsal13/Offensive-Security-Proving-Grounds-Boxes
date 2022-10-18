@@ -139,7 +139,12 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221017204550.png)
 
+#### -As found previously the "/root/git-server/backups.sh" file runs every 3 minutes I waited about 3 minutes and received a root shell on my netcat listener:
 
+![](Pasted%20image%2020221017204714.png)
+
+![](Pasted%20image%2020221017204827.png)
+#Git-serverCronTabScriptPrivilegeEscalation
 
 ## Privilege Escalation vector
 
