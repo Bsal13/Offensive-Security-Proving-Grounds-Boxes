@@ -21,6 +21,7 @@ IP:
 - Found cronjob with backups.sh file running every 3 minutes
 - Found git-server directory in SSH session 
 - Git cloned the git server in tmp directory which made us able to review the backup.sh which was a placeholder file
+- Found a user named git and found the ssh private key id_rsa file is readable and executable by user git
 - 
 - skill 2
 
