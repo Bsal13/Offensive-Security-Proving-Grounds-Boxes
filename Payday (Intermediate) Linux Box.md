@@ -255,7 +255,23 @@ customer, customer
 
 #### -Set up a "penelope" listener on port 80
 
+![](Pasted%20image%2020221018130054.png)
 
+#### -Navigated to "template editor" as the steps previously stated to navigate to
+
+![](Pasted%20image%2020221018130158.png)
+
+#### -Uploaded file "reverse.phtml" 
+
+![](Pasted%20image%2020221018130321.png)
+
+![](Pasted%20image%2020221018130358.png)
+
+#### -Navigated to http://192.168.76.39/skins/reverse.phtml as shown in previous exploit steps other than having my file being named differently and navigated back to penelope listener and received a reverse shell: 
+
+![](../Pasted%20Images/Pasted%20image%2020220521191124.png)
+
+![](Pasted%20image%2020221018130526.png)
 
 ---
 
