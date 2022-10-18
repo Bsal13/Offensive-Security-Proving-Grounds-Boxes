@@ -20,7 +20,8 @@ IP:
 - Directory showed SSH user credentials
 - Found cronjob with backups.sh file running every 3 minutes
 - Found git-server directory in SSH session 
-- Git cloned the 
+- Git cloned the git server in tmp directory which made us able to review the backup.sh which was a placeholder file
+- 
 - skill 2
 
 ## Used tools
