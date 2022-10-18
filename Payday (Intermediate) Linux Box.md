@@ -13,6 +13,14 @@ IP: 192.168.170.39
 
 # Resolution summary
 - Navigated to found admin login page 
+- Guessed credentials and logged in
+- Found webpage was running CS-Cart version 1.3.3
+- Ran searchsploit and found an authenticated RCE for the specific CS-Cart version
+- Followed the steps of the exploit and received a shell running www-data
+- Found we were able to read /etc/passwd
+- Found username and guessed password to login via SSH session
+- Found user can run sudo with any command
+- Escalated privileges by running us 
 - Text
 
 ## Improved skills
