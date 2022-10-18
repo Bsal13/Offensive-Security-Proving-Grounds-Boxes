@@ -114,6 +114,7 @@ Enumerated top 200 UDP ports:
 #### -Logged in to remote ssh session by typing "ssh -i id_rsa -p 43022 git@192.168.93.125" and found it to be a git-shell:
 
 ![](Pasted%20image%2020221017185623.png)
+#GitShell
 
 ---
 
