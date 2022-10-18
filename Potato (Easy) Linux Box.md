@@ -141,8 +141,17 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Port 80 - Apache httpd 2.4.41 ((Ubuntu))
+
+#### -My initial NMAP scan only showed port 22 and 80 open. I was unable to locate anything useful on webpage and robots.txt didn't show anything:
+
+![](Pasted%20image%2020221018163833.png)
+
+![](Pasted%20image%2020221018163902.png)
+
+#### -Ran gobuster scan and only found directory "/admin". Navigated to the admin directory and found the following login web page and attempted to input default like credentials but nothing worked: 
+
+
 
 ---
 
