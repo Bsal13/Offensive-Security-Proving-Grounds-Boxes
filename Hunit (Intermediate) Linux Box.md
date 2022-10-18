@@ -18,8 +18,9 @@ IP:
 ## Improved skills
 - Located a directory listed in webpage source code
 - Directory showed SSH user credentials
-- Found cronjob running every 2-3 minutes
-- 
+- Found cronjob with backups.sh file running every 3 minutes
+- Found git-server directory in SSH session 
+- Git cloned the 
 - skill 2
 
 ## Used tools
