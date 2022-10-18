@@ -12,7 +12,8 @@ IP: 192.168.236.47
 
 
 # Resolution summary
-- Logged into PostgreSQL
+- Logged into PostgreSQL with default credentials
+- Found PostgreSQL exploit and 
 - Text
 
 ## Improved skills
