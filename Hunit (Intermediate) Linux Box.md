@@ -109,7 +109,11 @@ Enumerated top 200 UDP ports:
 
 #### -Navigate to my kali machine and typed "scp -P 43022 dademola@192.168.93.125:/home/git/.ssh/id_rsa ." to upload the private ssh key to my kali machine and "chmod 600" to set the correct permissions:
 
+![](Pasted%20image%2020221017185135.png)
 
+#### -Logged in to remote ssh session by typing "ssh -i id_rsa -p 43022 git@192.168.93.125" and found it to be a git-shell:
+
+![](Pasted%20image%2020221017185623.png)
 
 ---
 
