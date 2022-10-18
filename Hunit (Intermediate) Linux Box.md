@@ -97,6 +97,14 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221017180606.png)
 
+#### -But after receiving an error when trying to push the file onto the git-server and further investigation the server is owned by user "git":
+
+#### -Found a user named "git" and found we have read and execute permissions on their ssh "id_rsa" file which is a private SSH Key:
+
+![](Pasted%20image%2020221017180818.png)
+
+![](Pasted%20image%2020221017180904.png)
+
 
 
 ## Privilege Escalation vector
