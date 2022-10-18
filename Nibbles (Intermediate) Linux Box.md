@@ -1,6 +1,6 @@
 ---
 Alias: Nibbles
-Date: {{date}}
+Date: 5/30/22
 Platform: Linux
 Difficulty: Intermediate
 Tags:
@@ -8,7 +8,7 @@ Status: Finished
 IP: 192.168.236.47
 ---
 
-# {{title}}
+# {{Nibbles}}
 
 
 # Resolution summary
@@ -21,7 +21,7 @@ IP: 192.168.236.47
 
 ## Used tools
 - nmap
-- gobuster
+- 
 
 ---
 
