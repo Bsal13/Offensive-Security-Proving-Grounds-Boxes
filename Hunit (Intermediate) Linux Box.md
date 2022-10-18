@@ -30,7 +30,7 @@ IP: 192.168.127.125
 - Modifying cron jobs
 
 ## Used tools
-- nmap
+- Linpeas
 
 ---
 
