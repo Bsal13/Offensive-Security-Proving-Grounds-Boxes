@@ -24,7 +24,10 @@ IP:
 - Prior to pushing the changes to master brang setup a netcat listener
 - Pushed the changes and as the cronjob/backup.sh file runs every 3 minutes I waited and recieved a reverse shell as root in 3 minutes
 ## Improved skills
-- Finding hidden dire
+- Finding hidden directory on web page source code
+- Git cloning server to kali and modifying files and pushing changes
+- Git-shell commands
+- Modifying cron jobs
 
 ## Used tools
 - nmap
@@ -52,7 +55,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 8080 - HTTP 
+## Port 8080  
 
 #### -Navigated to http://192.168.143.125:8080 and found the following web page and clicked on a link of a user's hauiku on the web page and right clicked and clicked "view page source" and found it had directory "/api"
 
