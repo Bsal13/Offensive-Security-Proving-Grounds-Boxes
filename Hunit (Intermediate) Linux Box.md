@@ -22,7 +22,7 @@ IP:
 - Found git-server directory in SSH session 
 - Git cloned the git server in tmp directory which made us able to review the backup.sh which was a placeholder file
 - Found a user named git and found the ssh private key id_rsa file is readable and executable by user git
-- 
+- Logged in with user git and found ssh private key and found it to be a git-shell
 - skill 2
 
 ## Used tools
@@ -115,6 +115,9 @@ Enumerated top 200 UDP ports:
 #### -Navigate to my kali machine and typed "scp -P 43022 dademola@192.168.93.125:/home/git/.ssh/id_rsa ." to upload the private ssh key to my kali machine and "chmod 600" to set the correct permissions:
 
 ![](Pasted%20image%2020221017185135.png)
+
+## Lateral Movement vector
+## Found private ssh key for user in SSH session
 
 #### -Logged in to remote ssh session by typing "ssh -i id_rsa -p 43022 git@192.168.93.125" and found it to be a git-shell:
 
