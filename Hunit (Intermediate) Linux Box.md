@@ -105,7 +105,7 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221017180904.png)
 
-#### -Navigate to my kali machine and typed "scp -P 43022 dademola@192.168.93.125:/home/git/.ssh/id_rsa ." to upload the private ssh key to my kali machine and "chmod 600" to set the correct permissions:
+
 
 
 
