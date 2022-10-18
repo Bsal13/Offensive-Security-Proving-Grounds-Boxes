@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Potato (Easy) Linux Box/Privilege Escalation.md",
+            "file": "Potato (Easy) Linux Box/Attack Surface.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Potato (Easy) Linux Box/Privilege Escalation.md",
+                "file": "Potato (Easy) Linux Box/Attack Surface.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Potato (Easy) Linux Box/Privilege Escalation.md",
+                "file": "Potato (Easy) Linux Box/Attack Surface.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Potato (Easy) Linux Box/Privilege Escalation.md"
+                "file": "Potato (Easy) Linux Box/Attack Surface.md"
               }
             }
           }
@@ -130,6 +130,8 @@
   },
   "active": "e6520ea988619da1",
   "lastOpenFiles": [
+    "Potato (Easy) Linux Box.md",
+    "Potato (Easy) Linux Box/Privilege Escalation.md",
     "Potato (Easy) Linux Box/Exploitation.md",
     "Potato (Easy) Linux Box/Enumeration.md",
     "Payday (Intermediate) Linux Box.md",
@@ -137,8 +139,6 @@
     "Payday (Intermediate) Linux Box/Exploitation.md",
     "Payday (Intermediate) Linux Box/Privilege Escalation.md",
     "Payday (Intermediate) Linux Box/Enumeration.md",
-    "Payday (Intermediate) Linux Box/Attack Surface.md",
-    "Shakabra (Easy) Linux Box/Exploitation.md",
-    "Images/Pasted image 20221018112651.png"
+    "Payday (Intermediate) Linux Box/Attack Surface.md"
   ]
 }
