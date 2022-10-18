@@ -3,7 +3,7 @@ Alias: Payday
 Date: 5/22/22
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #CS-cart
 Status: Finished
 IP: 192.168.170.39 
 ---
@@ -215,12 +215,30 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018124838.png)
 ![](Pasted%20image%2020221018124945.png)
 
+![](Pasted%20image%2020221018125058.png)
+#CS-cart
+
+#### -I also checked the users in the cscart database and found the following users: 
+
+admin, admin 
+
+customer, customer 
+
+#### -Navigated to "upgrade center" and found the current version of CS-Cart it was running was "version 1.3.3": 
+
+![](Pasted%20image%2020221018125237.png)
+
+![](Pasted%20image%2020221018125326.png)
 
 ---
 
 # Exploitation
-## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## CS-Cart 1.3.3 Authenticated Remote Command Execution exploit
+
+#### -Ran "searchsploit CS-Cart" and found the following "Authenticated RCE" exploit: 
+
+![](Pasted%20image%2020221018125459.png)
+
 
 
 ---
