@@ -147,13 +147,20 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Name of the technique
+## PostgreSQL Remote Code Execution
 
 #### -Googled postgresql reverse shell 11.7 github" and found the following webpage/script:
 ![](Pasted%20image%2020221018105717.png)
 ![](Pasted%20image%2020221018105824.png)
+#PostgreSQLRCEexploit 
 
+#### -Git cloned the code/script onto my kali machine and opened up the script in vim and modified script to have the remote ip/port and local ip/port
 
+#### -Ran the script and setup a "penelope" listener running on port 80 as I know port 80 is open on the remote machine and received a reverse shell:
+
+![](Pasted%20image%2020221018111232.png)
+
+![](Pasted%20image%2020221018111311.png)
 
 ---
 
