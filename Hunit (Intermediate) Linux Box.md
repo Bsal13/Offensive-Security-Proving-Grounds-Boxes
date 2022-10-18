@@ -12,10 +12,6 @@ IP:
 
 
 # Resolution summary
-- Text
-- Text
-
-## Improved skills
 - Located a directory listed in webpage source code
 - Directory showed SSH user credentials
 - Found cronjob with backups.sh file running every 3 minutes
@@ -23,7 +19,12 @@ IP:
 - Git cloned the git server in tmp directory which made us able to review the backup.sh which was a placeholder file
 - Found a user named git and found the ssh private key id_rsa file is readable and executable by user git
 - Logged in with user git and found ssh private key and found it to be a git-shell
-- skill 2
+- Git cloned the server onto kali machine
+- Modified the backup.sh file and input a reverse shell into the backup.sh file
+- Prior to pushing the changes to master brang setup a netcat listener
+- Pushed the changes and as the cronjob/backup.sh file runs every 3 minutes I waited and recieved a reverse shell as root in 3 minutes
+## Improved skills
+- Finding hidden dire
 
 ## Used tools
 - nmap
