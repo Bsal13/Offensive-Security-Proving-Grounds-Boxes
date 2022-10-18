@@ -12,7 +12,7 @@ IP: 192.168.236.47
 
 
 # Resolution summary
-- Text
+- Logged into PostgreSQL
 - Text
 
 ## Improved skills
