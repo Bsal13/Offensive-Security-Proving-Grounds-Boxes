@@ -13,7 +13,8 @@ IP:
 
 # Resolution summary
 - Found admin login page from gobuster scan
-- Text
+- Found we were able to login to ftp port 2112 anonymously
+- 
 
 ## Improved skills
 - skill 1
@@ -161,6 +162,14 @@ Enumerated top 200 UDP ports:
 ## Port 2112 - ProFTPD
 
 #### -Ran a general NMAP scan to scan all ports showing services and versions and found port "2112" (which is an FTP server) and shows we can connect anonymously and found file "index.php.bak": Navigated into FTP server with user anonymous and no password for password:
+
+![](Pasted%20image%2020221018164658.png)
+![](Pasted%20image%2020221018164838.png)
+
+#### -Downloaded file "index.php.bak" using "mget" command onto my kali machine: 
+
+![](Pasted%20image%2020221018164938.png)
+
 
 
 ---
