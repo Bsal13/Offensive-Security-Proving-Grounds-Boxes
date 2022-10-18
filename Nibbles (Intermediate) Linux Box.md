@@ -142,7 +142,7 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "psql -h 192.168.143.47 -p 5437 -U postgres" and logged into the postgres server with user "postgres" and password "postgres" and found it was running version "11.7" which was also found in the nmap scan:
 
-
+![](Pasted%20image%2020221018104720.png)
 
 ---
 
