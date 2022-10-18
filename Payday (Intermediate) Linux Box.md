@@ -3,7 +3,7 @@ Alias: Payday
 Date: 5/22/22
 Platform: Linux
 Difficulty: Intermediate
-Tags: #CS-cart
+Tags: #CS-cart1.3.3AuthenticatedRCE
 Status: Finished
 IP: 192.168.170.39 
 ---
@@ -238,7 +238,7 @@ customer, customer
 #### -Ran "searchsploit CS-Cart" and found the following "Authenticated RCE" exploit: 
 
 ![](Pasted%20image%2020221018125459.png)
-
+#CS-cart1.3.3AuthenticatedRCE
 #### -Googled "CS-Cart 1.3.3 Authenticated RCE Github" and found the following link and navigated to it and showed the following steps: 
 
 ![](Pasted%20image%2020221018125642.png)
@@ -304,10 +304,12 @@ I attempted to ssh with user patrick and tried password patrick
 ## Local Enumeration
 
 #### -When I typed sudo –l it showed I was able to run all commands with sudo 
-
+![](Pasted%20image%2020221018131128.png)
 
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Found user is able to run sudo for ALL commands
 
+#### -Typed "sudo su" and got a root shell: 
+![](Pasted%20image%2020221018131204.png)
 ---
