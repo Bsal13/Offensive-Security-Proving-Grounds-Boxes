@@ -116,6 +116,9 @@ Enumerated top 200 UDP ports:
 
 #### -Since this is a git-shell we should be able to interact with the git repository
 
+## Privilege Escalation vector
+## Git-shell cron tab privilege escalation
+
 #### -Typed "GIT_SSH_COMMAND='ssh -i id_rsa -p 43022' git clone git@192.168.93.125:/git-server" to clone git server onto my kali machine:
 
 ![](Pasted%20image%2020221017191609.png)
@@ -145,10 +148,6 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221017204827.png)
 #Git-serverCronTabScriptPrivilegeEscalation
-
-## Privilege Escalation vector
-
-
 
 ---
 
