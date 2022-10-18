@@ -131,6 +131,14 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221017204016.png)
 ![](Pasted%20image%2020221017204123.png)
 
+#### -Prior to pushing the master branch to the git-server to place the reverse shell onto the git-server I started a netcat listener listening on port 8080 on my kali machine:
+
+![](Pasted%20image%2020221017204330.png)
+
+#### -Then typed "GIT_SSH_COMMAND='ssh -i /home/kali/Downloads/ProvingGroundsBoxes/Hunit/id_rsa -p 43022' git push origin master" to push everything to the master branch on git-server onto remote machine:
+
+![](Pasted%20image%2020221017204550.png)
+
 
 
 ## Privilege Escalation vector
