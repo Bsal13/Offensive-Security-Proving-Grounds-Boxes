@@ -135,7 +135,14 @@ Enumerated top 200 UDP ports:
 
 # Enumeration
 ## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Found the following webpage when googled "list of postgesql usernames and passwords":
+
+![](Pasted%20image%2020221018104257.png)
+
+#### -Typed "psql -h 192.168.143.47 -p 5437 -U postgres" and logged into the postgres server with user "postgres" and password "postgres" and found it was running version "11.7" which was also found in the nmap scan:
+
+
 
 ---
 
