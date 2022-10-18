@@ -12,7 +12,7 @@ IP:
 
 
 # Resolution summary
-- Text
+- Found admin login page from gobuster scan
 - Text
 
 ## Improved skills
@@ -22,6 +22,7 @@ IP:
 ## Used tools
 - nmap
 - gobuster
+- rustscan
 
 ---
 
@@ -130,7 +131,9 @@ Nmap done: 1 IP address (1 host up) scanned in 69.29 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+80
+22
+2112
 ```
 
 Enumerated top 200 UDP ports:
@@ -151,6 +154,13 @@ Enumerated top 200 UDP ports:
 
 #### -Ran gobuster scan and only found directory "/admin". Navigated to the admin directory and found the following login web page and attempted to input default like credentials but nothing worked: 
 
+![](Pasted%20image%2020221018164122.png)
+
+![](Pasted%20image%2020221018164331.png)
+
+## Port 2112 - ProFTPD
+
+#### -Ran a general NMAP scan to scan all ports showing services and versions and found port "2112" (which is an FTP server) and shows we can connect anonymously and found file "index.php.bak": Navigated into FTP server with user anonymous and no password for password:
 
 
 ---

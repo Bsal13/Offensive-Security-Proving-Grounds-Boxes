@@ -202,7 +202,8 @@ Nmap done: 1 IP address (1 host up) scanned in 43.06 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+80
+22
 ```
 
 Enumerated top 200 UDP ports:
