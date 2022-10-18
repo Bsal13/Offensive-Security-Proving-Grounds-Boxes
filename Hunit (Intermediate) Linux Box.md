@@ -49,6 +49,13 @@ Enumerated top 200 UDP ports:
 #### -Navigated to http://192.168.143.125:8080 and found the following web page and clicked on a link of a user's hauiku on the web page and right clicked and clicked "view page source" and found it had directory "/api"
 
 ![](Pasted%20image%2020221016220003.png)
+![](Pasted%20image%2020221017173943.png)
+
+#### -Navigated to "/api" directory and found the following and clicked "raw data" and found  directory "/user":
+
+![](Pasted%20image%2020221017174047.png)
+
+
 
 ---
 
