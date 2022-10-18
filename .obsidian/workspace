@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Hunit (Intermediate)  Linux Box/Privilege Escalation.md",
+            "file": "Hunit (Intermediate) Linux Box.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hunit (Intermediate)  Linux Box/Privilege Escalation.md",
+                "file": "Hunit (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hunit (Intermediate)  Linux Box/Privilege Escalation.md",
+                "file": "Hunit (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hunit (Intermediate)  Linux Box/Privilege Escalation.md"
+                "file": "Hunit (Intermediate) Linux Box.md"
               }
             }
           }
@@ -130,11 +130,11 @@
   },
   "active": "9022170bc71cb616",
   "lastOpenFiles": [
+    "Hunit (Intermediate)  Linux Box/Privilege Escalation.md",
     "Hunit (Intermediate)  Linux Box/Attack Surface.md",
     "Hunit (Intermediate)  Linux Box/Exploitation.md",
     "Images/Pasted image 20221016220003.png",
     "Hunit (Intermediate) Linux Box.md",
-    "Hunit (Intermediate)  Linux Box/Privilege Escalation.md",
     "Heist (Hard) Windows Active Directory Box.md",
     "Hetemit (Intermediate) Linux Box.md",
     "Hunit (Intermediate)  Linux Box/Enumeration.md",

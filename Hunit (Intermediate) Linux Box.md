@@ -3,9 +3,9 @@ Alias: Hunit
 Date: 6/1/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #GitShell #CronTabScriptPrivilegeEscalation
 Status: Finished
-IP: 
+IP: 192.168.127.125
 ---
 
 # {{Hunit}}
