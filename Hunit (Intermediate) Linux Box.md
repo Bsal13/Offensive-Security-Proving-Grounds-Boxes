@@ -31,7 +31,6 @@ IP: 192.168.127.125
 
 ## Used tools
 - nmap
-- gobuster
 
 ---
 
@@ -165,7 +164,3 @@ Enumerated top 200 UDP ports:
 
 ---
 
-# Trophy & Loot
-user.txt
-
-root.txt
