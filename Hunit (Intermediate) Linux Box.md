@@ -55,13 +55,20 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221017174047.png)
 
+![](Pasted%20image%2020221017174142.png)
 
+#### -Navigated to directory "/user" and found user login "dademola" listed as an admin:
+
+![](Pasted%20image%2020221017174304.png)
 
 ---
 
 # Exploitation
-## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Located user credentials in directory shown in websites source code
+
+#### -As port 43022 was found earlier running on SSH I typed the following to login to ssh session with the found credentials above "ssh –p 43022 dademola@192.168.143.125" with password "ExplainSlowQuest110" and received shell:
+
+![](Pasted%20image%2020221017174428.png)
 
 ---
 
