@@ -3,7 +3,7 @@ Alias: Payday
 Date: 5/22/22
 Platform: Linux
 Difficulty: Intermediate
-Tags: #CS-cart1.3.3AuthenticatedRCE
+Tags: #CS-cart1.3.3AuthenticatedRCE #Sudo(ALL)PrivilegeEscalation
 Status: Finished
 IP: 192.168.170.39 
 ---
@@ -12,11 +12,11 @@ IP: 192.168.170.39
 
 
 # Resolution summary
-- Text
+- Navigated to found admin login page 
 - Text
 
 ## Improved skills
-- skill 1
+- Password guessing
 - skill 2
 
 ## Used tools
