@@ -140,11 +140,11 @@ Enumerated top 200 UDP ports:
 
 #### -Found the following webpage when googled "list of postgesql usernames and passwords":
 
-![](Pasted%20image%2020221018104257.png)
+![](Images/Pasted%20image%2020221018104257.png)
 
 #### -Typed "psql -h 192.168.143.47 -p 5437 -U postgres" and logged into the postgres server with user "postgres" and password "postgres" and found it was running version "11.7" which was also found in the nmap scan:
 
-![](Pasted%20image%2020221018104720.png)
+![](Images/Pasted%20image%2020221018104720.png)
 
 ---
 
@@ -152,17 +152,17 @@ Enumerated top 200 UDP ports:
 ## PostgreSQL Remote Code Execution
 
 #### -Googled postgresql reverse shell 11.7 github" and found the following webpage/script:
-![](Pasted%20image%2020221018105717.png)
-![](Pasted%20image%2020221018105824.png)
+![](Images/Pasted%20image%2020221018105717.png)
+![](Images/Pasted%20image%2020221018105824.png)
 #PostgreSQLRCEexploit 
 
 #### -Git cloned the code/script onto my kali machine and opened up the script in vim and modified script to have the remote ip/port and local ip/port
 
 #### -Ran the script and setup a "penelope" listener running on port 80 as I know port 80 is open on the remote machine and received a reverse shell:
 
-![](Pasted%20image%2020221018111232.png)
+![](Images/Pasted%20image%2020221018111232.png)
 
-![](Pasted%20image%2020221018111311.png)
+![](Images/Pasted%20image%2020221018111311.png)
 
 ---
 
@@ -175,15 +175,15 @@ Enumerated top 200 UDP ports:
 
 #### -Found the following when running the above command searching for SUID files:
 
-![](Pasted%20image%2020221018112111.png)
+![](Images/Pasted%20image%2020221018112111.png)
 
 ## Privilege Escalation vector
 ## Find SUID Privilege Escalation
 
 #### -Found "find" bin in the GTFOBINS website and found the following command to run when "find" is running as SUID:
-![](Pasted%20image%2020221018112250.png)
+![](Images/Pasted%20image%2020221018112250.png)
 #FindSUIDprivilegeEscalation 
 
-![](Pasted%20image%2020221018112651.png)
+![](Images/Pasted%20image%2020221018112651.png)
 ---
 
