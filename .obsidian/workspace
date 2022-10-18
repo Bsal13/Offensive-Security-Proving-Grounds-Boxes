@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Nibbles (Intermediate) Linux Box/Privilege Escalation.md",
+            "file": "Nibbles (Intermediate) Linux Box.md",
             "mode": "source",
             "source": false
           }
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Nibbles (Intermediate) Linux Box/Privilege Escalation.md",
+                "file": "Nibbles (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Nibbles (Intermediate) Linux Box/Privilege Escalation.md",
+                "file": "Nibbles (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Nibbles (Intermediate) Linux Box/Privilege Escalation.md"
+                "file": "Nibbles (Intermediate) Linux Box.md"
               }
             }
           }
@@ -129,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7c7e82a3023b528f",
+  "active": "9022170bc71cb616",
   "lastOpenFiles": [
-    "Nibbles (Intermediate) Linux Box.md",
     "Nibbles (Intermediate) Linux Box/Privilege Escalation.md",
+    "Nibbles (Intermediate) Linux Box.md",
+    "Pasted image 20221018104720.png",
     "Nibbles (Intermediate) Linux Box/Exploitation.md",
     "Nibbles (Intermediate) Linux Box/Enumeration.md",
     "Nibbles (Intermediate) Linux Box/Attack Surface.md",
     "Hunit (Intermediate) Linux Box.md",
     "Hunit (Intermediate)  Linux Box/Privilege Escalation.md",
     "Hunit (Intermediate)  Linux Box/Attack Surface.md",
-    "Hunit (Intermediate)  Linux Box/Exploitation.md",
-    "Images/Pasted image 20221016220003.png"
+    "Hunit (Intermediate)  Linux Box/Exploitation.md"
   ]
 }

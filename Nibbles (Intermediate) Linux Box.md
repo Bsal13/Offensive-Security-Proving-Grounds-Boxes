@@ -175,6 +175,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 # Privilege Escalation
 ## Local Enumeration
+
 #### -Ran the following command to search for SUID files as I was unable to download privilege escalation scripts to the target machine:
 
 "find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null"
@@ -184,11 +185,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 ![](Pasted%20image%2020221018112111.png)
 
 ## Privilege Escalation vector
+## Find SUID Privilege Escalation
 
 #### -Found "find" bin in the GTFOBINS website and found the following command to run when "find" is running as SUID:
 ![](Pasted%20image%2020221018112250.png)
 #FindSUIDprivilegeEscalation 
 
-
+![](Pasted%20image%2020221018112651.png)
 ---
 
