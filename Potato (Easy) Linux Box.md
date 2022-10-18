@@ -14,6 +14,8 @@ IP:
 # Resolution summary
 - Found admin login page from gobuster scan
 - Found we were able to login to ftp port 2112 anonymously
+- Downloaded index.php.bak file from ftp server
+- Found the following string of code in the .bak file "strcmp($_POST['password'], $pass) == 0)" and googled it
 - 
 
 ## Improved skills
@@ -170,6 +172,11 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221018164938.png)
 
+#### -Cat'd file "index.php.bak" and found the following. Then googled "strcmp($_POST['password'], $pass) == 0)" and found the following link which has the syntax "strcmp($_POST['password']" which I used ctrl+f and that syntax on other pages/links I found before the "PHP Magic Tricks: Type Juggling" link: 
+
+![](Pasted%20image%2020221018165212.png)
+![](Pasted%20image%2020221018165322.png)
+#phpJugglingMagicTricks
 
 
 ---
