@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "9022170bc71cb616",
+        "id": "e6520ea988619da1",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -128,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9022170bc71cb616",
+  "active": "e6520ea988619da1",
   "lastOpenFiles": [
+    "Payday (Intermediate) Linux Box/Attack Surface.md",
+    "Payday (Intermediate) Linux Box.md",
+    "Shakabra (Easy) Linux Box/Exploitation.md",
     "Payday (Intermediate) Linux Box/Exploitation.md",
     "Payday (Intermediate) Linux Box/Privilege Escalation.md",
     "Payday (Intermediate) Linux Box/Enumeration.md",
     "Images/Pasted image 20221018112651.png",
     "Nibbles (Intermediate) Linux Box.md",
     "Nibbles (Intermediate) Linux Box/Privilege Escalation.md",
-    "Images/Pasted image 20221018104720.png",
-    "Nibbles (Intermediate) Linux Box/Exploitation.md",
-    "Nibbles (Intermediate) Linux Box/Enumeration.md",
-    "Nibbles (Intermediate) Linux Box/Attack Surface.md"
+    "Images/Pasted image 20221018104720.png"
   ]
 }
