@@ -275,9 +275,37 @@ customer, customer
 
 ---
 
+# Lateral Movement to user
+## Local Enumeration
+
+#### -I was able to read the "/etc/passwd" file and found a user patrick 
+
+ 
+
+Per previously found users 
+
+customer, customer 
+
+admin, admin 
+
+ 
+
+I attempted to ssh with user patrick and tried password patrick 
+
+
+## Lateral Movement vector
+## SSH'd into found username from reading /etc/passwd and password guessing
+
+![](Pasted%20image%2020221018130838.png)
+
+---
+
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -When I typed sudo –l it showed I was able to run all commands with sudo 
+
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
