@@ -16,7 +16,8 @@ IP:
 - Text
 
 ## Improved skills
-- skill 1
+- Located a directory listed in webpage source code
+- Directory showed SSH user a
 - skill 2
 
 ## Used tools
@@ -33,7 +34,8 @@ Scanned all TCP ports:
 
 Enumerated open TCP ports:
 ```bash
-
+8080
+43022
 ```
 
 Enumerated top 200 UDP ports:
@@ -44,7 +46,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
+## Port 8080 - HTTP 
 
 #### -Navigated to http://192.168.143.125:8080 and found the following web page and clicked on a link of a user's hauiku on the web page and right clicked and clicked "view page source" and found it had directory "/api"
 
