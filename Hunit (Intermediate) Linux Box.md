@@ -77,6 +77,12 @@ Enumerated top 200 UDP ports:
 #### -Ran "lse.sh" and found cron job "crontab.bak" running as root and was readable and found the below contents of "crontab.bak" which file "pull.sh" and "backups.sh" was running every 2 and 3 minutes:
 
 ![](Pasted%20image%2020221017175014.png)
+![](Pasted%20image%2020221017175126.png)
+
+#### -Searched more and found directory "git-server" and found it being owned by "git" user and was git backend files which are difficult to work with so I navigated to "/tmp" directory and typed "git clone file:///git-server/" to clone the server into the "/tmp" directory:
+
+![](Pasted%20image%2020221017175529.png)
+
 
 
 ## Privilege Escalation vector
