@@ -120,6 +120,8 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221017191609.png)
 
+#### -Navigated into git-server and typed [git config --global user.name "kali"] and [git config --global user.email "kali@kali.(none)"] to setup git identity:
+
 ## Privilege Escalation vector
 
 
