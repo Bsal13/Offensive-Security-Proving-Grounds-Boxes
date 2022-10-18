@@ -150,6 +150,10 @@ Enumerated top 200 UDP ports:
 ## Name of the technique
 
 #### -Googled postgresql reverse shell 11.7 github" and found the following webpage/script:
+![](Pasted%20image%2020221018105717.png)
+![](Pasted%20image%2020221018105824.png)
+
+
 
 ---
 
