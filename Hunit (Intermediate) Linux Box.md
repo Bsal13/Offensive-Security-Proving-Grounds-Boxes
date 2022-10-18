@@ -17,7 +17,9 @@ IP:
 
 ## Improved skills
 - Located a directory listed in webpage source code
-- Directory showed SSH user a
+- Directory showed SSH user credentials
+- Found cronjob running every 2-3 minutes
+- 
 - skill 2
 
 ## Used tools
