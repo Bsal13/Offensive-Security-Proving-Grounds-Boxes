@@ -239,6 +239,22 @@ customer, customer
 
 ![](Pasted%20image%2020221018125459.png)
 
+#### -Googled "CS-Cart 1.3.3 Authenticated RCE Github" and found the following link and navigated to it and showed the following steps: 
+
+![](Pasted%20image%2020221018125642.png)
+
+![](Pasted%20image%2020221018125727.png)
+
+#### -Typed "locate webshells" on kali machine and found "/usr/share/webshells/php/php-reverse-shell.php" and typed cat "/usr/share/webshells/php/php-reverse-shell.php" and copied contents into a file called "reverse.phtml" and changed the "ip" and "port" number in script: 
+
+![](Pasted%20image%2020221018125837.png)
+
+![](Pasted%20image%2020221018125919.png)
+
+![](Pasted%20image%2020221018125957.png)
+
+#### -Set up a "penelope" listener on port 80
+
 
 
 ---
