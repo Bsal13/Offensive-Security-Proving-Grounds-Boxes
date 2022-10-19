@@ -230,7 +230,19 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018172846.png)
 ![](Pasted%20image%2020221018172931.png)
 ![](Pasted%20image%2020221018173015.png)
+![](Pasted%20image%2020221018173053.png)
 
+#### -Copied the raw request from the first "2" 1000 found in the bruteforce and pasted into the "proxy" page of burpsuite and clicked "forward" and the following web page came up showing user "webadmin" along with the password hash.  
+ 
+#### -Copied everything after user "webadmin" and before the first colon (which will be the hash) and pasted into a "hash.txt" file in my kali machine: 
+
+![](Pasted%20image%2020221018173305.png)
+
+![](Pasted%20image%2020221018173355.png)
+
+![](Pasted%20image%2020221018173454.png)
+
+#### -Typed "john hash.txt" and cracked the hash finding the password for "webadmin" to be "dragon": 
 
 
 
