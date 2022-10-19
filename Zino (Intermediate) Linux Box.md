@@ -3,7 +3,7 @@ Alias: Zino
 Date: 6/1/22
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #SMBenumeration #BookedSchedulerv2.7.5RCEexploit
 Status: Finished
 IP: 192.168.108.64
 ---
@@ -16,8 +16,8 @@ IP: 192.168.108.64
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- SMB enumeration
+- Cronjob modifying
 
 ## Used tools
 - nmap
@@ -131,7 +131,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Enumerated open TCP ports:
 ```bash
 445
-
+8003
 ```
 
 Enumerated top 200 UDP ports:
@@ -178,11 +178,12 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018231437.png)
 ![](Pasted%20image%2020221018231522.png)
 ![](Pasted%20image%2020221018231803.png)
-
+#BookedSchedulerv2.7.5RCEexploit
 ---
 
 # Exploitation
 ## Name of the technique
+## Booked Scheduler v2.7.5 RCE Exploit
 
 #### -Logged into Admin Scheduler webpage utilizing found credentials username "admin" password "adminadmin"
 
