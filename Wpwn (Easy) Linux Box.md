@@ -3,7 +3,7 @@ Alias: Wpwn
 Date: 5/5/22
 Platform: Linux
 Difficulty: Easy
-Tags: #Social-warfare3.5.2unauthenticatedRCE 
+Tags: #Social-warfare3.5.2unauthenticatedRCE #wp-configFile
 Status: Finished
 IP: 192.168.127.123
 ---
@@ -14,12 +14,15 @@ IP: 192.168.127.123
 # Resolution summary
 - Found wordpress website running on port 80
 - Ran wpscan and found wordpress site is vulnerable to Social-warfare 3.5.2 unauthenticated remote code exececution exploit
-- Followed the steps for exploit and received a reverse shell as www-data
+- Followed the steps for exploit to read /etc/passwd file to find username and received a reverse shell as www-data
+- Found mysql was listening on localhost
+- Found wordpress config file with users password 
+- Logged into SSH session with found username and password
 - 
 - Text
 
 ## Improved skills
-- skill 1
+- Found password credentials for SSH in wordpress config file
 - skill 2
 
 ## Used tools
@@ -218,6 +221,7 @@ define( 'DB_PASSWORD', 'R3&]vzhHmMn9,:-5' );
 define( 'DB_HOST', 'localhost' ); 
 
 ![](Pasted%20image%2020221018224046.png)
+#wp-configFile
 
 #### -Typed "ssh takis@localhost" then input the password "R3&]vzhHmMn9,:-5" found earlier in the config file and received a ssh session for user "takis" below: 
 
