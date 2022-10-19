@@ -19,6 +19,11 @@ IP: 192.168.142.122
 - Downloaded aspx webshell onto target machine in cadaver
 - Navigated to webshell page in web browser and found to have command execution
 - Googled root directory location in Microsoft IIS 10.0
+- Downloaded reverse shell in cadaver
+- Utilizing webshell command execuation I confirmed the reverse shell was downloaded in the root directory
+- Started netcat listener on kali machine
+- Executed the reverse shell and received a reverse shelll
+- 
 - Text
 
 ## Improved skills
