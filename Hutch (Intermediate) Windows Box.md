@@ -240,7 +240,7 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
-## aspxcmdWebShell
+## aspx CMD WebShell
 
 #### -Googled "Microsoft-IIS/10.10 root directory"
 
