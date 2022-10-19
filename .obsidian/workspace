@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Hawat (Easy) Linux Box.md",
+            "file": "Hutch (Intermediate) Windows Box.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Hutch (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Hutch (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md"
+                "file": "Hutch (Intermediate) Windows Box.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "e6520ea988619da1",
   "lastOpenFiles": [
+    "Hawat (Easy) Linux Box.md",
     "Images/Pasted image 20221018232733.png",
     "Zino (Intermediate) Linux Box.md",
     "Zino (Intermediate) Linux Box/Privilege Escalation.md",
@@ -138,7 +139,6 @@
     "Zino (Intermediate) Linux Box/Enumeration.md",
     "Images/Pasted image 20221018231437.png",
     "Wpwn (Easy) Linux Box.md",
-    "Zino (Intermediate) Linux Box/Attack Surface.md",
-    "Images/Pasted image 20221018221158.png"
+    "Zino (Intermediate) Linux Box/Attack Surface.md"
   ]
 }
