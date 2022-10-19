@@ -20,7 +20,9 @@ IP:
 - Found Type Juggling PHP Magic tricks
 - Utilized Burpsuite when logging into the admin login page with found credentials and  sent the request to repeater
 - Followed the steps for th Juggling PHP Magic Tricks and was redirected to a dashboard.php page
-- 
+- Found a webpage which would pull log.txt files from the machine
+- Sent web request/page to intruder in Burpsuite and retreived a cheatsheet/manual ist of directory traversal requests for /etc/passwd/
+- Bruteforced the different commands 
 
 ## Improved skills
 - skill 1
@@ -220,6 +222,10 @@ Enumerated top 200 UDP ports:
 #### -Found the following "log.txt" file on the web page above and ran Burp Suite and found the following "log.txt" file: 
 
 ![](Pasted%20image%2020221018171240.png)
+
+#### -As the log file was found on the server I used "sniper" attack type on "intruder" tab and clicked into "options" tab and copied the following web traversal manual cheat sheet found in web page https://pentestlab.blog/2012/06/29/directory-traversal-cheat-sheet/ and copied and pasted on Burp Suite via the following to bruteforce the "/etc/password" location. Grep'd "1000" as that is a normal number for a user on a linux machine and found the different "2" which is the correct directory traversal to receive the "/etc/password" credentials: 
+
+![](Pasted%20image%2020221018172236.png)
 
 
 ---
