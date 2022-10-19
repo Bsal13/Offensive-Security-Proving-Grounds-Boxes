@@ -211,6 +211,13 @@ Enumerated top 200 UDP ports:
 
 #### -Per the ldap enumeration script we find user Freddy McsSorley (account name fmcsorley) with password "CrabSharkJellyfish192":
 
+![](Pasted%20image%2020221019005459.png)
+
+![](Pasted%20image%2020221019005630.png)
+
+#### -Typed "cadaver http://192.168.142.122 " and user fmcsorley with password CrabSharkJellyfish192:
+
+
 
 ---
 
