@@ -16,8 +16,7 @@ IP: 192.168.127.86
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- Found adding a semi colon after a command will be treated a separate command the commands will be executed sequentially 
 
 ## Used tools
 - nmap
