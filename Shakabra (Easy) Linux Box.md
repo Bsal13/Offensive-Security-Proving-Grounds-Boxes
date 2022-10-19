@@ -21,6 +21,7 @@ IP: 192.168.127.86
 
 ## Used tools
 - nmap
+- rustscan
 - gobuster
 
 ---
@@ -134,6 +135,22 @@ Enumerated top 200 UDP ports:
 ## Port 80 - Apache httpd 2.4.29
 
 #### As port 80 was found to be open per nmap scan; I navigated to the boxes IP address and found the below webpage: 
+
+![](Pasted%20image%2020221018181215.png)
+
+#### As "127.0.0.1 was already populated in the "ping" bar I input "127.0.0.1" into it and clicked go and found the below ping results: 
+
+![](Pasted%20image%2020221018181341.png)
+
+#### I then typed ";cat /etc/passwd" (adding a semicolon at the end of 127.0.0.1) and found the below user "dylan" on the system: 
+
+![](Pasted%20image%2020221018181441.png)
+
+#### Then typed "; which nc" and found the machine had nc installed:
+
+![](Pasted%20image%2020221018181531.png)
+
+
 
 ---
 
