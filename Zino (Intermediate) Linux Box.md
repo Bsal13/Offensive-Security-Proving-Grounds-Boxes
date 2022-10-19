@@ -177,15 +177,20 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018231353.png)
 ![](Pasted%20image%2020221018231437.png)
 ![](Pasted%20image%2020221018231522.png)
-
-
-
+![](Pasted%20image%2020221018231803.png)
 
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Logged into Admin Scheduler webpage utilizing found credentials username "admin" password "adminadmin"
+
+#### -Typed "locate webshells" and created a file named "reverse.php" and copied "/usr/share/webshells/php/php-reverse-shell.php" into the file and change ip adress to my kali machine's ip and changed port number to 8003
+
+![](Pasted%20image%2020221018232029.png)
+
+
 
 ---
 
