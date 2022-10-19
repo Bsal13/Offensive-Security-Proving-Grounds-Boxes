@@ -138,22 +138,22 @@ Enumerated top 200 UDP ports:
 
 #### As port 80 was found to be open per nmap scan; I navigated to the boxes IP address and found the below webpage: 
 
-![](Pasted%20image%2020221018181215.png)
+![](Images/Pasted%20image%2020221018181215.png)
 #ConnectionTesterTool
 #### As "127.0.0.1 was already populated in the "ping" bar I input "127.0.0.1" into it and clicked go and found the below ping results: 
 
-![](Pasted%20image%2020221018181341.png)
+![](Images/Pasted%20image%2020221018181341.png)
 
 #### I then typed ";cat /etc/passwd" (adding a semicolon at the end of 127.0.0.1) and found the below user "dylan" on the system: 
 
-![](Pasted%20image%2020221018181441.png)
+![](Images/Pasted%20image%2020221018181441.png)
 #Command_Injection 
 
 #### Then typed "; which nc" and found the machine had nc installed:
 
-![](Pasted%20image%2020221018181531.png)
+![](Images/Pasted%20image%2020221018181531.png)
 
-![](Pasted%20image%2020221018181603.png)
+![](Images/Pasted%20image%2020221018181603.png)
 
 ---
 
@@ -166,7 +166,7 @@ Enumerated top 200 UDP ports:
 
 #### Ran the syntax above on the connection tester tool and had a listener listening on my kali machine and received a reverse shell 
 
-![](Pasted%20image%2020221018181728.png)
+![](Images/Pasted%20image%2020221018181728.png)
 
 ---
 
@@ -174,7 +174,7 @@ Enumerated top 200 UDP ports:
 ## Local Enumeration
 
 #### Typed "find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null" to find SUID binaries and found the following "vim.basic" set as SUID bit: 
-![](Pasted%20image%2020221018183948.png)
+![](Images/Pasted%20image%2020221018183948.png)
 
 
 ## Privilege Escalation vector
@@ -182,11 +182,11 @@ Enumerated top 200 UDP ports:
 
 #### Found "vim" in GTFOBins site and followed the instructions to run the binary and type colon to enter "enter command mode" and prepend py3 to the command as the machine only has python3 and typed ":py3 import os; os.exec("/bin/sh", "sh", "-pc", "reset; exec sh -p")" and then enter and then when asked "which terminal?" Enter "xterm" and then received a root shell: 
 
-![](Pasted%20image%2020221018184110.png)
+![](Images/Pasted%20image%2020221018184110.png)
 
-![](Pasted%20image%2020221018184146.png)
+![](Images/Pasted%20image%2020221018184146.png)
 
-![](Pasted%20image%2020221018184222.png)
+![](Images/Pasted%20image%2020221018184222.png)
 #SUIDvim.basicPrivilegeEscalation
 ---
 
