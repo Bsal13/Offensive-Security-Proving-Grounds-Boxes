@@ -26,6 +26,10 @@ IP:
 - Was able to read the /etc/passwd file and retreived a username and hashed password 
 - Utilized John to crack the users hash 
 - Logged in via SSH session with found credentials
+- Found we can run sudo with (ALL:ALL) with /bin/nice /notes/*
+- As /notes/ directory was one up from the /home/ directory I performed the following:
+- Created a file in user "webadmin" user home directory with "/bin/bash" and created the name of "root.sh". 
+- Then made file "root.sh" file executiblle with "chmod +x root.sh". Ran "sudo /bin/nice /notes/../home/webadmin/root.sh" and received a root shell
 
 ## Improved skills
 - PHP Magic Tricks
@@ -263,6 +267,7 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018174853.png)
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
+#### -Created a file in user "webadmin" user home directory with "/bin/bash" and created the name of "root.sh". Then made file "root.sh" file executiblle with "chmod +x root.sh". Ran "sudo /bin/nice /notes/../home/webadmin/root.sh" and received a root shell: 
+![](Pasted%20image%2020221018175220.png)
 ---
