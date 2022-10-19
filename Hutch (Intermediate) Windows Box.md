@@ -251,29 +251,24 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221019011613.png)
 
-
-
 #### -Typed "dir C:\inetpub\wwwroot\" to confirm the reverse shell payload was on the target machine
 
 ![](Pasted%20image%2020221019011821.png)
 
+#### -Ran a netcat listener on port 593 on kali machine
 
+#### -Typed "C:\inetpub\wwwroot\reverse.exe" on the webshell and received a reverse shell:
 
-
----
-
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+![](Pasted%20image%2020221019012059.png)
 
 ---
 
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Navigated to "c:\Program Files" directory and shows that Microsoft's _Local Administrator Password Solution (LAPS) is installed:
+
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
