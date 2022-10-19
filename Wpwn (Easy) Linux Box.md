@@ -174,7 +174,7 @@ Enumerated top 200 UDP ports:
 
 ---
 
-# Privilege Escalation
+# Lateral Movement to user
 ## Local Enumeration
 
 #### -Uploaded and ran linux-smart-enumeration script "lse.sh" and found services  listening on localhost. Typed "ss –nltp" to show all running services/processes running on all ports:
@@ -182,6 +182,41 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018223433.png)
 
 ![](Pasted%20image%2020221018223516.png)
+
+
+## Lateral Movement vector
+## Found users password for SSH login in wordpress config file
+
+#### -Typed "ls -ls /var/www/html/wordpress | grep .conf" to list all config files for site and cat'd the configuration file and found the following credentials: 
+
+/** The name of the database for WordPress */ 
+
+define( 'DB_NAME', 'wordpress_db' ); 
+
+ 
+
+/** MySQL database username */ 
+
+define( 'DB_USER', 'wp_user' ); 
+
+  
+
+/** MySQL database password */ 
+
+define( 'DB_PASSWORD', 'R3&]vzhHmMn9,:-5' ); 
+
+  
+
+/** MySQL hostname */ 
+
+define( 'DB_HOST', 'localhost' ); 
+
+---
+
+
+# Privilege Escalation
+## Local Enumeration
+
 
 
 
