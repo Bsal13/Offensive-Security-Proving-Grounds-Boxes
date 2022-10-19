@@ -1,6 +1,6 @@
 ---
 Alias: Hutch
-Date: {{date}}
+Date: 10/2/22
 Platform: Windows
 Difficulty: Intermediate
 Tags:
@@ -28,7 +28,160 @@ IP: 192.168.142.122
 # Information Gathering
 Scanned all TCP ports:
 ```bash
+rustscan -a 192.168.142.122 --ulimit 5000
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
+The Modern Day Port Scanner.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+Real hackers hack time ⌛
 
+[~] The config file is expected to be at "/home/kali/.rustscan.toml"
+[~] Automatically increasing ulimit value to 5000.
+Open 192.168.142.122:53
+Open 192.168.142.122:80
+Open 192.168.142.122:88
+Open 192.168.142.122:135
+Open 192.168.142.122:139
+Open 192.168.142.122:389
+Open 192.168.142.122:445
+Open 192.168.142.122:464
+Open 192.168.142.122:593
+Open 192.168.142.122:3268
+Open 192.168.142.122:5985
+Open 192.168.142.122:9389
+Open 192.168.142.122:49666
+Open 192.168.142.122:49668
+Open 192.168.142.122:49669
+Open 192.168.142.122:49670
+Open 192.168.142.122:49672
+Open 192.168.142.122:49688
+[~] Starting Script(s)
+[>] Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[~] Starting Nmap 7.92 ( https://nmap.org ) at 2022-07-14 20:16 EDT
+Initiating Ping Scan at 20:16
+Scanning 192.168.142.122 [2 ports]
+Completed Ping Scan at 20:16, 0.08s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 20:16
+Completed Parallel DNS resolution of 1 host. at 20:16, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 20:16
+Scanning 192.168.142.122 [18 ports]
+Discovered open port 80/tcp on 192.168.142.122
+Discovered open port 139/tcp on 192.168.142.122
+Discovered open port 135/tcp on 192.168.142.122
+Discovered open port 53/tcp on 192.168.142.122
+Discovered open port 445/tcp on 192.168.142.122
+Discovered open port 49669/tcp on 192.168.142.122
+Discovered open port 88/tcp on 192.168.142.122
+Discovered open port 49688/tcp on 192.168.142.122
+Discovered open port 389/tcp on 192.168.142.122
+Discovered open port 49672/tcp on 192.168.142.122
+Discovered open port 593/tcp on 192.168.142.122
+Discovered open port 464/tcp on 192.168.142.122
+Discovered open port 49666/tcp on 192.168.142.122
+Discovered open port 49668/tcp on 192.168.142.122
+Discovered open port 49670/tcp on 192.168.142.122
+Discovered open port 9389/tcp on 192.168.142.122
+Discovered open port 3268/tcp on 192.168.142.122
+Discovered open port 5985/tcp on 192.168.142.122
+Completed Connect Scan at 20:16, 0.18s elapsed (18 total ports)
+Nmap scan report for 192.168.142.122
+Host is up, received syn-ack (0.089s latency).
+Scanned at 2022-07-14 20:16:48 EDT for 0s
+
+PORT      STATE SERVICE        REASON
+53/tcp    open  domain         syn-ack
+80/tcp    open  http           syn-ack
+88/tcp    open  kerberos-sec   syn-ack
+135/tcp   open  msrpc          syn-ack
+139/tcp   open  netbios-ssn    syn-ack
+389/tcp   open  ldap           syn-ack
+445/tcp   open  microsoft-ds   syn-ack
+464/tcp   open  kpasswd5       syn-ack
+593/tcp   open  http-rpc-epmap syn-ack
+3268/tcp  open  globalcatLDAP  syn-ack
+5985/tcp  open  wsman          syn-ack
+9389/tcp  open  adws           syn-ack
+49666/tcp open  unknown        syn-ack
+49668/tcp open  unknown        syn-ack
+49669/tcp open  unknown        syn-ack
+49670/tcp open  unknown        syn-ack
+49672/tcp open  unknown        syn-ack
+49688/tcp open  unknown        syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
+
+
+
+
+# Nmap 7.92 scan initiated Sun Jul 17 10:38:57 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/brian/Downloads/Proving_Grounds/Hutch/results/192.168.142.122/scans/_full_tcp_nmap.txt -oX /home/brian/Downloads/Proving_Grounds/Hutch/results/192.168.142.122/scans/xml/_full_tcp_nmap.xml 192.168.142.122
+Nmap scan report for 192.168.142.122
+Host is up, received user-set (0.085s latency).
+Scanned at 2022-07-17 10:38:57 PDT for 344s
+Not shown: 65514 filtered tcp ports (no-response)
+PORT      STATE SERVICE       REASON  VERSION
+53/tcp    open  domain        syn-ack Simple DNS Plus
+80/tcp    open  http          syn-ack Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-webdav-scan: 
+|   Public Options: OPTIONS, TRACE, GET, HEAD, POST, PROPFIND, PROPPATCH, MKCOL, PUT, DELETE, COPY, MOVE, LOCK, UNLOCK
+|   Allowed Methods: OPTIONS, TRACE, GET, HEAD, POST, COPY, PROPFIND, DELETE, MOVE, PROPPATCH, MKCOL, LOCK, UNLOCK
+|   WebDAV type: Unknown
+|   Server Date: Sun, 17 Jul 2022 17:43:57 GMT
+|_  Server Type: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST COPY PROPFIND DELETE MOVE PROPPATCH MKCOL LOCK UNLOCK PUT
+|_  Potentially risky methods: TRACE COPY PROPFIND DELETE MOVE PROPPATCH MKCOL LOCK UNLOCK PUT
+88/tcp    open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2022-07-17 17:43:00Z)
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: hutch.offsec0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack
+464/tcp   open  kpasswd5?     syn-ack
+593/tcp   open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack
+3268/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: hutch.offsec0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack
+5985/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        syn-ack .NET Message Framing
+49666/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49668/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49669/tcp open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+49670/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49672/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49688/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49771/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: Host: HUTCHDC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -1s
+| smb2-time: 
+|   date: 2022-07-17T17:44:02
+|_  start_date: N/A
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 36496/tcp): CLEAN (Timeout)
+|   Check 2 (port 46061/tcp): CLEAN (Timeout)
+|   Check 3 (port 15711/udp): CLEAN (Timeout)
+|   Check 4 (port 28169/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 17 10:44:41 2022 -- 1 IP address (1 host up) scanned in 344.13 seconds
 ```
 
 Enumerated open TCP ports:
