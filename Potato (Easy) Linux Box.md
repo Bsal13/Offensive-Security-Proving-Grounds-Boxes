@@ -166,57 +166,57 @@ Enumerated top 200 UDP ports:
 
 #### -My initial NMAP scan only showed port 22 and 80 open. I was unable to locate anything useful on webpage and robots.txt didn't show anything:
 
-![](Pasted%20image%2020221018163833.png)
+![](Images/Pasted%20image%2020221018163833.png)
 
-![](Pasted%20image%2020221018163902.png)
+![](Images/Pasted%20image%2020221018163902.png)
 
 #### -Ran gobuster scan and only found directory "/admin". Navigated to the admin directory and found the following login web page and attempted to input default like credentials but nothing worked: 
 
-![](Pasted%20image%2020221018164122.png)
+![](Images/Pasted%20image%2020221018164122.png)
 
-![](Pasted%20image%2020221018164331.png)
+![](Images/Pasted%20image%2020221018164331.png)
 
 ## Port 2112 - ProFTPD
 
 #### -Ran a general NMAP scan to scan all ports showing services and versions and found port "2112" (which is an FTP server) and shows we can connect anonymously and found file "index.php.bak": Navigated into FTP server with user anonymous and no password for password:
 
-![](Pasted%20image%2020221018164658.png)
-![](Pasted%20image%2020221018164838.png)
+![](Images/Pasted%20image%2020221018164658.png)
+![](Images/Pasted%20image%2020221018164838.png)
 
 #### -Downloaded file "index.php.bak" using "mget" command onto my kali machine: 
 
-![](Pasted%20image%2020221018164938.png)
+![](Images/Pasted%20image%2020221018164938.png)
 
 #### -Cat'd file "index.php.bak" and found the following. Then googled "strcmp($_POST['password'], $pass) == 0)" and found the following link which has the syntax "strcmp($_POST['password']" which I used ctrl+f and that syntax on other pages/links I found before the "PHP Magic Tricks: Type Juggling" link: 
 
-![](Pasted%20image%2020221018165212.png)
-![](Pasted%20image%2020221018165322.png)
+![](Images/Pasted%20image%2020221018165212.png)
+![](Images/Pasted%20image%2020221018165322.png)
 #phpJugglingMagicTricks
 
 #### -The found webpage shows the following to post a password string (e.g "password=password" submit and array "password[ ]=" additionally showing PHP translates POST variables like this to an empty array with quotation marks (" "). So you will need to submit an array with the following {password[ ]=" "}: 
 
-![](Pasted%20image%2020221018165802.png)
-![](Pasted%20image%2020221018170047.png)
+![](Images/Pasted%20image%2020221018165802.png)
+![](Images/Pasted%20image%2020221018170047.png)
 
 #### -Started Burp Suite and turned on Foxyproxy. As the username "admin" was found in file "index.php.bak". Typed "admin" into username and "pass" into the password on the /admin login webpage and clicked "login" and sent the POST information to repeater in Burp Suite and which showed the following: 
 
-![](Pasted%20image%2020221018170308.png)
-![](Pasted%20image%2020221018170455.png)
+![](Images/Pasted%20image%2020221018170308.png)
+![](Images/Pasted%20image%2020221018170455.png)
 
-![](Pasted%20image%2020221018170532.png)
+![](Images/Pasted%20image%2020221018170532.png)
 
 #### -Changed "password=" to password[ ]=" " and clicked send to send response and found the following response directing me to "dashboard.php": 
 
-![](Pasted%20image%2020221018170641.png)
+![](Images/Pasted%20image%2020221018170641.png)
 
 #### -I then navigated to the "proxy" tab in Burp Suite and input the same password[ ]=" " into the POST information and clicked "forward" and received the following webpage: 
 
-![](Pasted%20image%2020221018170749.png)
-![](Pasted%20image%2020221018170837.png)
+![](Images/Pasted%20image%2020221018170749.png)
+![](Images/Pasted%20image%2020221018170837.png)
 
 #### -I then tuned off Foxyproxy and navigated to the "dashboard" link and found the following webpage 
 
-![](Pasted%20image%2020221018170942.png)
+![](Images/Pasted%20image%2020221018170942.png)
 
 
 
@@ -230,34 +230,34 @@ Enumerated top 200 UDP ports:
 
 #### -Found the following "log.txt" file on the web page above and ran Burp Suite and found the following "log.txt" file: 
 
-![](Pasted%20image%2020221018171240.png)
+![](Images/Pasted%20image%2020221018171240.png)
 
 #### -As the log file was found on the server I used "sniper" attack type on "intruder" tab and clicked into "options" tab and copied the following web traversal manual cheat sheet found in web page https://pentestlab.blog/2012/06/29/directory-traversal-cheat-sheet/ and copied and pasted on Burp Suite via the following to bruteforce the "/etc/password" location. Grep'd "1000" as that is a normal number for a user on a linux machine and found the different "2" which is the correct directory traversal to receive the "/etc/password" credentials: 
 
-![](Pasted%20image%2020221018172236.png)
-![](Pasted%20image%2020221018172846.png)
-![](Pasted%20image%2020221018172931.png)
-![](Pasted%20image%2020221018173015.png)
-![](Pasted%20image%2020221018173053.png)
+![](Images/Pasted%20image%2020221018172236.png)
+![](Images/Pasted%20image%2020221018172846.png)
+![](Images/Pasted%20image%2020221018172931.png)
+![](Images/Pasted%20image%2020221018173015.png)
+![](Images/Pasted%20image%2020221018173053.png)
 #DirectoryTraversalBruteForce
 
 #### -Copied the raw request from the first "2" 1000 found in the bruteforce and pasted into the "proxy" page of burpsuite and clicked "forward" and the following web page came up showing user "webadmin" along with the password hash.  
  
 #### -Copied everything after user "webadmin" and before the first colon (which will be the hash) and pasted into a "hash.txt" file in my kali machine: 
 
-![](Pasted%20image%2020221018173305.png)
+![](Images/Pasted%20image%2020221018173305.png)
 
-![](Pasted%20image%2020221018173355.png)
+![](Images/Pasted%20image%2020221018173355.png)
 
-![](Pasted%20image%2020221018173454.png)
+![](Images/Pasted%20image%2020221018173454.png)
 
 #### -Typed "john hash.txt" and cracked the hash finding the password for "webadmin" to be "dragon": 
 
-![](Pasted%20image%2020221018173609.png)
+![](Images/Pasted%20image%2020221018173609.png)
 
 #### -I was unable to login to the admin login page with the credentials found but was able to login to SSH with username webadmin and password dragon: 
 
-![](Pasted%20image%2020221018173704.png)
+![](Images/Pasted%20image%2020221018173704.png)
 
 ---
 
@@ -265,10 +265,10 @@ Enumerated top 200 UDP ports:
 ## Local Enumeration
 
 #### -Typed "sudo –l" I found the user can run sudo on (ALL : ALL) /bin/nice /notes/* : 
-![](Pasted%20image%2020221018174853.png)
+![](Images/Pasted%20image%2020221018174853.png)
 
 ## Privilege Escalation vector
 
 #### -Created a file in user "webadmin" user home directory with "/bin/bash" and created the name of "root.sh". Then made file "root.sh" file executiblle with "chmod +x root.sh". Ran "sudo /bin/nice /notes/../home/webadmin/root.sh" and received a root shell: 
-![](Pasted%20image%2020221018175220.png)
+![](Images/Pasted%20image%2020221018175220.png)
 ---
