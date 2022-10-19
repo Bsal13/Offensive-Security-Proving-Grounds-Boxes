@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Wpwn (Easy) Linux Box.md",
+            "file": "Shakabra (Easy) Linux Box.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Wpwn (Easy) Linux Box.md",
+                "file": "Shakabra (Easy) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Wpwn (Easy) Linux Box.md",
+                "file": "Shakabra (Easy) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Wpwn (Easy) Linux Box.md"
+                "file": "Shakabra (Easy) Linux Box.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "e6520ea988619da1",
   "lastOpenFiles": [
+    "Wpwn (Easy) Linux Box.md",
     "Wpwn (Easy) Linux Box/Privilege Escalation.md",
     "Wpwn (Easy) Linux Box/Exploitation.md",
     "Wpwn (Easy) Linux Box/Enumeration.md",
@@ -138,7 +139,6 @@
     "Shakabra (Easy) Linux Box/Privilege Escalation.md",
     "Shakabra (Easy) Linux Box/Exploitation.md",
     "Shakabra (Easy) Linux Box/Enumeration.md",
-    "Nibbles (Intermediate) Linux Box.md",
-    "Payday (Intermediate) Linux Box.md"
+    "Nibbles (Intermediate) Linux Box.md"
   ]
 }
