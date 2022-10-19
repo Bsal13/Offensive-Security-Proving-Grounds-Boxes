@@ -160,6 +160,8 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221018230819.png)
 
+## Port 8003 - Apache httpd 2.4.38
+
 #### -Navigated to http://192.168.108.64:8003 as nmap scan showed port 8003 as an http apache server and found the below web page showing file/folder "booked":
 
 ![](Pasted%20image%2020221018230914.png)
@@ -167,6 +169,15 @@ Enumerated top 200 UDP ports:
 #### -Clicked on the "booked" link and was navigated to the below web page showing "booked scheduler v2.7.5"
 
 ![](Pasted%20image%2020221018231035.png)
+
+#### -Googled "Booked Scheduler v2.7.5 exploit python" and found the below webpage and found the following steps:
+
+![](Pasted%20image%2020221018231314.png)
+
+![](Pasted%20image%2020221018231353.png)
+![](Pasted%20image%2020221018231437.png)
+![](Pasted%20image%2020221018231522.png)
+
 
 
 
