@@ -15,6 +15,7 @@ IP:
 - Found admin login page from gobuster scan
 - Found we were able to login to ftp port 2112 anonymously
 - Downloaded index.php.bak file from ftp server
+- Found the username and password in the .bak file and logged into the adming login page
 - Found the following string of code in the .bak file "strcmp($_POST['password'], $pass) == 0)" and googled it
 - 
 
@@ -181,6 +182,19 @@ Enumerated top 200 UDP ports:
 #### -The found webpage shows the following to post a password string (e.g "password=password" submit and array "password[ ]=" additionally showing PHP translates POST variables like this to an empty array with quotation marks (" "). So you will need to submit an array with the following {password[ ]=" "}: 
 
 ![](Pasted%20image%2020221018165802.png)
+![](Pasted%20image%2020221018170047.png)
+
+#### -Started Burp Suite and turned on Foxyproxy. As the username "admin" was found in file "index.php.bak". Typed "admin" into username and "pass" into the password on the /admin login webpage and clicked "login" and sent the POST information to repeater in Burp Suite and which showed the following: 
+
+![](Pasted%20image%2020221018170308.png)
+![](Pasted%20image%2020221018170455.png)
+
+![](Pasted%20image%2020221018170532.png)
+
+
+
+
+
 ---
 
 # Exploitation
