@@ -23,12 +23,15 @@ IP: 192.168.142.122
 - Utilizing webshell command execuation I confirmed the reverse shell was downloaded in the root directory
 - Started netcat listener on kali machine
 - Executed the reverse shell and received a reverse shelll
+- FInd Local Administrator Password Solution (LAPS) is installed onto target machine
 - 
 - Text
 
 ## Improved skills
 - ldapsearch enumeration
 - Findng allowed file extensions for Microsoft IIS to download a webshell
+- Downloading webshells/reverse shellls while logged into cadaver tool
+- Local Administrator Password Solution (LAPS) enumeration
 
 ## Used tools
 - nmap
