@@ -15,6 +15,7 @@ IP: 192.168.142.122
 - Found domain of ldap to be hutch.offsec
 - Utilized ldapsearch to find username and password
 - Utilized found credentials to login with cadevar tool
+- Downloaded aspx webshell onto target machine
 - 
 - Text
 
