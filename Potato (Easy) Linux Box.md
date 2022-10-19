@@ -5,7 +5,7 @@ Platform: Linux
 Difficulty: Easy
 Tags: #AnonymousTFPlogin #phpJugglingMagicTricks #BurpsuiteDirectoryTraversalBruteForce
 Status: Finished
-IP: 
+IP: 192.168.127.101
 ---
 
 # {{Potato}}
@@ -29,7 +29,8 @@ IP:
 - Found we can run sudo with (ALL:ALL) with /bin/nice /notes/*
 - As /notes/ directory was one up from the /home/ directory I performed the following:
 - Created a file in user "webadmin" user home directory with "/bin/bash" and created the name of "root.sh". 
-- Then made file "root.sh" file executiblle with "chmod +x root.sh". Ran "sudo /bin/nice /notes/../home/webadmin/root.sh" and received a root shell
+- Then made file "root.sh" file executiblle with "chmod +x root.sh". 
+- Ran "sudo /bin/nice /notes/../home/webadmin/root.sh" and received a root shell
 
 ## Improved skills
 - PHP Magic Tricks
