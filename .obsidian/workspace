@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Zino (Intermediate) Linux Box.md",
+            "file": "Zino (Intermediate) Linux Box/Enumeration.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Zino (Intermediate) Linux Box.md",
+                "file": "Zino (Intermediate) Linux Box/Enumeration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Zino (Intermediate) Linux Box.md",
+                "file": "Zino (Intermediate) Linux Box/Enumeration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Zino (Intermediate) Linux Box.md"
+                "file": "Zino (Intermediate) Linux Box/Enumeration.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "e6520ea988619da1",
   "lastOpenFiles": [
-    "Zino (Intermediate) Linux Box/Privilege Escalation.md",
+    "Zino (Intermediate) Linux Box.md",
+    "Zino (Intermediate) Linux Box/Enumeration.md",
     "Zino (Intermediate) Linux Box/Attack Surface.md",
+    "Zino (Intermediate) Linux Box/Privilege Escalation.md",
     "Images/Pasted image 20221018221158.png",
     "Wpwn (Easy) Linux Box.md",
     "Wpwn (Easy) Linux Box/Privilege Escalation.md",
     "Wpwn (Easy) Linux Box/Exploitation.md",
     "Wpwn (Easy) Linux Box/Enumeration.md",
-    "Payday (Intermediate) Linux Box.md",
-    "Wpwn (Easy) Linux Box/Attack Surface.md",
-    "Shakabra (Easy) Linux Box.md"
+    "Payday (Intermediate) Linux Box.md"
   ]
 }
