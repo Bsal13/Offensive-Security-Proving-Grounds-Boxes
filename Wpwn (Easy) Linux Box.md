@@ -22,6 +22,7 @@ IP: 192.168.127.123
 ## Used tools
 - nmap
 - gobuster
+- rustscan
 
 ---
 
@@ -211,17 +212,26 @@ define( 'DB_PASSWORD', 'R3&]vzhHmMn9,:-5' );
 
 define( 'DB_HOST', 'localhost' ); 
 
+![](Pasted%20image%2020221018224046.png)
+
+#### -Typed "ssh takis@localhost" then input the password "R3&]vzhHmMn9,:-5" found earlier in the config file and received a ssh session for user "takis" below: 
+
+![](Pasted%20image%2020221018224246.png)
 ---
 
 
 # Privilege Escalation
 ## Local Enumeration
 
-
+#### -Typed "sudo-l" and found user can run sudo for any command. 
 
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## User is able to run any command using sudo
+
+#### Typed "sudo su root" and received a root shell and found root flag in "proof.txt" file: 
+
+![](Pasted%20image%2020221018224509.png)
 
 ---
 
