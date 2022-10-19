@@ -21,7 +21,7 @@ IP: 192.168.142.122
 
 ## Improved skills
 - ldapsearch enumeration
-- skill 2
+- Microsoft IIS 
 
 ## Used tools
 - nmap
