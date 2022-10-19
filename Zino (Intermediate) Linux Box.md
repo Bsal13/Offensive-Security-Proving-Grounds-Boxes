@@ -13,7 +13,12 @@ IP: 192.168.108.64
 
 # Resolution summary
 - Found username and password in SMB log share file
-- 
+- Found Booked Scheduler v2.7.5 running on port 8003 
+- Logged into Booked Scheduler login page with found credentials
+- Found Booked Scheduler v2.7.5 exploit
+- Followed the exploit steps and received a reverse shell running as www-data
+- Found a cronjob which is writable  running every 3 minutes
+- Modified the cronjob 
 - Text
 
 ## Improved skills
