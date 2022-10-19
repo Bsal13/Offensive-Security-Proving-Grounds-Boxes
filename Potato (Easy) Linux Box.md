@@ -3,7 +3,7 @@ Alias: Potato
 Date: 5/10/22
 Platform: Linux
 Difficulty: Easy
-Tags:
+Tags: #AnonymousTFPlogin #phpJugglingMagicTricks 
 Status: Finished
 IP: 
 ---
@@ -178,7 +178,9 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018165322.png)
 #phpJugglingMagicTricks
 
+#### -The found webpage shows the following to post a password string (e.g "password=password" submit and array "password[ ]=" additionally showing PHP translates POST variables like this to an empty array with quotation marks (" "). So you will need to submit an array with the following {password[ ]=" "}: 
 
+![](Pasted%20image%2020221018165802.png)
 ---
 
 # Exploitation
