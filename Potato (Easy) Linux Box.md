@@ -227,12 +227,13 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
+Bruteforced directory traversal commands for /etc/passwd with intuder on Burpsuite to retreive username and hashed password. Utilized john to crack the hashed password
 
 #### -Found the following "log.txt" file on the web page above and ran Burp Suite and found the following "log.txt" file: 
 
 ![](Images/Pasted%20image%2020221018171240.png)
 
-#### -As the log file was found on the server I used "sniper" attack type on "intruder" tab and clicked into "options" tab and copied the following web traversal manual cheat sheet found in web page https://pentestlab.blog/2012/06/29/directory-traversal-cheat-sheet/ and copied and pasted on Burp Suite via the following to bruteforce the "/etc/password" location. Grep'd "1000" as that is a normal number for a user on a linux machine and found the different "2" which is the correct directory traversal to receive the "/etc/password" credentials: 
+#### -As the log file was found on the server I used "sniper" attack type on "intruder" tab and clicked into "options" tab and copied the following web traversal manual cheat sheet found in web page https://pentestlab.blog/2012/06/29/directory-traversal-cheat-sheet/ and copied and pasted on Burp Suite via the following to bruteforce the "/etc/password" location. Grep'd "1000" as that is a normal number for a user on a linux machine and found the different "2" which is the correct directory traversal to receive the "/etc/passwd" credentials: 
 
 ![](Images/Pasted%20image%2020221018172236.png)
 ![](Images/Pasted%20image%2020221018172846.png)
@@ -268,6 +269,7 @@ Enumerated top 200 UDP ports:
 ![](Images/Pasted%20image%2020221018174853.png)
 
 ## Privilege Escalation vector
+Found sudo command to leverage in order to get a root shell
 
 #### -Created a file in user "webadmin" user home directory with "/bin/bash" and created the name of "root.sh". Then made file "root.sh" file executiblle with "chmod +x root.sh". Ran "sudo /bin/nice /notes/../home/webadmin/root.sh" and received a root shell: 
 ![](Images/Pasted%20image%2020221018175220.png)

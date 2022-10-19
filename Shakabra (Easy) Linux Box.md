@@ -5,10 +5,10 @@ Platform: Linux
 Difficulty: Easy
 Tags:
 Status: Finished
-IP: 
+IP: 192.168.127.86
 ---
 
-# {{title}}
+# {{Shakabra}}
 
 
 # Resolution summary
@@ -119,7 +119,8 @@ Nmap done: 1 IP address (1 host up) scanned in 41.93 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+80
+22
 ```
 
 Enumerated top 200 UDP ports:
@@ -130,8 +131,9 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Port 80 - Apache httpd 2.4.29
+
+#### As port 80 was found to be open per nmap scan; I navigated to the boxes IP address and found the below webpage: 
 
 ---
 
