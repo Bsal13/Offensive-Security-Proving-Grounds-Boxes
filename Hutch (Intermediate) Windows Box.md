@@ -206,6 +206,10 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "ldapsearch -v -x -b "DC=hutch,DC=offsec" -H "ldap://192.168.142.122" "(objectclass=*)"" to enumerate the LDAP service:
 
+![](Pasted%20image%2020221019005210.png)
+#LDAPsearch
+
+#### -Per the ldap enumeration script we find user Freddy McsSorley (account name fmcsorley) with password "CrabSharkJellyfish192":
 
 
 ---
