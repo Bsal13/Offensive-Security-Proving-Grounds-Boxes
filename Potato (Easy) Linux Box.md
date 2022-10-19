@@ -18,7 +18,9 @@ IP:
 - Found the username and password in the .bak file 
 - Found the following string of code in the .bak file "strcmp($_POST['password'], $pass) == 0)" and googled it
 - Found Type Juggling PHP Magic tricks
-- Utilized Burpsuite when logging into
+- Utilized Burpsuite when logging into the admin login page with found credentials and  sent the request to repeater
+- Followed the steps for th Juggling PHP Magic Tricks and was redirected to a dashboard.php page
+- 
 
 ## Improved skills
 - skill 1
