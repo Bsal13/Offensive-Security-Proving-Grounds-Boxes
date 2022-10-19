@@ -260,7 +260,7 @@ Enumerated top 200 UDP ports:
 ## Local Enumeration
 
 #### -Typed "sudo –l" I found the user can run sudo on (ALL : ALL) /bin/nice /notes/* : 
-
+![](Pasted%20image%2020221018174853.png)
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
