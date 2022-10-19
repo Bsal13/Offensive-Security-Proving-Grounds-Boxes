@@ -3,7 +3,7 @@ Alias: Hutch
 Date: 10/2/22
 Platform: Windows
 Difficulty: Intermediate
-Tags: #ActiveDirectory 
+Tags: #ActiveDirectory #LDAPenumeration #LDAPsearch #Cadaver #aspxcmdWebShell
 Status: Finished
 IP: 192.168.142.122
 ---
@@ -21,7 +21,8 @@ IP: 192.168.142.122
 
 ## Used tools
 - nmap
-- gobuster
+- ldapsearch
+- cadaver
 
 ---
 
@@ -229,7 +230,7 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221019010645.png)
 
-
+## Port 80 - Microsoft IIS httpd 10.0
 
 ![](Images/Pasted%20image%2020221019010904.png)
 #aspxcmdWebShell
@@ -239,6 +240,7 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
+## aspxcmdWebShell
 
 #### -Googled "Microsoft-IIS/10.10 root directory"
 

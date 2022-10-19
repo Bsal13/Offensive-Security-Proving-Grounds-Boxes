@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#FindSUIDprivilegeEscalation",
+                "query": "tag:#aspxcmdWebShell",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -130,8 +130,8 @@
   },
   "active": "e6520ea988619da1",
   "lastOpenFiles": [
-    "Images/Pasted image 20220719191944.png",
     "Hutch (Intermediate) Windows Box.md",
+    "Images/Pasted image 20220719191944.png",
     "Nibbles (Intermediate) Linux Box.md",
     "Hawat (Easy) Linux Box.md",
     "Images/Pasted image 20221018232733.png",
