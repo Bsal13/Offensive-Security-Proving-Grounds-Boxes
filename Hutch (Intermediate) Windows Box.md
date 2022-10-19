@@ -15,13 +15,15 @@ IP: 192.168.142.122
 - Found domain of ldap to be hutch.offsec
 - Utilized ldapsearch to find username and password
 - Utilized found credentials to login with cadevar tool
-- Downloaded aspx webshell onto target machine
-- 
+- Found port 80 was running Microsoft IIS
+- Downloaded aspx webshell onto target machine in cadaver
+- Navigated to webshell page in web browser and found to have command execution
+- Googled root directory location in Microsoft IIS 10.0
 - Text
 
 ## Improved skills
 - ldapsearch enumeration
-- Microsoft IIS 
+- Findng allowed file extensions for Microsoft IIS to download a webshell
 
 ## Used tools
 - nmap
