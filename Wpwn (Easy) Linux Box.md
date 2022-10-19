@@ -3,7 +3,7 @@ Alias: Wpwn
 Date: 5/5/22
 Platform: Linux
 Difficulty: Easy
-Tags:
+Tags: #Social-warfare3.5.2unauthenticatedRCE 
 Status: Finished
 IP: 192.168.127.123
 ---
@@ -12,7 +12,10 @@ IP: 192.168.127.123
 
 
 # Resolution summary
-- Text
+- Found wordpress website running on port 80
+- Ran wpscan and found wordpress site is vulnerable to Social-warfare 3.5.2 unauthenticated remote code exececution exploit
+- Followed the steps for exploit and received a reverse shell as www-data
+- 
 - Text
 
 ## Improved skills
@@ -23,6 +26,7 @@ IP: 192.168.127.123
 - nmap
 - gobuster
 - rustscan
+- wpscan
 
 ---
 
@@ -150,6 +154,7 @@ Enumerated top 200 UDP ports:
 #### -Googled "social-warfare 3.5.2 exploit" and found the following ling and navigate to the web page and followed the steps: 
 ![](Pasted%20image%2020221018221940.png)
 ![](Pasted%20image%2020221018221808.png)
+#Social-warfare3.5.2unauthenticatedRCE 
 
 #### -Made a payload.txt file with the script "<pre>system('cat /etc/passwd')</pre>" inside
 
