@@ -3,7 +3,7 @@ Alias: Hutch
 Date: 10/2/22
 Platform: Windows
 Difficulty: Intermediate
-Tags: #ActiveDirectory #LDAPenumeration #LDAPsearch #Cadaver #aspxcmdWebShell #Microsoft-IIS/10.0RootDirectory #LAPS #LocalAdministratorPasswordSolution 
+Tags: #ActiveDirectory #LDAPenumeration #LDAPsearch #Cadaver #aspxcmdWebShell #Microsoft-IIS/10.0RootDirectory #LAPS #LocalAdministratorPasswordSolution #psexec.py
 Status: Finished
 IP: 192.168.142.122
 ---
@@ -25,8 +25,7 @@ IP: 192.168.142.122
 - Executed the reverse shell and received a reverse shelll
 - FInd Local Administrator Password Solution (LAPS) is installed onto target machine
 - Perform ldapsearch query and find administrators password
-- Login as administrator utilizing psexec.py and receive a 
-- Text
+- Login as administrator utilizing psexec.py and receive a session running as nt authority/system
 
 ## Improved skills
 - ldapsearch enumeration
