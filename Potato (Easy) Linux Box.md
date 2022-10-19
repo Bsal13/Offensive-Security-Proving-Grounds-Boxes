@@ -3,7 +3,7 @@ Alias: Potato
 Date: 5/10/22
 Platform: Linux
 Difficulty: Easy
-Tags: #AnonymousTFPlogin #phpJugglingMagicTricks #DirectoryTraversalBruteForce
+Tags: #AnonymousTFPlogin #phpJugglingMagicTricks #BurpsuiteDirectoryTraversalBruteForce
 Status: Finished
 IP: 
 ---
@@ -28,13 +28,14 @@ IP:
 - Logged in via SSH session with found credentials
 
 ## Improved skills
-- 
-- Burpsuite intruder directory
+- PHP Magic Tricks
+- Burpsuite intruder directory traversal bruteforcing
 
 ## Used tools
 - nmap
 - gobuster
 - rustscan
+- burpsuite
 
 ---
 
@@ -257,7 +258,9 @@ Enumerated top 200 UDP ports:
 
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Typed "sudo –l" I found the user can run sudo on (ALL : ALL) /bin/nice /notes/* : 
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
