@@ -223,6 +223,10 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "put /usr/share/webshells/asp/cmdasp.aspx" and navigated to "http://192.168.142.122/cmdasp.aspx" and find the following web page showing the cmdasp.asp file successfully downloaded to the target machine and was able to run commands:
 
+![](Pasted%20image%2020221019010408.png)
+
+![](Pasted%20image%2020221019010645.png)
+
 
 
 
