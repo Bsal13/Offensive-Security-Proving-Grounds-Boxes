@@ -12,8 +12,8 @@ IP: 192.168.127.86
 
 
 # Resolution summary
-- Text
-- Text
+- Found a connection tester tool running on port 80
+- Added a semi colon 
 
 ## Improved skills
 - Found adding a semi colon after a command will be treated a separate command the commands will be executed sequentially 
