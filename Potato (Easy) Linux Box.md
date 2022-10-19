@@ -191,6 +191,20 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221018170532.png)
 
+#### -Changed "password=" to password[ ]=" " and clicked send to send response and found the following response directing me to "dashboard.php": 
+
+![](Pasted%20image%2020221018170641.png)
+
+#### -I then navigated to the "proxy" tab in Burp Suite and input the same password[ ]=" " into the POST information and clicked "forward" and received the following webpage: 
+
+![](Pasted%20image%2020221018170749.png)
+![](Pasted%20image%2020221018170837.png)
+
+#### -I then tuned off Foxyproxy and navigated to the "dashboard" link and found the following webpage 
+
+![](Pasted%20image%2020221018170942.png)
+
+
 
 
 
