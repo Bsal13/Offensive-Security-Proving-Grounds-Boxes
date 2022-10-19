@@ -15,9 +15,10 @@ IP:
 - Found admin login page from gobuster scan
 - Found we were able to login to ftp port 2112 anonymously
 - Downloaded index.php.bak file from ftp server
-- Found the username and password in the .bak file and logged into the adming login page
+- Found the username and password in the .bak file 
 - Found the following string of code in the .bak file "strcmp($_POST['password'], $pass) == 0)" and googled it
-- 
+- Found Type Juggling PHP Magic tricks
+- Utilized Burpsuite when logging into
 
 ## Improved skills
 - skill 1
@@ -213,16 +214,11 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
----
+#### -Found the following "log.txt" file on the web page above and ran Burp Suite and found the following "log.txt" file: 
 
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+![](Pasted%20image%2020221018171240.png)
 
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
 ---
 
