@@ -13,7 +13,9 @@ IP: 192.168.127.86
 
 # Resolution summary
 - Found a connection tester tool running on port 80
-- Added a semi colon 
+- Added a semi colon and modified mkfifo netcat one liner; setup a netcat listener and recieved a reverse shell
+- Found SUID /usr/bin/vim.basic binary on the target machine
+- Foun
 
 ## Improved skills
 - Found adding a semi colon after a command will be treated a separate command the commands will be executed sequentially 
