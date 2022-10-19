@@ -190,22 +190,27 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221018232029.png)
 
+#### -Navigated to "192.168.235.64:8003/booked/Web/admin/manage_theme.php"
 
+#### -Clicked the "browse" icon and clicked my "reverse.php" on my kali machine and clicked "update"
 
----
+#### -Started a reverse listener on port 8003 and navigated to http://192.168.235.64:8003/booked/Web/custom-favicon.php/reverse.php and received a reverse shell:
 
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+![](Pasted%20image%2020221018232149.png)
 
 ---
 
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Per linpeas.sh scan I found the following cronjob running every 3 minutes
+![](Pasted%20image%2020221018232421.png)
+
+#### -Cat'd "/var/www/html/booked/cleanup.py" and found the following:
+![](Pasted%20image%2020221018232524.png)
+
+
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
