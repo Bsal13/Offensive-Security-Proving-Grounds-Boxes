@@ -3,7 +3,7 @@ Alias: Potato
 Date: 5/10/22
 Platform: Linux
 Difficulty: Easy
-Tags: #AnonymousTFPlogin #phpJugglingMagicTricks 
+Tags: #AnonymousTFPlogin #phpJugglingMagicTricks #DirectoryTraversalBruteForce
 Status: Finished
 IP: 
 ---
@@ -23,11 +23,13 @@ IP:
 - Found a webpage which would pull log.txt files from the machine
 - Sent web request/page to intruder in Burpsuite and retreived a cheatsheet/manual ist of directory traversal requests for /etc/passwd/
 - Bruteforced the different directory traversal commands for retreiving /etc/passwd and found a hit using intruder in Burpsuite
-- Retreived a username and hashed password for 
+- Was able to read the /etc/passwd file and retreived a username and hashed password 
+- Utilized John to crack the users hash 
+- Logged in via SSH session with found credentials
 
 ## Improved skills
-- skill 1
-- skill 2
+- 
+- Burpsuite intruder directory
 
 ## Used tools
 - nmap
@@ -231,6 +233,7 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221018172931.png)
 ![](Pasted%20image%2020221018173015.png)
 ![](Pasted%20image%2020221018173053.png)
+#DirectoryTraversalBruteForce
 
 #### -Copied the raw request from the first "2" 1000 found in the bruteforce and pasted into the "proxy" page of burpsuite and clicked "forward" and the following web page came up showing user "webadmin" along with the password hash.  
  
@@ -244,7 +247,11 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "john hash.txt" and cracked the hash finding the password for "webadmin" to be "dragon": 
 
+![](Pasted%20image%2020221018173609.png)
 
+#### -I was unable to login to the admin login page with the credentials found but was able to login to SSH with username webadmin and password dragon: 
+
+![](Pasted%20image%2020221018173704.png)
 
 ---
 
