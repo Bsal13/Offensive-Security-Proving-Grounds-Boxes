@@ -148,6 +148,26 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221018230328.png)
 
+#### -Typed "smbmap -R zino -H 192.168.108.64" and found the following files in the "zino" share logs files:
+
+![](Pasted%20image%2020221018230621.png)
+
+#### -Typed "smbmap -R zino -H 192.168.108.64 -A misc.log" as well as every other file listed in the zino share to download to my kali machine:
+
+![](Pasted%20image%2020221018230715.png)
+
+#### -Typed "cat 192.168.108.64-zino_misc.log" and found username "admin" password "adminadmin":
+
+![](Pasted%20image%2020221018230819.png)
+
+#### -Navigated to http://192.168.108.64:8003 as nmap scan showed port 8003 as an http apache server and found the below web page showing file/folder "booked":
+
+![](Pasted%20image%2020221018230914.png)
+
+#### -Clicked on the "booked" link and was navigated to the below web page showing "booked scheduler v2.7.5"
+
+![](Pasted%20image%2020221018231035.png)
+
 
 
 ---

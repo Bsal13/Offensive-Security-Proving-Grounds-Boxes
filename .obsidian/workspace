@@ -130,6 +130,7 @@
   },
   "active": "e6520ea988619da1",
   "lastOpenFiles": [
+    "Zino (Intermediate) Linux Box/Exploitation.md",
     "Zino (Intermediate) Linux Box.md",
     "Zino (Intermediate) Linux Box/Enumeration.md",
     "Zino (Intermediate) Linux Box/Attack Surface.md",
@@ -138,7 +139,6 @@
     "Wpwn (Easy) Linux Box.md",
     "Wpwn (Easy) Linux Box/Privilege Escalation.md",
     "Wpwn (Easy) Linux Box/Exploitation.md",
-    "Wpwn (Easy) Linux Box/Enumeration.md",
-    "Payday (Intermediate) Linux Box.md"
+    "Wpwn (Easy) Linux Box/Enumeration.md"
   ]
 }
