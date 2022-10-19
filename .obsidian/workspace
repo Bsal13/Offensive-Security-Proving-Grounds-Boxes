@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Shakabra (Easy) Linux Box.md",
+            "file": "Wpwn (Easy) Linux Box.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shakabra (Easy) Linux Box.md",
+                "file": "Wpwn (Easy) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Shakabra (Easy) Linux Box.md",
+                "file": "Wpwn (Easy) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shakabra (Easy) Linux Box.md"
+                "file": "Wpwn (Easy) Linux Box.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "e6520ea988619da1",
   "lastOpenFiles": [
+    "Wpwn (Easy) Linux Box/Enumeration.md",
+    "Wpwn (Easy) Linux Box/Attack Surface.md",
     "Wpwn (Easy) Linux Box.md",
+    "Shakabra (Easy) Linux Box.md",
     "Wpwn (Easy) Linux Box/Privilege Escalation.md",
     "Wpwn (Easy) Linux Box/Exploitation.md",
-    "Wpwn (Easy) Linux Box/Enumeration.md",
     "Images/Pasted image 20221018184222.png",
-    "Shakabra (Easy) Linux Box.md",
     "Shakabra (Easy) Linux Box/Privilege Escalation.md",
     "Shakabra (Easy) Linux Box/Exploitation.md",
-    "Shakabra (Easy) Linux Box/Enumeration.md",
-    "Nibbles (Intermediate) Linux Box.md"
+    "Shakabra (Easy) Linux Box/Enumeration.md"
   ]
 }
