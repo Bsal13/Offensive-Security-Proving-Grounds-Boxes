@@ -7,11 +7,9 @@
         "id": "e6520ea988619da1",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Meathead (Hard) Windows Machine.md",
-            "mode": "source",
-            "source": false
+            "file": "Images/Pasted image 20221020002407.png"
           }
         }
       }
@@ -77,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
+                "file": "Images/Pasted image 20221020002407.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
+                "file": "Images/Pasted image 20221020002407.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md"
+                "file": "Images/Pasted image 20221020002407.png"
               }
             }
           }
@@ -128,8 +126,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e6520ea988619da1",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Meathead (Hard) Windows Machine.md",
     "Hutch (Intermediate) Windows Box.md",
     "Images/Pasted image 20220719191944.png",
     "Nibbles (Intermediate) Linux Box.md",
@@ -138,7 +137,6 @@
     "Zino (Intermediate) Linux Box.md",
     "Zino (Intermediate) Linux Box/Privilege Escalation.md",
     "Zino (Intermediate) Linux Box/Exploitation.md",
-    "Algeron (Easy) Windows Box.md",
-    "Zino (Intermediate) Linux Box/Enumeration.md"
+    "Algeron (Easy) Windows Box.md"
   ]
 }
