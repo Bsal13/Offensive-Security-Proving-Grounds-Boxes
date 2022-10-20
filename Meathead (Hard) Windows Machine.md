@@ -184,6 +184,12 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221020002530.png)
 
+## PORT 1221 - Microsoft ftpd
+#### - Per the nmap scan it shows we are able login anonymously via ftp
+
+#### - Typed "ftp 192.168.114.70 -p 1221" used anonymous as user and anonymous as password and found the following files:
+
+
 
 
 
