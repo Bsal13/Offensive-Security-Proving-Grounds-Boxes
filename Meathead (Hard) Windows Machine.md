@@ -217,6 +217,8 @@ Enumerated top 200 UDP ports:
 #MicrosoftSQLServerReverseShellExploit
 
 #### - Typed "help" and found the following commands I can input:
+![](Pasted%20image%2020221020004819.png)
+
 
 
 
