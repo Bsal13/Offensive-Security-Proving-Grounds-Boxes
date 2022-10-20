@@ -15,17 +15,23 @@ IP: 192.168.114.70
 - Found we are able to login anonymously to FTP server
 - Found MSSQL bak file which needed a password to be opened
 - Utilized rar2john to retreive the rar file password hash and cracked the password with john
+- Logged into mssql
+- Hosted nc64.exe binary from smbserver.py
+- Started a netcat listener on kali machine
+- Typed xp_cmdshell cmd reverse shell command and received a reverse shelll
 - 
-- Text
+- 
+
 
 ## Improved skills
 - rar2john
-- john
+- mssql commands
 
 ## Used tools
 - nmap
 - rar2john
 - john
+- mssql
 
 ---
 
