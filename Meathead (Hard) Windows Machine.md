@@ -269,7 +269,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 
 #### - Typed "PrintSpoofer64.exe -i -c cmd" and received a shell running with system privileges:
 
-
+![](Pasted%20image%2020221020011216.png)
 
 
 ## Privilege Escalation vector
