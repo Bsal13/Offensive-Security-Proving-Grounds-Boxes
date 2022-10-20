@@ -1,6 +1,6 @@
 ---
 Alias: Meathead
-Date: {{date}}
+Date: 71
 Platform: Windows
 Difficulty: Hard
 Tags:
