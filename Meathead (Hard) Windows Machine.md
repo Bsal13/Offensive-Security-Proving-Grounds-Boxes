@@ -19,8 +19,9 @@ IP: 192.168.114.70
 - Hosted nc64.exe binary from smbserver.py
 - Started a netcat listener on kali machine
 - Typed xp_cmdshell cmd reverse shell command and received a reverse shelll
-- 
-- 
+- Found Seimperosnateprivilege was enabled 
+- Downloaded Printspoofer64.exe binary on target machine
+- Ran Printspoofer64.exe binary and received a CMD session running as nt authority/s
 
 
 ## Improved skills
