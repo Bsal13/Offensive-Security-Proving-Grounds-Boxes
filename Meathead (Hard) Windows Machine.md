@@ -220,6 +220,8 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221020004819.png)
 
 
+#### - Typed "enable_xp_cmdshell" 
+
 
 
 ---
