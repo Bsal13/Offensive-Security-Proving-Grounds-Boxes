@@ -1,11 +1,11 @@
 ---
 Alias: Meathead
-Date: 71
+Date: 7/1/22
 Platform: Windows
 Difficulty: Hard
 Tags:
 Status: Finished
-IP: 
+IP: 192.168.114.70
 ---
 
 # {{Meathead}}
@@ -28,6 +28,135 @@ IP:
 # Information Gathering
 Scanned all TCP ports:
 ```bash
+rustscan -a 192.168.114.70 --ulimit 5000                                                                                       (master✱) 
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
+The Modern Day Port Scanner.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+Nmap? More like slowmap.🐢
+
+[~] The config file is expected to be at "/home/kali/.rustscan.toml"
+[~] Automatically increasing ulimit value to 5000.
+Open 192.168.114.70:80
+Open 192.168.114.70:135
+Open 192.168.114.70:139
+Open 192.168.114.70:445
+Open 192.168.114.70:1221
+Open 192.168.114.70:1435
+Open 192.168.114.70:3389
+Open 192.168.114.70:5985
+[~] Starting Script(s)
+[>] Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[~] Starting Nmap 7.92 ( https://nmap.org ) at 2022-06-30 23:49 EDT
+Initiating Ping Scan at 23:49
+Scanning 192.168.114.70 [2 ports]
+Completed Ping Scan at 23:49, 0.08s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 23:49
+Completed Parallel DNS resolution of 1 host. at 23:49, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 23:49
+Scanning 192.168.114.70 [8 ports]
+Discovered open port 3389/tcp on 192.168.114.70
+Discovered open port 135/tcp on 192.168.114.70
+Discovered open port 139/tcp on 192.168.114.70
+Discovered open port 80/tcp on 192.168.114.70
+Discovered open port 445/tcp on 192.168.114.70
+Discovered open port 5985/tcp on 192.168.114.70
+Discovered open port 1221/tcp on 192.168.114.70
+Discovered open port 1435/tcp on 192.168.114.70
+Completed Connect Scan at 23:49, 0.08s elapsed (8 total ports)
+Nmap scan report for 192.168.114.70
+Host is up, received syn-ack (0.080s latency).
+Scanned at 2022-06-30 23:49:26 EDT for 0s
+
+PORT     STATE SERVICE        REASON
+80/tcp   open  http           syn-ack
+135/tcp  open  msrpc          syn-ack
+139/tcp  open  netbios-ssn    syn-ack
+445/tcp  open  microsoft-ds   syn-ack
+1221/tcp open  sweetware-apps syn-ack
+1435/tcp open  ibm-cics       syn-ack
+3389/tcp open  ms-wbt-server  syn-ack
+5985/tcp open  wsman          syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.26 seconds
+
+sudo nmap -sC -sV 192.168.114.70 -p 80,135,139,445,1221,1435,3389,5985                                      (master✱) 
+[sudo] password for kali: 
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-07-01 00:02 EDT
+Nmap scan report for 192.168.114.70
+Host is up (0.10s latency).
+
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Plantronics
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+1221/tcp open  ftp           Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 04-27-20  07:02PM                18866 Elementum Supremum.docx
+| 04-27-20  07:02PM               764176 file_example_MP3_700KB.mp3
+| 04-27-20  07:02PM                15690 img.jpg
+| 04-27-20  07:02PM                  302 MSSQL_BAK.rar
+| 04-27-20  07:02PM                  548 palindromes.txt
+|_04-27-20  07:02PM                45369 server.jpg
+1435/tcp open  ms-sql-s      Microsoft SQL Server 2017 14.00.1000
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2021-09-21T18:21:07
+|_Not valid after:  2051-09-21T18:21:07
+| ms-sql-ntlm-info: 
+|   Target_Name: MEATHEAD
+|   NetBIOS_Domain_Name: MEATHEAD
+|   NetBIOS_Computer_Name: MEATHEAD
+|   DNS_Domain_Name: Meathead
+|   DNS_Computer_Name: Meathead
+|_  Product_Version: 10.0.17763
+|_ssl-date: 2022-07-01T04:03:54+00:00; 0s from scanner time.
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2022-07-01T04:03:54+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=Meathead
+| Not valid before: 2022-06-29T23:40:16
+|_Not valid after:  2022-12-29T23:40:16
+| rdp-ntlm-info: 
+|   Target_Name: MEATHEAD
+|   NetBIOS_Domain_Name: MEATHEAD
+|   NetBIOS_Computer_Name: MEATHEAD
+|   DNS_Domain_Name: Meathead
+|   DNS_Computer_Name: Meathead
+|   Product_Version: 10.0.17763
+|_  System_Time: 2022-07-01T04:03:15+00:00
+5985/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2022-07-01T04:03:24
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 86.99 seconds
 
 ```
 
