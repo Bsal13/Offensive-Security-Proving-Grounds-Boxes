@@ -206,18 +206,19 @@ Enumerated top 200 UDP ports:
 
 #### - And found username "sa" and password "EjectFrailtyThorn425"
 ![](Pasted%20image%2020221020003738.png)
-
-
-
-
-
-
-
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### - Logged into ms-sql by typing "mssqlclient.py -p 1435 sa:EjectFrailtyThorn425@192.168.114.70"
+
+![](Pasted%20image%2020221020004521.png)
+#MicrosoftSQLServerReverseShellExploit
+
+#### - Typed "help" and found the following commands I can input:
+
+
 
 ---
 
