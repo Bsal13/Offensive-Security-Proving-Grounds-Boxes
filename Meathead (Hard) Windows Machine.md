@@ -211,6 +211,7 @@ Enumerated top 200 UDP ports:
 # Exploitation
 ## Name of the technique
 ## Microsoft SQL Server Reverse Shell Exploit
+
 #### - Logged into ms-sql by typing "mssqlclient.py -p 1435 sa:EjectFrailtyThorn425@192.168.114.70"
 
 ![](Pasted%20image%2020221020004521.png)
