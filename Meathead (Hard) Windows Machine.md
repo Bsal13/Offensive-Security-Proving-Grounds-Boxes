@@ -13,16 +13,19 @@ IP: 192.168.114.70
 
 # Resolution summary
 - Found we are able to login anonymously to FTP server
-- Found MSS
+- Found MSSQL bak file which needed a password to be opened
+- Utilized rar2john to retreive the rar file password hash and cracked the password with john
+- 
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- rar2john
+- john
 
 ## Used tools
 - nmap
-- gobuster
+- rar2john
+- john
 
 ---
 
@@ -196,7 +199,7 @@ Enumerated top 200 UDP ports:
 
 #### - Attempted to open the "MSSQL_BACK.rar" file but it needed a password
 
-#### - Typed "rar2john MSSQL_BAK.rar > back.hash" to retreive the rar file password hashand input it into the back.hash file
+#### - Typed "rar2john MSSQL_BAK.rar > back.hash" to retreive the rar file password hash and input it into the back.hash file
 
 #### - Typed "john back.hash --wordlist=/usr/share/wordlists/rockyou.txt" and found password "letmeinplease"
 ![](Pasted%20image%2020221020003414.png)
