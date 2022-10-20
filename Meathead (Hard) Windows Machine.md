@@ -189,6 +189,24 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "ftp 192.168.114.70 -p 1221" used anonymous as user and anonymous as password and found the following files:
 
+![](Pasted%20image%2020221020003245.png)
+
+#### - Typed "mget MSSQL_BAK.rar" to download the file to my kali machine
+
+#### - Attempted to open the "MSSQL_BACK.rar" file but it needed a password
+
+#### - Typed "rar2john MSSQL_BAK.rar > back.hash" to retreive the rar file password hashand input it into the back.hash file
+
+#### - Typed "john back.hash --wordlist=/usr/share/wordlists/rockyou.txt" and found password "letmeinplease"
+![](Pasted%20image%2020221020003414.png)
+
+#### - Typed "unrar e MSSQL_BAK.rar -p " and entered password "letmeinplease"
+
+![](Pasted%20image%2020221020003518.png)
+
+#### - And found username "sa" and password "EjectFrailtyThorn425"
+
+
 
 
 
