@@ -12,7 +12,8 @@ IP: 192.168.114.70
 
 
 # Resolution summary
-- Text
+- Found we are able to login anonymously to FTP server
+- Found MSS
 - Text
 
 ## Improved skills
