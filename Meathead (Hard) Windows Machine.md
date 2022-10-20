@@ -205,6 +205,8 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221020003518.png)
 
 #### - And found username "sa" and password "EjectFrailtyThorn425"
+![](Pasted%20image%2020221020003738.png)
+
 
 
 
