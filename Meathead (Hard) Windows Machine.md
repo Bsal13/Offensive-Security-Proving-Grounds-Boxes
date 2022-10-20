@@ -3,7 +3,7 @@ Alias: Meathead
 Date: 7/1/22
 Platform: Windows
 Difficulty: Hard
-Tags:
+Tags: #FTPAnoymousLogin #msqlclient.py 
 Status: Finished
 IP: 192.168.114.70
 ---
@@ -21,7 +21,7 @@ IP: 192.168.114.70
 - Typed xp_cmdshell cmd reverse shell command and received a reverse shelll
 - Found Seimperosnateprivilege was enabled 
 - Downloaded Printspoofer64.exe binary on target machine
-- Ran Printspoofer64.exe binary and received a CMD session running as nt authority/s
+- Ran Printspoofer64.exe binary and received a CMD session running as nt authority/system
 
 
 ## Improved skills
