@@ -30,6 +30,7 @@ IP: 192.168.114.70
 
 ## Used tools
 - nmap
+- rustscan
 - rar2john
 - john
 - mssql
@@ -173,7 +174,9 @@ Nmap done: 1 IP address (1 host up) scanned in 86.99 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+80
+1221
+1435
 ```
 
 Enumerated top 200 UDP ports:
