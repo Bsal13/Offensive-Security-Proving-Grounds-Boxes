@@ -12,7 +12,11 @@ IP: 192.168.114.127
 
 
 # Resolution summary
-- Navigated to port 33033 in web browser and found a site containing t
+- Navigated to port 33033 in web browser and found a site containing a list of team members pictures, names, email addresses and captions
+- Found a login page and clicked link "forgot password"
+- Attempted to input the found emails and information from the team members and found jerren.devops successful 
+- Logged in with jarren.devops and created a new password
+- 
 - Text
 
 ## Improved skills
