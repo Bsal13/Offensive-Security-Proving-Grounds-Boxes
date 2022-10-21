@@ -374,6 +374,7 @@ Enumerated open TCP ports:
 ```bash
 45332
 44330
+333033
 ```
 
 Enumerated top 200 UDP ports:
@@ -399,6 +400,26 @@ Enumerated top 200 UDP ports:
 ## PORT 44330 
 
 #### - Navigated to "http://192.168.114.127:44330" and was directed to the following webpage:
+
+![](Pasted%20image%2020221020170735.png)
+
+#### - Googled "BarracudaDrive exploit" and found the following local privilege escalation exploit:
+
+![](Pasted%20image%2020221020170824.png)
+
+## PORT 33033
+
+#### - Navigated to "http://192.168.114.127:33033" and found the following web page with team names, emails and pictures:
+
+![](Pasted%20image%2020221020170955.png)
+
+#### - Found a picture of a cat in the team to be interesting:
+
+![](Pasted%20image%2020221020171034.png)
+
+#### - Clicked on the login link and was directed the following login page:
+
+![](Pasted%20image%2020221020171114.png)
 
 
 ---
