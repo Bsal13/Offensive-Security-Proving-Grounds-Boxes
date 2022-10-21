@@ -422,6 +422,12 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221020171114.png)
 
 
+![](Pasted%20image%2020221020183042.png)
+
+#### -Clicked on the "forgot password" link and wa directed to the following page:
+
+
+
 ---
 
 # Exploitation
