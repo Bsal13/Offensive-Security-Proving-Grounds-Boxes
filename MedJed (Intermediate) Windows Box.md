@@ -372,7 +372,8 @@ Nmap done: 1 IP address (1 host up) scanned in 193.29 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+45332
+44330
 ```
 
 Enumerated top 200 UDP ports:
@@ -385,6 +386,19 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 45332 - Apache httpd 2.4.46 
 
+#### - Typed "feroxbuster -u http://192.168.114.127:45332/ -C 401 403 405 -x php,txt,json,docx,html" and found phpinfo.php file:
+
+![](Pasted%20image%2020221020170419.png)
+
+#### -Navigated to "http://192.168.114.127:45332/phpinfo.php" and found the root directory of the machine is "C:/xampp/htdocs"
+
+![](Pasted%20image%2020221020170505.png)
+#phpinfo #WebRootDirectoryFindings
+
+
+## PORT 44330 
+
+#### - Navigated to "http://192.168.114.127:44330" and was directed to the following webpage:
 
 
 ---

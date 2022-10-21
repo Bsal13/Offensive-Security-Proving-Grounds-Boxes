@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Meathead (Hard) Windows Machine.md",
+            "file": "MedJed (Intermediate) Windows Box.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
+                "file": "MedJed (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
+                "file": "MedJed (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md"
+                "file": "MedJed (Intermediate) Windows Box.md"
               }
             }
           }
@@ -130,12 +130,12 @@
   },
   "active": "e6520ea988619da1",
   "lastOpenFiles": [
-    "MedJed (Intermediate) Windows Box.md",
     "Meathead (Hard) Windows Machine.md",
+    "Hutch (Intermediate) Windows Box.md",
     "Jacko (Intermediate) Windows Box.md",
+    "MedJed (Intermediate) Windows Box.md",
     "MeatHead (Hard) Windows Machine.md",
     "Images/Pasted image 20221020002407.png",
-    "Hutch (Intermediate) Windows Box.md",
     "Images/Pasted image 20220719191944.png",
     "Nibbles (Intermediate) Linux Box.md",
     "Hawat (Easy) Linux Box.md",
