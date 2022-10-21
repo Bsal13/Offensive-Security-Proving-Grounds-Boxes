@@ -19,8 +19,10 @@ IP: 192.168.114.127
 - Logged in with jarren.devops and created a new password
 - Found the website was running mysql
 - Input a mysql command along with php webshell code into the root directory 
+- Confirmed code execution on webshell and downloaded a reverse shell binary onto target machine and received a shell
 - 
-- Text
+- 
+
 
 ## Improved skills
 - skill 1
@@ -454,7 +456,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Name of the technique
+## MYSQL Injection
 
 #### - Found mysql on the page so I typed one quote and clicked request to confirm if it might be vulernable to sql injection:
 
@@ -500,6 +502,7 @@ Enumerated top 200 UDP ports:
 ![](Images/Pasted%20image%2020221020193237.png)
 
 ## Privilege Escalation vector
+## BarracudaDrive v6.5 Privilege Escalation 
 
 #### - Instead of creating an admin user via the compiled binary steps shown in the exploit I performed the following steps:
 
