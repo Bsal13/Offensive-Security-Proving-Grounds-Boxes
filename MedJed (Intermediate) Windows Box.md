@@ -426,8 +426,23 @@ Enumerated top 200 UDP ports:
 
 #### -Clicked on the "forgot password" link and wa directed to the following page:
 
+![](Pasted%20image%2020221020183337.png)
 
+#### - As the picture of the cat listed in the team was most odd I attempted multiple username and reminder alternatives found in the cats profile information and finally was able to find the correct username and reminder combination (username: jerren.devops reminder: paranoid):
 
+![](Pasted%20image%2020221020183427.png)
+
+![](Pasted%20image%2020221020183508.png)
+
+#### - Logged into the webpage with the username jerren.devops and the new created password "password" and was directed to the following web page:
+
+![](Pasted%20image%2020221020183555.png)
+
+#### - Clicked "edit" link and was directed to the following web page and clicked "Request profile SLUG" link:
+
+![](Pasted%20image%2020221020183649.png)
+
+#### - Found mysql on the page so I typed one quote and clicked request to confirm if it might be vulernable to sql injection:
 ---
 
 # Exploitation
