@@ -3,7 +3,7 @@ Alias: MedJed
 Date: 7/10/22
 Platform: Windows
 Difficulty: Intermediate
-Tags:
+Tags: #PHPwebshell #
 Status: Finished
 IP: 192.168.114.127 
 ---
@@ -16,7 +16,8 @@ IP: 192.168.114.127
 - Found a login page and clicked link "forgot password"
 - Attempted to input the found emails and information from the team members and found jerren.devops successful 
 - Logged in with jarren.devops and created a new password
-- 
+- Found the website was running mysql
+- Input a mysql command along with php webshell code
 - Text
 
 ## Improved skills
@@ -466,7 +467,7 @@ Enumerated top 200 UDP ports:
 #sqlinjection 
 
 #### -As we confirmed previously the root directory of the target machine is "C:/xampp/htdocs" I typed ' UNION SELECT ("<?php echo passthru($_GET['cmd']);") INTO OUTFILE 'C:/xampp/htdocs/cmd.php'  -- -' and request 
-#phpcodeExecutionCommand
+#PHPwebshell #UNIONselectMYSQLinjection
 
 #### - Received no error
 
