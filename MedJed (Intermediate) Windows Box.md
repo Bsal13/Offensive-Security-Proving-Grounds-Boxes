@@ -12,7 +12,7 @@ IP: 192.168.114.127
 
 
 # Resolution summary
-- Text
+- Navigated to port 33033 in web browser and found a site containing t
 - Text
 
 ## Improved skills
