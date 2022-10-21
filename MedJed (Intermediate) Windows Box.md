@@ -3,7 +3,7 @@ Alias: MedJed
 Date: 7/10/22
 Platform: Windows
 Difficulty: Intermediate
-Tags: #phpinfo #RootDirectory #PHPwebshell #UNIONSELECTmysqlinjection
+Tags: #phpinfo #RootDirectory #PHPwebshell #UNIONSELECTmysqlinjection #BarracudaDrivev6.5PrivilegeEscalation 
 Status: Finished
 IP: 192.168.114.127 
 ---
@@ -20,13 +20,12 @@ IP: 192.168.114.127
 - Found the website was running mysql
 - Input a mysql command along with php webshell code into the root directory 
 - Confirmed code execution on webshell and downloaded a reverse shell binary onto target machine and received a shell
-- 
-- 
+- Found BarracudaDrive v6.5 Privilege Escalation
+- Followed the steps to escalate privileges and received a shell running as nt system/authority
 
 
 ## Improved skills
-- skill 1
-- skill 2
+- UNION SELECT mysql injection
 
 ## Used tools
 - nmap
