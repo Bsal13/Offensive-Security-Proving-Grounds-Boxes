@@ -251,7 +251,7 @@ Enumerated top 200 UDP ports:
 
 #### Per the nmap scan, port 25 was open so I used smtp user enum script and typed "sudo smtp-user-enum -M VRFY -U /usr/share/wordlists/seclists/Usernames/Names/names.txt -t 192.168.108.137" and found the following valid users for SMTP:
 
-
+![](Pasted%20image%2020221025153641.png)
 
 ---
 
