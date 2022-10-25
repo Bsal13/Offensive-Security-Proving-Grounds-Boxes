@@ -1,8 +1,7 @@
 ---
 Alias: Postfish
-Date: {{date}}
-Platform: 
-Category:
+Date: 6/7/2022
+Platform: Linux
 Difficulty:
 Tags:
 Status:
