@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "a444086d2c72693c",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.0.0"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -150,10 +139,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "a444086d2c72693c",
+  "active": "e6520ea988619da1",
   "lastOpenFiles": [
-    "Images/Pasted image 20221020170419.png",
     "MedJed (Intermediate) Windows Box.md",
+    "Images/Pasted image 20221020170419.png",
     "Meathead (Hard) Windows Machine.md",
     "Hutch (Intermediate) Windows Box.md",
     "Jacko (Intermediate) Windows Box.md",
