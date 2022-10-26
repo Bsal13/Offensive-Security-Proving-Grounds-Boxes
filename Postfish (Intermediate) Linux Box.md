@@ -277,7 +277,14 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -I then googled port 25 command (SMTP) and found the following link/webage showing how I can send an e-mail via port 25 to their internal sales team. Per previous e-mail found sent from it@postfish.off:
+
+![](Pasted%20image%2020221025172936.png)
+
+![](Pasted%20image%2020221025173043.png)
+
+
 
 ---
 
