@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nukem (Intermediate) Linux Box.md",
+                "file": "Postfish (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Nukem (Intermediate) Linux Box.md",
+                "file": "Postfish (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Nukem (Intermediate) Linux Box.md",
+                "file": "Postfish (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Nukem (Intermediate) Linux Box.md"
+                "file": "Postfish (Intermediate) Linux Box.md"
               }
             }
           }
@@ -154,6 +154,7 @@
   },
   "active": "8a4c35666c839e59",
   "lastOpenFiles": [
+    "Nukem (Intermediate) Linux Box.md",
     "Postfish (Intermediate) Linux Box.md",
     "Images/Pasted image 20221025180855.png",
     "MedJed (Intermediate) Windows Box.md",
@@ -162,7 +163,6 @@
     "Hutch (Intermediate) Windows Box.md",
     "Jacko (Intermediate) Windows Box.md",
     "MeatHead (Hard) Windows Machine.md",
-    "Images/Pasted image 20221020002407.png",
-    "Images/Pasted image 20220719191944.png"
+    "Images/Pasted image 20221020002407.png"
   ]
 }
