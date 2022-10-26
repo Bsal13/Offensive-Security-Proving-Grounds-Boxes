@@ -3,7 +3,7 @@ Alias: Nukem
 Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:  #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload #SETUIDDosboxLinuxPrivilegeEscalation
+Tags:  #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload #SETUIDDosboxLinuxPrivilegeEscalation #SSHTunneling
 Status: Finished
 IP: 192.168.230.105 
 ---
@@ -189,5 +189,10 @@ Enumerated top 200 UDP ports:
 #### -Attempted to run dosbox binary but unable to on ssh session
 
 #### -Typed "netstat -atlp" and found an xvnc session listening on localhost port 5901:
+
+![](Pasted%20image%2020221026143324.png)
+
+#### -Opened another terminal on my kali machine and typed "ssh -L 5901:localhost:5901 commander@192.168.143.105" to SSH Tunnel/port forward and received another SSH session
+#SSHTunneling
 
 ---
