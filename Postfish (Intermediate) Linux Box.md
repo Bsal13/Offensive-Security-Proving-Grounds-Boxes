@@ -257,13 +257,19 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221025170417.png)
 ![](Pasted%20image%2020221025170504.png)
 
+## Port 80 - Apache httpd 2.4.41
+
 #### -Navigated to website as port 80 was found to be open per NMAP scan but was redirected to "postfish.off" and was unable to access it. 
 
 #### -Typed "vim /etc/hosts" and added target ip address linking to postfish.off
 
 #### -Then navigated to postfish.off and found the following webpage:
 
+![](Pasted%20image%2020221025170559.png)
 
+#### -I then clicked on the "Our Team" link and found Brian Moore being the "Sales Manager":
+
+![](Pasted%20image%2020221025170647.png)
 
 
 
