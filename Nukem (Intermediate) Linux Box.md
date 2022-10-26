@@ -19,7 +19,12 @@ IP: 192.168.230.105
 - Logged into SSH session with found credentials
 - Found SUID bit set for /usr/bin/dosbox and instructions to escalate privileges in GTFOBINS
 - Unable to run dosbox binary on the SSH session
-- Found VNC session running on localhost port 5901
+- Found VNC session listenening on localhost port 5901
+- SSH tunneled into localhost port 5901 on a separate terminal
+- Then found vnc session listening from 127.0.0.1 on port 5901
+- Connected to vnc session from Remmina using found credentials
+- Opened a terminal in the vnc session and was able to run dosbox binary
+- 
 - 
 - Text
 
