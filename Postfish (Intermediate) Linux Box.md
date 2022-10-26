@@ -21,7 +21,7 @@ IP: 192.168.108.137
 
 ## Used tools
 - nmap
-- gobuster
+- smtp-user-enum
 
 ---
 
@@ -362,7 +362,16 @@ server.quit()
 ![](Pasted%20image%2020221025180351.png)
 
 ## Privilege Escalation vector
+## /usr/bin/mail GTFOBINS 
 
 #### -Found mail with sudo privileges in GTFOBins site:
+
+![](Pasted%20image%2020221025180737.png)
+![](Pasted%20image%2020221025180808.png)
+#/usr/bin/mailGTFOBINSPrivilegeEscalation
+
+#### -Typed "sudo mail --exec='!/bin/sh'" and received a shell as root:
+
+![](Pasted%20image%2020221025180855.png)
 
 ---
