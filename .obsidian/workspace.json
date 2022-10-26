@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#SMTPSpearfishingExploit",
+                "query": "tag:#SETUIDDosboxLinuxPrivilegeEscalation",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -152,7 +152,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "8a4c35666c839e59",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
     "Postfish (Intermediate) Linux Box.md",
     "Nukem (Intermediate) Linux Box.md",
