@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Localize",
+                "query": "tag:#SMTPSpearfishingExploit",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -139,7 +139,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "cc61d3b1497b7e97",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
     "MedJed (Intermediate) Windows Box.md",
     "Postfish (Intermediate) Linux Box.md",

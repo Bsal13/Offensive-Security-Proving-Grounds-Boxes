@@ -3,7 +3,7 @@ Alias: Postfish
 Date: 6/7/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #SMTPSpearfishingExploit #/usr/bin/mailGTFOBINSPrivilegeEscalation #PostFixDisclaimerPrivilegeEscalation
 Status: Finished
 IP: 192.168.108.137
 ---
