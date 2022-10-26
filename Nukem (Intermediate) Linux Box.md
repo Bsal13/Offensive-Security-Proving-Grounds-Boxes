@@ -195,4 +195,8 @@ Enumerated top 200 UDP ports:
 #### -Opened another terminal on my kali machine and typed "ssh -L 5901:localhost:5901 commander@192.168.143.105" to SSH Tunnel/port forward and received another SSH session
 #SSHTunneling
 
+
+#### -Typed "netstat -atlp" and found the vnc session now listening from 127.0.0.1 on port 5901:
+
+
 ---
