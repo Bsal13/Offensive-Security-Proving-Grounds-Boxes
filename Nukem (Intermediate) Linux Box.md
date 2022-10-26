@@ -17,7 +17,10 @@ IP: 192.168.230.105
 - Ran the exploit and received a reverse shell
 - Found credentials in wp-config file
 - Logged into SSH session with found credentials
-- Found SUID bit set for /usr/bin/dosbox
+- Found SUID bit set for /usr/bin/dosbox and instructions to escalate privileges in GTFOBINS
+- Unable to run dosbox binary on the SSH session
+- Found VNC session running on localhost port 5901
+- 
 - Text
 
 ## Improved skills
@@ -116,7 +119,8 @@ Nmap done: 1 IP address (1 host up) scanned in 67.31 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+80
+5901
 ```
 
 Enumerated top 200 UDP ports:
