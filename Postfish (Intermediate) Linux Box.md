@@ -19,7 +19,8 @@ IP: 192.168.108.137
 - Attempted to navigate to webpage on open port 80
 - Was redirected to postfish.off but was unable to access the page
 - Added target IP address and linked to postfish.off to the host file on kali machine
-- Navigated to postfish.off and found webpage showing team membe
+- Navigated to postfish.off and found webpage showing team member information and found Brian Moore being the Sales Manager
+- Googled port 25 commands and found how to cu
 - Text
 
 ## Improved skills
