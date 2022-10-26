@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e6520ea988619da1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MedJed (Intermediate) Windows Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cc61d3b1497b7e97",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -152,9 +139,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "36fe7cca0c50b180",
+  "active": "cc61d3b1497b7e97",
   "lastOpenFiles": [
     "MedJed (Intermediate) Windows Box.md",
+    "Postfish (Intermediate) Linux Box.md",
     "Images/Pasted image 20221020170419.png",
     "Meathead (Hard) Windows Machine.md",
     "Hutch (Intermediate) Windows Box.md",
@@ -162,7 +150,6 @@
     "MeatHead (Hard) Windows Machine.md",
     "Images/Pasted image 20221020002407.png",
     "Images/Pasted image 20220719191944.png",
-    "Nibbles (Intermediate) Linux Box.md",
-    "Hawat (Easy) Linux Box.md"
+    "Nibbles (Intermediate) Linux Box.md"
   ]
 }
