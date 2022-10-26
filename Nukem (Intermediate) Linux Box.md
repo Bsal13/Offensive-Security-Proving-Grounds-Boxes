@@ -3,7 +3,7 @@ Alias: Nukem
 Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:  #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload #SETUIDDosboxLinuxPrivilegeEscalation #SSHTunneling
+Tags:  #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload #SETUIDDosboxLinuxPrivilegeEscalation #SSHTunneling #SudoersLinuxPrivilegeEscalation
 Status: Finished
 IP: 192.168.230.105 
 ---
@@ -12,17 +12,18 @@ IP: 192.168.230.105
 
 
 # Resolution summary
-- Text
+- 
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- SSH tunneling
+- Connecting to VNC session
 
 ## Used tools
 - nmap
 - rustscan
 - wpscan
+- Remmina
 
 ---
 
