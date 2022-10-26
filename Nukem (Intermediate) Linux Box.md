@@ -14,6 +14,7 @@ IP: 192.168.230.105
 # Resolution summary
 - Found a wordpress site running on port 80
 - Found it was vulnerable to an unauthenticated abritary file upload RCE
+- Ran the exploit and received a reverse shell
 - 
 - Text
 
