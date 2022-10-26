@@ -17,7 +17,7 @@ IP: 192.168.230.105
 - Ran the exploit and received a reverse shell
 - Found credentials in wp-config file
 - Logged into SSH session with found credentials
-- 
+- Found SUID bit set for /usr/bin/dosbox
 - Text
 
 ## Improved skills
