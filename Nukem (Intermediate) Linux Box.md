@@ -120,8 +120,15 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Port 80 - Apache httpd 2.4.46
+
+#### -Navigated to target box IP address and found the following webpage showing it is a wordpress site:
+
+![](Pasted%20image%2020221026124543.png)
+
+#### -Ran wpscan and found plugin Simple File List which is vulnerable to Unauthenticated Arbitrary File Upload Remote Command Execution:
+
+![](Pasted%20image%2020221026124651.png)
 
 ---
 
