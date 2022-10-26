@@ -13,10 +13,14 @@ IP: 192.168.108.137
 
 # Resolution summary
 - Utilized smtp-user-enum to enumerate the users on system as I found port 25 to be opened
+- Found multiple accounts exist
+- Found user sales exists in the POP3 mailbox
+- Guessed passwords and found I was able to login with password sales
+- 
 - Text
 
 ## Improved skills
-- skill 1
+- password guessing
 - skill 2
 
 ## Used tools
