@@ -25,6 +25,7 @@ IP: 192.168.108.137
 - Sent a spear fishing email to change/update password to Brian from IT including a link to connect to kali machine
 - Awaited Brian to connect to the link and send back new password
 - Received the password shown in the netcat listener
+- Then logged into SSH using the credentials
 - 
 - 
 - Text
