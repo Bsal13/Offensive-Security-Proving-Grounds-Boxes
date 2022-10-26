@@ -226,7 +226,4 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "sudo su" and commanders password CommanderKeenVorticons1990 and received a root shell:
 
-
-
-
 ---
