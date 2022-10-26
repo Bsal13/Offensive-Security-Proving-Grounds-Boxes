@@ -253,6 +253,20 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221025153641.png)
 
+#### -Typed "telnet 192.168.108.137 110" to enter POP3 mailbox in open 110 port and went one by one with attempting to login with each found user providing their usernames as passwords and found I could login with USER sales and PASS sales and found the following e-mail:
+![](Pasted%20image%2020221025170417.png)
+![](Pasted%20image%2020221025170504.png)
+
+#### -Navigated to website as port 80 was found to be open per NMAP scan but was redirected to "postfish.off" and was unable to access it. 
+
+#### -Typed "vim /etc/hosts" and added target ip address linking to postfish.off
+
+#### -Then navigated to postfish.off and found the following webpage:
+
+
+
+
+
 ---
 
 # Exploitation
