@@ -202,5 +202,21 @@ Enumerated top 200 UDP ports:
 
 #### -Opened "Remmina" (a remote destkop client application). Typed "localhost:5901" then enter and typed "CommanderKeenVorticons1990" as the password.
 
+![](Pasted%20image%2020221026153827.png)
+#VNCconnection
+
+#### -Opened a terminal in the vnc session and typed "dosbox" which opened the dosbox program
+
+#### -Per instructions from GTFOBins it advises to type mount c [directory you would like to have mounted]. I typed"mount c /etc " in the dosbox program terminal
+
+#### -Typed "cd /etc" but received an error message stating I was still on drive Z: and to change to a mounted drive with "C:"
+
+![](Pasted%20image%2020221026154030.png)
+
+#### -Typed "C:" and it switched to the mounted drive
+
+#### -Typed  "dir" and found we were in the machines "/etc" directory:
+
+
 
 ---
