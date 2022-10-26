@@ -3,7 +3,7 @@ Alias: Nukem
 Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #UnauthenticatedArbitraryFileUploadRCE 
 Status: Finished
 IP: 192.168.230.105 
 ---
@@ -21,7 +21,8 @@ IP: 192.168.230.105
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
+- wpscan
 
 ---
 
@@ -129,12 +130,14 @@ Enumerated top 200 UDP ports:
 #### -Ran wpscan and found plugin Simple File List which is vulnerable to Unauthenticated Arbitrary File Upload Remote Command Execution:
 
 ![](Pasted%20image%2020221026124651.png)
+#UnauthenticatedArbitraryFileUploadRCE
 
 ---
 
 # Exploitation
-## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## WordPress Plugin Simple File List 4.2.2 - Aribitrary File Upload
+
+#### -Googled "Simple File List Arbitrary File Upload RCE" and found the following webpage with the python script exploit:
 
 ---
 
