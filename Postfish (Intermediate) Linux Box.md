@@ -21,6 +21,8 @@ IP: 192.168.108.137
 - Added target IP address and linked to postfish.off to the host file on kali machine
 - Navigated to postfish.off and found webpage showing team member information and found Brian Moore being the Sales Manager
 - Googled port 25 commands and found how to curate an email
+- Setup a netcat listener on Kali machine
+- Sent a spear fishing email sending as IT to Brian including a link to host back to 
 - Text
 
 ## Improved skills
