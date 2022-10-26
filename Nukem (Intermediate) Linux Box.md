@@ -3,7 +3,7 @@ Alias: Nukem
 Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags: #UnauthenticatedArbitraryFileUploadRCE 
+Tags:  #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload
 Status: Finished
 IP: 192.168.230.105 
 ---
@@ -140,7 +140,7 @@ Enumerated top 200 UDP ports:
 #### -Googled "Simple File List Arbitrary File Upload RCE" and found the following webpage with the python script exploit:
 
 ![](Pasted%20image%2020221026135317.png)
-
+#WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload
 #### -Pasted the contents into a file on my kali machine named "exploit.py"
 
 #### -Set up a penelope listener for port 5000
@@ -151,6 +151,9 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221026135424.png)
 
+#### -Navigated to "http://192.168.213.105/wp-content/uploads/simple-file-list/2651.php" and received a reverse shell:
+
+![](Pasted%20image%2020221026135903.png)
 ---
 
 # Lateral Movement to user
