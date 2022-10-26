@@ -27,7 +27,7 @@ IP: 192.168.108.137
 - Received the password shown in the netcat listener
 - Then logged into SSH using the credentials
 - Typed "sudo -l" and found user filter can run "/usr/bin/mail *" as sudo
-- Tound /usr/bin/mail in GTFOBINS and followed the steps and received a shell running as root
+- Found /usr/bin/mail in GTFOBINS and followed the steps and received a shell running as root
 
 ## Improved skills
 - password guessing

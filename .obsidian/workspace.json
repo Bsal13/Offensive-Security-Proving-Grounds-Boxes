@@ -11,9 +11,11 @@
             "id": "cc61d3b1497b7e97",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Images/Pasted image 20221025180855.png"
+                "file": "Postfish (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20221025180855.png",
+                "file": "Postfish (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20221025180855.png",
+                "file": "Postfish (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20221025180855.png"
+                "file": "Postfish (Intermediate) Linux Box.md"
               }
             }
           }
@@ -137,8 +139,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "36fe7cca0c50b180",
+  "active": "cc61d3b1497b7e97",
   "lastOpenFiles": [
+    "Images/Pasted image 20221025180855.png",
     "Postfish (Intermediate) Linux Box.md",
     "MedJed (Intermediate) Windows Box.md",
     "Images/Pasted image 20221020170419.png",
@@ -147,7 +150,6 @@
     "Jacko (Intermediate) Windows Box.md",
     "MeatHead (Hard) Windows Machine.md",
     "Images/Pasted image 20221020002407.png",
-    "Images/Pasted image 20220719191944.png",
-    "Nibbles (Intermediate) Linux Box.md"
+    "Images/Pasted image 20220719191944.png"
   ]
 }
