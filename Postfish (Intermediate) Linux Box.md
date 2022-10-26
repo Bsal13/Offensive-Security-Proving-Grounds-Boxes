@@ -284,6 +284,26 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221025173043.png)
 
+![](Pasted%20image%2020221025173137.png)
+
+![](Pasted%20image%2020221025173207.png)
+#SMTPSpearfishingExploit
+
+#### -I then typed the following sending a spear phishing e-mail from it@postfish.off to brian.moore@postfish.off while having a netcat listener listening on port 80:
+
+![](Pasted%20image%2020221025173328.png)
+
+![](Pasted%20image%2020221025173415.png)
+
+#### -Then received application web page form showing brian's password as "EternaLSunshinE":
+
+![](Pasted%20image%2020221025173459.png)
+
+#### -I then typed "ssh brian.moore@postfish.off" and password and received an ssh shell for user brian moore:
+
+![](Pasted%20image%2020221025173541.png)
+
+
 
 
 ---
