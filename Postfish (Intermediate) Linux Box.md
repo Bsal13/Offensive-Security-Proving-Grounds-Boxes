@@ -12,7 +12,7 @@ IP: 192.168.108.137
 
 
 # Resolution summary
-- Text
+- Utilized smtp-user-enum to enumerate the users on system as I found port 25 to be opened
 - Text
 
 ## Improved skills
@@ -236,7 +236,9 @@ OS and Service detection performed. Please report any incorrect results at https
 
 Enumerated open TCP ports:
 ```bash
-
+25
+80
+110
 ```
 
 Enumerated top 200 UDP ports:
