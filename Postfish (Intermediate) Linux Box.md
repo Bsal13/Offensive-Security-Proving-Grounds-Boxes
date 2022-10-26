@@ -16,7 +16,10 @@ IP: 192.168.108.137
 - Found multiple accounts exist
 - Found user sales exists in the POP3 mailbox
 - Guessed passwords and found I was able to login with password sales
-- 
+- Attempted to navigate to webpage on open port 80
+- Was redirected to postfish.off but was unable to access the page
+- Added target IP address and linked to postfish.off to the host file on kali machine
+- Navigated to postfish.off and found webpage showing team membe
 - Text
 
 ## Improved skills
