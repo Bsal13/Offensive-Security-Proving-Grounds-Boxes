@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8a4c35666c839e59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nukem (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Postfish (Intermediate) Linux Box.md",
+                "file": "Nukem (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Postfish (Intermediate) Linux Box.md",
+                "file": "Nukem (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Postfish (Intermediate) Linux Box.md"
+                "file": "Nukem (Intermediate) Linux Box.md"
               }
             }
           }
@@ -139,10 +152,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "cc61d3b1497b7e97",
+  "active": "8a4c35666c839e59",
   "lastOpenFiles": [
-    "Images/Pasted image 20221025180855.png",
     "Postfish (Intermediate) Linux Box.md",
+    "Images/Pasted image 20221025180855.png",
     "MedJed (Intermediate) Windows Box.md",
     "Images/Pasted image 20221020170419.png",
     "Meathead (Hard) Windows Machine.md",
