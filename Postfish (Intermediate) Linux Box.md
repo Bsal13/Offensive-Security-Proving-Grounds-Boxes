@@ -333,6 +333,24 @@ Enumerated top 200 UDP ports:
 INSPECT_DIR=/var/spool/filter
 SENDMAIL=/usr/sbin/sendmail
 
+![](Pasted%20image%2020221025175933.png)
+
+#### -Typed vim "sendemail.py" and added the following script to send an email:
+
+import smtplib
+
+server = smtplib.SMTP("localhost",25)
+
+server.ehlo()
+
+server.sendmail("a@b.c","a@b.c","Hello")
+
+server.quit()
+
+#### -Started a netcat listener on my kali machine listening on port 80
+
+#### -Typed "python3 sendemail.py" and received a shell as user filter:
+
 
 
 ---
