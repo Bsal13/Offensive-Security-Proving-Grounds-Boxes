@@ -198,5 +198,9 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "netstat -atlp" and found the vnc session now listening from 127.0.0.1 on port 5901:
 
+![](Pasted%20image%2020221026151401.png)
+
+#### -Opened "Remmina" (a remote destkop client application). Typed "localhost:5901" then enter and typed "CommanderKeenVorticons1990" as the password.
+
 
 ---
