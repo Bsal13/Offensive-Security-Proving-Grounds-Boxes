@@ -267,11 +267,11 @@ Enumerated top 200 UDP ports:
 
 #### Per the nmap scan, port 25 was open so I used smtp user enum script and typed "sudo smtp-user-enum -M VRFY -U /usr/share/wordlists/seclists/Usernames/Names/names.txt -t 192.168.108.137" and found the following valid users for SMTP:
 
-![](Pasted%20image%2020221025153641.png)
+![](Images/Pasted%20image%2020221025153641.png)
 
 #### -Typed "telnet 192.168.108.137 110" to enter POP3 mailbox in open 110 port and went one by one with attempting to login with each found user providing their usernames as passwords and found I could login with USER sales and PASS sales and found the following e-mail:
-![](Pasted%20image%2020221025170417.png)
-![](Pasted%20image%2020221025170504.png)
+![](Images/Pasted%20image%2020221025170417.png)
+![](Images/Pasted%20image%2020221025170504.png)
 
 ## Port 80 - Apache httpd 2.4.41
 
@@ -281,11 +281,11 @@ Enumerated top 200 UDP ports:
 
 #### -Then navigated to postfish.off and found the following webpage:
 
-![](Pasted%20image%2020221025170559.png)
+![](Images/Pasted%20image%2020221025170559.png)
 
 #### -I then clicked on the "Our Team" link and found Brian Moore being the "Sales Manager":
 
-![](Pasted%20image%2020221025170647.png)
+![](Images/Pasted%20image%2020221025170647.png)
 
 
 
@@ -296,30 +296,30 @@ Enumerated top 200 UDP ports:
 
 #### -I then googled port 25 command (SMTP) and found the following link/webage showing how I can send an e-mail via port 25 to their internal sales team. Per previous e-mail found sent from it@postfish.off:
 
-![](Pasted%20image%2020221025172936.png)
+![](Images/Pasted%20image%2020221025172936.png)
 
-![](Pasted%20image%2020221025173043.png)
+![](Images/Pasted%20image%2020221025173043.png)
 
-![](Pasted%20image%2020221025173137.png)
+![](Images/Pasted%20image%2020221025173137.png)
 
-![](Pasted%20image%2020221025173207.png)
+![](Images/Pasted%20image%2020221025173207.png)
 #SMTPSpearfishingExploit
 
 #### -I then typed the following sending a spear phishing e-mail from it@postfish.off to brian.moore@postfish.off while having a netcat listener listening on port 80:
 
-![](Pasted%20image%2020221025173328.png)
+![](Images/Pasted%20image%2020221025173328.png)
 
-![](Pasted%20image%2020221025173415.png)
+![](Images/Pasted%20image%2020221025173415.png)
 
 #### -Then received application web page form showing brian's password as "EternaLSunshinE":
 
-![](Pasted%20image%2020221025173459.png)
+![](Images/Pasted%20image%2020221025173459.png)
 
 #### -I then typed "ssh brian.moore@postfish.off" and password and received an ssh shell for user brian moore:
 
-![](Pasted%20image%2020221025173541.png)
+![](Images/Pasted%20image%2020221025173541.png)
 
-![](Pasted%20image%2020221025173624.png)
+![](Images/Pasted%20image%2020221025173624.png)
 
 ---
 # Lateral Movement to user
@@ -329,13 +329,13 @@ Enumerated top 200 UDP ports:
 
 #### -Googled "/etc/postfix/disclaimer privilege escalation" and found the following webpage showing the following steps to escalate priviliges:
 
-![](Pasted%20image%2020221025173854.png)
+![](Images/Pasted%20image%2020221025173854.png)
 
-![](Pasted%20image%2020221025173931.png)
+![](Images/Pasted%20image%2020221025173931.png)
 
-![](Pasted%20image%2020221025174013.png)
+![](Images/Pasted%20image%2020221025174013.png)
 
-![](Pasted%20image%2020221025174049.png)
+![](Images/Pasted%20image%2020221025174049.png)
 #PostFixDisclaimerPrivilegeEscalation
 
 
@@ -349,7 +349,7 @@ Enumerated top 200 UDP ports:
 INSPECT_DIR=/var/spool/filter
 SENDMAIL=/usr/sbin/sendmail
 
-![](Pasted%20image%2020221025175933.png)
+![](Images/Pasted%20image%2020221025175933.png)
 
 #### -Typed vim "sendemail.py" and added the following script to send an email:
 
@@ -367,7 +367,7 @@ server.quit()
 
 #### -Typed "python3 sendemail.py" and received a shell as user filter:
 
-![](Pasted%20image%2020221025180235.png)
+![](Images/Pasted%20image%2020221025180235.png)
 
 ---
 
@@ -375,19 +375,19 @@ server.quit()
 ## Local Enumeration
 
 #### -Typed "sudo -l" and found user filter can run "/usr/bin/mail *" as sudo:
-![](Pasted%20image%2020221025180351.png)
+![](Images/Pasted%20image%2020221025180351.png)
 
 ## Privilege Escalation vector
 ## /usr/bin/mail GTFOBINS 
 
 #### -Found mail with sudo privileges in GTFOBins site:
 
-![](Pasted%20image%2020221025180737.png)
-![](Pasted%20image%2020221025180808.png)
+![](Images/Pasted%20image%2020221025180737.png)
+![](Images/Pasted%20image%2020221025180808.png)
 #/usr/bin/mailGTFOBINSPrivilegeEscalation
 
 #### -Typed "sudo mail --exec='!/bin/sh'" and received a shell as root:
 
-![](Pasted%20image%2020221025180855.png)
+![](Images/Pasted%20image%2020221025180855.png)
 
 ---

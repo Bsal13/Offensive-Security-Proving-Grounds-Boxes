@@ -11,11 +11,9 @@
             "id": "cc61d3b1497b7e97",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Postfish (Intermediate) Linux Box.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Pasted image 20221025180855.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Postfish (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221025180855.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Postfish (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221025180855.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Postfish (Intermediate) Linux Box.md"
+                "file": "Images/Pasted image 20221025180855.png"
               }
             }
           }
@@ -141,8 +139,8 @@
   },
   "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
-    "MedJed (Intermediate) Windows Box.md",
     "Postfish (Intermediate) Linux Box.md",
+    "MedJed (Intermediate) Windows Box.md",
     "Images/Pasted image 20221020170419.png",
     "Meathead (Hard) Windows Machine.md",
     "Hutch (Intermediate) Windows Box.md",
