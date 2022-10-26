@@ -3,7 +3,7 @@ Alias: Nukem
 Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:  #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload
+Tags:  #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload #SETUIDDosboxLinuxPrivilegeEscalation
 Status: Finished
 IP: 192.168.230.105 
 ---
@@ -170,7 +170,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Privilege Escalation
-## Local Enumeration
+## SUID /usr/bin/doxbox -GTFOBINS
 
 #### -Ran "lse.sh" script and found binary "/usr/bin/dosbox" with SETUID bit
 
@@ -183,6 +183,11 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221026142247.png)
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Per the instructions we are suppose to run binary dosbox
+
+#### -Attempted to run dosbox binary but unable to on ssh session
+
+#### -Typed "netstat -atlp" and found an xvnc session listening on localhost port 5901:
 
 ---
