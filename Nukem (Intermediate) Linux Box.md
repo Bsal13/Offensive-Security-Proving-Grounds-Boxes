@@ -1,6 +1,6 @@
 ---
 Alias: Nukem
-Date: {{date}}
+Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
 Tags:
