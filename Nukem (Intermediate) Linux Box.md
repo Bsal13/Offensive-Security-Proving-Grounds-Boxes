@@ -139,6 +139,18 @@ Enumerated top 200 UDP ports:
 
 #### -Googled "Simple File List Arbitrary File Upload RCE" and found the following webpage with the python script exploit:
 
+![](Pasted%20image%2020221026135317.png)
+
+#### -Pasted the contents into a file on my kali machine named "exploit.py"
+
+#### -Set up a penelope listener for port 5000
+
+#### -Changed the script to input my kali machine's IP and listeners port on kali machine
+
+#### -Typed "python3 exploit.py http://192.168.213.105" and the exploit completed
+
+![](Pasted%20image%2020221026135424.png)
+
 ---
 
 # Lateral Movement to user
