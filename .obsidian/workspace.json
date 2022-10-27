@@ -33,11 +33,9 @@
             "id": "05c812039c556e85",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Squid (Intermediate) Windows Box.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Pasted image 20221027150259.png"
               }
             }
           }
@@ -108,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Squid (Intermediate) Windows Box.md",
+                "file": "Images/Pasted image 20221027150259.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Squid (Intermediate) Windows Box.md",
+                "file": "Images/Pasted image 20221027150259.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Squid (Intermediate) Windows Box.md"
+                "file": "Images/Pasted image 20221027150259.png"
               }
             }
           }
@@ -162,10 +160,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "05c812039c556e85",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
-    "Shakabra (Easy) Linux Box.md",
     "Squid (Intermediate) Windows Box.md",
+    "Shakabra (Easy) Linux Box.md",
     "Images/Pasted image 20221026124543.png",
     "Nukem (Intermediate) Linux Box.md",
     "Postfish (Intermediate) Linux Box.md",
