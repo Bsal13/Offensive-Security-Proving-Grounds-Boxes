@@ -13,7 +13,10 @@ IP: 192.168.122.189
 
 # Resolution summary
 - Navigated to web page on port 3128
-- Found an internal 
+- Found an internal port scanning tool for Squid proxy
+- Ran the port scanner and found ports 8080 and 3306 to be opened
+- Setup and ran a squid proxy utilizing foxyproxy
+- Navigate to 
 - Text
 
 ## Improved skills
@@ -88,6 +91,7 @@ Enumerated top 200 UDP ports:
 #### - Navigated to my foxyproxy on my firefox browser in my kali machine and input the following:
 
 ![](Pasted%20image%2020221027002106.png)
+#proxy
 
 #### - Turned the "Squid" proxy on and navigated to "http://192.168.231.189:8080" and found the following webpage showing it was running Wampserver version 3.2.3:
 
