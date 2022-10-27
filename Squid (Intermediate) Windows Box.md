@@ -170,7 +170,28 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 ![](Pasted%20image%2020221027145713.png)
 #LocalSystemMissingAccountPrivileges
 
+#### -Googled "local service restricted permissions github" and found the following tool to add the missing privileges back:
+
+![](Pasted%20image%2020221027145938.png)
+![](Pasted%20image%2020221027150012.png)
+
+
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Downloaded the .exe version of the tool onto the target machine
+
+#### -Type "FullPowers.exe" to run the tool and now have the missing privileges back and are all enabled:
+
+![](Pasted%20image%2020221027150126.png)
+
+![](Pasted%20image%2020221027150159.png)
+
+#### - As we have SeImpersonatePrivilege enabled I proceeded to downoload PrintSpoofer64.exe on target machine
+
+#SeImpersonatePrivilegePrivilegeEscalation
+
+#### -Typed "PrintSpoofer64.exe -i -c cmd" and received a cmd session as nt authority/system:
+
+![](Pasted%20image%2020221027150259.png)
 
 ---

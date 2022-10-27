@@ -71,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#SETUIDDosboxLinuxPrivilegeEscalation",
+                "query": "tag:#SeImpersonatePrivilegePrivilegeEscalation",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -162,7 +163,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "05c812039c556e85",
+  "active": "7c7e82a3023b528f",
   "lastOpenFiles": [
     "Images/Pasted image 20221026124543.png",
     "Nukem (Intermediate) Linux Box.md",
