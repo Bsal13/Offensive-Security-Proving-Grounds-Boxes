@@ -28,9 +28,21 @@
                 "file": "Images/Pasted image 20221026124543.png"
               }
             }
+          },
+          {
+            "id": "05c812039c556e85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Squid (Intermediate) Windows Box.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -96,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20221026124543.png",
+                "file": "Squid (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20221026124543.png",
+                "file": "Squid (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20221026124543.png"
+                "file": "Squid (Intermediate) Windows Box.md"
               }
             }
           }
@@ -150,8 +162,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "36fe7cca0c50b180",
+  "active": "05c812039c556e85",
   "lastOpenFiles": [
+    "Images/Pasted image 20221026124543.png",
     "Nukem (Intermediate) Linux Box.md",
     "Postfish (Intermediate) Linux Box.md",
     "Images/Pasted image 20221025180855.png",
@@ -160,7 +173,6 @@
     "Meathead (Hard) Windows Machine.md",
     "Hutch (Intermediate) Windows Box.md",
     "Jacko (Intermediate) Windows Box.md",
-    "MeatHead (Hard) Windows Machine.md",
-    "Images/Pasted image 20221020002407.png"
+    "MeatHead (Hard) Windows Machine.md"
   ]
 }
