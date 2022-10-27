@@ -100,6 +100,16 @@ Enumerated top 200 UDP ports:
 #### - Searched for and noted the root directory of the web server "C:/wamp/www":
 
 ![](Pasted%20image%2020221027002652.png)
+#PHPinfoWebServerRootDirectory #DocumentRoot
+
+#### - Navigated back to the wampserver webpage where I found and clicked into link phpmyadmin and was forwarded to the phpmyadmin login page to login to mysql:
+
+![](Pasted%20image%2020221027004707.png)
+
+![](Pasted%20image%2020221027004759.png)
+
+
+
 
 
 
