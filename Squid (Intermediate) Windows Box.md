@@ -3,7 +3,7 @@ Alias: Squid
 Date: 8/31/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #InternalPortScannerForSquidProxy 
+Tags: #InternalPortScannerForSquidProxy #PHPinfoWebServerRootDirectory #DocumentRoot
 Status: Finished
 IP: 192.168.122.189
 ---
