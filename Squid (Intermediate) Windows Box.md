@@ -19,6 +19,11 @@ IP: 192.168.122.189
 - Navigate to webpage on port 8080 and found phpinfo page showing the root directory of the web server
 - Found a link to a Mysql phpMyAdmin login page
 - Logged in utulizing the default credentials
+- Googled phpmyadmin mysql root login exploit 
+- Found and followed steps to create a web shell
+- Downloaded nc64.exe to target machine
+- Downloaded a reverse shell payload to target machine and received a reverse shell as nt authority/local service
+- Found privileges were missing
 - 
 - 
 - Text
