@@ -45,7 +45,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Enumerated open TCP ports:
 ```bash
-
+3128
 ```
 
 Enumerated top 200 UDP ports:
@@ -56,8 +56,12 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+# Port 3128 - Squid http proxy 4.14
+
+#### - Navigated to "http://192.168.231.189:3128" and found the following webpage:
+
+![](Pasted%20image%2020221026235704.png)
+
 
 ---
 
