@@ -16,7 +16,11 @@ IP: 192.168.122.189
 - Found an internal port scanning tool for Squid proxy
 - Ran the port scanner and found ports 8080 and 3306 to be opened
 - Setup and ran a squid proxy utilizing foxyproxy
-- Navigate to 
+- Navigate to webpage on port 8080 and found phpinfo page showing the root directory of the web server
+- Found a link to a Mysql phpMyAdmin login page
+- Logged in utulizing the default credentials
+- 
+- 
 - Text
 
 ## Improved skills
