@@ -31,6 +31,7 @@ IP: 192.168.230.105
 ## Improved skills
 - SSH tunneling
 - Connecting to VNC session
+- Learned a command to have user execute all commands as sudo and add to the sudoers file
 
 ## Used tools
 - nmap
@@ -140,11 +141,11 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to target box IP address and found the following webpage showing it is a wordpress site:
 
-![](Pasted%20image%2020221026124543.png)
+![](Images/Pasted%20image%2020221026124543.png)
 
 #### -Ran wpscan and found plugin Simple File List which is vulnerable to Unauthenticated Arbitrary File Upload Remote Command Execution:
 
-![](Pasted%20image%2020221026124651.png)
+![](Images/Pasted%20image%2020221026124651.png)
 #UnauthenticatedArbitraryFileUploadRCE
 
 ---
@@ -154,7 +155,7 @@ Enumerated top 200 UDP ports:
 
 #### -Googled "Simple File List Arbitrary File Upload RCE" and found the following webpage with the python script exploit:
 
-![](Pasted%20image%2020221026135317.png)
+![](Images/Pasted%20image%2020221026135317.png)
 #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload
 #### -Pasted the contents into a file on my kali machine named "exploit.py"
 
@@ -164,11 +165,11 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "python3 exploit.py http://192.168.213.105" and the exploit completed
 
-![](Pasted%20image%2020221026135424.png)
+![](Images/Pasted%20image%2020221026135424.png)
 
 #### -Navigated to "http://192.168.213.105/wp-content/uploads/simple-file-list/2651.php" and received a reverse shell:
 
-![](Pasted%20image%2020221026135903.png)
+![](Images/Pasted%20image%2020221026135903.png)
 ---
 
 # Lateral Movement to user
@@ -176,7 +177,7 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "/srv/http" and cat'd wp-config.php and found user "commander" and password "CommanderKeenVorticons1990":
 
-![](Pasted%20image%2020221026140700.png)
+![](Images/Pasted%20image%2020221026140700.png)
 
 ## Lateral Movement vector
 
@@ -189,13 +190,13 @@ Enumerated top 200 UDP ports:
 
 #### -Ran "lse.sh" script and found binary "/usr/bin/dosbox" with SETUID bit
 
-![](Pasted%20image%2020221026142127.png)
+![](Images/Pasted%20image%2020221026142127.png)
 
 #SETUIDDosboxLinuxPrivilegeEscalation
 
 #### -Naviged to GTFOBins website and found binary dosbox with SETUID:
 
-![](Pasted%20image%2020221026142247.png)
+![](Images/Pasted%20image%2020221026142247.png)
 
 ## Privilege Escalation vector
 
@@ -205,7 +206,7 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "netstat -atlp" and found an xvnc session listening on localhost port 5901:
 
-![](Pasted%20image%2020221026143324.png)
+![](Images/Pasted%20image%2020221026143324.png)
 
 #### -Opened another terminal on my kali machine and typed "ssh -L 5901:localhost:5901 commander@192.168.143.105" to SSH Tunnel/port forward and received another SSH session
 #SSHTunneling
@@ -213,11 +214,11 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "netstat -atlp" and found the vnc session now listening from 127.0.0.1 on port 5901:
 
-![](Pasted%20image%2020221026151401.png)
+![](Images/Pasted%20image%2020221026151401.png)
 
 #### -Opened "Remmina" (a remote destkop client application). Typed "localhost:5901" then enter and typed "CommanderKeenVorticons1990" as the password.
 
-![](Pasted%20image%2020221026153827.png)
+![](Images/Pasted%20image%2020221026153827.png)
 #VNCconnection
 
 #### -Opened a terminal in the vnc session and typed "dosbox" which opened the dosbox program
@@ -226,17 +227,17 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "cd /etc" but received an error message stating I was still on drive Z: and to change to a mounted drive with "C:"
 
-![](Pasted%20image%2020221026154030.png)
+![](Images/Pasted%20image%2020221026154030.png)
 
 #### -Typed "C:" and it switched to the mounted drive
 
 #### -Typed  "dir" and found we were in the machines "/etc" directory:
 
-![](Pasted%20image%2020221026154240.png)
+![](Images/Pasted%20image%2020221026154240.png)
 
 #### -Typed "echo commander ALL=(ALL) ALL >> sudoers"
 
-![](Pasted%20image%2020221026154413.png)
+![](Images/Pasted%20image%2020221026154413.png)
 #SudoersLinuxPrivilegeEscalation
 
 #### -Typed "sudo su" and commanders password CommanderKeenVorticons1990 and received a root shell:

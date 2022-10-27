@@ -23,11 +23,9 @@
             "id": "8a4c35666c839e59",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Nukem (Intermediate) Linux Box.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Pasted image 20221026124543.png"
               }
             }
           }
@@ -98,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Nukem (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221026124543.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Nukem (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221026124543.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Nukem (Intermediate) Linux Box.md"
+                "file": "Images/Pasted image 20221026124543.png"
               }
             }
           }
@@ -154,8 +152,8 @@
   },
   "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
-    "Postfish (Intermediate) Linux Box.md",
     "Nukem (Intermediate) Linux Box.md",
+    "Postfish (Intermediate) Linux Box.md",
     "Images/Pasted image 20221025180855.png",
     "MedJed (Intermediate) Windows Box.md",
     "Images/Pasted image 20221020170419.png",
