@@ -79,6 +79,19 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "python spose.py -h" and found the following usage:
 
+![](Pasted%20image%2020221027001834.png)
+
+#### - Typed "python spose.py --proxy http://192.168.231.189:3128 --target 192.168.231.189" and found  open ports 3306 and 8080:
+
+![](Pasted%20image%2020221027001951.png)
+
+#### - Navigated to my foxyproxy on my firefox browser in my kali machine and input the following:
+
+![](Pasted%20image%2020221027002106.png)
+
+#### - Turned the "Squid" proxy on and navigated to "http://192.168.231.189:8080" and found the following webpage showing it was running Wampserver version 3.2.3:
+
+#### - Turned the "Squid" proxy on and navigated to "http://192.168.231.189:8080" and found the following webpage showing it was running Wampserver version 3.2.3:
 
 ---
 
