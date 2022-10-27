@@ -68,6 +68,14 @@ Enumerated top 200 UDP ports:
 
 #### - Attempted the following steps but I was unsuccessful:
 
+![](Pasted%20image%2020221027001124.png)
+
+#### - Googled "internal port scanner for Squid github" and found the following tool:
+
+![](Pasted%20image%2020221027001302.png)
+
+
+
 
 ---
 
