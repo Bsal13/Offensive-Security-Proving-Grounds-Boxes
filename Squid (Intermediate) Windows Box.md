@@ -91,7 +91,18 @@ Enumerated top 200 UDP ports:
 
 #### - Turned the "Squid" proxy on and navigated to "http://192.168.231.189:8080" and found the following webpage showing it was running Wampserver version 3.2.3:
 
-#### - Turned the "Squid" proxy on and navigated to "http://192.168.231.189:8080" and found the following webpage showing it was running Wampserver version 3.2.3:
+![](Pasted%20image%2020221027002401.png)
+
+#### - Navigated to the bottom of the webpage where I found the link "phpinfo" and which redirected me to the phpinfo page:
+
+![](Pasted%20image%2020221027002453.png)
+
+#### - Searched for and noted the root directory of the web server "C:/wamp/www":
+
+![](Pasted%20image%2020221027002652.png)
+
+
+
 
 ---
 
