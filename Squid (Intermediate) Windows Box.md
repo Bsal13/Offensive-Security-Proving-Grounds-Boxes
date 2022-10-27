@@ -106,7 +106,13 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221027004707.png)
 
-![](Pasted%20image%2020221027004759.png)
+![](Pasted%20image%2020221027005042.png)
+
+#### - Googled "phpmyadmin mysql default credentials" and found the following webpage showing username root and password is left blank:
+
+![](Pasted%20image%2020221027005200.png)
+
+
 
 
 
