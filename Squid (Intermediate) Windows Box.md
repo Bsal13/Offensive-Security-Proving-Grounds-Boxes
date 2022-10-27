@@ -1,15 +1,14 @@
 ---
-Alias: {{title}}
-Date: {{date}}
-Platform: 
-Category:
-Difficulty:
+Alias: Squid
+Date: 8/31/2022
+Platform: Windows
+Difficulty: Intermediate
 Tags:
-Status:
+Status: Finished
 IP: 
 ---
 
-# {{title}}
+# {{Squid}}
 
 
 # Resolution summary
@@ -29,7 +28,19 @@ IP:
 # Information Gathering
 Scanned all TCP ports:
 ```bash
+#Nmap 7.92 scan initiated Thu Aug 25 17:18:06 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN /home/brian/Downloads/Proving_Grounds/Squid/results/192.168.122.189/scans/_quick_tcp_nmap.txt -oX /home/brian/Downloads/Proving_Grounds/Squid/results/192.168.122.189/scans/xml/_quick_tcp_nmap.xml 192.168.122.189
+Nmap scan report for 192.168.122.189
+Host is up, received user-set (0.16s latency).
+Scanned at 2022-08-25 17:18:07 PDT for 80s
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE    REASON  VERSION
+3128/tcp open  http-proxy syn-ack Squid http proxy 4.14
+|_http-title: ERROR: The requested URL could not be retrieved
+|_http-server-header: squid/4.14
 
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+#Nmap done at Thu Aug 25 17:19:27 2022 -- 1 IP address (1 host up) scanned in 80.17 seconds
 ```
 
 Enumerated open TCP ports:
