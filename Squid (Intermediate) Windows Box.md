@@ -24,13 +24,15 @@ IP: 192.168.122.189
 - Downloaded nc64.exe to target machine
 - Downloaded a reverse shell payload to target machine and received a reverse shell as nt authority/local service
 - Found privileges were missing
-- 
-- 
-- Text
+- Found a tool to recover the detault privileges for local service account
+- Downloaded tool to target machine and executed it
+- Found the privileges were recovered and SeImpersonatePrivilege is enabled
+- Downloaded PrintSpoofer64.exe onto target machine 
+- Executed PrintSpoofer and received a reverse shell as nt authority/system
 
 ## Improved skills
-- skill 1
-- skill 2
+- Learned of a new tool to recover missing 
+- 
 
 ## Used tools
 - nmap
