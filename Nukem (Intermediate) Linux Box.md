@@ -24,9 +24,9 @@ IP: 192.168.230.105
 - Then found vnc session listening from 127.0.0.1 on port 5901
 - Connected to vnc session from Remmina using found credentials
 - Opened a terminal in the vnc session and was able to run dosbox binary
-- 
-- 
-- Text
+- Followed GTFOBINS instructions for dosbox
+- Typed  command to allow user commander to execute all commands as sudo and place commander into the sudoers file
+- Typed sudo su and commanders password and received a root shell
 
 ## Improved skills
 - SSH tunneling
