@@ -3,7 +3,7 @@ Alias: Squid
 Date: 8/31/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #InternalPortScannerForSquidProxy #PHPinfoWebServerRootDirectory #DocumentRoot
+Tags: #InternalPortScannerForSquidProxy #PHPinfoWebServerRootDirectory #DocumentRoot #SQLInectionWebShell #SeImpersonatePrivilegePrivilegeEscalation #InternalPortScannerForSquidProxy
 Status: Finished
 IP: 192.168.122.189
 ---
@@ -12,7 +12,8 @@ IP: 192.168.122.189
 
 
 # Resolution summary
-- Text
+- Navigated to web page on port 3128
+- Found an internal 
 - Text
 
 ## Improved skills
@@ -21,7 +22,6 @@ IP: 192.168.122.189
 
 ## Used tools
 - nmap
-- gobuster
 
 ---
 
@@ -115,6 +115,7 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
+## SQL Inection Web Shell
 
 #### - Entered credentials username root and password left as blank and logged in:
 
