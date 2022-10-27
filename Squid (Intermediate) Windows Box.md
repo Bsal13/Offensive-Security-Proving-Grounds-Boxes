@@ -62,6 +62,12 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221026235704.png)
 
+#### - Googled "port 3128 enumeration" and found the following Hacktricks webpage:
+
+![](Pasted%20image%2020221026235844.png)
+
+#### - Attempted the following steps but I was unsuccessful:
+
 
 ---
 
