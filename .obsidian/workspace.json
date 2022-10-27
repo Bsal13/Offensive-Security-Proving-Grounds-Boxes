@@ -33,9 +33,11 @@
             "id": "05c812039c556e85",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Images/Pasted image 20221027150259.png"
+                "file": "Squid (Intermediate) Windows Box.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -106,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20221027150259.png",
+                "file": "Squid (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20221027150259.png",
+                "file": "Squid (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20221027150259.png"
+                "file": "Squid (Intermediate) Windows Box.md"
               }
             }
           }
@@ -160,17 +162,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "36fe7cca0c50b180",
+  "active": "05c812039c556e85",
   "lastOpenFiles": [
+    "Postfish (Intermediate) Linux Box.md",
+    "Images/Pasted image 20221027150259.png",
     "Squid (Intermediate) Windows Box.md",
     "Shakabra (Easy) Linux Box.md",
     "Images/Pasted image 20221026124543.png",
     "Nukem (Intermediate) Linux Box.md",
-    "Postfish (Intermediate) Linux Box.md",
     "Images/Pasted image 20221025180855.png",
     "MedJed (Intermediate) Windows Box.md",
     "Images/Pasted image 20221020170419.png",
-    "Meathead (Hard) Windows Machine.md",
-    "Hutch (Intermediate) Windows Box.md"
+    "Meathead (Hard) Windows Machine.md"
   ]
 }

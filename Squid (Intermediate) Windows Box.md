@@ -59,6 +59,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Enumerated open TCP ports:
 ```bash
 3128
+8080
 ```
 
 Enumerated top 200 UDP ports:
@@ -129,7 +130,7 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
-## SQL Inection Web Shell
+## SQL Injection Web Shell
 
 #### - Entered credentials username root and password left as blank and logged in:
 
