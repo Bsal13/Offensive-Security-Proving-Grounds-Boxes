@@ -3,9 +3,9 @@ Alias: Squid
 Date: 8/31/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags:
+Tags: #InternalPortScannerForSquidProxy 
 Status: Finished
-IP: 
+IP: 192.168.122.189
 ---
 
 # {{Squid}}
@@ -73,8 +73,11 @@ Enumerated top 200 UDP ports:
 #### - Googled "internal port scanner for Squid github" and found the following tool:
 
 ![](Pasted%20image%2020221027001302.png)
+#InternalPortScannerForSquidProxy
 
+#### - Git cloned the found "spose" tool to my kali machine
 
+#### - Typed "python spose.py -h" and found the following usage:
 
 
 ---
