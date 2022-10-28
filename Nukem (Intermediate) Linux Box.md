@@ -4,7 +4,7 @@ Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
 Tags:  #WordPressPluginSimpleFileList4.2.2-AribitraryFileUpload #SETUIDDosboxLinuxPrivilegeEscalation #SSHTunneling #SudoersLinuxPrivilegeEscalation
-Status: Finisheds
+Status: Finished
 IP: 192.168.230.105 
 ---
 
