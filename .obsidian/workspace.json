@@ -40,9 +40,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fd4eba8461f94afb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -108,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Squid (Intermediate) Windows Box.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Squid (Intermediate) Windows Box.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Squid (Intermediate) Windows Box.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -162,11 +174,11 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "05c812039c556e85",
+  "active": "fd4eba8461f94afb",
   "lastOpenFiles": [
+    "Squid (Intermediate) Windows Box.md",
     "Postfish (Intermediate) Linux Box.md",
     "Images/Pasted image 20221027150259.png",
-    "Squid (Intermediate) Windows Box.md",
     "Shakabra (Easy) Linux Box.md",
     "Images/Pasted image 20221026124543.png",
     "Nukem (Intermediate) Linux Box.md",
