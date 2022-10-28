@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pelican.md",
+                "file": "Nukem (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pelican.md",
+                "file": "Nukem (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pelican.md",
+                "file": "Nukem (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pelican.md"
+                "file": "Nukem (Intermediate) Linux Box.md"
               }
             }
           }
@@ -176,6 +176,7 @@
   },
   "active": "fd4eba8461f94afb",
   "lastOpenFiles": [
+    "Pelican.md",
     "Squid (Intermediate) Windows Box.md",
     "Postfish (Intermediate) Linux Box.md",
     "Images/Pasted image 20221027150259.png",
@@ -184,7 +185,6 @@
     "Nukem (Intermediate) Linux Box.md",
     "Images/Pasted image 20221025180855.png",
     "MedJed (Intermediate) Windows Box.md",
-    "Images/Pasted image 20221020170419.png",
-    "Meathead (Hard) Windows Machine.md"
+    "Images/Pasted image 20221020170419.png"
   ]
 }
