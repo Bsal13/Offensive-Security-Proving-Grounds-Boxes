@@ -199,13 +199,20 @@ Enumerated top 200 UDP ports:
 
 #### -Clicked "Commit" > "All At Once" > "OK" and waited about a minute for the script to run and received a reverse shell:
 
-
+![](Pasted%20image%2020221029153837.png)
 
 ---
 
 # Lateral Movement to user
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Typed "sudo -l" and found user charles can run "/usr/bin/gcore" as sudo:
+
+![](Pasted%20image%2020221029154227.png)
+
+#### - Typed "ps aux | grep root" to find which processes were running with root privileges and found "/usr/bin/password-store" running as root:
+
+
 
 ## Lateral Movement vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
