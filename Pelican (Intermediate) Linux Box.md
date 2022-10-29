@@ -212,6 +212,12 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "ps aux | grep root" to find which processes were running with root privileges and found "/usr/bin/password-store" running as root:
 
+![](Pasted%20image%2020221029154326.png)
+
+#### -Googled "/usr/bin/password-store" and found it to be a standard unix password manager
+
+![](Pasted%20image%2020221029154416.png)
+![](Pasted%20image%2020221029154455.png)
 
 
 ## Lateral Movement vector
