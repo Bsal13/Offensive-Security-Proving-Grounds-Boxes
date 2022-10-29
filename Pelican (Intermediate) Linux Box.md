@@ -1,15 +1,14 @@
 ---
 Alias: Pelican
-Date: {{date}}
-Platform: 
-Category:
-Difficulty:
+Date: 5/29/2022
+Platform: Linux
+Difficulty: Intermediate
 Tags:
-Status:
+Status: Finished
 IP: 
 ---
 
-# {{title}}
+# {{Pelican}}
 
 
 # Resolution summary
