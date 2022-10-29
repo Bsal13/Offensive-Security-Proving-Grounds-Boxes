@@ -1,5 +1,5 @@
 ---
-Alias: {{title}}
+Alias: Pelican
 Date: {{date}}
 Platform: 
 Category:
