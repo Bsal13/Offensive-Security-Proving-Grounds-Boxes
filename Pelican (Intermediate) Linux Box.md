@@ -12,12 +12,14 @@ IP: 192.168.192.98
 
 
 # Resolution summary
-- Text
+- Found Exhibitor for zookeeper version 1 located on a webpage on port 8080
+- Found Remote Code Execution - Exhibitor Web UI 1.7.1 exploit
+- Followed the steps for the exploit and received a reverse shell
+- 
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- Utilizing "strings" command to read a file
 
 ## Used tools
 - nmap
