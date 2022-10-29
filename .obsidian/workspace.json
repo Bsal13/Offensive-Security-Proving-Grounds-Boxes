@@ -95,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#SeImpersonatePrivilegePrivilegeEscalation",
+                "query": "tag:#RemoteCodeExecution-ExhibitorWebUI1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,7 +112,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,7 +184,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9b4d71355ec1a471",
+  "active": "7c7e82a3023b528f",
   "lastOpenFiles": [
     "Meathead (Hard) Windows Machine.md",
     "Pelican (Intermediate) Linux Box.md",

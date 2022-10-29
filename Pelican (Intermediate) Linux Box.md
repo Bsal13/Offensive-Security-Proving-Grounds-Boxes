@@ -3,7 +3,7 @@ Alias: Pelican
 Date: 5/29/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #RemoteCodeExecution-Exhibitor-Web-UI-1.71 #/usr/bin/gcoreGTFOBINS #/usr/bin/password-store
 Status: Finished
 IP: 192.168.192.98
 ---
@@ -183,7 +183,7 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221029153214.png)
 ![](Pasted%20image%2020221029153255.png)
 ![](Pasted%20image%2020221029153321.png)
-
+#RemoteCodeExecution-ExhibitorWebUI1.71
 ---
 
 # Exploitation
@@ -217,10 +217,12 @@ Enumerated top 200 UDP ports:
 #### - Per GTFOBINS the /usr/bin/gcore can be utilized to do privileged reads or disclose files outside a restricted file system.
 
 ![](Pasted%20image%2020221029155123.png)
+#/usr/bin/gcoreGTFOBINS 
 
 #### - Typed "ps aux | grep root" to find which processes were running with root privileges and found "/usr/bin/password-store" running as root:
 
 ![](Pasted%20image%2020221029154326.png)
+#/usr/bin/password-store
 
 #### -Googled "/usr/bin/password-store" and found it to be a standard unix password manager
 
