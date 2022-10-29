@@ -229,19 +229,29 @@ Enumerated top 200 UDP ports:
 
 
 ## Lateral Movement vector
-
+## Read root password from standard unix password manager (/usr/bin/password-store)
 
 #### - Typed "sudo /usr/bin/gcore 493" (which is the PID of /usr/bin/password-store) which created file "core.493":
 
+![](Pasted%20image%2020221029155334.png)
 
+#### - Typed "strings core.493" and found roots password "ClogKingpinInning731":
+
+![](Pasted%20image%2020221029155429.png)
+![](Pasted%20image%2020221029155622.png)
 
 ---
 
 # Privilege Escalation
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Input found root credentials
+
+#### -Typed "su root" then provided found password "ClogKingpinInning731" and received a root shell:
+
+![](Pasted%20image%2020221029155802.png)
+
+
 
 ---
