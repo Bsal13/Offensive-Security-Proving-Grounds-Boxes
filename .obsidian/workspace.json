@@ -57,9 +57,11 @@
             "id": "9b4d71355ec1a471",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.0.3"
+                "file": "Pelican (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
