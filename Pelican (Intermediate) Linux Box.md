@@ -210,6 +210,14 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221029154227.png)
 
+#### -Googled "/usr/bin/gcore" and found the binary in GTFOBINS
+
+![](Pasted%20image%2020221029154932.png)
+
+#### - Per GTFOBINS the /usr/bin/gcore can be utilized to do privileged reads or disclose files outside a restricted file system.
+
+![](Pasted%20image%2020221029155123.png)
+
 #### - Typed "ps aux | grep root" to find which processes were running with root privileges and found "/usr/bin/password-store" running as root:
 
 ![](Pasted%20image%2020221029154326.png)
@@ -221,7 +229,11 @@ Enumerated top 200 UDP ports:
 
 
 ## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+
+#### - Typed "sudo /usr/bin/gcore 493" (which is the PID of /usr/bin/password-store) which created file "core.493":
+
+
 
 ---
 
