@@ -52,9 +52,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9b4d71355ec1a471",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.3"
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -171,10 +181,7 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "36fe7cca0c50b180",
+  "active": "9b4d71355ec1a471",
   "lastOpenFiles": [
     "Meathead (Hard) Windows Machine.md",
     "Pelican (Intermediate) Linux Box.md",
