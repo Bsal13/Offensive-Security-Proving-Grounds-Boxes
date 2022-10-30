@@ -57,11 +57,9 @@
             "id": "9b4d71355ec1a471",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
-                "mode": "preview",
-                "source": false
+                "file": "Images/Pasted image 20221029155802.png"
               }
             }
           }
@@ -132,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221029155802.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221029155802.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md"
+                "file": "Images/Pasted image 20221029155802.png"
               }
             }
           }
@@ -185,8 +183,8 @@
   },
   "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
-    "Meathead (Hard) Windows Machine.md",
     "Pelican (Intermediate) Linux Box.md",
+    "Meathead (Hard) Windows Machine.md",
     "Nukem (Intermediate) Linux Box.md",
     "Squid (Intermediate) Windows Box.md",
     "Postfish (Intermediate) Linux Box.md",

