@@ -112,8 +112,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,7 +183,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9b4d71355ec1a471",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
     "Meathead (Hard) Windows Machine.md",
     "Pelican (Intermediate) Linux Box.md",
