@@ -60,7 +60,7 @@
               "type": "markdown",
               "state": {
                 "file": "Pelican (Intermediate) Linux Box.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -184,7 +184,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7c7e82a3023b528f",
+  "active": "9b4d71355ec1a471",
   "lastOpenFiles": [
     "Meathead (Hard) Windows Machine.md",
     "Pelican (Intermediate) Linux Box.md",
