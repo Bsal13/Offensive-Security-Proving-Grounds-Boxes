@@ -3,7 +3,8 @@ Alias: Pelican
 Date: 5/29/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags: RemoteCodeExecution-Exhibitor-Web-UI-1.71 /usr/bin/gcoreGTFOBINS /usr/bin/password-store strings
+Tags: RemoteCodeExecution-Exhibitor-Web-UI-1.71 
+/usr/bin/gcoreGTFOBINS /usr/bin/password-store strings
 Status: Finished
 IP: 192.168.192.98
 ---
