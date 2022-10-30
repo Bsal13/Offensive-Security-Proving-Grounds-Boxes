@@ -132,6 +132,12 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221030122244.png)
 #redisConfigurationFilePathLocation
 
+#### -As instructed for LFI payload found previously I added "/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=" after the target IP address and added "/etc/redis/redis.conf". Typed "ctrl+f and pass" to find redis pass on the config file and found password "Ready4Redis?":
+
+![](Pasted%20image%2020221030122333.png)
+
+## PORT 6379 - Redis
+
 
 
 
