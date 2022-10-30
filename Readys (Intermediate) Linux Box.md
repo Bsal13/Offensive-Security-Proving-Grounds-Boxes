@@ -109,8 +109,21 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Port 80 - HTTP 
+
+#### -Navigated to targets IP address and found the following webpage showing it is a WordPress site:
+
+![](Pasted%20image%2020221030121553.png)
+
+#### -Typed "wpscan --update -e p --url http://192.168.53.166 " and found the following vulnerable plugin site-editor 1.1.1:
+
+![](Pasted%20image%2020221030121703.png)
+#vunerablepluginSite-EditorVersion1 #LocalFileInclusion
+
+#### -Googled site-editor 1.1.1 exploit and found the following LFI exploit for site-editor 1.1.1:
+
+
+
 
 ---
 
