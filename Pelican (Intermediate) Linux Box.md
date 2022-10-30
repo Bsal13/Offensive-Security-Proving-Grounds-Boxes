@@ -15,7 +15,11 @@ IP: 192.168.192.98
 - Found Exhibitor for zookeeper version 1 located on a webpage on port 8080
 - Found Remote Code Execution - Exhibitor Web UI 1.7.1 exploit
 - Followed the steps for the exploit and received a reverse shell
-- 
+- Found user can run /usr/bin/gcore as sudo
+- Googled /usr/bin/gcore and found the binary located in GTFOBINS
+- Found the binary can perform privileged reads with process IDs
+- Searched for processes that were running as root on target machine
+- Found 
 - Text
 
 ## Improved skills

@@ -57,9 +57,11 @@
             "id": "9b4d71355ec1a471",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Images/Pasted image 20221029155802.png"
+                "file": "Pelican (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -130,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20221029155802.png",
+                "file": "Pelican (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20221029155802.png",
+                "file": "Pelican (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20221029155802.png"
+                "file": "Pelican (Intermediate) Linux Box.md"
               }
             }
           }
@@ -181,8 +183,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "36fe7cca0c50b180",
+  "active": "9b4d71355ec1a471",
   "lastOpenFiles": [
+    "Images/Pasted image 20221029155802.png",
     "Pelican (Intermediate) Linux Box.md",
     "Meathead (Hard) Windows Machine.md",
     "Nukem (Intermediate) Linux Box.md",
@@ -191,7 +194,6 @@
     "Images/Pasted image 20221027150259.png",
     "Shakabra (Easy) Linux Box.md",
     "Images/Pasted image 20221026124543.png",
-    "Images/Pasted image 20221025180855.png",
-    "MedJed (Intermediate) Windows Box.md"
+    "Images/Pasted image 20221025180855.png"
   ]
 }
