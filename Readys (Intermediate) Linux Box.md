@@ -138,6 +138,8 @@ Enumerated top 200 UDP ports:
 
 ## PORT 6379 - Redis
 
+#### - Typed "redis-cli -h 192.168.230.166" and "AUTH Ready4Redis?" to login to redis:
+
 
 
 
