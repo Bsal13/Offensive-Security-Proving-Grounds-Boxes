@@ -64,9 +64,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a9ec89500078db60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Readys (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -132,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
+                "file": "Readys (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
+                "file": "Readys (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md"
+                "file": "Readys (Intermediate) Linux Box.md"
               }
             }
           }
@@ -183,10 +195,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9b4d71355ec1a471",
+  "active": "a9ec89500078db60",
   "lastOpenFiles": [
-    "Images/Pasted image 20221029155802.png",
     "Pelican (Intermediate) Linux Box.md",
+    "Images/Pasted image 20221029155802.png",
     "Meathead (Hard) Windows Machine.md",
     "Nukem (Intermediate) Linux Box.md",
     "Squid (Intermediate) Windows Box.md",
