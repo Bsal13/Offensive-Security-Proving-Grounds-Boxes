@@ -3,7 +3,7 @@ Alias: Pelican
 Date: 5/29/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags: #RemoteCodeExecution-Exhibitor-Web-UI-1.71 #/usr/bin/gcoreGTFOBINS #/usr/bin/password-store
+Tags: #RemoteCodeExecution-Exhibitor-Web-UI-1.71 #/usr/bin/gcoreGTFOBINS #/usr/bin/password-store #strings
 Status: Finished
 IP: 192.168.192.98
 ---
@@ -19,8 +19,11 @@ IP: 192.168.192.98
 - Googled /usr/bin/gcore and found the binary located in GTFOBINS
 - Found the binary can perform privileged reads with process IDs
 - Searched for processes that were running as root on target machine
-- Found 
-- Text
+- Found /usr/bin/password-store running on target machine as root
+- Googled the binary and found it is standard unix password manager
+- Ran the /usr/bin/gcore binary against the PID for the unix password manager and it created another file
+- Utilized strings command to read the file and found root credentials
+- Switched user to root on target machine; input found password and received a root shell
 
 ## Improved skills
 - Utilizing "strings" command to read a file
