@@ -1,14 +1,14 @@
 ---
 Alias: Readys
-Date: {{date}}
+Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
 Tags:
 Status: Finished
-IP: 
+IP: 192.168.53.166 
 ---
 
-# {{title}}
+# {{Readys}}
 
 
 # Resolution summary
@@ -21,14 +21,79 @@ IP:
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
 
 ---
 
 # Information Gathering
 Scanned all TCP ports:
 ```bash
+rustscan -a 192.168.53.166  --ulimit 5000                                                                   (master✱) 
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
+The Modern Day Port Scanner.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+🌍HACK THE PLANET🌍
 
+[~] The config file is expected to be at "/home/kali/.rustscan.toml"
+[~] Automatically increasing ulimit value to 5000.
+Open 192.168.53.166:22
+Open 192.168.53.166:80
+Open 192.168.53.166:6379
+[~] Starting Script(s)
+[>] Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[~] Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-11 19:17 EDT
+Initiating Ping Scan at 19:17
+Scanning 192.168.53.166 [2 ports]
+Completed Ping Scan at 19:17, 0.08s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 19:17
+Completed Parallel DNS resolution of 1 host. at 19:17, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 19:17
+Scanning 192.168.53.166 [3 ports]
+Discovered open port 22/tcp on 192.168.53.166
+Discovered open port 80/tcp on 192.168.53.166
+Discovered open port 6379/tcp on 192.168.53.166
+Completed Connect Scan at 19:17, 0.08s elapsed (3 total ports)
+Nmap scan report for 192.168.53.166
+Host is up, received syn-ack (0.081s latency).
+Scanned at 2022-05-11 19:17:51 EDT for 0s
+
+PORT     STATE SERVICE REASON
+22/tcp   open  ssh     syn-ack
+80/tcp   open  http    syn-ack
+6379/tcp open  redis   syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.31 seconds
+
+
+nmap -sC -sV -p 22,80,6379 192.168.53.166                                                                   (master✱) 
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-11 19:20 EDT
+Nmap scan report for 192.168.53.166
+Host is up (0.080s latency).
+
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 74:ba:20:23:89:92:62:02:9f:e7:3d:3b:83:d4:d9:6c (RSA)
+|   256 54:8f:79:55:5a:b0:3a:69:5a:d5:72:39:64:fd:07:4e (ECDSA)
+|_  256 7f:5d:10:27:62:ba:75:e9:bc:c8:4f:e2:72:87:d4:e2 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.38 ((Debian))
+|_http-title: Readys &#8211; Just another WordPress site
+|_http-generator: WordPress 5.7.2
+|_http-server-header: Apache/2.4.38 (Debian)
+6379/tcp open  redis   Redis key-value store
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 20.16 seconds
 ```
 
 Enumerated open TCP ports:
