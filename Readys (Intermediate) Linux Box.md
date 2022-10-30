@@ -122,6 +122,16 @@ Enumerated top 200 UDP ports:
 
 #### -Googled site-editor 1.1.1 exploit and found the following LFI exploit for site-editor 1.1.1:
 
+![](Pasted%20image%2020221030122057.png)
+![](Pasted%20image%2020221030122124.png)
+
+#### -Per the NMAP scan we know redis is present on the target machine. Googled "redis config location on linux" and found the following web page showing path location of "etc/redis/redis.conf":
+
+
+![](Pasted%20image%2020221030122212.png)
+![](Pasted%20image%2020221030122244.png)
+#redisConfigurationFilePathLocation
+
 
 
 
