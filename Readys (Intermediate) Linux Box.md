@@ -140,6 +140,26 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "redis-cli -h 192.168.230.166" and "AUTH Ready4Redis?" to login to redis:
 
+![](Pasted%20image%2020221031162257.png)
+
+#### -Per Hacktricks website in order to attempt to gain a webshell we must know the path of the website folder:
+
+![](Pasted%20image%2020221031162348.png)
+
+#### -Googled "how to find web root directory config files in linux" and found the following web page showing the path can be referenced in the "/etc/apache2/sites-available/000-default.conf" file:
+
+![](Pasted%20image%2020221031162436.png)
+![](Pasted%20image%2020221031162502.png)
+#webrootdirectoryApacheConfigFile
+
+#### -Navigated to "http://192.168.230.166/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/etc/apache2/sites-enabled/000-default.conf" and was shown the web root directory of server is located in "/var/www/html":
+
+![](Pasted%20image%2020221031162551.png)
+
+#### -Followed the steps in Hacktricks for Webshell but when attempting to save the file/config I received an error. We may not have write permissions on the directory
+
+
+
 
 
 
