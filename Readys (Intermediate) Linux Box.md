@@ -178,9 +178,7 @@ set test "<?php system('id'); ?>"
 ![](Pasted%20image%2020221031163319.png)
 
 ![](Pasted%20image%2020221031163356.png)
-#webshell
-
-
+#hacktricksRedisWebshell
 
 ---
 
