@@ -158,6 +158,15 @@ Enumerated top 200 UDP ports:
 
 #### -Followed the steps in Hacktricks for Webshell but when attempting to save the file/config I received an error. We may not have write permissions on the directory
 
+![](Pasted%20image%2020221031162635.png)
+
+#### -Googled "redis write permission file" and found mentioned file "/etc/systemd/system/redis.service":
+
+![](Pasted%20image%2020221031162703.png)
+![](Pasted%20image%2020221031162733.png)
+
+#### -Navigated to "http://192.168.230.166/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/etc/systemd/system/redis.service" and found we can write to "/etc/redis" and "/opt/redis-files":
+
 
 
 
