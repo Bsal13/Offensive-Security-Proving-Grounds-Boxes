@@ -14,6 +14,10 @@ IP: 192.168.53.166
 # Resolution summary
 - Found a wordpress site on port 80
 - Ran wpscan and found Site Editor 1.1.1 plugin which is vulnerable to a Local File Inclusion
+- As redis is present on the target machine foud via nmap I googled redis config file location
+- Ran the LFI with the redis config file location and found the password to login to redis
+- Per Hacktricks website in order to attempt to gain a webshell we must know the path of the website folder
+- Googled 
 - 
 - Text
 
