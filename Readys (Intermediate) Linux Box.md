@@ -25,10 +25,16 @@ IP: 192.168.53.166
 - Ran the LFI with the redis.service file and found we can write to "/etc/redis" and "/opt/redis-files"
 - Followed the rest of the steps to obtain a webshell now that I knew which directory i had write permissions
 - Obtained a webshell with command execution 
-- Text
+- Received a shell
+- Ran Linpeas and found there was a script running every 3 minutes
+- Found the script was running tar with a wildcard
+- Googled "tar wildcard privilege escalation"
+- Found a privilege escalation for tar wildcard 
+- Performed the privilege escalation steps and received a shell as root
 
 ## Improved skills
 - redis enumeration
+- tar wilcard privilege escalation
 
 ## Used tools
 - nmap

@@ -107,7 +107,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#TarWildcardPrivilegeEscalation",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -124,8 +124,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -196,7 +195,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a9ec89500078db60",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
     "Pelican (Intermediate) Linux Box.md",
     "Images/Pasted image 20221029155802.png",
