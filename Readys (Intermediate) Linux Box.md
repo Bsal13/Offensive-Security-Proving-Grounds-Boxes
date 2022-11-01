@@ -12,16 +12,18 @@ IP: 192.168.53.166
 
 
 # Resolution summary
-- Text
+- Found a wordpress site on port 80
+- Ran wpscan and found Site Editor 1.1.1 plugin which is vulnerable to a Local File Inclusion
+- 
 - Text
 
 ## Improved skills
-- redis enumerating
+- redis enumeration
 
 ## Used tools
 - nmap
 - rustscan
-- redis
+- wpscan
 
 ---
 
