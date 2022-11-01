@@ -183,8 +183,12 @@ set test "<?php system('id'); ?>"
 ---
 
 # Exploitation
-## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Typed "vim shell.sh" on kali machine and typed the following into the "shell.sh":
+
+![](Pasted%20image%2020221101000321.png)
+
+
 
 ---
 
