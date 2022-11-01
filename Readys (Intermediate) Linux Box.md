@@ -32,7 +32,7 @@ IP: 192.168.53.166
 - Found a privilege escalation for tar wildcard 
 - Performed the privilege escalation steps in the specified "/var/www/html" directory as the script showed it was in that specific directory
 - Waited for the cronjob to run
-- Typed sudo su and received a shell
+- Typed sudo su and received a shell as root
 
 ## Improved skills
 - redis enumeration
