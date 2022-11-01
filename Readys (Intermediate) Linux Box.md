@@ -30,7 +30,9 @@ IP: 192.168.53.166
 - Found the script was running tar with a wildcard
 - Googled "tar wildcard privilege escalation"
 - Found a privilege escalation for tar wildcard 
-- Performed the privilege escalation steps and received a shell as root
+- Performed the privilege escalation steps in the specified "/var/www/html" directory as the script showed it was in that specific directory
+- Waited for the cronjob to run
+- Typed sudo su and received a shell
 
 ## Improved skills
 - redis enumeration
