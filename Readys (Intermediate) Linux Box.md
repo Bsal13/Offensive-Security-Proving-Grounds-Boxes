@@ -3,7 +3,7 @@ Alias: Readys
 Date: 5/20/2022
 Platform: Linux
 Difficulty: Intermediate
-Tags: #vunerablepluginSite-EditorVersion1 #LocalFileInclusion #redisConfigurationFilePathLocation 
+Tags: #vunerablepluginSite-EditorVersion1 #LocalFileInclusion #redisConfigurationFilePathLocation #RedisWritePermissionFile #hacktricksRedisWebshell
 Status: Finished
 IP: 192.168.53.166 
 ---
@@ -19,11 +19,12 @@ IP: 192.168.53.166
 - Per Hacktricks website in order to attempt to gain a webshell we must know the path of the website folder
 - Googled how to find web root directory config files in linux and found that information is located in redis conifig file: /etc/apache2/sites-available/000-default.conf
 - Ran the LFI with the 000-default config file and found the location of the web root directory on the target machine
+- Logged into redis
 - Attempted to follow the steps from Hackricks to obtain a webshell but received an error and found I had no write permissions in the directory
 - Googled "redis write permission file" and found /etc/systemd/system/redis.service obtained the information of which directories had read and write permissions
-- 
-- 
-- 
+- Ran the LFI with the redis.service file and found we can write to "/etc/redis" and "/opt/redis-files"
+- Followed the rest of the steps to obtain a webshell now that I knew which directory i had write permissions
+- Obtained a webshell with command execution 
 - Text
 
 ## Improved skills
