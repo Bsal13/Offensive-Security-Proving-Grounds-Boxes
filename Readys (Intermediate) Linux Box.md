@@ -17,7 +17,10 @@ IP: 192.168.53.166
 - As redis is present on the target machine foud via nmap I googled redis config file location
 - Ran the LFI with the redis config file location and found the password to login to redis
 - Per Hacktricks website in order to attempt to gain a webshell we must know the path of the website folder
-- Googled 
+- Googled how to find web root directory config files in linux and found that information is located in redis conifig file: /etc/apache2/sites-available/000-default.conf
+- Ran the LFI with the 000-default config file and found the location of the web root directory on the target machine
+- 
+- 
 - 
 - Text
 
