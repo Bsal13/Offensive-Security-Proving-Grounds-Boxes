@@ -5,7 +5,7 @@ Platform: Windows
 Difficulty: Intermediate
 Tags:
 Status: Finished
-IP: 
+IP:  192.168.142.55
 ---
 
 # {{Shenzi}}
@@ -21,7 +21,7 @@ IP:
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
 
 ---
 
