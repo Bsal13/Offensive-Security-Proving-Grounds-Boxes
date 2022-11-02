@@ -1,15 +1,14 @@
 ---
-Alias: {{title}}
+Alias: Shenzi
 Date: {{date}}
-Platform: 
-Category:
-Difficulty:
+Platform: Windows
+Difficulty: Intermediate
 Tags:
 Status:
 IP: 
 ---
 
-# {{title}}
+# {{Shenzi}}
 
 
 # Resolution summary
