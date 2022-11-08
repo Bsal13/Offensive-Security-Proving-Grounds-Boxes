@@ -256,6 +256,16 @@ Enumerated top 200 UDP ports:
 
 #### - Typed powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck" on CMD prompt to run the "PrivescCheck.ps1" script and received the following Report showing "AlwaysInstallElevated" as High:
 
+![](Pasted%20image%2020221108101505.png)
+
+![](Pasted%20image%2020221108101625.png)
+#PrivescCheck.ps1
+
+#### - Reviewed the content of the script output and found the value of AlwaysInstallElevated in Local Machine and Current Users keys (also ran WinPeas to confirm this as well):
+
+![](Pasted%20image%2020221108101801.png)
+
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
