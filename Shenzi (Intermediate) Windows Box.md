@@ -144,6 +144,7 @@ Nmap done: 1 IP address (1 host up) scanned in 203.89 seconds
 
 Enumerated open TCP ports:
 ```bash
+80
 445
 ```
 
@@ -172,6 +173,8 @@ Enumerated top 200 UDP ports:
 #### -Cat'd the password file and found the following credentials
 
 ![](Pasted%20image%2020221108010923.png)
+
+#### - Port 80 Apache httpd 2.4.43
 
 #### -Navigated to "http://192.168.142.55/shenzi/" and found the following wordpress site:
 
