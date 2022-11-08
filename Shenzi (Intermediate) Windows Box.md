@@ -173,6 +173,18 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221108010923.png)
 
+#### -Navigated to "http://192.168.142.55/shenzi/" and found the following wordpress site:
+
+![](Pasted%20image%2020221108011213.png)
+
+#### - Typed "http://192.168.142.55/shenzi/admin" and was redirected to the following wordpress login page:
+
+![](Pasted%20image%2020221108011314.png)
+
+#### -Logged in with the wordpress credentials found previously (password FeltHeadwallWight357) and navigated to the plugins page:
+
+![](Pasted%20image%2020221108011438.png)
+
 
 
 ---
