@@ -224,8 +224,28 @@ Enumerated top 200 UDP ports:
 
 #### - Clicked on "2022/"
 
+![](Pasted%20image%2020221108100456.png)
 
+#### -Clicked on "07/"
 
+![](Pasted%20image%2020221108100540.png)
+
+#### -Found my reverse shell payload. Set up a netcat listener on my kali machine listening on port 445 and clicked on the payload
+
+![](Pasted%20image%2020221108100619.png)
+
+#### - I was unable to execute the reverse shell from there so I downloaded a windows webshell found from https://github.com/WhiteWinterWolf/wwwolf-php-webshell/blob/master/webshell.php and typed "whoami" and found we had remote code execution:
+
+![](Pasted%20image%2020221108100715.png)
+
+![](Pasted%20image%2020221108100749.png)
+#PHPwebshell 
+
+#### - Typed "dir" and found our payload reverse.exe-.php was in the current directory. Then typed "reverse.exe_.php" and received a reverse shell:
+
+![](Pasted%20image%2020221108100845.png)
+
+![](Pasted%20image%2020221108100919.png)
 
 ---
 
