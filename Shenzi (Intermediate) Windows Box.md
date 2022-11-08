@@ -167,6 +167,11 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221108005828.png)
 
 
+#### -Typed "get password.txt" which downloaded the file to my kali machine
+
+#### -Cat'd the password file and found the following credentials
+
+
 
 ---
 
