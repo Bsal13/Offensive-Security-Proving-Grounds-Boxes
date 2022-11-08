@@ -159,6 +159,15 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "echo exit | smbclient -L \\\\192.168.142.55" and found Shenzi as a share:
 
+![](Pasted%20image%2020221108005630.png)
+#SMBenumeration
+
+#### -Typed "smbclient \\\\192.168.142.55\\Shenzi" and hit enter/ left workgroup password blank and was able to gain access to the smb share and found a file named "password.txt":
+
+![](Pasted%20image%2020221108005828.png)
+
+
+
 ---
 
 # Exploitation
