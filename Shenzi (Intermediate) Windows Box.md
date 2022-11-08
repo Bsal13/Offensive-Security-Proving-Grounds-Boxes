@@ -265,6 +265,7 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221108101801.png)
 
+![](Pasted%20image%2020221108103449.png)
 
 
 ## Privilege Escalation vector
