@@ -218,6 +218,12 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221108095931.png)
 
+#### - As I know directory "/wp-content/uploads" is a common directory to have access to, I navigated to it and found the following:
+
+![](Pasted%20image%2020221108100355.png)
+
+#### - Clicked on "2022/"
+
 
 
 
