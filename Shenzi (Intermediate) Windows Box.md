@@ -174,7 +174,7 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221108010923.png)
 
-#### - Port 80 Apache httpd 2.4.43
+# Port 80 Apache httpd 2.4.43
 
 #### -As the SMB share was named "Shenzi" I navigated to "http://192.168.142.55/shenzi/" and found the following wordpress site:
 
@@ -193,7 +193,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Name of the technique
+## Upload Web Shell to Wordpress site plugins section
 
 
 #### -Clicked "add new":
@@ -249,18 +249,13 @@ Enumerated top 200 UDP ports:
 
 ---
 
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
----
-
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### - Downloaded PrivescCheck.ps1 into user Shenzi's directory
+
+#### - Typed powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck" on CMD prompt to run the "PrivescCheck.ps1" script and received the following Report showing "AlwaysInstallElevated" as High:
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
