@@ -171,6 +171,8 @@ Enumerated top 200 UDP ports:
 
 #### -Cat'd the password file and found the following credentials
 
+![](Pasted%20image%2020221108010923.png)
+
 
 
 ---
