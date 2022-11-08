@@ -176,7 +176,7 @@ Enumerated top 200 UDP ports:
 
 #### - Port 80 Apache httpd 2.4.43
 
-#### -Navigated to "http://192.168.142.55/shenzi/" and found the following wordpress site:
+#### -As the SMB share was named "Shenzi" I navigated to "http://192.168.142.55/shenzi/" and found the following wordpress site:
 
 ![](Pasted%20image%2020221108011213.png)
 
