@@ -128,6 +128,18 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221109124738.png)
 
+#### -Downloaded max.zip file and found the following "id_rsa" private ssh and "scp_wrapper.sh" script:
+
+![](Pasted%20image%2020221109124849.png)
+
+#### -Navigated to kali machine and typed copied the id_rsa file into a file named maxid_rsa and typed "chmod 600 maxid_rsa " to make the key private
+
+#### -Typed "ssh -i maxid_rsa max@192.168.143.100" and received the following output:
+
+![](Pasted%20image%2020221109125243.png)
+
+
+
 
 ---
 
