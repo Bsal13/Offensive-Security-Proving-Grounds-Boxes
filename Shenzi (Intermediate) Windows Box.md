@@ -28,6 +28,9 @@ IP:  192.168.142.55
 - Navigated to the folder containing the webshell
 - Clicked the webshell link and confirmed we had remote code execution and saw our reverse shell on the target machine
 - Typed "reverse.exe_.php" and received a reverse shell
+- Downloaded privesccheck.ps1 and ran the script
+- Found it was vulnerable to Always Install Elevated privilege escalation
+- 
 - 
 - 
 - 
