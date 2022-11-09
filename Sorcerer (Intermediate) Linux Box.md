@@ -138,14 +138,16 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221109125243.png)
 
-
-
-
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -As found in Max zip file we found the "scp_wrapper.sh" was located in "/home/max"
+#SCP_Wrapper.sh
+
+#### -Copied the script in kali machine in vim file name "scp_wrapper.sh"
+
 
 ---
 
