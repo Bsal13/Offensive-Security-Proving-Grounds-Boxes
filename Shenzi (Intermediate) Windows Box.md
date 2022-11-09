@@ -21,7 +21,10 @@ IP:  192.168.142.55
 - Navigated to upload plugin page
 - Created a reverse shell payload on kali machine
 - Started netcat listener on kali machine
-- Uploaded reverse shell payload
+- Uploaded reverse shell payload to plugin page
+- Navigated to "/wp-content/uploads" as it is a common wordpress directory to have access to
+- Navigated to the specific uploads directory where the reverse shell was uploaded
+- 
 - Text
 
 ## Improved skills
