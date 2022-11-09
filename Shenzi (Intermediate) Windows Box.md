@@ -15,7 +15,8 @@ IP:  192.168.142.55
 - Utilized smbclient to locate an smb share and found we were able to login as null with no password
 - Found a passwords.txt file in the share
 - Password.txt file contained wordpress credentials
-- As the share was clal
+- As the share was called Shenzi i attempted to navigate to http://192.168.142.55/shenzi
+- 
 - Text
 
 ## Improved skills
