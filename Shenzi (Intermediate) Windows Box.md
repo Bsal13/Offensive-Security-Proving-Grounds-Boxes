@@ -16,7 +16,8 @@ IP:  192.168.142.55
 - Found a passwords.txt file in the share
 - Password.txt file contained wordpress credentials
 - As the share was called Shenzi i attempted to navigate to http://192.168.142.55/shenzi and found a wordpress site
-- 
+- Found an admin link and was directed to an admin login page
+- Logged into the admin page with the credentials 
 - 
 - Text
 
