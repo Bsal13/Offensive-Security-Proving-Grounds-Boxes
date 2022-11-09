@@ -15,11 +15,11 @@ IP:  192.168.142.55
 - Utilized smbclient to locate an smb share and found we were able to login as null with no password
 - Found a passwords.txt file in the share
 - Password.txt file contained wordpress credentials
-- 
+- As the share was clal
 - Text
 
 ## Improved skills
-- skill 1
+- Wordpress site/webpage directory guessing
 - skill 2
 
 ## Used tools
