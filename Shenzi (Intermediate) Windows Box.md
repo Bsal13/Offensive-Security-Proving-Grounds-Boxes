@@ -25,6 +25,10 @@ IP:  192.168.142.55
 - Navigated to the folder with the reverse shell
 - Clicked on the reverse shell but received no reverse shell
 - Created a White Winterwolf Web Shell and uploaded it into the plugin page
+- Navigated to the folder containing the webshell
+- Clicked the webshell link and confirmed we had remote code execution and saw our reverse shell on the target machine
+- Typed "reverse.exe_.php" and received a reverse shell
+- 
 - 
 - 
 - Text
