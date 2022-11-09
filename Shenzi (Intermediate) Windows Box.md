@@ -3,7 +3,7 @@ Alias: Shenzi
 Date: {{date}}
 Platform: Windows
 Difficulty: Intermediate
-Tags: #SMBenumeration 
+Tags: #SMBenumeration #WhiteWinterWolfPHPwebshell
 Status: Finished
 IP:  192.168.142.55
 ---
@@ -19,11 +19,8 @@ IP:  192.168.142.55
 - Found an admin link and was directed to an admin login page
 - Logged into the admin page with the found credentials in the smb share
 - Navigated to upload plugin page
-- Created a reverse shell payload on kali machine
-- Started netcat listener on kali machine
-- Uploaded reverse shell payload to plugin page
-- Navigated to "/wp-content/uploads" as it is a common wordpress directory to have access to
-- Navigated to the specific uploads directory where the reverse shell was uploaded
+- Created a White Winterworlf Web Shell and uploaded it into the plugin page
+- 
 - 
 - Text
 
