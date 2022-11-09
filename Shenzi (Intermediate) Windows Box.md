@@ -12,7 +12,7 @@ IP:  192.168.142.55
 
 
 # Resolution summary
-- Text
+- Utilized sm
 - Text
 
 ## Improved skills
@@ -22,6 +22,7 @@ IP:  192.168.142.55
 ## Used tools
 - nmap
 - rustscan
+- smbclient
 
 ---
 
