@@ -18,7 +18,7 @@ IP:  192.168.142.55
 - As the share was called Shenzi i attempted to navigate to http://192.168.142.55/shenzi and found a wordpress site
 - Found an admin link and was directed to an admin login page
 - Logged into the admin page with the found credentials in the smb share
-- 
+- Navigated to upload plugin page
 - 
 - Text
 
