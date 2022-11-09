@@ -20,7 +20,10 @@ IP:  192.168.142.55
 - Logged into the admin page with the found credentials in the smb share
 - Navigated to upload plugin page
 - Uploaded a reverse shell on the plugin page
-- Navigated to 
+- Set up a netcat listener on kali machine
+- Navigated to  "/wp-content/uploads" as it is a common Wordpress directory to have access to
+- Navigated to the folder with the reverse shell
+- Clicked on the reverse shell but received no reverse shell
 - Created a White Winterwolf Web Shell and uploaded it into the plugin page
 - 
 - 
