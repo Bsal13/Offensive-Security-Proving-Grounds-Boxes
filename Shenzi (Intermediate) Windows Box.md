@@ -3,7 +3,7 @@ Alias: Shenzi
 Date: {{date}}
 Platform: Windows
 Difficulty: Intermediate
-Tags:
+Tags: #SMBenumeration 
 Status: Finished
 IP:  192.168.142.55
 ---
@@ -12,7 +12,10 @@ IP:  192.168.142.55
 
 
 # Resolution summary
-- Utilized sm
+- Utilized smbclient to locate an smb share and found we were able to login as null with no password
+- Found a passwords.txt file in the share
+- Password.txt file contained wordpress credentials
+- 
 - Text
 
 ## Improved skills
