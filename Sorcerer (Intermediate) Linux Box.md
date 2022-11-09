@@ -3,7 +3,7 @@ Alias: Sorcerer
 Date: {{date}}
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #start-stop-daemon #start-stop-daemonSUIDPrivilegeEscalation
 Status: Finished
 IP: 192.168.143.100
 ---
@@ -17,7 +17,7 @@ IP: 192.168.143.100
 
 ## Improved skills
 - Modifying SCP_Wrapper.sh script to change to bash shell
-- Learned to rewrite scp script in within target mach
+- Learned to rewrite scp script in within target machine remotely
 
 ## Used tools
 - nmap
@@ -141,7 +141,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Name of the technique
+## Found ssh private key and rewrote scp_wrapper.sh script to run bash
 
 #### -As found in Max zip file we found the "scp_wrapper.sh" was located in "/home/max"
 #SCP_Wrapper.sh
@@ -165,27 +165,20 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221109133953.png)
 
 ![](Pasted%20image%2020221109134032.png)
----
-
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
 ---
 
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Ran linpeas.s script and found binary /usr/sbin/start-stop-daemon set as a SUID bit:
+
+![](Pasted%20image%2020221109134636.png)
+
+#start-stop-daemon #start-stop-daemonSUIDPrivilegeEscalation
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
 ---
 
-# Trophy & Loot
-user.txt
-
-root.txt
