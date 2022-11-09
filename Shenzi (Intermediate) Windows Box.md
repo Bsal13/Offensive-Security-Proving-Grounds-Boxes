@@ -19,7 +19,9 @@ IP:  192.168.142.55
 - Found an admin link and was directed to an admin login page
 - Logged into the admin page with the found credentials in the smb share
 - Navigated to upload plugin page
-- Created a White Winterworlf Web Shell and uploaded it into the plugin page
+- Uploaded a reverse shell on the plugin page
+- Navigated to 
+- Created a White Winterwolf Web Shell and uploaded it into the plugin page
 - 
 - 
 - Text
