@@ -86,9 +86,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1a0aadb44513ad17",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sorcerer (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -154,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shenzi (Intermediate) Windows Box.md",
+                "file": "Sorcerer (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Shenzi (Intermediate) Windows Box.md",
+                "file": "Sorcerer (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shenzi (Intermediate) Windows Box.md"
+                "file": "Sorcerer (Intermediate) Linux Box.md"
               }
             }
           }
@@ -205,10 +217,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c19b1a1cd7e49324",
+  "active": "1a0aadb44513ad17",
   "lastOpenFiles": [
-    "Images/Pasted image 20221108005630.png",
     "Shenzi (Intermediate) Windows Box.md",
+    "Images/Pasted image 20221108005630.png",
     "Pelican (Intermediate) Linux Box.md",
     "Images/Pasted image 20221101121057.png",
     "Readys (Intermediate) Linux Box.md",
