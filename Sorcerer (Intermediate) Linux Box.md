@@ -21,7 +21,9 @@ IP: 192.168.143.100
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
+- feroxbuster
+- scp
 
 ---
 
@@ -118,7 +120,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP nginx
+## Port 7742 - HTTP nginx
 
 #### -Ran feroxbuster and the below results showed "http://192.168.143.100:7742/zipfiles"
 
@@ -177,8 +179,15 @@ Enumerated top 200 UDP ports:
 
 #start-stop-daemon #start-stop-daemonSUIDPrivilegeEscalation
 
-## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+#### -Checked GTFOBins website and found the following to run command "/usr/sbin/start-stop-daemon -n $RANDOM -S -x /bin/sh -- -p" for privilege escalation 
 
+![](Pasted%20image%2020221109134944.png)
+
+## Privilege Escalation vector
+## /usr/sbin/start-stop-daemon SUID Privilege Escalation GTFOBINS
+
+#### -Input the referenced command and received a root shell:
+
+![](Pasted%20image%2020221109135035.png)
 ---
 
