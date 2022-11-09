@@ -19,7 +19,9 @@ IP:  192.168.142.55
 - Found an admin link and was directed to an admin login page
 - Logged into the admin page with the found credentials in the smb share
 - Navigated to upload plugin page
-- 
+- Created a reverse shell payload on kali machine
+- Started netcat listener on kali machine
+- Uploaded reverse shell payload
 - Text
 
 ## Improved skills
