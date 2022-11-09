@@ -12,8 +12,7 @@ IP: 192.168.143.100
 
 
 # Resolution summary
-- Text
-- Text
+- Modifying 
 
 ## Improved skills
 - skill 1
@@ -147,6 +146,18 @@ Enumerated top 200 UDP ports:
 #SCP_Wrapper.sh
 
 #### -Copied the script in kali machine in vim file name "scp_wrapper.sh"
+
+![](Pasted%20image%2020221109133314.png)
+
+#### -Changed the "scp" code to "bash" and saved the file:
+
+![](Pasted%20image%2020221109133424.png)
+
+#### -Typed the following wich rewrites the "scp_wrapper.sh" script in /home/max location with the one I edited:
+
+"scp -i maxid_rsa /home/kali/Downloads/ProvingGroundsBoxes/Sorcerer/scp_wrapper.sh  max@192.168.230.100:/home/max/scp_wrapper.sh"
+
+![](Pasted%20image%2020221109133614.png)
 
 
 ---
