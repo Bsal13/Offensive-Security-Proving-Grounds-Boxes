@@ -12,11 +12,12 @@ IP: 192.168.143.100
 
 
 # Resolution summary
-- Modifying 
+- 
+- 
 
 ## Improved skills
-- skill 1
-- skill 2
+- Modifying SCP_Wrapper.sh script to change to bash shell
+- Learned to rewrite scp script in within target mach
 
 ## Used tools
 - nmap
@@ -159,7 +160,11 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221109133614.png)
 
+#### -Typed  "ssh -i maxid_rsa max@192.168.230.100"  and logged into a ssh bash shell as max and typed "python -c 'import pty; pty.spawn("/bin/bash")'" to spawn a pty shell:
 
+![](Pasted%20image%2020221109133953.png)
+
+![](Pasted%20image%2020221109134032.png)
 ---
 
 # Lateral Movement to user
