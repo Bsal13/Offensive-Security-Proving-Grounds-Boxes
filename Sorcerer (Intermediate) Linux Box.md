@@ -107,7 +107,7 @@ Nmap done: 1 IP address (1 host up) scanned in 15.35 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+7742
 ```
 
 Enumerated top 200 UDP ports:
@@ -118,8 +118,16 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Port 80 - HTTP nginx
+
+#### -Ran feroxbuster and the below results showed "http://192.168.143.100:7742/zipfiles"
+
+![](Pasted%20image%2020221109124628.png)
+
+#### -Navigated to the webapge and found the following zip links
+
+![](Pasted%20image%2020221109124738.png)
+
 
 ---
 
