@@ -3,7 +3,7 @@ Alias: Shenzi
 Date: {{date}}
 Platform: Windows
 Difficulty: Intermediate
-Tags: #SMBenumeration #WhiteWinterWolfPHPwebshell
+Tags: #SMBenumeration #WhiteWinterWolfPHPwebshell #AlwaysInstallElevatedPrivelegeEscalation 
 Status: Finished
 IP:  192.168.142.55
 ---
@@ -30,11 +30,7 @@ IP:  192.168.142.55
 - Typed "reverse.exe_.php" and received a reverse shell
 - Downloaded privesccheck.ps1 and ran the script
 - Found it was vulnerable to Always Install Elevated privilege escalation
-- 
-- 
-- 
-- 
-- Text
+- Followed the steps to create a reverse shell payload and command to initiate it and recevived a reverse shell running as root
 
 ## Improved skills
 - Wordpress site/webpage directory guessing
