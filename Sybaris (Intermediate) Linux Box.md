@@ -22,17 +22,18 @@ IP: 192.168.241.93
 - Found cronjob "/usr/bin/log-sweeper" binary running as root in the ld_library_path
 - Googled "ld_library_path privilege escalation" and found a website showing to confirm if the binary uses shared objects
 - Confirmed the binary utilizes shared objects and the shared object utils.so was not found in the binary
-- 
+- Created a shared object ""
 - Text
 
 ## Improved skills
 - ldd
-- skill 2
 
 ## Used tools
 - nmap
 - gobuster
 - feroxbuster
+- ldd
+
 
 ---
 
