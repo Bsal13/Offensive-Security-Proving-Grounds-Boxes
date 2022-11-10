@@ -12,8 +12,8 @@ IP: 192.168.143.100
 
 
 # Resolution summary
-- 
-- 
+- Ran Feroxbuster and found a "/zipfiles" directory on port 7742
+- Located a 
 
 ## Improved skills
 - Modifying SCP_Wrapper.sh script to change to bash shell
