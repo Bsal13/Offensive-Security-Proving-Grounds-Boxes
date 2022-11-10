@@ -13,8 +13,11 @@ IP: 192.168.241.93
 
 # Resolution summary
 - Anonymously logged into FTP server and found a directory named "pub" with no files
-- Navigated to the targets website on port 80 and found a blog page powered HTMLY
-- 
+- Googled redis enumeration and came across hacktricks website and found we should be able to upload a redis module to the ftp server as we have write permissions on directory "pub"
+- Followed the "Load Redis Module" steps listed in the hacktricks website
+- Googled "where is the anonymous ftp directory located" and found the following webpage showing it is located in the path "/var/ftp/pub"
+- Loaded the shared object module into the directory "/var/ftp/pub" on the ftp server
+- Confirmed we were able to execute commands with 
 - 
 - Text
 
