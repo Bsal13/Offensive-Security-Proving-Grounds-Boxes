@@ -182,7 +182,7 @@ Enumerated top 200 UDP ports:
 
 #### -Followed the "Load Redis Module" steps listed in the hacktricks website:
 
-#### -Navigated to "RedisModules-ExecuteCommands" github website and git cloned the repository in kai machine:
+#### -Navigated to "RedisModules-ExecuteCommands" github website and git cloned the repository in kali machine:
 
 ![](Pasted%20image%2020221110000832.png)
 
