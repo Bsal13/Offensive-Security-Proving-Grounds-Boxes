@@ -18,6 +18,7 @@ IP: 192.168.143.100
 - Copied the "scp_wrapper.sh" script to kali machine
 - Changed "scp" to "bash" in the "scp_wrapper.sh" script
 - Utilized scp to copy my edited "scp_wrapper.sh" script to the users directory found in the "/zipfiles" directory
+- Attempted to login via ssh and was successful
 - 
 - 
 - 
