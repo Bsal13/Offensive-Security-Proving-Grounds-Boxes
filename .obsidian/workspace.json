@@ -91,11 +91,9 @@
             "id": "1a0aadb44513ad17",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Sorcerer (Intermediate) Linux Box.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Pasted image 20221109200105.png"
               }
             }
           }
@@ -166,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sorcerer (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221109200105.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +181,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sorcerer (Intermediate) Linux Box.md",
+                "file": "Images/Pasted image 20221109200105.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sorcerer (Intermediate) Linux Box.md"
+                "file": "Images/Pasted image 20221109200105.png"
               }
             }
           }
@@ -217,13 +215,13 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1a0aadb44513ad17",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
-    "Pasted image 20221109135035.png",
-    "Pasted image 20221109134944.png",
-    "Pasted image 20221109133614.png",
-    "Pasted image 20221109133953.png",
     "Sorcerer (Intermediate) Linux Box.md",
+    "Images/Pasted image 20221109135035.png",
+    "Images/Pasted image 20221109134944.png",
+    "Images/Pasted image 20221109133614.png",
+    "Images/Pasted image 20221109133953.png",
     "Shenzi (Intermediate) Windows Box.md",
     "Images/Pasted image 20221108005630.png",
     "Pelican (Intermediate) Linux Box.md",

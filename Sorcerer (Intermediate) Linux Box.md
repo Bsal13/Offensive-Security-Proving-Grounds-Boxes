@@ -132,21 +132,21 @@ Enumerated top 200 UDP ports:
 
 #### -Ran feroxbuster and the below results showed "http://192.168.143.100:7742/zipfiles"
 
-![](Pasted%20image%2020221109124628.png)
+![](Images/Pasted%20image%2020221109124628.png)
 
 #### -Navigated to the webapge and found the following zip links
 
-![](Pasted%20image%2020221109124738.png)
+![](Images/Pasted%20image%2020221109124738.png)
 
 #### -Downloaded max.zip file and found the following "id_rsa" private ssh and "scp_wrapper.sh" script:
 
-![](Pasted%20image%2020221109124849.png)
+![](Images/Pasted%20image%2020221109124849.png)
 
 #### -Navigated to kali machine and typed copied the id_rsa file into a file named maxid_rsa and typed "chmod 600 maxid_rsa " to make the key private
 
 #### -Typed "ssh -i maxid_rsa max@192.168.143.100" and received the following output:
 
-![](Pasted%20image%2020221109125243.png)
+![](Images/Pasted%20image%2020221109125243.png)
 
 ---
 
@@ -158,23 +158,23 @@ Enumerated top 200 UDP ports:
 
 #### -Copied the script in kali machine in vim file name "scp_wrapper.sh"
 
-![](Pasted%20image%2020221109133314.png)
+![](Images/Pasted%20image%2020221109133314.png)
 
 #### -Changed the "scp" code to "bash" and saved the file:
 
-![](Pasted%20image%2020221109200105.png)
+![](Images/Pasted%20image%2020221109200105.png)
 
 #### -Typed the following wich rewrites the "scp_wrapper.sh" script in /home/max location with the one I edited:
 
 "scp -i maxid_rsa /home/kali/Downloads/ProvingGroundsBoxes/Sorcerer/scp_wrapper.sh  max@192.168.230.100:/home/max/scp_wrapper.sh"
 
-![](Pasted%20image%2020221109133614.png)
+![](Images/Pasted%20image%2020221109133614.png)
 
 #### -Typed  "ssh -i maxid_rsa max@192.168.230.100"  and logged into a ssh bash shell as max and typed "python -c 'import pty; pty.spawn("/bin/bash")'" to spawn a pty shell:
 
-![](Pasted%20image%2020221109133953.png)
+![](Images/Pasted%20image%2020221109133953.png)
 
-![](Pasted%20image%2020221109134032.png)
+![](Images/Pasted%20image%2020221109134032.png)
 
 ---
 
@@ -183,19 +183,19 @@ Enumerated top 200 UDP ports:
 
 #### -Ran linpeas.s script and found binary /usr/sbin/start-stop-daemon set as a SUID bit:
 
-![](Pasted%20image%2020221109134636.png)
+![](Images/Pasted%20image%2020221109134636.png)
 
 #start-stop-daemon #start-stop-daemonSUIDPrivilegeEscalation
 
 #### -Checked GTFOBins website and found the following to run command "/usr/sbin/start-stop-daemon -n $RANDOM -S -x /bin/sh -- -p" for privilege escalation 
 
-![](Pasted%20image%2020221109134944.png)
+![](Images/Pasted%20image%2020221109134944.png)
 
 ## Privilege Escalation vector
 ## /usr/sbin/start-stop-daemon SUID Privilege Escalation GTFOBINS
 
 #### -Input the referenced command and received a root shell:
 
-![](Pasted%20image%2020221109135035.png)
+![](Images/Pasted%20image%2020221109135035.png)
 ---
 
