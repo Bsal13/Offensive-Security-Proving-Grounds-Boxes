@@ -3,7 +3,7 @@ Alias: Sybaris
 Date: {{date}}
 Platform: Linux Box
 Difficulty: Intermediate
-Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy #RedisModules-ExecuteCommands #HackTricksLoadRedisModule #AnonymousFTPdirectorylocation
+Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy #LoginWebPageUserDisclosure #RedisModules-ExecuteCommands #HackTricksLoadRedisModule #AnonymousFTPdirectorylocation
 Status: Finished
 IP: 192.168.241.93
 ---
@@ -12,7 +12,10 @@ IP: 192.168.241.93
 
 
 # Resolution summary
-- Anonymously logged into FTP server and found 
+- Anonymously logged into FTP server and found a directory named "pub" with no files
+- Navigated to the targets website on port 80 and found a blog page powered HTMLY
+- 
+- 
 - Text
 
 ## Improved skills
@@ -22,6 +25,7 @@ IP: 192.168.241.93
 ## Used tools
 - nmap
 - gobuster
+- feroxbuster
 
 ---
 
