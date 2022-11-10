@@ -19,7 +19,8 @@ IP: 192.168.143.100
 - Changed "scp" to "bash" in the "scp_wrapper.sh" script
 - Utilized scp to copy my edited "scp_wrapper.sh" script to the users directory found in the "/zipfiles" directory
 - Attempted to login via ssh and was successful
-- 
+- Found SUID binary "/usr/sbin/start-stop-daemon"
+- Located the binary 
 - 
 - 
 - 
