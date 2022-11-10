@@ -227,6 +227,19 @@ Enumerated top 200 UDP ports:
 ## Local Enumeration
 
 #### -Navigated to "/var/www/html/config" directory
+#PasswordSearch/var/www/html/config
+
+#### -Navigated to found "users" directory
+
+#### -Found "pablo.ini" file and read the file wich exposed pablo's password "PostureAlienateArson345":
+
+![](Pasted%20image%2020221110143222.png)
+
+#### -Typed "sudo -l" and found user pablo is unable to utilize sudo 
+
+#### -Ran linpeas.sh and found cronjob "/usr/bin/log-sweeper" binary running as root:
+
+![](Pasted%20image%2020221110143312.png)
 
 
 
