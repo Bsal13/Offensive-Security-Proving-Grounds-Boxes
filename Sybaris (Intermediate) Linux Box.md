@@ -20,11 +20,13 @@ IP: 192.168.241.93
 - Confirmed we were able to execute commands with system.exec on redis
 - Set up a netcat listener on Kali machine; typed a reverse shell command on redis and recieved a reverse shell
 - Found cronjob "/usr/bin/log-sweeper" binary running as root in the ld_library_path
-- Googled "ld_library_path privilege escalation" 
+- Googled "ld_library_path privilege escalation" and found a website showing to confirm if the binary uses shared objects
+- Confirmed the binary utilizes shared objects and the shared object utils.so was not found in the binary
+- 
 - Text
 
 ## Improved skills
-- skill 1
+- ldd
 - skill 2
 
 ## Used tools
