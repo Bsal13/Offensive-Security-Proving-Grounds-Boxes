@@ -15,7 +15,11 @@ IP: 192.168.143.100
 - Ran Feroxbuster and found a "/zipfiles" directory on port 7742
 - Located a ssh private key and username in the "/zipfiles" directory; additionally found a "scp_wrapper.sh" script
 - Attempted to login via ssh with the found private ssh key but was unable to
-- Changed "scp"
+- Copied the "scp_wrapper.sh" script to kali machine
+- Changed "scp" to "bash" in the "scp_wrapper.sh" script
+- Utilized scp to copy my edited "scp_wrapper.sh" script to the users directory found in the "/zipfiles" directory
+- 
+- 
 - 
 - 
 
