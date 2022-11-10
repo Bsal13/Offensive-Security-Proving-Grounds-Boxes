@@ -3,7 +3,7 @@ Alias: Sybaris
 Date: {{date}}
 Platform: Linux Box
 Difficulty: Intermediate
-Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy 
+Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy #RedisModules-ExecuteCommands #HackTricksLoadRedisModule 
 Status: Finished
 IP: 192.168.241.93
 ---
@@ -179,7 +179,22 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Followed the "Load Redis Module" steps listed in the hacktricks website:
+
+#### -Navigated to "RedisModules-ExecuteCommands" github website and git cloned the repository in kai machine:
+
+![](Pasted%20image%2020221110000832.png)
+
+#### -Navigated to the repository and typed "make" to create the compiled "module.so":
+
+![](Pasted%20image%2020221110000913.png)
+
+![](Pasted%20image%2020221110000948.png)
+#RedisModules-ExecuteCommands #HackTricksLoadRedisModule
+
+#### -Navigated to directory "pub" on ftp server and typed "put module.so" to upload the module to the ftp server:
+
 
 ---
 
