@@ -96,9 +96,21 @@
                 "file": "Images/Pasted image 20221109200105.png"
               }
             }
+          },
+          {
+            "id": "b6565c986775fded",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sybaris (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -164,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20221109200105.png",
+                "file": "Sybaris (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,7 +193,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20221109200105.png",
+                "file": "Sybaris (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -204,7 +216,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20221109200105.png"
+                "file": "Sybaris (Intermediate) Linux Box.md"
               }
             }
           }
@@ -215,8 +227,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "36fe7cca0c50b180",
+  "active": "b6565c986775fded",
   "lastOpenFiles": [
+    "Images/Pasted image 20221109200105.png",
     "Sorcerer (Intermediate) Linux Box.md",
     "Images/Pasted image 20221109135035.png",
     "Images/Pasted image 20221109134944.png",
@@ -225,7 +238,6 @@
     "Shenzi (Intermediate) Windows Box.md",
     "Images/Pasted image 20221108005630.png",
     "Pelican (Intermediate) Linux Box.md",
-    "Images/Pasted image 20221101121057.png",
-    "Readys (Intermediate) Linux Box.md"
+    "Images/Pasted image 20221101121057.png"
   ]
 }
