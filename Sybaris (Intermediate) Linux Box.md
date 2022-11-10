@@ -162,7 +162,18 @@ Enumerated top 200 UDP ports:
 #### -Ran feroxbuster "feroxbuster -u http://192.168.241.93 -C 401 403 405 -x php,txt,json,docx" on kali machine and found the following login page:
 
 ![](Pasted%20image%2020221110000023.png)
+![](Pasted%20image%2020221110000336.png)
 
+#### -Attempted to login with user "admin" and password "admin". The error message when attempting to login with username admin discloses if it the username provided is found in the database:
+
+![](Pasted%20image%2020221110000432.png)
+#LoginWebPageUserDisclosure
+
+# Port 6349 - Redis
+
+#### Googled redis enumeration and came across hacktricks website and found we should be able to upload a redis module to the ftp server as we have write permissions on directory "pub":
+
+![](Pasted%20image%2020221110000655.png)
 
 ---
 
