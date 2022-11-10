@@ -20,10 +20,8 @@ IP: 192.168.143.100
 - Utilized scp to copy my edited "scp_wrapper.sh" script to the users directory found in the "/zipfiles" directory
 - Attempted to login via ssh and was successful
 - Found SUID binary "/usr/sbin/start-stop-daemon"
-- Located the binary 
-- 
-- 
-- 
+- Located the binary in GTFOBINS
+- Input the command from GTFOBINS and received a reverse shell as root
 
 ## Improved skills
 - Modifying SCP_Wrapper.sh script to change to bash shell
