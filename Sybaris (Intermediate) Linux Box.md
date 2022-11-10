@@ -195,6 +195,16 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to directory "pub" on ftp server and typed "put module.so" to upload the module to the ftp server:
 
+![](Pasted%20image%2020221110001235.png)
+
+#### -Googled "where is the anonymous ftp directory located" and found the following webpage showing it is located in the path "/var/ftp/pub"
+
+![](Pasted%20image%2020221110001330.png)
+
+![](Pasted%20image%2020221110001600.png)
+
+#AnonymousFTPdirectorylocation
+
 
 ---
 
