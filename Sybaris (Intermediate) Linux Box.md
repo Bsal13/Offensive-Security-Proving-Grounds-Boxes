@@ -17,8 +17,10 @@ IP: 192.168.241.93
 - Followed the "Load Redis Module" steps listed in the hacktricks website
 - Googled "where is the anonymous ftp directory located" and found the following webpage showing it is located in the path "/var/ftp/pub"
 - Loaded the shared object module into the directory "/var/ftp/pub" on the ftp server
-- Confirmed we were able to execute commands with 
-- 
+- Confirmed we were able to execute commands with system.exec on redis
+- Set up a netcat listener on Kali machine; typed a reverse shell command on redis and recieved a reverse shell
+- Found cronjob "/usr/bin/log-sweeper" binary running as root in the ld_library_path
+- Googled "ld_library_path privilege escalation" 
 - Text
 
 ## Improved skills
