@@ -14,7 +14,8 @@ IP: 192.168.143.100
 # Resolution summary
 - Ran Feroxbuster and found a "/zipfiles" directory on port 7742
 - Located a ssh private key and username in the "/zipfiles" directory; additionally found a "scp_wrapper.sh" script
-- Attempted to login via ssh with the found private ssh key
+- Attempted to login via ssh with the found private ssh key but was unable to
+- Changed "scp"
 - 
 - 
 
@@ -157,7 +158,7 @@ Enumerated top 200 UDP ports:
 
 #### -Changed the "scp" code to "bash" and saved the file:
 
-![](Pasted%20image%2020221109133424.png)
+![](Pasted%20image%2020221109200105.png)
 
 #### -Typed the following wich rewrites the "scp_wrapper.sh" script in /home/max location with the one I edited:
 
