@@ -3,7 +3,7 @@ Alias: Sybaris
 Date: {{date}}
 Platform: Linux Box
 Difficulty: Intermediate
-Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy #RedisModules-ExecuteCommands #HackTricksLoadRedisModule 
+Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy #RedisModules-ExecuteCommands #HackTricksLoadRedisModule #AnonymousFTPdirectorylocation
 Status: Finished
 IP: 192.168.241.93
 ---
