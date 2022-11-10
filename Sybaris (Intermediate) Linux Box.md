@@ -3,7 +3,7 @@ Alias: Sybaris
 Date: {{date}}
 Platform: Linux Box
 Difficulty: Intermediate
-Tags:
+Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy 
 Status: Finished
 IP: 192.168.241.93
 ---
@@ -134,6 +134,7 @@ Nmap done: 1 IP address (1 host up) scanned in 16.61 seconds
 Enumerated open TCP ports:
 ```bash
 21
+80
 ```
 
 Enumerated top 200 UDP ports:
@@ -149,7 +150,18 @@ Enumerated top 200 UDP ports:
 #### -Typed "ftp 192.168.55.93", logged in as anonymous and found writable directory "pub" containing no files:
 
 ![](Pasted%20image%2020221109235702.png)
+#anonymousFTPlogin #FTPwriteabledirectory
 
+# Port 80 - Apache httpd 2.4.6
+
+#### -Navigated to the targets website and found the following blog page powered by HTMLY:
+
+![](Pasted%20image%2020221109235857.png)
+#htlmy
+
+#### -Ran feroxbuster "feroxbuster -u http://192.168.241.93 -C 401 403 405 -x php,txt,json,docx" on kali machine and found the following login page:
+
+![](Pasted%20image%2020221110000023.png)
 
 
 ---
