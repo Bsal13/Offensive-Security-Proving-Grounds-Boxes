@@ -12,7 +12,7 @@ IP: 192.168.241.93
 
 
 # Resolution summary
-- Text
+- Anonymously logged into FTP server and found 
 - Text
 
 ## Improved skills
