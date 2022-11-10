@@ -13,7 +13,9 @@ IP: 192.168.143.100
 
 # Resolution summary
 - Ran Feroxbuster and found a "/zipfiles" directory on port 7742
-- Located a ssh private key and username in the "/zipfiles" directory
+- Located a ssh private key and username in the "/zipfiles" directory; additionally found a "scp_wrapper.sh" script
+- Attempted to login via ssh with the found private ssh key
+- 
 - 
 
 ## Improved skills
