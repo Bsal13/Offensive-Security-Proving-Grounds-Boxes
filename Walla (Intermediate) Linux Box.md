@@ -19,7 +19,7 @@ IP: 192.168.97.97
 - Input default credentials in the exploit script; ran it and received a reverse shell
 - Found www-data can run wifi_reset.py as sudo
 - Ran the script and received an error stating unable to load wificontroller module
-- Typed "python -c 'import sys; print(sys.path)'" to receive a  list of directories that Python looks in when importing modules
+- Typed python -c 'import sys; print(sys.path)' to receive a  list of directories that Python looks in when importing modules
 - Text
 
 ## Improved skills
