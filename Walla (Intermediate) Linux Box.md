@@ -17,7 +17,9 @@ IP: 192.168.97.97
 - Googled raspAP Wifi Configuration Portal default credentials
 - Googled RaspAP 2.1 exploit github and found authenticated RCE CVE-20202-24572
 - Input default credentials in the exploit script; ran it and received a reverse shell
-- 
+- Found www-data can run wifi_reset.py as sudo
+- Ran the script and received an error stating unable to load wificontroller module
+- Typed "python -c 'import sys; print(sys.path)'" to receive a  list of directories that Python looks in when importing modules
 - Text
 
 ## Improved skills
