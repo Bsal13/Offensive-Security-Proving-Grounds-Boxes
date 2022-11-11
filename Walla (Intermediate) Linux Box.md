@@ -13,7 +13,9 @@ IP: 192.168.97.97
 
 # Resolution summary
 - Found a package.json file on port 8091
-- Navigated to the json file and found the target machine to be running 
+- Navigated to the json file and found the target machine to be running raspAP Wifi Configuration Portal version 2.1
+- Googled raspAP Wifi Configuration Portal default credentials
+- 
 - Text
 
 ## Improved skills
