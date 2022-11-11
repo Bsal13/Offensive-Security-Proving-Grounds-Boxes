@@ -5,7 +5,7 @@ Platform: Linux
 Difficulty: Intermediate
 Tags:
 Status: Finished
-IP: 
+IP: 192.168.97.97
 ---
 
 # {{Walla}}
@@ -21,7 +21,7 @@ IP:
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
 
 ---
 
@@ -134,7 +134,7 @@ Nmap done: 1 IP address (1 host up) scanned in 29.50 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+8091
 ```
 
 Enumerated top 200 UDP ports:
@@ -173,7 +173,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## CVE-20202-24572-POC - 
+## CVE-20202-24572-POC - RaspAP 2.1 Authenticated RCE
 
 #### -Copied the found exploit into a file on my kali machine named "exploit.py"
 
@@ -190,7 +190,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Privilege Escalation
-## Python Library HijackingPrivilegeEscalation
+## Python Library Hijacking 
 
 #### -Typed "sudo -l" and found www-data can run the following commands as sudo:
 
@@ -211,6 +211,8 @@ Enumerated top 200 UDP ports:
 #### -Typed "python -c 'import sys; print(sys.path)'" to receive a  list of directories that Python looks in when importing modules. Received the following output showing it looks in the current directory first:
 ![](Pasted%20image%2020221111093133.png)
 
+## Privilege Escalation vector
+
 #### -Created a file named "wificontroller.py" on my kali machine with the following: 
 import os 
 os.system('/bin/bash')
@@ -221,8 +223,5 @@ os.system('/bin/bash')
 #### -Typed "sudo /usr/bin/python /home/walter/wifi_reset.py" and received a root shell:
 
 ![](Pasted%20image%2020221111093244.png)
-
-## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
 ---
