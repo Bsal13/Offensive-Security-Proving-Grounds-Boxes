@@ -16,12 +16,13 @@ IP: 192.168.114.44
 - Text
 
 ## Improved skills
-- skill 1
+- hexchat
 - skill 2
 
 ## Used tools
 - nmap
 - rustscan
+- hexchat
 
 ---
 
@@ -493,7 +494,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Enumerated open TCP ports:
 ```bash
-
+80
 ```
 
 Enumerated top 200 UDP ports:
@@ -522,6 +523,8 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221111000757.png)
 
+# IRC Chat
+
 #### - Typed "hexchat" on my kali machine to bring up an IRC program:
 
 #### - Clicked under "Networks" to create and label a new network and clicked edit:
@@ -544,13 +547,21 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221111001400.png)
 
+![](Pasted%20image%2020221111001429.png)
+
 
 
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+
+#### - Googled "Unreal Tournament 99 Game Server"  and found the following exploit:
+
+![](Pasted%20image%2020221111001801.png)
+
+
 
 ---
 
