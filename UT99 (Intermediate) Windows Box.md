@@ -524,11 +524,25 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "hexchat" on my kali machine to bring up an IRC program:
 
-#### - Clicked under "Networks" to create and label a anew network and clicked edit:
+#### - Clicked under "Networks" to create and label a new network and clicked edit:
 
 ![](Pasted%20image%2020221111000854.png)
 
 #### - Clicked in the new server box and changed it to the following "[target IP/7000]" and clicked typed enter key and close:
+
+![](Pasted%20image%2020221111001112.png)
+
+#### - Clicked "connect" and connected to the target machines IRC server:
+
+![](Pasted%20image%2020221111001204.png)
+
+#### - Clicked "open the channel list" and okay
+
+![](Pasted%20image%2020221111001319.png)
+
+#### - Clicked "search" and found the following "Unreal Tournament 99 Game Server" and clicked "join channel"
+
+![](Pasted%20image%2020221111001400.png)
 
 
 
