@@ -319,16 +319,20 @@ Enumerated top 200 UDP ports:
 #### - Googled "redis key-value store 5.0.9 exploit github" and found the following link/web page showing the following redis rce exploit:
 
 ![](Pasted%20image%2020221111102950.png)
-
-
-
-
+![](Pasted%20image%2020221111103142.png)
 
 ---
 
 # Exploitation
-## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Redis 4x-5x RCE Exploit
+
+#### -Downloaded the exploit on my kali machine 
+
+#### -Downloaded the following exploit on my kali machine and compiled the "exp.so" and placed in the directory of the previous exploit I found:
+
+![](Pasted%20image%2020221111103254.png)
+
+![](Pasted%20image%2020221111103350.png)
 
 ---
 
