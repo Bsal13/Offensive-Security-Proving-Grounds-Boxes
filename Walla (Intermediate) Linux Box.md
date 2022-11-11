@@ -189,25 +189,28 @@ Enumerated top 200 UDP ports:
 
 ---
 
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
----
-
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Typed "sudo -l" and found www-data can run the following commands as sudo:
+
+    (ALL) NOPASSWD: /sbin/ifup
+    (ALL) NOPASSWD: /usr/bin/python /home/walter/wifi_reset.py
+    (ALL) NOPASSWD: /bin/systemctl start hostapd.service
+    (ALL) NOPASSWD: /bin/systemctl stop hostapd.service
+    (ALL) NOPASSWD: /bin/systemctl start dnsmasq.service
+    (ALL) NOPASSWD: /bin/systemctl stop dnsmasq.service
+    (ALL) NOPASSWD: /bin/systemctl restart dnsmasq.service
+
+![](Pasted%20image%2020221111092853.png)
+
+#### -Typed "python wifi_reset.py" and I received the following output:
+
+![](Pasted%20image%2020221111093000.png)
+
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
 ---
-
-# Trophy & Loot
-user.txt
-
-root.txt
