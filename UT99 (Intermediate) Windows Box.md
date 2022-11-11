@@ -504,8 +504,33 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## Port 80 - HTTP Apache httpd 2.4.16
+
+#### -Navigated to target ip address and found the following webpage:
+
+![](Pasted%20image%2020221111000532.png)
+
+#### - Clicked on the "public html" link and was directed to the following web page:
+
+![](Pasted%20image%2020221111000610.png)
+
+![](Pasted%20image%2020221111000641.png)
+
+#### - Clicked the "read more" link and found the following comment to join IRC:
+
+![](Pasted%20image%2020221111000723.png)
+
+![](Pasted%20image%2020221111000757.png)
+
+#### - Typed "hexchat" on my kali machine to bring up an IRC program:
+
+#### - Clicked under "Networks" to create and label a anew network and clicked edit:
+
+![](Pasted%20image%2020221111000854.png)
+
+#### - Clicked in the new server box and changed it to the following "[target IP/7000]" and clicked typed enter key and close:
+
+
 
 ---
 
