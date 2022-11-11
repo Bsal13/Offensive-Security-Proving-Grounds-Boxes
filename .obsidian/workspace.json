@@ -150,9 +150,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "87eb5552c7ee40e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Walla (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 13
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -218,7 +230,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Wpwn (Easy) Linux Box.md",
+                "file": "Walla (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -235,7 +247,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Wpwn (Easy) Linux Box.md",
+                "file": "Walla (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -258,7 +270,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Wpwn (Easy) Linux Box.md"
+                "file": "Walla (Intermediate) Linux Box.md"
               }
             }
           }
@@ -269,8 +281,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "b0e3ac83a2fd557b",
+  "active": "87eb5552c7ee40e2",
   "lastOpenFiles": [
+    "Wpwn (Easy) Linux Box.md",
     "Sybaris (Intermediate) Linux Box.md",
     "Pasted image 20221111000532.png",
     "Pasted image 20221111001801.png",
@@ -279,7 +292,6 @@
     "Images/Pasted image 20221109200105.png",
     "Sorcerer (Intermediate) Linux Box.md",
     "Images/Pasted image 20221109135035.png",
-    "Images/Pasted image 20221109134944.png",
-    "Images/Pasted image 20221109133614.png"
+    "Images/Pasted image 20221109134944.png"
   ]
 }

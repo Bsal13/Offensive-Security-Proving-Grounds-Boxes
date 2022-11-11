@@ -1,0 +1,185 @@
+---
+Alias: Walla
+Date: {{date}}
+Platform: Linux
+Difficulty: Intermediate
+Tags:
+Status: Finished
+IP: 
+---
+
+# {{Walla}}
+
+
+# Resolution summary
+- Text
+- Text
+
+## Improved skills
+- skill 1
+- skill 2
+
+## Used tools
+- nmap
+- gobuster
+
+---
+
+# Information Gathering
+Scanned all TCP ports:
+```bash
+rustscan -a 192.168.97.97 --ulimit 5000
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
+The Modern Day Port Scanner.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+Real hackers hack time ⌛
+
+[~] The config file is expected to be at "/home/kali/.rustscan.toml"
+[~] Automatically increasing ulimit value to 5000.
+Open 192.168.97.97:22
+Open 192.168.97.97:23
+Open 192.168.97.97:25
+Open 192.168.97.97:53
+Open 192.168.97.97:422
+Open 192.168.97.97:8091
+Open 192.168.97.97:42042
+[~] Starting Script(s)
+[>] Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[~] Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-22 09:37 EDT
+Initiating Ping Scan at 09:37
+Scanning 192.168.97.97 [2 ports]
+Completed Ping Scan at 09:37, 0.12s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 09:37
+Completed Parallel DNS resolution of 1 host. at 09:37, 0.04s elapsed
+DNS resolution of 1 IPs took 0.14s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 09:37
+Scanning 192.168.97.97 [7 ports]
+Discovered open port 23/tcp on 192.168.97.97
+Discovered open port 22/tcp on 192.168.97.97
+Discovered open port 25/tcp on 192.168.97.97
+Discovered open port 53/tcp on 192.168.97.97
+Discovered open port 422/tcp on 192.168.97.97
+Discovered open port 8091/tcp on 192.168.97.97
+Discovered open port 42042/tcp on 192.168.97.97
+Completed Connect Scan at 09:37, 0.09s elapsed (7 total ports)
+Nmap scan report for 192.168.97.97
+Host is up, received conn-refused (0.093s latency).
+Scanned at 2022-05-22 09:37:49 EDT for 0s
+
+PORT      STATE SERVICE REASON
+22/tcp    open  ssh     syn-ack
+23/tcp    open  telnet  syn-ack
+25/tcp    open  smtp    syn-ack
+53/tcp    open  domain  syn-ack
+422/tcp   open  ariel3  syn-ack
+8091/tcp  open  jamlink syn-ack
+42042/tcp open  unknown syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 2.28 seconds
+
+
+nmap -sC -sV -p 22,23,25,53,422,8091,42042 192.168.97.97
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-22 10:00 EDT
+Nmap scan report for 192.168.97.97
+Host is up (0.084s latency).
+
+PORT      STATE SERVICE    VERSION
+22/tcp    open  ssh        OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 02:71:5d:c8:b9:43:ba:6a:c8:ed:15:c5:6c:b2:f5:f9 (RSA)
+|   256 f3:e5:10:d4:16:a9:9e:03:47:38:ba:ac:18:24:53:28 (ECDSA)
+|_  256 02:4f:99:ec:85:6d:79:43:88:b2:b5:7c:f0:91:fe:74 (ED25519)
+23/tcp    open  telnet     Linux telnetd
+25/tcp    open  smtp       Postfix smtpd
+|_smtp-commands: walla, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, CHUNKING
+| ssl-cert: Subject: commonName=walla
+| Subject Alternative Name: DNS:walla
+| Not valid before: 2020-09-17T18:26:36
+|_Not valid after:  2030-09-15T18:26:36
+|_ssl-date: TLS randomness does not represent time
+53/tcp    open  tcpwrapped
+422/tcp   open  ssh        OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 02:71:5d:c8:b9:43:ba:6a:c8:ed:15:c5:6c:b2:f5:f9 (RSA)
+|   256 f3:e5:10:d4:16:a9:9e:03:47:38:ba:ac:18:24:53:28 (ECDSA)
+|_  256 02:4f:99:ec:85:6d:79:43:88:b2:b5:7c:f0:91:fe:74 (ED25519)
+8091/tcp  open  http       lighttpd 1.4.53
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=RaspAP
+|_http-server-header: lighttpd/1.4.53
+42042/tcp open  ssh        OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 02:71:5d:c8:b9:43:ba:6a:c8:ed:15:c5:6c:b2:f5:f9 (RSA)
+|   256 f3:e5:10:d4:16:a9:9e:03:47:38:ba:ac:18:24:53:28 (ECDSA)
+|_  256 02:4f:99:ec:85:6d:79:43:88:b2:b5:7c:f0:91:fe:74 (ED25519)
+Service Info: Host:  walla; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 29.50 seconds
+```
+
+Enumerated open TCP ports:
+```bash
+
+```
+
+Enumerated top 200 UDP ports:
+```bash
+
+```
+
+---
+
+# Enumeration
+## Port 80 - HTTP (Apache)
+
+#### -Per the nmap scan I navigated to web page on "http://192.168.97.97:8091/"
+
+#### -The page prompted me for a username and password to login
+
+#### -I then ran a feroxbuster scan and found "http://192.168.97.97:8091/package.json"
+
+---
+
+# Exploitation
+## Name of the technique
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+---
+
+# Lateral Movement to user
+## Local Enumeration
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+## Lateral Movement vector
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+---
+
+# Privilege Escalation
+## Local Enumeration
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+## Privilege Escalation vector
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+---
+
+# Trophy & Loot
+user.txt
+
+root.txt
