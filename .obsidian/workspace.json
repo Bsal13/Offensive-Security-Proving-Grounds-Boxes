@@ -111,16 +111,44 @@
             "id": "94bcca0619009e83",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "72669aeff568bb95",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "3c71e281b3563c32",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "ab145f08d697af3e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "b0e3ac83a2fd557b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 13
       }
     ],
     "direction": "vertical"
@@ -186,7 +214,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +230,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,9 +251,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "UT99 (Intermediate) Windows Box.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -237,8 +261,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "94bcca0619009e83",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Pasted image 20221111001801.png",
+    "UT99 (Intermediate) Windows Box.md",
     "Images/Pasted image 20221109235702.png",
     "Sybaris (Intermediate) Linux Box.md",
     "Images/Pasted image 20221109200105.png",
@@ -246,8 +272,6 @@
     "Images/Pasted image 20221109135035.png",
     "Images/Pasted image 20221109134944.png",
     "Images/Pasted image 20221109133614.png",
-    "Images/Pasted image 20221109133953.png",
-    "Shenzi (Intermediate) Windows Box.md",
-    "Images/Pasted image 20221108005630.png"
+    "Images/Pasted image 20221109133953.png"
   ]
 }
