@@ -15,6 +15,8 @@ IP: 192.168.97.97
 - Found a package.json file on port 8091
 - Navigated to the json file and found the target machine to be running raspAP Wifi Configuration Portal version 2.1
 - Googled raspAP Wifi Configuration Portal default credentials
+- Googled RaspAP 2.1 exploit github and found authenticated RCE CVE-20202-24572
+- Input default credentials in the exploit script; ran it and received a reverse shell
 - 
 - Text
 
