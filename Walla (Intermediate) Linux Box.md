@@ -145,13 +145,32 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
+## Port 8091 - HTTP lighttpd 1.4.53
 
 #### -Per the nmap scan I navigated to web page on "http://192.168.97.97:8091/"
 
 #### -The page prompted me for a username and password to login
 
 #### -I then ran a feroxbuster scan and found "http://192.168.97.97:8091/package.json"
+
+![](Pasted%20image%2020221111091657.png)
+
+#### -Navigated to the found .json page and found it was running "RaspAP WiFi Configuration Portal version 2.1"
+#RaspAPWiFiConfigurationPortal 
+
+![](Pasted%20image%2020221111091753.png)
+
+#### -Googled "RaspAP WiFi Configuration Portal default credentials" and found it to be username "admin" password "secret"
+
+![](Pasted%20image%2020221111091832.png)
+
+#### -Googled "RaspAP 2.1 exploit github" and found the following exploit script for Authenticated RCE
+
+![](Pasted%20image%2020221111091906.png)
+
+
+
+
 
 ---
 
