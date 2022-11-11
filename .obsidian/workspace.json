@@ -143,8 +143,12 @@
             "id": "b0e3ac83a2fd557b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Wpwn (Easy) Linux Box.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -214,6 +218,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Wpwn (Easy) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -230,6 +235,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Wpwn (Easy) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,7 +257,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Wpwn (Easy) Linux Box.md"
+              }
             }
           }
         ]
@@ -261,17 +269,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "36fe7cca0c50b180",
+  "active": "b0e3ac83a2fd557b",
   "lastOpenFiles": [
+    "Sybaris (Intermediate) Linux Box.md",
+    "Pasted image 20221111000532.png",
     "Pasted image 20221111001801.png",
     "UT99 (Intermediate) Windows Box.md",
     "Images/Pasted image 20221109235702.png",
-    "Sybaris (Intermediate) Linux Box.md",
     "Images/Pasted image 20221109200105.png",
     "Sorcerer (Intermediate) Linux Box.md",
     "Images/Pasted image 20221109135035.png",
     "Images/Pasted image 20221109134944.png",
-    "Images/Pasted image 20221109133614.png",
-    "Images/Pasted image 20221109133953.png"
+    "Images/Pasted image 20221109133614.png"
   ]
 }
