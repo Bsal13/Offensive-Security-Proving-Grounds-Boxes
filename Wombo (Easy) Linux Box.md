@@ -13,7 +13,7 @@ IP: 192.168.192.69
 
 
 # Resolution summary
-- Text
+- 
 - Text
 
 ## Improved skills
@@ -303,7 +303,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 Enumerated open TCP ports:
 ```bash
-
+6379
 ```
 
 Enumerated top 200 UDP ports:

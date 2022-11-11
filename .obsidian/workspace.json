@@ -169,7 +169,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Walla (Intermediate) Linux Box.md",
+                "file": "Wombo (Easy) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -242,7 +242,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Walla (Intermediate) Linux Box.md",
+                "file": "Wombo (Easy) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -259,7 +259,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Walla (Intermediate) Linux Box.md",
+                "file": "Wombo (Easy) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -282,7 +282,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Walla (Intermediate) Linux Box.md"
+                "file": "Wombo (Easy) Linux Box.md"
               }
             }
           }
@@ -295,9 +295,9 @@
   },
   "active": "faa40ada97a78e23",
   "lastOpenFiles": [
+    "Walla (Intermediate) Linux Box.md",
     "Images/Pasted image 20221111103924.png",
     "Wombo (Easy) Linux Box.md",
-    "Walla (Intermediate) Linux Box.md",
     "Images/Pasted image 20221111091657.png",
     "Wpwn (Easy) Linux Box.md",
     "Sybaris (Intermediate) Linux Box.md",
