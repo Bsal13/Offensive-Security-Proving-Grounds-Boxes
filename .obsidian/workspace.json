@@ -106,9 +106,21 @@
                 "file": "Images/Pasted image 20221109235702.png"
               }
             }
+          },
+          {
+            "id": "94bcca0619009e83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UT99 (Intermediate) Windows Box.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -174,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20221109235702.png",
+                "file": "UT99 (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Pasted image 20221109235702.png",
+                "file": "UT99 (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Pasted image 20221109235702.png"
+                "file": "UT99 (Intermediate) Windows Box.md"
               }
             }
           }
@@ -225,8 +237,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "36fe7cca0c50b180",
+  "active": "94bcca0619009e83",
   "lastOpenFiles": [
+    "Images/Pasted image 20221109235702.png",
     "Sybaris (Intermediate) Linux Box.md",
     "Images/Pasted image 20221109200105.png",
     "Sorcerer (Intermediate) Linux Box.md",
@@ -235,7 +248,6 @@
     "Images/Pasted image 20221109133614.png",
     "Images/Pasted image 20221109133953.png",
     "Shenzi (Intermediate) Windows Box.md",
-    "Images/Pasted image 20221108005630.png",
-    "Pelican (Intermediate) Linux Box.md"
+    "Images/Pasted image 20221108005630.png"
   ]
 }
