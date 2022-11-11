@@ -20,7 +20,11 @@ IP: 192.168.97.97
 - Found www-data can run wifi_reset.py as sudo
 - Ran the script and received an error stating unable to load wificontroller module
 - Typed python -c 'import sys; print(sys.path)' to receive a  list of directories that Python looks in when importing modules
-- Text
+- Confirmed it looks in the current directory first
+- Created a file named "wificontroller.py" on kali machine with the following contents "import os 
+   os.system('/bin/bash')"
+- Transferred controller.py to the target machine in the "/home/directory"
+- Ran the sc
 
 ## Improved skills
 - skill 1
