@@ -3,7 +3,7 @@ Alias: Walla
 Date: {{date}}
 Platform: Linux
 Difficulty: Intermediate
-Tags:
+Tags: #RaspAPWiFiConfigurationPortal 
 Status: Finished
 IP: 192.168.97.97
 ---
@@ -12,7 +12,8 @@ IP: 192.168.97.97
 
 
 # Resolution summary
-- Text
+- Found a package.json file on port 8091
+- Navigated to the json file and found the target machine to be running 
 - Text
 
 ## Improved skills
@@ -22,6 +23,7 @@ IP: 192.168.97.97
 ## Used tools
 - nmap
 - rustscan
+- feroxbuster
 
 ---
 
