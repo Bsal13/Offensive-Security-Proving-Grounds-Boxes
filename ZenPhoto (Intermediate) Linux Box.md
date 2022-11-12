@@ -12,8 +12,10 @@ IP: 192.168.241.41
 
 
 # Resolution summary
-- Text
-- Text
+- Ran feroxbuster and ound "/test" directory on port 80
+- Found application and version of application within source code of "/test" directory
+- Followed the exploit steps and received a reverse shell
+- Found kernel version on target machine is 
 
 ## Improved skills
 - finding application and version in source code
