@@ -4,7 +4,7 @@ Date: {{date}}
 Platform: Linux
 Category:
 Difficulty: Easy
-Tags: redis-rce.py
+Tags: #redis-rce.py
 Status: Finished
 IP: 192.168.192.69
 ---
