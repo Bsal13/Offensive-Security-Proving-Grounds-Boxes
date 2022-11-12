@@ -15,7 +15,10 @@ IP: 192.168.241.41
 - Ran feroxbuster and ound "/test" directory on port 80
 - Found application and version of application within source code of "/test" directory
 - Followed the exploit steps and received a reverse shell
-- Found kernel version on target machine is 
+- Found kernel version on target machine is "Linux 2.6.32"
+- Googled "Linux 2.6.32 exploit"
+- Found a Dirty Cow privilege escalation exploit
+- Ran the exploit and received a root shell
 
 ## Improved skills
 - finding application and version in source code
