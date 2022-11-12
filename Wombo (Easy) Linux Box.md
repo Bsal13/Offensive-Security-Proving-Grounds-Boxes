@@ -4,7 +4,7 @@ Date: {{date}}
 Platform: Linux
 Category:
 Difficulty: Easy
-Tags:
+Tags: redis-rce.py
 Status: Finished
 IP: 192.168.192.69
 ---
@@ -13,12 +13,13 @@ IP: 192.168.192.69
 
 
 # Resolution summary
-- 
-- Text
+- Per nmap scan I found Redis key-value store 5.0.9 running 
+- Found redis 4x-5x RCE exploit
+- Followed the steps to exploit redis and received a root shell
+
 
 ## Improved skills
-- skill 1
-- skill 2
+
 
 ## Used tools
 - nmap
