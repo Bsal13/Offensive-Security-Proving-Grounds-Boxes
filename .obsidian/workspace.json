@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Heist (Hard) Windows Active Directory Box.md",
+                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -253,7 +253,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Heist (Hard) Windows Active Directory Box.md",
+                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -270,7 +270,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Heist (Hard) Windows Active Directory Box.md",
+                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -293,7 +293,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Heist (Hard) Windows Active Directory Box.md"
+                "file": "Hutch (Intermediate) Windows Active Directory Box.md"
               }
             }
           }
@@ -306,6 +306,7 @@
   },
   "active": "cc61d3b1497b7e97",
   "lastOpenFiles": [
+    "Heist (Hard) Windows Active Directory Box.md",
     "Hutch (Intermediate) Windows Active Directory Box.md",
     "Postfish (Intermediate) Linux Box.md",
     "ZenPhoto (Intermediate) Linux Box.md",
@@ -314,7 +315,6 @@
     "Walla (Intermediate) Linux Box.md",
     "Images/Pasted image 20221111103924.png",
     "Images/Pasted image 20221111091657.png",
-    "Wpwn (Easy) Linux Box.md",
-    "Sybaris (Intermediate) Linux Box.md"
+    "Wpwn (Easy) Linux Box.md"
   ]
 }
