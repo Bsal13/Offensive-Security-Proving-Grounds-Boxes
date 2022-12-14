@@ -569,10 +569,6 @@ Enumerated top 200 UDP ports:
 
 #### - I then input the correct syntax and recieved a reverse shell:
 
-![](../Images/Pasted%20image%2020220704011948.png)
-
-
-
 ---
 
 # Lateral Movement to user
