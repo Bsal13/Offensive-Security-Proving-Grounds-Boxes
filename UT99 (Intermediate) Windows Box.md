@@ -536,13 +536,42 @@ Enumerated top 200 UDP ports:
 
 #### - Clicked "connect" and connected to the target machines IRC server:
 
+![](../Images/Pasted%20image%2020220704002706.png)
 
+#### - Clicked "open the channel list" and okay
+
+![](../Images/Pasted%20image%2020220704004114.png)
+
+#### - Clicked "search" and found the following "Unreal Tournament 99 Game Server" and clicked "join channel"
+
+![](../Images/Pasted%20image%2020220704005333.png)
+
+![](../Images/Pasted%20image%2020220704005559.png)
 
 ---
 
 # Exploitation
 ## Name of the technique
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### - Googled "Unreal Tournament 99 Game Server"  and found the following exploit:
+
+![](../Images/Pasted%20image%2020220704010511.png)
+
+![](../Images/Pasted%20image%2020220704010833.png)
+
+#### - Downloaded the exploit on my kali machine
+
+#### - Started a netcat listener on my kali machine listening on port 80
+
+#### - Typed "perl 16145.pl" and found to input the following syntax:
+
+![](../Images/Pasted%20image%2020220704011433.png)
+
+#### - I then input the correct syntax and recieved a reverse shell:
+
+![](../Images/Pasted%20image%2020220704011948.png)
+
+
 
 ---
 
