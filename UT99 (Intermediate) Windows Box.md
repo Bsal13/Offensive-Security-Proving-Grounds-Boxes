@@ -48,6 +48,7 @@ Enumerated top 200 UDP ports:
 
 #### -Navigated to target ip address and found the following webpage:
 
+![](../Images/Pasted%20image%2020220703234227.png)
 
 ---
 
