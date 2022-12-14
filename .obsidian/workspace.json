@@ -11,11 +11,9 @@
             "id": "cc61d3b1497b7e97",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
-                "mode": "source",
-                "source": false
+                "file": "Pasted image 20221111203116.png"
               }
             }
           },
@@ -253,7 +251,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
+                "file": "Pasted image 20221111203116.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -270,7 +268,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
+                "file": "Pasted image 20221111203116.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -293,7 +291,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md"
+                "file": "Pasted image 20221111203116.png"
               }
             }
           }
@@ -306,8 +304,8 @@
   },
   "active": "cc61d3b1497b7e97",
   "lastOpenFiles": [
-    "Heist (Hard) Windows Active Directory Box.md",
     "Hutch (Intermediate) Windows Active Directory Box.md",
+    "Heist (Hard) Windows Active Directory Box.md",
     "Postfish (Intermediate) Linux Box.md",
     "ZenPhoto (Intermediate) Linux Box.md",
     "Images/Pasted image 20221111200923.png",
