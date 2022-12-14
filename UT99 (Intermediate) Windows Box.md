@@ -1,11 +1,11 @@
 ---
 Alias: UT99
-Date: {{date}}
+Date: 8/2/2022
 Platform: Windows
 Difficulty: Intermediate
 Tags:
 Status: Finished
-IP: 
+IP: 192.168.114.44
 ---
 
 # {{UT99}}
@@ -45,7 +45,9 @@ Enumerated top 200 UDP ports:
 
 # Enumeration
 ## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+#### -Navigated to target ip address and found the following webpage:
+
 
 ---
 
