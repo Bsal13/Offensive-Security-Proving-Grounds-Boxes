@@ -11,9 +11,11 @@
             "id": "cc61d3b1497b7e97",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Pasted image 20221111203116.png"
+                "file": "Nukem (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -251,7 +253,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20221111203116.png",
+                "file": "Nukem (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -268,7 +270,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted image 20221111203116.png",
+                "file": "Nukem (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -291,7 +293,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted image 20221111203116.png"
+                "file": "Nukem (Intermediate) Linux Box.md"
               }
             }
           }
@@ -304,6 +306,7 @@
   },
   "active": "cc61d3b1497b7e97",
   "lastOpenFiles": [
+    "Pasted image 20221111203116.png",
     "Hutch (Intermediate) Windows Active Directory Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
     "Postfish (Intermediate) Linux Box.md",
@@ -312,7 +315,6 @@
     "Wombo (Easy) Linux Box.md",
     "Walla (Intermediate) Linux Box.md",
     "Images/Pasted image 20221111103924.png",
-    "Images/Pasted image 20221111091657.png",
-    "Wpwn (Easy) Linux Box.md"
+    "Images/Pasted image 20221111091657.png"
   ]
 }
