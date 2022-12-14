@@ -1,11 +1,10 @@
 ---
 Alias: UT99
 Date: {{date}}
-Platform: 
-Category:
-Difficulty:
+Platform: Windows
+Difficulty: Intermediate
 Tags:
-Status:
+Status: Finished
 IP: 
 ---
 
