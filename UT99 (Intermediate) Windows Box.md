@@ -516,6 +516,28 @@ Enumerated top 200 UDP ports:
 
 ![](../Images/Pasted%20image%2020220703235553.png)
 
+![](../Images/Pasted%20image%2020220703235737.png)
+
+#### - Clicked the "read more" link and found the following comment to join IRC:
+
+![](../Images/Pasted%20image%2020220704000236.png)
+
+![](../Images/Pasted%20image%2020220704000337.png)
+
+#### - IRC Hexchat server enumeration
+
+#### - Typed "hexchat" on my kali machine to bring up an IRC program:
+
+#### - Clicked under "Networks" to create and label a anew network and clicked edit:
+
+![](../Images/Pasted%20image%2020220704002124.png)
+
+#### - Clicked in the new server box and changed it to the following "[target IP/7000]" and clicked typed enter key and close:
+
+#### - Clicked "connect" and connected to the target machines IRC server:
+
+
+
 ---
 
 # Exploitation
