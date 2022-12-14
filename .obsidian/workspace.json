@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MedJed (Intermediate) Windows Box.md",
-                "mode": "source",
+                "file": "ZenPhoto (Intermediate) Linux Box.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -253,7 +253,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MedJed (Intermediate) Windows Box.md",
+                "file": "ZenPhoto (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -270,7 +270,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MedJed (Intermediate) Windows Box.md",
+                "file": "ZenPhoto (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -293,7 +293,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MedJed (Intermediate) Windows Box.md"
+                "file": "ZenPhoto (Intermediate) Linux Box.md"
               }
             }
           }
@@ -306,15 +306,15 @@
   },
   "active": "cc61d3b1497b7e97",
   "lastOpenFiles": [
-    "Nibbles (Intermediate) Linux Box.md",
-    "Pasted image 20221111203116.png",
-    "Nukem (Intermediate) Linux Box.md",
-    "Hutch (Intermediate) Windows Active Directory Box.md",
-    "Heist (Hard) Windows Active Directory Box.md",
-    "Postfish (Intermediate) Linux Box.md",
-    "ZenPhoto (Intermediate) Linux Box.md",
-    "Images/Pasted image 20221111200923.png",
+    "Wpwn (Easy) Linux Box.md",
     "Wombo (Easy) Linux Box.md",
-    "Walla (Intermediate) Linux Box.md"
+    "Walla (Intermediate) Linux Box.md",
+    "Sybaris (Intermediate) Linux Box.md",
+    "Squid (Intermediate) Windows Box.md",
+    "Sorcerer (Intermediate) Linux Box.md",
+    "Shenzi (Intermediate) Windows Box.md",
+    "Shakabra (Easy) Linux Box.md",
+    "Readys (Intermediate) Linux Box.md",
+    "Potato (Easy) Linux Box.md"
   ]
 }
