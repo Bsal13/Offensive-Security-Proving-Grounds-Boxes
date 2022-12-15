@@ -30,9 +30,7 @@ IP: 192.168.114.44
 - Typed "perl 16145.pl" and was provided usage syntax
 - Input the requested syntax for script and received a reverse shell
 - Found the machine to be vunerable to a unqoted path service path running as NT/Authority privilege escalation 
-- 
-- 
-- skill 2
+- Performed steps for privilege escalation and escalated to NT/Authority
 
 ## Used tools
 - nmap
