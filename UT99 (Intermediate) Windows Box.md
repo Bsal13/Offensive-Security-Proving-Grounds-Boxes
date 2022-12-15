@@ -16,7 +16,9 @@ IP: 192.168.114.44
 - Text
 
 ## Improved skills
-- skill 1
+- Navigated to target IP address and found DragonFly website
+- Found a comment to join an IRC chat channel
+- 
 - skill 2
 
 ## Used tools
@@ -493,7 +495,8 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Enumerated open TCP ports:
 ```bash
-
+80
+7000
 ```
 
 Enumerated top 200 UDP ports:
