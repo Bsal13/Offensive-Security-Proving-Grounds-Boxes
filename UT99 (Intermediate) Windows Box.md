@@ -28,6 +28,8 @@ IP: 192.168.114.44
 - Downloaded the exploit on my kali machine
 - Started a netcat listener on my kali machine listening on port 80
 - Typed "perl 16145.pl" and was provided usage syntax
+- Input the requested syntax for script and received a reverse shell
+- Found the machine to be vunerable to a unqoted path service path running as NT/Authority privilege escalation 
 - 
 - 
 - skill 2
