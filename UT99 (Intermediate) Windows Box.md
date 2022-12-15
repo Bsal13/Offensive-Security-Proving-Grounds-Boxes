@@ -19,6 +19,7 @@ IP: 192.168.114.44
 - Navigated to target IP address and found DragonFly website
 - Found a comment to join an IRC chat channel
 - Typed hexchat and brought up an IRC program
+- Edited the network tab and input the IRC details mentioned in the IRC comm
 - skill 2
 
 ## Used tools
