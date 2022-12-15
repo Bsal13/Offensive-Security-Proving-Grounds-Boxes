@@ -3,7 +3,7 @@ Alias: UT99
 Date: 8/2/2022
 Platform: Windows
 Difficulty: Intermediate
-Tags: #UnqoutedServicePath #PrivilegeEscalation #accesschkbinary
+Tags: #UnqoutedServicePath #PrivilegeEscalation #accesschkbinary #UnrealTournament-RemoteBufferOverflow(SEH) 
 Status: Finished
 IP: 192.168.114.44
 ---
@@ -24,6 +24,10 @@ IP: 192.168.114.44
 - Clicked UTF900 (as UTF900 as UTF9 was part of the box's name); clicked "connect" and connected to the target machines IRC server
 - Clicked "open the channel list" and clicked okay
 - Clicked "search" and found the following "Unreal Tournament 99 Game Server" and clicked "join channel"
+- Googled "Unreal Tournament 99 Game Server"  and found Unreal Tournament - Remote Buffer Overflow (SEH)  exploit
+- Downloaded the exploit on my kali machine
+- Started a netcat listener on my kali machine listening on port 80
+- Typed "perl 16145.pl" and was provided usage syntax
 - 
 - 
 - skill 2
