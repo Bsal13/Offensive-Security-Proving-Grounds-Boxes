@@ -19,7 +19,13 @@ IP: 192.168.114.44
 - Navigated to target IP address and found DragonFly website
 - Found a comment to join an IRC chat channel
 - Typed hexchat and brought up an IRC program
-- Edited the network tab and input the IRC details mentioned in the IRC comm
+- Edited the network tab to created and label a new network and clicked edit 
+- Clicked in the new server box and changed it to the following "[target IP/7000]" and clicked typed enter key and close
+- Clicked UTF900 (as UTF900 as UTF9 was part of the box's name); clicked "connect" and connected to the target machines IRC server
+- Clicked "open the channel list" and clicked okay
+- Clicked "search" and found the following "Unreal Tournament 99 Game Server" and clicked "join channel"
+- 
+- 
 - skill 2
 
 ## Used tools
@@ -539,11 +545,11 @@ Enumerated top 200 UDP ports:
 
 #### - Clicked in the new server box and changed it to the following "[target IP/7000]" and clicked typed enter key and close:
 
-#### - Clicked "connect" and connected to the target machines IRC server:
+#### - Clicked UTF900 (as UTF900 as UTF9 was part of the box's name); clicked "connect" and connected to the target machines IRC server:
 
 ![](../Images/Pasted%20image%2020220704002706.png)
 
-#### - Clicked "open the channel list" and okay
+#### - Clicked "open the channel list" and clicked okay
 
 ![](../Images/Pasted%20image%2020220704004114.png)
 
