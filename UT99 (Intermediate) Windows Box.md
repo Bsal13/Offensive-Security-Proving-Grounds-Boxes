@@ -18,12 +18,13 @@ IP: 192.168.114.44
 ## Improved skills
 - Navigated to target IP address and found DragonFly website
 - Found a comment to join an IRC chat channel
-- 
+- Typed hexchat and brought up an IRC program
 - skill 2
 
 ## Used tools
 - nmap
 - rustscan
+- hexchat
 
 ---
 
@@ -531,7 +532,7 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "hexchat" on my kali machine to bring up an IRC program:
 
-#### - Clicked under "Networks" to create and label a anew network and clicked edit:
+#### - Clicked under "Networks" to create and label a new network and clicked edit:
 
 ![](../Images/Pasted%20image%2020220704002124.png)
 
