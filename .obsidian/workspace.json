@@ -30,168 +30,12 @@
             }
           },
           {
-            "id": "8a4c35666c839e59",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/Pasted image 20221026124543.png"
-              }
-            }
-          },
-          {
             "id": "05c812039c556e85",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Squid (Intermediate) Windows Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fd4eba8461f94afb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9b4d71355ec1a471",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a9ec89500078db60",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/Pasted image 20221101121057.png"
-              }
-            }
-          },
-          {
-            "id": "c19b1a1cd7e49324",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Shenzi (Intermediate) Windows Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1a0aadb44513ad17",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/Pasted image 20221109200105.png"
-              }
-            }
-          },
-          {
-            "id": "b6565c986775fded",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/Pasted image 20221109235702.png"
-              }
-            }
-          },
-          {
-            "id": "94bcca0619009e83",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "72669aeff568bb95",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "3c71e281b3563c32",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "ab145f08d697af3e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "b0e3ac83a2fd557b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Wpwn (Easy) Linux Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "87eb5552c7ee40e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Walla (Intermediate) Linux Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "faa40ada97a78e23",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Wombo (Easy) Linux Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c0efdff151248d21",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -315,17 +159,27 @@
     "width": 300,
     "collapsed": true
   },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
   "active": "ec4a5b4aacc3d762",
   "lastOpenFiles": [
-    "Sybaris (Intermediate) Linux Box.md",
-    "UT99 (Intermediate) Windows Box.md",
-    "Images/Pasted image 20221111203116.png",
-    "ZenPhoto (Intermediate) Linux Box.md",
-    "Wpwn (Easy) Linux Box.md",
-    "Wombo (Easy) Linux Box.md",
-    "Walla (Intermediate) Linux Box.md",
+    "Images/Pasted image 20221026124543.png",
     "Squid (Intermediate) Windows Box.md",
-    "Sorcerer (Intermediate) Linux Box.md",
-    "Shenzi (Intermediate) Windows Box.md"
+    "Images/Pasted image 20221101121057.png",
+    "Shenzi (Intermediate) Windows Box.md",
+    "Wombo (Easy) Linux Box.md",
+    "Images/Pasted image 20221109200105.png",
+    "Images/Pasted image 20221109235702.png",
+    "UT99 (Intermediate) Windows Box.md",
+    "Sybaris (Intermediate) Linux Box.md",
+    "Images/Pasted image 20221111203116.png"
   ]
 }
