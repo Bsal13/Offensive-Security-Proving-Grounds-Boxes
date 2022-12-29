@@ -8,16 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cc61d3b1497b7e97",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/Pasted image 20221111203116.png"
-              }
-            }
-          },
-          {
             "id": "ec4a5b4aacc3d762",
             "type": "leaf",
             "state": {
@@ -41,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,6 +160,8 @@
   },
   "active": "ec4a5b4aacc3d762",
   "lastOpenFiles": [
+    "Images/Pasted image 20221111203116.png",
+    "UT99 (Intermediate) Windows Box.md",
     "Images/Pasted image 20221026124543.png",
     "Squid (Intermediate) Windows Box.md",
     "Images/Pasted image 20221101121057.png",
@@ -178,8 +169,6 @@
     "Wombo (Easy) Linux Box.md",
     "Images/Pasted image 20221109200105.png",
     "Images/Pasted image 20221109235702.png",
-    "UT99 (Intermediate) Windows Box.md",
-    "Sybaris (Intermediate) Linux Box.md",
-    "Images/Pasted image 20221111203116.png"
+    "Sybaris (Intermediate) Linux Box.md"
   ]
 }
