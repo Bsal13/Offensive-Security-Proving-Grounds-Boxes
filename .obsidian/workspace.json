@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "56fb9ea246554dc2",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.16"
+              }
+            }
+          },
+          {
             "id": "05c812039c556e85",
             "type": "leaf",
             "state": {
@@ -31,7 +41,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,7 +169,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ec4a5b4aacc3d762",
+  "active": "56fb9ea246554dc2",
   "lastOpenFiles": [
     "Images/Pasted image 20221111203116.png",
     "UT99 (Intermediate) Windows Box.md",
