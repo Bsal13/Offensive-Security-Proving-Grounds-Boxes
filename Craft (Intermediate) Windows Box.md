@@ -113,13 +113,11 @@ Enumerated top 200 UDP ports:
 
 #### - Clicked File > Save 
 
-
+![](Pasted%20image%2020230407230026.png)
 
 #### - Named the file "Offesec1" and clicked Save:
 
-![](Images/Pasted%20image%2020220823122608.png)
-
-#### - Closed out of the Offsec.odt document
+![](Pasted%20image%2020230407230118.png)
 
 #### - I then attached the macro/script to an event by clicking Tools > customize and in the "Events" tab > Open Document > Macro > double cick Offesec1.odt > double click Standard > click Offsec1 > click Main > click OK:
 
