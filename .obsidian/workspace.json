@@ -20,43 +20,17 @@
             }
           },
           {
-            "id": "ed637d047e6ed924",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DVR4 (Intermediate) Windows Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3ba2612d2000eb79",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "05c812039c556e85",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Squid (Intermediate) Windows Box.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Pasted image 20230407232534.png"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
+                "file": "Images/Pasted image 20230407232534.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
+                "file": "Images/Pasted image 20230407232534.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md"
+                "file": "Images/Pasted image 20230407232534.png"
               }
             }
           }
@@ -183,22 +157,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3ba2612d2000eb79",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
-    "Pasted image 20230407232156.png",
-    "Pasted image 20230407232107.png",
-    "Pasted image 20230407232026.png",
-    "Pasted image 20230407231917.png",
-    "Pasted image 20230407231839.png",
-    "Pasted image 20230407231750.png",
-    "Pasted image 20230407231504.png",
-    "Pasted image 20230407231301.png",
-    "Pasted image 20230407231101.png",
-    "Pasted image 20230407230954.png",
-    "Pasted image 20230407230856.png",
+    "Craft (Intermediate) Windows Box.md",
+    "Images/Pasted image 20230407232534.png",
+    "Images/Pasted image 20230407232506.png",
+    "Images/Pasted image 20230407232418.png",
+    "Images/Pasted image 20230407232337.png",
+    "Images/Pasted image 20230407232311.png",
+    "Images/Pasted image 20230407232222.png",
+    "Images/Pasted image 20230407232156.png",
+    "Images/Pasted image 20230407232107.png",
+    "Images/Pasted image 20230407232026.png",
+    "Images/Pasted image 20230407231917.png",
     "Hawat (Easy) Linux Box.md",
     "Images/Pasted image 20220823115217.png.md",
-    "Craft (Intermediate) Windows Box.md",
     "DVR4 (Intermediate) Windows Box.md",
     "conflict-files-obsidian-git.md",
     "UT99 (Intermediate) Windows Box.md",

