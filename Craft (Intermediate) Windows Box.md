@@ -119,27 +119,25 @@ Enumerated top 200 UDP ports:
 
 ![](Pasted%20image%2020230407230118.png)
 
+#### - Closed out of the Offsec.odt document
+
 #### - I then attached the macro/script to an event by clicking Tools > customize and in the "Events" tab > Open Document > Macro > double cick Offesec1.odt > double click Standard > click Offsec1 > click Main > click OK:
 
-![](Images/Pasted%20image%2020220823123215.png)
+![](Pasted%20image%2020230407230317.png)
 
-![](Images/Pasted%20image%2020220823123456.png)
+![](Pasted%20image%2020230407230358.png)
 
-
-
-![](Images/Pasted%20image%2020220823170108.png)
-
+![](Pasted%20image%2020230407230439.png)
 
 #### - Now the Event "Open Document" is assigned an action:
 
-![](Images/Pasted%20image%2020220823170532.png)
+![](Pasted%20image%2020230407230524.png)
 
 #### - Clicked "File" then "Save"
 
 
 #### - Typed "updog -p 80" (in the same directory where the newly created Offsec1.odt file is located in) on my kali machine to host the .odt file:
 
-![](Images/Pasted%20image%2020220823175748.png)
 
 #### - Navigated back to the webpage and clicked "browse" and chose my newly created ".odt" file and clicked upload and received the following page showing the file was accepted:
 
