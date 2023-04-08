@@ -77,11 +77,11 @@ Enumerated top 200 UDP ports:
 
 #### - Navigated to "http://192.168.122.169" and found the following webpage:
 
-![](Images/Pasted%20image%2020220823115047.png)
+![](Pasted%20image%2020230407224047.png)
 
 #### - Found the following where we can upload our "resume":
 
-![](Images/Pasted%20image%2020220823115217.png)
+
 
 #### - Tried to upload a random file and received the following:
 
