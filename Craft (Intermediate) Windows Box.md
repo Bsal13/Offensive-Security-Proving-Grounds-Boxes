@@ -173,7 +173,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Copied contents in between the quotation marks in the PowerShell #3 tab for Windows payload and pasted it into the offsec.ps1 file
 
-![](Images/Pasted%20image%2020230406161956.png)
+![](Pasted%20image%2020230407231301.png)
 
 #### - Typed chmod 775 offsec.ps1 to make it executable
 
@@ -181,8 +181,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Re-uploaded the offsec1.odt file and receive a windows reverse shell
 
-![](Images/Pasted%20image%2020230406162546.png)
----
+![](Pasted%20image%2020230407231504.png)
 
 # Lateral Movement to user
 ## Local Enumeration
