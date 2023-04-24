@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
+                "file": "Authby (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -29,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
+                "file": "Authby (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
+                "file": "Authby (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md"
+                "file": "Authby (Intermediate) Linux Box.md"
               }
             }
           }
@@ -157,8 +156,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "36fe7cca0c50b180",
+  "active": "ec4a5b4aacc3d762",
   "lastOpenFiles": [
+    "Images/Pasted image 20221001114759.png.md",
+    "UT99 (Intermediate) Windows Box.md",
+    "Images/Pasted image 20230407232337.png.md",
+    "Images/Pasted image 20221007131752.png.md",
+    "Images/Pasted image 20230407224402.png.md",
+    "Images/Pasted image 20221018181341.png.md",
+    "Images/Pasted image 20221030121553.png.md",
+    "Images/Pasted image 20221108010923.png.md",
+    "Images/Pasted image 20221016111525.png.md",
+    "Untitled",
     "Craft (Intermediate) Windows Box.md",
     "Images/Pasted image 20230407232534.png",
     "Images/Pasted image 20230407232506.png",
@@ -174,7 +183,6 @@
     "Images/Pasted image 20220823115217.png.md",
     "DVR4 (Intermediate) Windows Box.md",
     "conflict-files-obsidian-git.md",
-    "UT99 (Intermediate) Windows Box.md",
     "Squid (Intermediate) Windows Box.md",
     "Shenzi (Intermediate) Windows Box.md",
     "Wombo (Easy) Linux Box.md",
