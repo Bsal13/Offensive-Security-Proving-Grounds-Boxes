@@ -31,7 +31,7 @@ IP: 192.168.127.125
 
 ## Used tools
 - Linpeas
-
+- Rustscan
 ---
 
 # Information Gathering
