@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Nibbles (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "psql",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Nibbles (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Nibbles (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md"
+                "file": "Nibbles (Intermediate) Linux Box.md"
               }
             }
           }
@@ -169,8 +170,8 @@
   },
   "active": "3ba2612d2000eb79",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Hawat (Easy) Linux Box.md",
+    "conflict-files-obsidian-git.md",
     "Images/Pasted image 20221001114845.png.md",
     "Images/Pasted image 20221001114759.png.md",
     "Heist (Hard) Windows Active Directory Box.md",
