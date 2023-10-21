@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a2704308b31c4935",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meathead (Hard) Windows Machine.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -61,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "psql",
+                "query": "smbser",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Nibbles (Intermediate) Linux Box.md",
+                "file": "Meathead (Hard) Windows Machine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Nibbles (Intermediate) Linux Box.md",
+                "file": "Meathead (Hard) Windows Machine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Nibbles (Intermediate) Linux Box.md"
+                "file": "Meathead (Hard) Windows Machine.md"
               }
             }
           }
@@ -168,8 +180,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3ba2612d2000eb79",
+  "active": "a2704308b31c4935",
   "lastOpenFiles": [
+    "Nibbles (Intermediate) Linux Box.md",
     "Hawat (Easy) Linux Box.md",
     "conflict-files-obsidian-git.md",
     "Images/Pasted image 20221001114845.png.md",
