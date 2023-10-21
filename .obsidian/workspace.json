@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "smbser",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,7 +180,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a2704308b31c4935",
+  "active": "7c7e82a3023b528f",
   "lastOpenFiles": [
     "Nibbles (Intermediate) Linux Box.md",
     "Hawat (Easy) Linux Box.md",
