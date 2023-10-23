@@ -42,9 +42,17 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c93fbe583c2a0fba",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -119,7 +127,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +143,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,9 +164,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Meathead (Hard) Windows Machine.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -180,8 +184,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7c7e82a3023b528f",
+  "active": "c93fbe583c2a0fba",
   "lastOpenFiles": [
+    "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
     "Hawat (Easy) Linux Box.md",
     "conflict-files-obsidian-git.md",
