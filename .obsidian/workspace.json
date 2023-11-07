@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
+                "file": "DVR4 (Intermediate) Windows Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
+                "file": "DVR4 (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
+                "file": "DVR4 (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md"
+                "file": "DVR4 (Intermediate) Windows Box.md"
               }
             }
           }
@@ -199,14 +199,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "36fe7cca0c50b180",
+  "active": "30d41ead0b9a24f7",
   "lastOpenFiles": [
+    "Fail (Intermediate) Linux Box.md",
+    "DVR4 (Intermediate) Windows Box.md",
+    "Craft (Intermediate) Windows Box.md",
     "ClamAV (Easy) Linux Box.md",
     "Banzai (Intermediate) Linux Box.md",
     "Authby (Intermediate) Linux Box.md",
     "Algeron (Easy) Windows Box.md",
-    "Craft (Intermediate) Windows Box.md",
-    "Fail (Intermediate) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
     "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
@@ -234,7 +235,6 @@
     "Images/Pasted image 20230407232026.png",
     "Images/Pasted image 20230407231917.png",
     "Images/Pasted image 20220823115217.png.md",
-    "DVR4 (Intermediate) Windows Box.md",
     "Squid (Intermediate) Windows Box.md",
     "Shenzi (Intermediate) Windows Box.md",
     "Wombo (Easy) Linux Box.md"
