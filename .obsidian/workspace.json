@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Authby (Intermediate) Linux Box.md",
+                "file": "Banzai (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Authby (Intermediate) Linux Box.md",
+                "file": "Banzai (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Authby (Intermediate) Linux Box.md",
+                "file": "Banzai (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Authby (Intermediate) Linux Box.md"
+                "file": "Banzai (Intermediate) Linux Box.md"
               }
             }
           }
@@ -201,6 +201,7 @@
   },
   "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Authby (Intermediate) Linux Box.md",
     "Algeron (Easy) Windows Box.md",
     "Craft (Intermediate) Windows Box.md",
     "Fail (Intermediate) Linux Box.md",
