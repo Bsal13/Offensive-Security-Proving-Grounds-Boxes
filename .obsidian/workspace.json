@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
+                "file": "Algeron (Easy) Windows Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
+                "file": "Algeron (Easy) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md",
+                "file": "Algeron (Easy) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Craft (Intermediate) Windows Box.md"
+                "file": "Algeron (Easy) Windows Box.md"
               }
             }
           }
@@ -199,11 +199,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30d41ead0b9a24f7",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Craft (Intermediate) Windows Box.md",
     "Fail (Intermediate) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
-    "Craft (Intermediate) Windows Box.md",
     "Banzai (Intermediate) Linux Box.md",
     "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
