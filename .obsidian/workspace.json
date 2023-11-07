@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Heist (Hard) Windows Active Directory Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Heist (Hard) Windows Active Directory Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Heist (Hard) Windows Active Directory Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md"
+                "file": "Heist (Hard) Windows Active Directory Box.md"
               }
             }
           }
@@ -199,8 +199,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30d41ead0b9a24f7",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Hawat (Easy) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
     "Fail (Intermediate) Linux Box.md",
     "DVR4 (Intermediate) Windows Box.md",
@@ -211,7 +212,6 @@
     "Algeron (Easy) Windows Box.md",
     "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
-    "Hawat (Easy) Linux Box.md",
     "conflict-files-obsidian-git.md",
     "Images/Pasted image 20221001114845.png.md",
     "Images/Pasted image 20221001114759.png.md",
