@@ -55,9 +55,11 @@
             "id": "30d41ead0b9a24f7",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.4.16"
+                "file": "Craft (Intermediate) Windows Box.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -116,8 +118,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -137,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
+                "file": "Craft (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
+                "file": "Craft (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md"
+                "file": "Craft (Intermediate) Windows Box.md"
               }
             }
           }
@@ -200,13 +201,16 @@
   },
   "active": "30d41ead0b9a24f7",
   "lastOpenFiles": [
+    "Fail (Intermediate) Linux Box.md",
+    "Heist (Hard) Windows Active Directory Box.md",
+    "Craft (Intermediate) Windows Box.md",
+    "Banzai (Intermediate) Linux Box.md",
     "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
     "Hawat (Easy) Linux Box.md",
     "conflict-files-obsidian-git.md",
     "Images/Pasted image 20221001114845.png.md",
     "Images/Pasted image 20221001114759.png.md",
-    "Heist (Hard) Windows Active Directory Box.md",
     "UT99 (Intermediate) Windows Box.md",
     "Images/Pasted image 20230407232337.png.md",
     "Images/Pasted image 20221007131752.png.md",
@@ -216,7 +220,6 @@
     "Images/Pasted image 20221108010923.png.md",
     "Images/Pasted image 20221016111525.png.md",
     "Untitled",
-    "Craft (Intermediate) Windows Box.md",
     "Images/Pasted image 20230407232534.png",
     "Images/Pasted image 20230407232506.png",
     "Images/Pasted image 20230407232418.png",
