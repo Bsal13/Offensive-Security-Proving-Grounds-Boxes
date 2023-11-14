@@ -93,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "node.js",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,7 +118,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -199,7 +200,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "36fe7cca0c50b180",
+  "active": "7c7e82a3023b528f",
   "lastOpenFiles": [
     "Hawat (Easy) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
