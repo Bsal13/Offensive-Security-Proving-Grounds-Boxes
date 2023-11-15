@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Heist (Hard) Windows Active Directory Box.md",
+                "file": "Zino (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Dibble",
+                "query": "Peppo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
+                "file": "Zino (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md",
+                "file": "Zino (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UT99 (Intermediate) Windows Box.md"
+                "file": "Zino (Intermediate) Linux Box.md"
               }
             }
           }
@@ -202,6 +202,7 @@
   },
   "active": "7c7e82a3023b528f",
   "lastOpenFiles": [
+    "UT99 (Intermediate) Windows Box.md",
     "Hawat (Easy) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
     "Fail (Intermediate) Linux Box.md",
@@ -216,7 +217,6 @@
     "conflict-files-obsidian-git.md",
     "Images/Pasted image 20221001114845.png.md",
     "Images/Pasted image 20221001114759.png.md",
-    "UT99 (Intermediate) Windows Box.md",
     "Images/Pasted image 20230407232337.png.md",
     "Images/Pasted image 20221007131752.png.md",
     "Images/Pasted image 20230407224402.png.md",
