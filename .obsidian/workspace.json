@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Zino (Intermediate) Linux Box.md",
+                "file": "Pelican (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Peppo",
+                "query": "redirec",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Zino (Intermediate) Linux Box.md",
+                "file": "Pelican (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Zino (Intermediate) Linux Box.md",
+                "file": "Pelican (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Zino (Intermediate) Linux Box.md"
+                "file": "Pelican (Intermediate) Linux Box.md"
               }
             }
           }
@@ -200,8 +200,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7c7e82a3023b528f",
+  "active": "30d41ead0b9a24f7",
   "lastOpenFiles": [
+    "Zino (Intermediate) Linux Box.md",
     "UT99 (Intermediate) Windows Box.md",
     "Hawat (Easy) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
@@ -237,7 +238,6 @@
     "Images/Pasted image 20230407231917.png",
     "Images/Pasted image 20220823115217.png.md",
     "Squid (Intermediate) Windows Box.md",
-    "Shenzi (Intermediate) Windows Box.md",
-    "Wombo (Easy) Linux Box.md"
+    "Shenzi (Intermediate) Windows Box.md"
   ]
 }
