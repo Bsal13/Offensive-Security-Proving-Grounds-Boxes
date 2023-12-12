@@ -93,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "redirec",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,7 +200,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30d41ead0b9a24f7",
+  "active": "7c7e82a3023b528f",
   "lastOpenFiles": [
     "Zino (Intermediate) Linux Box.md",
     "UT99 (Intermediate) Windows Box.md",
