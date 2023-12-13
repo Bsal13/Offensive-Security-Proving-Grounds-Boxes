@@ -191,7 +191,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Sendmail with clamav-milter < 0.91.2 -Remote Code Execution exploit
+## Sendmail with clamav-milter < 0.91.2 - Remote Command Execution
 
 #### -As the box is called "ClamAV" I ran searchsploit "ClamAV" and found the following: 
 ![](Images/Pasted%20image%2020221007131752.png)
