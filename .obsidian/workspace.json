@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
+                "file": "Algeron (Easy) Windows Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,8 +118,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -139,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
+                "file": "Algeron (Easy) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md",
+                "file": "Algeron (Easy) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pelican (Intermediate) Linux Box.md"
+                "file": "Algeron (Easy) Windows Box.md"
               }
             }
           }
@@ -200,8 +199,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7c7e82a3023b528f",
+  "active": "30d41ead0b9a24f7",
   "lastOpenFiles": [
+    "Pelican (Intermediate) Linux Box.md",
     "Zino (Intermediate) Linux Box.md",
     "UT99 (Intermediate) Windows Box.md",
     "Hawat (Easy) Linux Box.md",
@@ -237,7 +237,6 @@
     "Images/Pasted image 20230407232026.png",
     "Images/Pasted image 20230407231917.png",
     "Images/Pasted image 20220823115217.png.md",
-    "Squid (Intermediate) Windows Box.md",
-    "Shenzi (Intermediate) Windows Box.md"
+    "Squid (Intermediate) Windows Box.md"
   ]
 }
