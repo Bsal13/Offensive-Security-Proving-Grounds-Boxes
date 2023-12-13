@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algeron (Easy) Windows Box.md",
+                "file": "Authby (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algeron (Easy) Windows Box.md",
+                "file": "Authby (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algeron (Easy) Windows Box.md",
+                "file": "Authby (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algeron (Easy) Windows Box.md"
+                "file": "Authby (Intermediate) Linux Box.md"
               }
             }
           }
@@ -201,6 +201,7 @@
   },
   "active": "30d41ead0b9a24f7",
   "lastOpenFiles": [
+    "Algeron (Easy) Windows Box.md",
     "Pelican (Intermediate) Linux Box.md",
     "Zino (Intermediate) Linux Box.md",
     "UT99 (Intermediate) Windows Box.md",
@@ -212,7 +213,6 @@
     "ClamAV (Easy) Linux Box.md",
     "Banzai (Intermediate) Linux Box.md",
     "Authby (Intermediate) Linux Box.md",
-    "Algeron (Easy) Windows Box.md",
     "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
     "conflict-files-obsidian-git.md",
