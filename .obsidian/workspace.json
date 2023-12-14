@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fail (Intermediate) Linux Box.md",
+                "file": "Hawat (Easy) Linux Box.md",
                 "mode": "preview",
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fail (Intermediate) Linux Box.md",
+                "file": "Hawat (Easy) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fail (Intermediate) Linux Box.md",
+                "file": "Hawat (Easy) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fail (Intermediate) Linux Box.md"
+                "file": "Hawat (Easy) Linux Box.md"
               }
             }
           }
@@ -199,8 +199,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30d41ead0b9a24f7",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Fail (Intermediate) Linux Box.md",
     "DVR4 (Intermediate) Windows Box.md",
     "Craft (Intermediate) Windows Box.md",
     "ClamAV (Easy) Linux Box.md",
@@ -212,7 +213,6 @@
     "UT99 (Intermediate) Windows Box.md",
     "Hawat (Easy) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
-    "Fail (Intermediate) Linux Box.md",
     "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
     "conflict-files-obsidian-git.md",
