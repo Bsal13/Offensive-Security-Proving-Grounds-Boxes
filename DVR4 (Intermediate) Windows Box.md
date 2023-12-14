@@ -250,7 +250,7 @@ Enumerated top 200 UDP ports:
 # Privilege Escalation
 ## Local Enumeration
 
-#### - Per the previous searchploit we ran for argus surveillance we found the following "Weak password encryption" python script:
+#### - Per the previous searchsploit we ran for argus surveillance we found the following "Weak password encryption" python script:
 
 ![](Images/Pasted%20image%2020221009192206.png)
 
