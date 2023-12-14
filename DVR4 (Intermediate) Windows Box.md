@@ -267,7 +267,7 @@ Enumerated top 200 UDP ports:
 ![](Images/Pasted%20image%2020221009192857.png)
 #FindHiddenWindowsDirectorys
 
-#### - Changed to directory "ProgramData" and foud the following directorys. I then navigated into the "PY_Software" directory:
+#### - Changed to directory "ProgramData" and found the following directories. I then navigated into the "PY_Software" directory:
 
 ![](Images/Pasted%20image%2020221009193059.png)
 
