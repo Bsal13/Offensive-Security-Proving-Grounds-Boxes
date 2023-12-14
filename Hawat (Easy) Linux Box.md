@@ -422,9 +422,9 @@ Enumerated top 200 UDP ports:
 
 ## Port 30455 - HTTP nginx 1.18.0 
 
-#### -Ran feroxbuster scan and found the following:
+#### -Ran feroxbuster scan and found an accessible phpinfo.php:
 
-![](Images/Pasted%20image%2020221011103134.png)
+
 
 #### -Navigated to http://192.168.241.147:30455/phpinfo.php and found "/srv/http" showing the root directory of the webserver:
 

@@ -58,7 +58,7 @@
               "type": "markdown",
               "state": {
                 "file": "Hawat (Easy) Linux Box.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -93,7 +93,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#webserverrootdirectory",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,7 +118,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -199,7 +200,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30d41ead0b9a24f7",
+  "active": "7c7e82a3023b528f",
   "lastOpenFiles": [
     "Fail (Intermediate) Linux Box.md",
     "Hawat (Easy) Linux Box.md",
