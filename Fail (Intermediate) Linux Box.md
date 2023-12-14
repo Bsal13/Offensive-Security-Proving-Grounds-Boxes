@@ -173,7 +173,7 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Name of the technique
+
 
 #### -Typed the following commands to create an authorized_keys file in fox's home directory so I can log in via SSH session:
 -"mkdir fox" 
