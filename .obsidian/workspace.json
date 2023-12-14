@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Heist (Hard) Windows Active Directory Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,8 +118,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -139,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Heist (Hard) Windows Active Directory Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md",
+                "file": "Heist (Hard) Windows Active Directory Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hawat (Easy) Linux Box.md"
+                "file": "Heist (Hard) Windows Active Directory Box.md"
               }
             }
           }
@@ -200,10 +199,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7c7e82a3023b528f",
+  "active": "30d41ead0b9a24f7",
   "lastOpenFiles": [
-    "Fail (Intermediate) Linux Box.md",
     "Hawat (Easy) Linux Box.md",
+    "Fail (Intermediate) Linux Box.md",
     "DVR4 (Intermediate) Windows Box.md",
     "Craft (Intermediate) Windows Box.md",
     "ClamAV (Easy) Linux Box.md",
