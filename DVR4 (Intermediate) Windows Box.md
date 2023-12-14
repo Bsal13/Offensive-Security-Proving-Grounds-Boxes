@@ -204,8 +204,6 @@ Enumerated top 200 UDP ports:
 #### - Per the NMAP scan I navigated to "http://192.168.109.179:8080" and found the following webpage:
 
 ![](Images/Pasted%20image%2020221009165921.png)
-
-
 #### - Navigated to the "Users" section and found the following user "viewer"
 
 ![](Images/Pasted%20image%2020221009183244.png)
