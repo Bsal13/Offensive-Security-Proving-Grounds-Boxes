@@ -512,6 +512,7 @@ Get-ADGroupMember 'Web Admins'
 ## SeRestorePrivilege privilege escalation
 
 #### - Navigated to "C:\Windows\system32" and located Utilman.exe:
+
 ![](Images/Pasted%20image%2020221012220556.png)
 
 #### - Typed "ren Utilman.exe Utilman.old" and confirmed the filename changed:
