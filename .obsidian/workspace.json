@@ -47,8 +47,12 @@
             "id": "c93fbe583c2a0fba",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Hetemit (Intermediate) Linux Box.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -64,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -138,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Heist (Hard) Windows Active Directory Box.md",
+                "file": "Hetemit (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Heist (Hard) Windows Active Directory Box.md",
+                "file": "Hetemit (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Heist (Hard) Windows Active Directory Box.md"
+                "file": "Hetemit (Intermediate) Linux Box.md"
               }
             }
           }
@@ -199,8 +203,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30d41ead0b9a24f7",
+  "active": "c93fbe583c2a0fba",
   "lastOpenFiles": [
+    "Heist (Hard) Windows Active Directory Box.md",
     "Hawat (Easy) Linux Box.md",
     "Fail (Intermediate) Linux Box.md",
     "DVR4 (Intermediate) Windows Box.md",
@@ -212,7 +217,6 @@
     "Pelican (Intermediate) Linux Box.md",
     "Zino (Intermediate) Linux Box.md",
     "UT99 (Intermediate) Windows Box.md",
-    "Heist (Hard) Windows Active Directory Box.md",
     "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
     "conflict-files-obsidian-git.md",
