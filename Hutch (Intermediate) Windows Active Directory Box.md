@@ -303,7 +303,7 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221019012818.png)
 
-#### - Now that I have valid aministrator credentials I login with psexec.py by typing "python psexec.py hutch.offsec/administrator:',G4$4Yk-2n&x(]'@192.168.142.122" and receive a shell as nt authority\system:
+#### - Now that I have valid administrator credentials I login with psexec.py by typing "python psexec.py hutch.offsec/administrator:',G4$4Yk-2n&x(]'@192.168.142.122" and receive a shell as nt authority\system:
 
 ![](Images/Pasted%20image%2020221019012951.png)
 

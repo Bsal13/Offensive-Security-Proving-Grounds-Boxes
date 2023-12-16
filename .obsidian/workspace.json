@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
+                "file": "Jacko (Intermediate) Windows Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
+                "file": "Jacko (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
+                "file": "Jacko (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hutch (Intermediate) Windows Active Directory Box.md"
+                "file": "Jacko (Intermediate) Windows Box.md"
               }
             }
           }
@@ -203,8 +203,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "36fe7cca0c50b180",
+  "active": "c93fbe583c2a0fba",
   "lastOpenFiles": [
+    "Hutch (Intermediate) Windows Active Directory Box.md",
     "Hunit (Intermediate) Linux Box.md",
     "Hetemit (Intermediate) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
@@ -230,7 +231,6 @@
     "Images/Pasted image 20221018181341.png.md",
     "Images/Pasted image 20221030121553.png.md",
     "Images/Pasted image 20221108010923.png.md",
-    "Images/Pasted image 20221016111525.png.md",
     "Untitled",
     "Images/Pasted image 20230407232534.png",
     "Images/Pasted image 20230407232506.png",
