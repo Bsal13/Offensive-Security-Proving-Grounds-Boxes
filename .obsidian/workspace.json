@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hunit (Intermediate) Linux Box.md",
+                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hunit (Intermediate) Linux Box.md",
+                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hunit (Intermediate) Linux Box.md",
+                "file": "Hutch (Intermediate) Windows Active Directory Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hunit (Intermediate) Linux Box.md"
+                "file": "Hutch (Intermediate) Windows Active Directory Box.md"
               }
             }
           }
@@ -203,8 +203,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c93fbe583c2a0fba",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Hunit (Intermediate) Linux Box.md",
     "Hetemit (Intermediate) Linux Box.md",
     "Heist (Hard) Windows Active Directory Box.md",
     "Hawat (Easy) Linux Box.md",
@@ -240,7 +241,6 @@
     "Images/Pasted image 20230407232156.png",
     "Images/Pasted image 20230407232107.png",
     "Images/Pasted image 20230407232026.png",
-    "Images/Pasted image 20230407231917.png",
-    "Images/Pasted image 20220823115217.png.md"
+    "Images/Pasted image 20230407231917.png"
   ]
 }
