@@ -216,7 +216,7 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221026151401.png)
 
-#### -Opened "Remmina" (a remote destkop client application). Typed "localhost:5901" then enter and typed "CommanderKeenVorticons1990" as the password.
+#### -Opened "Remmina" (a remote desktop client application). Typed "localhost:5901" then enter and typed "CommanderKeenVorticons1990" as the password.
 
 ![](Images/Pasted%20image%2020221026153827.png)
 #VNCconnection
