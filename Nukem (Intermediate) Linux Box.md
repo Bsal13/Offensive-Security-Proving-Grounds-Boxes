@@ -194,7 +194,7 @@ Enumerated top 200 UDP ports:
 
 #SETUIDDosboxLinuxPrivilegeEscalation
 
-#### -Naviged to GTFOBins website and found binary dosbox with SETUID:
+#### -Navigated to GTFOBins website and found binary dosbox with SETUID:
 
 ![](Images/Pasted%20image%2020221026142247.png)
 
