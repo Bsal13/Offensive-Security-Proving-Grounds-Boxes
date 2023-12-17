@@ -173,7 +173,7 @@ Enumerated top 200 UDP ports:
 
 "find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null"
 
-#### -Found the following when running the above command searching for SUID files:
+#### -Found the following when running the above command searching for SUID binaries:
 
 ![](Images/Pasted%20image%2020221018112111.png)
 
