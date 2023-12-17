@@ -457,7 +457,7 @@ Enumerated top 200 UDP ports:
 # Exploitation
 ## MYSQL Injection
 
-#### - Found mysql on the page so I typed one quote and clicked request to confirm if it might be vulernable to sql injection:
+#### - Found mysql on the page so I typed one quote and clicked request to confirm if it might be vulnerable to sql injection:
 
 ![](Images/Pasted%20image%2020221020191855.png)
 
