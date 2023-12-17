@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
+                "file": "MedJed (Intermediate) Windows Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
+                "file": "MedJed (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md",
+                "file": "MedJed (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meathead (Hard) Windows Machine.md"
+                "file": "MedJed (Intermediate) Windows Box.md"
               }
             }
           }
@@ -203,8 +203,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c93fbe583c2a0fba",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Meathead (Hard) Windows Machine.md",
     "Jacko (Intermediate) Windows Box.md",
     "Hutch (Intermediate) Windows Active Directory Box.md",
     "Hunit (Intermediate) Linux Box.md",
@@ -221,7 +222,6 @@
     "Pelican (Intermediate) Linux Box.md",
     "Zino (Intermediate) Linux Box.md",
     "UT99 (Intermediate) Windows Box.md",
-    "Meathead (Hard) Windows Machine.md",
     "Nibbles (Intermediate) Linux Box.md",
     "conflict-files-obsidian-git.md",
     "Images/Pasted image 20221001114845.png.md",
