@@ -134,13 +134,11 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221109124628.png)
 
-#### -Navigated to the webapge and found the following zip links
+#### -Navigated to the webpage and found the following zip links
 
 ![](Images/Pasted%20image%2020221109124738.png)
 
-#### -Downloaded max.zip file and found the following "id_rsa" private ssh and "scp_wrapper.sh" script:
-
-![](Images/Pasted%20image%2020221109124849.png)
+#### -Downloaded max.zip file and found an "id_rsa" private ssh and "scp_wrapper.sh" script:
 
 #### -Navigated to kali machine and typed copied the id_rsa file into a file named maxid_rsa and typed "chmod 600 maxid_rsa " to make the key private
 
