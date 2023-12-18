@@ -266,11 +266,13 @@ Bruteforced directory traversal commands for /etc/passwd with intruder on Burpsu
 ## Local Enumeration
 
 #### -Typed "sudo –l" I found the user can run sudo on (ALL : ALL) /bin/nice /notes/* : 
+
 ![](Images/Pasted%20image%2020221018174853.png)
 
 ## Privilege Escalation vector
 Found sudo command to leverage in order to get a root shell
 
-#### -Created a file in user "webadmin" user home directory with "/bin/bash" and created the name of "root.sh". Then made file "root.sh" file executiblle with "chmod +x root.sh". Ran "sudo /bin/nice /notes/../home/webadmin/root.sh" and received a root shell: 
+#### -Created a file in user "webadmin" user home directory with "/bin/bash" and created the name of "root.sh". Then made file "root.sh" file executiblle with "chmod +x root.sh". Ran "sudo /bin/nice /notes/../home/webadmin/root.sh" and received a root shell:
+
 ![](Images/Pasted%20image%2020221018175220.png)
 ---
