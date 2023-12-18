@@ -270,6 +270,7 @@ Enumerated top 200 UDP ports:
 ![](Images/Pasted%20image%2020221025153641.png)
 
 #### -Typed "telnet 192.168.108.137 110" to enter POP3 mailbox in open 110 port and went one by one with attempting to login with each found user providing their usernames as passwords and found I could login with USER sales and PASS sales and found the following e-mail:
+
 ![](Images/Pasted%20image%2020221025170417.png)
 ![](Images/Pasted%20image%2020221025170504.png)
 
