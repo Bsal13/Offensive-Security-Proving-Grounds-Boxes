@@ -376,6 +376,7 @@ server.quit()
 ## Local Enumeration
 
 #### -Typed "sudo -l" and found user filter can run "/usr/bin/mail *" as sudo:
+
 ![](Images/Pasted%20image%2020221025180351.png)
 
 ## Privilege Escalation vector
