@@ -227,7 +227,7 @@ Enumerated top 200 UDP ports:
 
 # Exploitation
 ## Name of the technique
-Bruteforced directory traversal commands for /etc/passwd with intuder on Burpsuite to retreive username and hashed password. Utilized john to crack the hashed password
+Bruteforced directory traversal commands for /etc/passwd with intruder on Burpsuite to retrieve username and hashed password. Utilized john to crack the hashed password
 
 #### -Found the following "log.txt" file on the web page above and ran Burp Suite and found the following "log.txt" file: 
 
