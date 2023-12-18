@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shakabra (Easy) Linux Box.md",
+                "file": "Shenzi (Intermediate) Windows Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shakabra (Easy) Linux Box.md",
+                "file": "Shenzi (Intermediate) Windows Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Shakabra (Easy) Linux Box.md",
+                "file": "Shenzi (Intermediate) Windows Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shakabra (Easy) Linux Box.md"
+                "file": "Shenzi (Intermediate) Windows Box.md"
               }
             }
           }
@@ -203,8 +203,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c93fbe583c2a0fba",
+  "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Shakabra (Easy) Linux Box.md",
     "Readys (Intermediate) Linux Box.md",
     "Potato (Easy) Linux Box.md",
     "Postfish (Intermediate) Linux Box.md",
@@ -230,7 +231,6 @@
     "Zino (Intermediate) Linux Box.md",
     "UT99 (Intermediate) Windows Box.md",
     "conflict-files-obsidian-git.md",
-    "Images/Pasted image 20221001114845.png.md",
     "Untitled",
     "Images/Pasted image 20230407232534.png",
     "Images/Pasted image 20230407232506.png",
