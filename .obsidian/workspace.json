@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shenzi (Intermediate) Windows Box.md",
+                "file": "Sorcerer (Intermediate) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shenzi (Intermediate) Windows Box.md",
+                "file": "Sorcerer (Intermediate) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Shenzi (Intermediate) Windows Box.md",
+                "file": "Sorcerer (Intermediate) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shenzi (Intermediate) Windows Box.md"
+                "file": "Sorcerer (Intermediate) Linux Box.md"
               }
             }
           }
@@ -205,6 +205,7 @@
   },
   "active": "36fe7cca0c50b180",
   "lastOpenFiles": [
+    "Shenzi (Intermediate) Windows Box.md",
     "Shakabra (Easy) Linux Box.md",
     "Readys (Intermediate) Linux Box.md",
     "Potato (Easy) Linux Box.md",
@@ -230,7 +231,6 @@
     "Algeron (Easy) Windows Box.md",
     "Zino (Intermediate) Linux Box.md",
     "UT99 (Intermediate) Windows Box.md",
-    "conflict-files-obsidian-git.md",
     "Untitled",
     "Images/Pasted image 20230407232534.png",
     "Images/Pasted image 20230407232506.png",
