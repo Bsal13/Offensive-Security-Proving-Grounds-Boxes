@@ -179,7 +179,7 @@ Enumerated top 200 UDP ports:
 # Privilege Escalation
 ## Local Enumeration
 
-#### -Ran linpeas.s script and found binary /usr/sbin/start-stop-daemon set as a SUID bit:
+#### -Ran linpeas.sh script and found binary /usr/sbin/start-stop-daemon set as a SUID bit:
 
 ![](Images/Pasted%20image%2020221109134636.png)
 
