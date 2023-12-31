@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Banzai (Intermediate) Linux Box.md",
+                "file": "Hawat (Easy) Linux Box.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "banzai",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,8 +122,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -143,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Banzai (Intermediate) Linux Box.md",
+                "file": "Hawat (Easy) Linux Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Banzai (Intermediate) Linux Box.md",
+                "file": "Hawat (Easy) Linux Box.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Banzai (Intermediate) Linux Box.md"
+                "file": "Hawat (Easy) Linux Box.md"
               }
             }
           }
@@ -206,6 +205,7 @@
   },
   "active": "c93fbe583c2a0fba",
   "lastOpenFiles": [
+    "Banzai (Intermediate) Linux Box.md",
     "ClamAV (Easy) Linux Box.md",
     "DVR4 (Intermediate) Windows Box.md",
     "UT99 (Intermediate) Windows Box.md",
@@ -231,7 +231,6 @@
     "Hutch (Intermediate) Windows Active Directory Box.md",
     "Hunit (Intermediate) Linux Box.md",
     "Hetemit (Intermediate) Linux Box.md",
-    "Heist (Hard) Windows Active Directory Box.md",
     "Untitled",
     "Images/Pasted image 20230407232534.png",
     "Images/Pasted image 20230407232506.png",
