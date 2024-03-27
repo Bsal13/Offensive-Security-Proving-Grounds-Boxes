@@ -7,14 +7,6 @@
       "key": "B"
     }
   ],
-  "obsidian-git:pull": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "L"
-    }
-  ],
   "obsidian-git:push2": [
     {
       "modifiers": [
@@ -29,6 +21,14 @@
         "Alt"
       ],
       "key": "A"
+    }
+  ],
+  "obsidian-git:pull": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "L"
     }
   ]
 }
