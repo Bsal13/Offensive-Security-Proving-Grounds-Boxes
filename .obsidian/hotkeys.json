@@ -30,5 +30,13 @@
       ],
       "key": "L"
     }
+  ],
+  "yet-another-obsidian-synchronizer:sync": [
+    {
+      "modifiers": [
+        "Meta"
+      ],
+      "key": "B"
+    }
   ]
 }
