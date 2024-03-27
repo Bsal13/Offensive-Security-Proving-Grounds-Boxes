@@ -255,7 +255,60 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Located user credentials in directory shown in websites source code
+## Located user credentials in websites source code
+
+### **Vulnerability Explanation:** 
+
+#### Title: Exposure of Sensitive Information through View Page Source
+
+#### Type of Vulnerability: Information Disclosure
+
+#### CWE Reference: CWE-200: Information Exposure
+
+#### Proposal for CVSS Score: 4.3 (Medium)
+
+- **CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N**
+- The score is justified by the vulnerability being accessible through the network with low attack complexity, no required privileges, and requiring user interaction to view the page source. The impact is limited to the confidentiality of the information exposed.
+
+#### Generic Description:
+
+The "View Page Source" vulnerability refers to the exposure of sensitive information to users through the source code of web pages. This information might include comments, server paths, third-party API keys, database connection details, or other proprietary information that could aid an attacker in further attacks or unauthorized access. Typically, this vulnerability arises from developers leaving sensitive data in the source code or client-side scripts that are not intended to be publicly accessible.
+
+#### Specific Description:
+
+Exposure through "View Page Source" can occur in several ways, including but not limited to:
+
+- Insecurely including sensitive information within HTML comments or client-side scripts.
+- Embedding API keys or other sensitive tokens within JavaScript code.
+- Exposing internal paths or system information in error messages or metadata.
+- Leaving database connection strings or credentials in client-accessible code.
+
+This type of vulnerability can lead to various security issues, such as unauthorized API access, system enumeration, or database breaches, depending on the nature of the exposed information.
+
+### **Vulnerability Fix:** 
+
+1. **Review and Cleanse Code:** Regularly review web page source code and remove any sensitive information or unnecessary comments that could disclose internal mechanisms or data.
+    
+2. **Use Environment Variables:** Store sensitive information like API keys, database credentials, and configuration details in server-side environment variables, not in client-side code.
+    
+3. **Implement Secure Code Practices:** Train developers on secure coding practices, emphasizing the importance of not leaving sensitive information in client-accessible code.
+    
+4. **Externalize Scripts:** Where possible, keep scripts external and serve them from server-side applications that can enforce authentication and authorization, rather than embedding sensitive data directly in HTML or client-side JavaScript.
+    
+5. **Use Minification and Obfuscation:** While not a security measure per se, minifying and obfuscating JavaScript can help reduce the ease of understanding and discovering sensitive information in client-side code.
+    
+6. **Secure Configuration Files:** Ensure configuration files used by web applications do not contain sensitive information. If necessary, apply proper access controls to these files.
+    
+7. **Regular Audits:** Conduct regular audits of your website's source code, including both server-side and client-side components, to check for inadvertently exposed sensitive information.
+    
+8. **Leverage Security Tools:** Use automated security tools to scan codebases for accidentally exposed sensitive information and enforce coding guidelines that prevent such exposure.
+    
+9. **Error Handling:** Implement secure error handling that does not expose sensitive information in error messages or stack traces to the client.
+    
+10. **Security Headers:** Use HTTP security headers, such as Content-Security-Policy, to add an extra layer of protection against client-side injections that could expose sensitive information indirectly.
+    
+
+Addressing vulnerabilities related to the exposure of sensitive information through "View Page Source" is an essential step in protecting the confidentiality and integrity of a web application and its underlying systems. By adhering to secure coding practices and regularly reviewing and auditing web application code, organizations can significantly mitigate the risk of such exposure.
 
 #### -As port 43022 was found earlier running on SSH I typed the following to login to ssh session with the found credentials above "ssh –p 43022 dademola@192.168.143.125" with password "ExplainSlowQuest110" and received shell:
 
