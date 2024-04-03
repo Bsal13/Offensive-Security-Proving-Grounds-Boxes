@@ -35,10 +35,14 @@ IP: 192.168.100.46
 - john
 
 ### **Initial Access Vulnerability Explanation:** 
-# 1. Anonymous FTP Acccess
-# 2. Writable Root Directory to a Web Server
+#### 1. Anonymous FTP Acccess
+#### 2. Writable Root Directory to a Web Server
 
-# 1. Anonymous FTP Acccess
+
+### **Initial Access Vulnerability Explanation:** 
+
+#### 1. Anonymous FTP Acccess
+
 Title: Anonymous FTP Misconfiguration Vulnerability
 Type of Vulnerability: Security Misconfiguration (OWASP Top 10: A6:2017-Security Misconfiguration)
 CWE Reference: CWE-276: Incorrect Default Permissions
@@ -54,7 +58,9 @@ Specific Description:
 
 This vulnerability stems from either an intentional or unintentional configuration that permits users to access an FTP server anonymously, i.e., without providing a personal username and password. This can lead to unauthorized access to sensitive files or directories, information disclosure, and potentially a foothold in the network for further attacks if sensitive data or executables are accessed. The issue is exacerbated if the anonymous user is granted write access, as this can lead to the upload of malicious files, defacement, or distribution of illegal content.
 
-# 2. Writable Root Directory to a Web Server
+### **Initial Access Vulnerability Explanation:** 
+#### 2. Writable Root Directory to a Web Server
+
 Title: Insecure Permissions on Web Server Root Directory
 Type of Vulnerability: Security Misconfiguration (OWASP Top 10: A6:2017-Security Misconfiguration)
 CWE Reference: CWE-276: Incorrect Default Permissions
@@ -72,7 +78,7 @@ The vulnerability is primarily due to inadequate file permissions set on the web
 
 ### **Initial Access Vulnerability Fix:** 
 
-# 1. Anonymous FTP Access
+#### 1. Anonymous FTP Access
 
 1. **Review FTP Server Configuration:** Regularly review the configuration of your FTP server to ensure that anonymous access is disabled unless it is a deliberate choice for sharing non-sensitive data. Ensure that directories accessible via anonymous FTP do not contain sensitive information.
     
@@ -91,7 +97,10 @@ The vulnerability is primarily due to inadequate file permissions set on the web
 
 By implementing these remediation steps, organizations can significantly mitigate the risks associated with anonymous FTP configurations and enhance their security posture against unauthorized access and information disclosure.
 
-# 2. Writable Root Directory to a Web Server
+### **Initial Access Vulnerability Fix:** 
+
+#### 2. Writable Root Directory to a Web Server
+
 1. **Review and Restrict Directory Permissions:** Examine the permissions set on the web server’s root directory and ensure that they are restricted to read-only for unauthorized users. Only administrative accounts or specific service accounts required for the operation of legitimate web applications should have write permissions.
     
 2. **Implement Proper Access Controls:** Use access control mechanisms to define who can modify the content within the web server’s directories. This should be tightly controlled and monitored.
@@ -115,6 +124,8 @@ By addressing this vulnerability with a comprehensive remediation plan, organiza
 
 ### **Privilege Escalation Vulnerability Explanation:** 
 
+#### MS11-046
+
 #### Title: Vulnerability in Ancillary Function Driver (AFD) Could Allow Elevation of Privilege
 
 #### Type of Vulnerability: Elevation of Privilege (EoP)
@@ -136,6 +147,8 @@ This elevation of privilege vulnerability is caused by the Ancillary Function Dr
 
 ### **Privilege Escalation Vulnerability Fix:** 
 
+#### MS11-046
+
 1. **Apply Microsoft Patch:** Microsoft has addressed this vulnerability in their MS11-046 security bulletin. The primary remediation is to apply the update provided by Microsoft for affected systems. This patch fixes the vulnerability by correcting the way that the Ancillary Function Driver (AFD) validates input passed from user mode.
     
 2. **Principle of Least Privilege:** Ensure that all user accounts operate under the principle of least privilege, meaning they have only the permissions necessary for their roles. This can mitigate the impact of this vulnerability by limiting what an attacker can do if they manage to exploit this flaw.
@@ -152,7 +165,6 @@ This elevation of privilege vulnerability is caused by the Ancillary Function Dr
     
 
 By following these remediation steps, organizations can protect themselves against the MS11-046 vulnerability and improve their overall security posture against similar elevation of privilege threats.
-
 
 
 ---
