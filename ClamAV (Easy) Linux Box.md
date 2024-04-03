@@ -12,9 +12,9 @@ IP: 192.168.229.42
 
 
 # Resolution summary
-- Found a remote code execution exploit for CLAMAV
-- Runnning the exploit opened another port to connect to
-- Ran a netcat listener and received a root shell
+- Discovered a CLAMAV remote code execution vulnerability
+- Using the exploit enabled a connection to a different port.
+- Obtained a root shell after running a netcat listener.
 
 ## Improved skills
 - Exploit enumeration
@@ -190,31 +190,34 @@ Enumerated top 200 UDP ports:
 
 ---
 
-# Enumeration
-## Sendmail with clamav-milter < 0.91.2 - Remote Command Execution
+- Given that the challenge is called “ClamAV,” we choose to use searchsploit against it. What we discover is as follows:
 
-#### -As the box is called "ClamAV" I ran searchsploit "ClamAV" and found the following: 
 ![](Images/Pasted%20image%2020221007131752.png)
 
-#### -As the NMAP scan I ran showed port 25 was running version "Sendmail" I tried the "Sendmail with clamav-milter < 0.91.2 - Remote Command Execution" exploit.
+- We attempt to use the "Sendmail with clamav-milter < 0.91.2-Remote Command Execution" attack as our NMAP scan revealed that port 25 was running the "Sendmail" version.
 
 ![](Images/Pasted%20image%2020221007131859.png)
 
-#### -Typed "searchsploit –m multiple/remote/4761.pl" to copy exploit to the directory I was in. Then typed "cat 4761.pl" to read the script and found the following advising to provide a host to connect to and showing port 31337 and ran an NMAP scan to confirm if the port was open and found it to be closed: 
+Exploitation
+Sendmail with clamav-milter < 0.91.2 -Remote Code Execution Exploit
+
+- We type "cat 4761.pl" to examine the script. It instructs us to supply a host to connect to and displays port 31337
 
 ![](Images/Pasted%20image%2020221007132014.png)
+
+- We discover that port 31337 is closed after performing an NMAP scan
+
 ![](Images/Pasted%20image%2020221007132057.png)
 
-#### -Typed "perl 4761.pl 192.168.229.42" as the ".pl" is a perl extension and received the following output. I then ran another NMAP scan on port 31137 to confirm if it is open and found it to be opened: 
+- As ".pl" is a Perl extension, We type "perl 4761.pl 192.168.229.42" and receive the following output:
 
 ![](Images/Pasted%20image%2020221008215215.png)
+
+- We rerun an NMAP scan against port 31337 and discover that it is now open.
+
 ![](Images/Pasted%20image%2020221008215315.png)
 
-
----
-
-# Exploitation
-#### -Typed "nc 192.168.229.42 31337 " and received a root shell: 
+- We receive a root shell when we type "nc 192.168.229.42 31337":
 
 ![](Images/Pasted%20image%2020221008215351.png)
 
