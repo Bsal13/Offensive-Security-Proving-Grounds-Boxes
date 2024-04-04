@@ -176,7 +176,7 @@ Shell("cmd /c powershell -c C:/Windows/Tasks/offsec.ps1")
 
 #### - Copied contents in between the quotation marks in the PowerShell #3 tab for Windows payload and pasted it into the offsec.ps1 file
 
-file:///home/parallels/Documents/Documents/Offensive-Security-Proving-Grounds-Boxes/Images/SCR-20240404-evj.png![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/2affc34d-2b58-4581-96e4-41d7aa74aa00)
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/2affc34d-2b58-4581-96e4-41d7aa74aa00)
 
 #### - Typed chmod 775 offsec.ps1 to make it executable
 
