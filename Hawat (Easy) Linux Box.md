@@ -12,14 +12,14 @@ IP: 192.168.151.147
 
 
 # Resolution summary
-- Ran feroxbuster for port 50080 and was able to locate a cloud php login webpage
-- Guessed login credentials and was able to login as administrator
-- Found issue tracker zip file
-- Dowloaded file to Kali machine and read the source code
-- From analyzing source code found the program connects to a mysql database and has a priority parameter. Additionally found "/issue/checkByPriority" directory
-- Ran feroxbuster for port 30455 and was able to locate the index.php page showing the root directory 
-- Navigated to http port 17445 and found the issue tracker program running on the webpage
-- Registered and logged in with setup credentials
+- After using feroxbuster to scan port 50080, I found a cloud PHP login page.
+- I was able to log in as administrator after guessing the login credentials.
+- Issue tracker zip file located
+- Read the source code by downloading the file to my Kali machine.
+- Source code analysis revealed that the software has a priority parameter and connects to a MySQL database. "/issue/checkByPriority" directory was also discovered.
+- Ran feroxbuster on port 30455 and found the index.php page which displayed the root directory. 
+- Accessed the webpage and discovered the problem tracker program running at http port 17445.
+- Created an account and entered login credentials
 - Navigated to /issue/checkByPriority directory and received a 405 error
 - Brought up burpsuite to see what is going on in the background and sent the web page for port 17455 for directory /issue/checkByPriority to repeater
 - Found method "POST" was allowed
