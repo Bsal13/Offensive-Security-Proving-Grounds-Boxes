@@ -17,18 +17,18 @@ IP: 192.168.151.147
 - Issue tracker zip file located
 - Read the source code by downloading the file to my Kali machine.
 - Source code analysis revealed that the software has a priority parameter and connects to a MySQL database. "/issue/checkByPriority" directory was also discovered.
-- Ran feroxbuster on port 30455 and found the index.php page which displayed the root directory. 
+- Ran feroxbuster on port 30455 and found the index.php page which displayed the root directory.
 - Accessed the webpage and discovered the problem tracker program running at http port 17445.
 - Created an account and entered login credentials
-- Navigated to /issue/checkByPriority directory and received a 405 error
-- Brought up burpsuite to see what is going on in the background and sent the web page for port 17455 for directory /issue/checkByPriority to repeater
-- Found method "POST" was allowed
-- Changed method to "POST" in repeater and found the error code changed to 400
-- Googled sq injection reverse shell and retreived the syntax
-- Added the priority parameter and the found syntax placing it into the root directory of the web server and url encoded the syntax into burpsuite to retreive command injection from the webpage
-- Confirmed we can run OS commands on from webpage
-- Downloaded a php reverse shell to target naming the reverse shell with a .php extension
-- Setup a netcat listener on Kali; ran the reverse shell php script and received a root shell
+- A 405 error message appeared when I navigated to the /issue/checkByPriority directory.
+- Started Burpsuite to observe what was happening in the background and forwarded the web page for directory /issue/checkByPriority on port 17455 to repeater.
+- The "POST" method was found and permitted.
+- After switching to the "POST" method in repeater, the error code changed to 400.
+- Looked up the syntax for sq injecting reverse shell on Google.
+- To execute command injection from the webpage, I added the priority parameter and the detected syntax, putting them in the web server's root directory. Additionally I URL encoded the syntax in Burpsuite.
+- Verified that I can execute OS commands from a webpage.
+- Downloaded and named a PHP reverse shell with a.php extension for the target machine.
+- Set a Kali netcat listener; executed the PHP script for the reverse shell to obtain a root shell.
 
 
 ## Improved skills
@@ -371,29 +371,34 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-##  Port 50080 - Apache httpd 2.4.46 ((Unix) PHP/7.4.15) 
+##  Port 50080 
 
-#### -Ran feroxbuster scan [feroxbuster -u http://192.168.65.147:50080 -C 401 403 405] and found directory "/cloud"
+- We execute the feroxbuster scan command below and discover a "/cloud" directory 
+
+feroxbuster -u http://192.168.65.147:50080 -C 401 403 405 -t 100
 
 ![](Images/Pasted%20image%2020221011100749.png)
 
+- By navigating to http://192.168.65.147:50080/cloud, we can access the PHP login page as seen below.
 
-#### -Navigated to http://192.168.65.147:50080/cloud and found the following login php page:
+- By using the login "admin" and password "admin," we are able to access the admin account.
+
 ![](Images/Pasted%20image%2020221011100923.png)
 
-#### -Attempted to utilize username admin and password admin and was able to login as admin 
+We find an issuetracker.zip file on the web application and download it to our Kali machine. We then analyze the source code in the “IssueControler.java” file and discover that Issue Tracker connects to a MySQL database and has a priority parameter. We also find a “/issue/checkByPriority” directory that may be vulnerable to SQL injection.
 
-#### -Clicked on the issuetracker.zip file 
+- We select the file called issuetracker.zip.
+
 ![](Images/Pasted%20image%2020221011101035.png)
 
 #issuetracker
 
-#### -The following webpage came up and clicked the 3 dots and clicked "Descargar" which allowed me to save the zip file to my kali machine:
-
+- The following webpage appeared; we saved the zip file to our Kali machine by clicking the three dots and selecting "Descargar":
+  
 ![](Images/Pasted%20image%2020221011102057.png)
 
-#### -Navigated throught the following source code folders for the "issuetracker.zip" file and found "IssueControler.java" file:
-
+- We locate the "IssueControler.java" file by going through the source code folders listed below for the "issuetracker.zip" file:
+  
 ![](Images/Pasted%20image%2020221011102341.png)
 
 ![](Images/Pasted%20image%2020221011102413.png)
@@ -408,22 +413,23 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221011102716.png)
 
-#### -Located the following information:
+- We locate the following information:
 #### "/issue/checkByPriority" directory
-#### Credentials User "issue_user" and password "ManagementInsideOld797"
+#### Credentials user "issue_user" and password "ManagementInsideOld797"
 #### Issue Tracker connects to mysql database per the following line of code:
 #### "jdbc:mysql://localhost:3306/issue_tracker"
 
 ![](Images/Pasted%20image%2020221011102828.png)
 
-#### -Additionaly, I found "priority" as a parameter in the "/issue/checkByPriority" directory and should be vulnerable to sql injection:
-
+- Furthermore, we discover that the "priority" parameter in the "/issue/checkByPriority" directory is vulnerable to SQL injection:
+  
 ![](Images/Pasted%20image%2020221011102910.png)
 
-## Port 30455 - HTTP nginx 1.18.0 
+We continue with enumeration and use feroxbuster to scan port 30455. The scan reveals the web server’s root directory is “/srv/http”. We also navigate to port 17445 and find an Issue Tracker program running on the webpage.
 
-#### -Ran feroxbuster scan and found an accessible phpinfo.php:
+## Port 30455 
 
+- We execute a feroxbuster directory scan and find an accessible phpinfo.php file
 
 
 #### -Navigated to http://192.168.241.147:30455/phpinfo.php and found "/srv/http" showing the root directory of the webserver:
