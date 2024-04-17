@@ -14,9 +14,9 @@ IP: 192.168.231.165
 
 # Resolution summary
 - Located a webpage on port 8080 which is vulnerable to SSRF
-- Utilized Responder to exploit the SSRF vulnerability; retreive username and etNTLMv2 hashed password
+- Utilized Responder to exploit the SSRF vulnerability; retrieve username and NTLMv2 hashed password
 - Cracked hashed password utilizing hashcat
-- Utilized  evil-winrm to login to a session with the retreived users credentials
+- Utilized  evil-winrm to login to a session with the retrieved users credentials
 - Retrieved all computers, domains, grops and user information in json format utilizing bloodhound-python
 - Found scv_apache account can read the GMSA password utilizing bloodhound
 - Utilized GMSAPasswordReader.exe to read svc_apache's NTML hash
@@ -26,8 +26,8 @@ IP: 192.168.231.165
 
 ## Improved skills
 - Active Directory enumeration
-- Bloodhound tool enumerating
-- crackmapexec enumerating 
+- Bloodhound tool enumeration
+- crackmapexec enumeration
 
 ## Used tools
 - nmap
@@ -459,30 +459,44 @@ bloodhound-python -u enox -p california -ns 192.168.81.165 -d heist.offsec -c al
 ![](Images/Pasted%20image%2020221012213928.png)
 ![](Images/Pasted%20image%2020221012214003.png)
 
-#### - Navigated to bloodhound and clicked "upload data". Then highlighted all the .json files and clicked open.  The target machines actived directory information was uploaded to bloodhound.
-
-#### - Clicked the hamburger icon in the upper left hand corner of bloodhound and then clicked the "Analysis"tab to see a list of pre-built queries.
-
+- We click "upload data" after navigating to Bloodhound. Choose every .json file and press open. Information about the target machine's active directory was uploaded to Bloodhound.
+  
+- To view a list of pre-built queries, we click the hamburger icon in Bloodhound's upper left corner, and then select the "Analysis" option.
+  
 ![](Images/Pasted%20image%2020221012214126.png)
 
-#### - Going from the bottom up on this list, nothing was providing data until I got to **Shortest Paths to High Value Targets**, which revealed nothing interesting about my current user; however, it did show some interesting info on the service account.
-
+- As we worked our way up the list, nothing was giving us any information until we found Shortest Paths to High Value Targets. There, we learned nothing new about our current user, but we did learn some intriguing details about the service account.
+  
 ![](Images/Pasted%20image%2020221012214301.png)
 #ADservicecanreadGMSApassword #GMSA #GroupManagedServiceAccount
 
-#### - This shows that the **svc_apache** service account can read the GMSA password, which means that the **svc_apache** account is a Group Managed Service Account (gMSA).
+- This indicates that the svc_apache service account is a Group Managed Service Account (gMSA) since it can see the GMSA password.
 #GMSApassword
 
-#### - Using the following PowerShell command, we can confirm that this account is a service account with GMSA enabled:
+- It can be verified that this account is a service account with GMSA enabled by running the following PowerShell command:
 
 Get-ADServiceAccount -Filter * | where-object {$_.ObjectClass -eq "msDS-GroupManagedServiceAccount"}
 
 ![](Images/Pasted%20image%2020221012214423.png)
 
-#### - This shows that members of Web Admins group can retrieve the gMSA password. Earlier during the manual enumeration, we saw that our current user **enox** was a member of this group! This also shows that the svc_apache account is in the remote users group, which means that once we extract the gMSA password, we can remote in with this account using evil-winrm.
+- We upload PowerView.ps1 to the target machine.
 
-#### - Just to be certain, we can double check that our user is in the Web Admins group using the following command:
+- We type the following command to load PowerView.ps1 onto the target machine.
 
+. .\PowerView.ps1
+
+- We type the following command to find info about which groups have permissions to retrieve the password for the svc_apache service account.
+  
+Get-ADServiceAccount -Filter {name -eq 'svc_apache'} -Properties * | Select CN,DNSHostName,DistinguishedName,MemberOf,PrincipalsAllowedToRetrieveManagedPassword
+
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/b10215d2-a249-455d-8c33-5b6c130cdbec)
+
+- This shows that the gMSA password may be retrieved by Web Admins group members. It was during the manual enumeration earlier that we discovered our current user **enox** belonged to this group.
+
+- Additionally, this demonstrates that the svc_apache account is a member of the remote users group. This implies that we may use evil-winrm to remotely log in with this account once we have extracted the gMSA password.
+
+- We run the following command to confirm if our user is a member of the Web Admins group just to be sure.
+  
 Get-ADGroupMember 'Web Admins'
 
 ![](Images/Pasted%20image%2020221012214545.png)
@@ -490,54 +504,68 @@ Get-ADGroupMember 'Web Admins'
 
 ## Lateral Movement vector
 
-#### - Googled "gMSA password extraction tool github" and found the following tool to extract the NT hash from the active directory:
-
+- To extract the NTLM hash from the active directory, we search for "gMSA password extraction tool github" on Google and discover the following tool.
+  
 ![](Images/Pasted%20image%2020221012215446.png)
 
 ![](Images/Pasted%20image%2020221012215548.png)
 
-#### - Downloaded the GMSAPasswordReader.exe precompiled binary to target machine
+- We download the precompiled binary GMSAPasswordReader.exe to the target machine.
+  
+- We type the following command and receive the NTLM hash (the rc4_hmac is the same as the NTLM hash).
 
-#### - Typed .\GMSAPasswordReader.exe --AccountName 'svc_apache' and retreived the following  NTLM hash:
+.\GMSAPasswordReader.exe -- AccountName 'svc_apache'
 
 ![](Images/Pasted%20image%2020221012215649.png)
 #GMSApasswordReader.exe
-#### - The rc4_hmac hash is the same as the NT hash, they are interchangeable.
 #rc4_hmac
 
-#### - Typed evil-winrm -i 192.168.81.165 -u svc_apache$ -H 4283B392D3647F3F26D614EE3AB9A80C and received a winrm login session as user svc_apache$
+- A winrm login session as user svc_apache$ was acquired when we type the following command.
+
+evil-winrm -i 192.168.81.165 -u svc_apache$ -H 4283B392D3647F3F26D614EE3AB9A80C
+
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/3d000ba6-198f-478a-ac41-6c88c1f5b3a1)
+
 ---
 
 # Privilege Escalation
 ## Local Enumeration
-#### - Typed whoami /priv and found SeRestorePrivilege is enabled:
+
+After gaining access to the svc_apache account, we discovered that the SeRestorePrivilege was enabled. We followed the privilege escalation steps, which involved creating a new service and running a command to get a cmd session as NT Authority\System.
+
+
+- We discover that SeRestorePrivilege is enabled when we type the following command.
+
+whoami /priv
 
 ![](Images/Pasted%20image%2020221012220215.png)
 #SeRestorePrivilegeEnabledPrivelegeEscalation
 
-#### - Googled "SeRestorePrivilege privilege escalation" and found the following Hacktricks page showing the steps to escalate privileges:
-
+- We search for "SeRestorePrivilege privilege escalation" on Google and discover the Hacktricks page that outlines the steps to take.
+  
 ![](Images/Pasted%20image%2020221012220333.png)
 
 
-## Privilege Escalation vector
-## SeRestorePrivilege privilege escalation
+## Privilege Escalation Vector
+#### SeRestorePrivilege 
 
-#### - Navigated to "C:\Windows\system32" and located Utilman.exe:
-
+- We find Utilman.exe by navigating to "C:\Windows\system32":
+  
 ![](Images/Pasted%20image%2020221012220556.png)
 
-#### - Typed "ren Utilman.exe Utilman.old" and confirmed the filename changed:
-
+- We enter "ren Utilman.exe Utilman.old" and verify the filename modification:
+  
 ![](Images/Pasted%20image%2020221012220652.png)
 
-#### - Typed "ren cmd.exe Utilman.exe"
+- We type the following command to rename cmd.exe to Ultiman.exe
 
-#### - Navigated to another terminal on my kali machine and typed "rdesktop 192.168.81.165"
+ren cmd.exe Utilman.exe
+
+-Once at the login page of the RDP session we type "windows key + u key" and receive a cmd session as NT authority/system:
 
 #RDP #rdesktop
 
-#### - Once at login page of RDP session I typed "windows key + u key" and received a cmd session as NT authority/system:
+-After entering "windows + u" keys on the RDP session login page, we launch a CMD session as NT authority/system.
 
 ![](Images/Pasted%20image%2020221012220806.png)
 
