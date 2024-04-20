@@ -12,7 +12,7 @@ IP: 192.168.127.125
 
 
 # Resolution summary
-- Located a directory listed in webpage source code
+- Found a directory mentioned in the source code of the webpage
 - Directory showed SSH user credentials
 - Found cronjob with backups.sh file running every 3 minutes
 - Found git-server directory in SSH session 
