@@ -313,6 +313,7 @@ To elevate privileges to root, we cloned the git server onto our Kali machine us
 ![](Images/Pasted%20image%2020221017203812.png)
 
 ![](Images/Pasted%20image%2020221017204016.png)
+
 ![](Images/Pasted%20image%2020221017204123.png)
 
 ![](Images/Pasted%20image%2020221017204550.png)
