@@ -241,7 +241,8 @@ Enumerated top 200 UDP ports:
 - We open a web browser, navigate to http://192.168.143.125:8080, locate the webpage below, and click on "the taste of rain" link. Next, we right click and view page source. Afterwards, we can see that it includes the directory "/api".
 
 ![](Images/Pasted%20image%2020221016220003.png)
-![[Pasted image 20240422172548.png]]
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/11cd703c-4069-4be3-af3d-85fd284f472a)
+
 ![](Images/Pasted%20image%2020221017173943.png)
 
 #### -Navigated to "/api" directory and found the following and clicked "raw data" and found  directory "/user":
