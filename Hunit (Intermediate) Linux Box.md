@@ -255,9 +255,7 @@ Enumerated top 200 UDP ports:
   
 ![](Images/Pasted%20image%2020221017174304.png)
 
-
-
-#### -As port 43022 was found earlier running on SSH I typed the following to login to ssh session with the found credentials above "ssh –p 43022 dademola@192.168.143.125" with password "ExplainSlowQuest110" and received shell:
+Using the identified SSH port (43022), we established an SSH connection to the target machine with the username “dademola” and the password “ExplainSlowQuest110”. This successful login provided us with a shell on the target system.
 
 ![](Images/Pasted%20image%2020221017174428.png)
 
@@ -271,7 +269,7 @@ To escalate our privileges, we performed local enumeration using the Linpeas too
 ![](Images/Pasted%20image%2020221017175014.png)
 ![](Images/Pasted%20image%2020221017175126.png)
 
-To escalate our privileges, we performed local enumeration using the Linpeas tool. During the scan, we discovered a cronjob named “crontab.bak” running as root. Upon examining “crontab.bak”, we found references to two files: “pull.sh” and “backups.sh”. The cronjob executed “pull.sh” every 2 minutes and “backups.sh” every 3 minutes.tory:
+During our exploration, we encountered a directory named “git-server” within the SSH session. However, due to the complexities of working directly with Git backend files, we decided to clone the Git server onto our Kali Linux machine. Using the command git clone file:///git-server/, we successfully cloned the git server repository into the “/tmp” directory on our local machine.
 
 ![](Images/Pasted%20image%2020221017175529.png)
 
@@ -301,7 +299,7 @@ To proceed, we discovered a user named "git" and realized that we had read and e
 Using the acquired private SSH key, we established an SSH connection to the target machine as the "git" user with the command ssh -i id_rsa -p 43022 git@192.168.93.125. This login provides access to the git-shell environment.
 
 ![](Images/Pasted%20image%2020221017185623.png)
-#GitShell
+
 
 - We should be able to communicate with the git repository as this is a git shell.
 
@@ -322,7 +320,7 @@ To elevate privileges to root, we cloned the git server onto our Kali machine us
 We then started a Netcat listener on our Kali machine to receive the reverse shell. As the cronjob executed the "backups.sh" file every 3 minutes, we patiently waited for the reverse shell to trigger. Finally, after a few minutes, we gained a root shell on our Netcat listener, giving us complete control over the target machine.
 
 ![](Images/Pasted%20image%2020221017204827.png)
-#Git-serverCronTabScriptPrivilegeEscalation
+
 
 ---
 
