@@ -13,19 +13,20 @@ IP: 192.168.127.125
 
 # Resolution summary
 - Found a directory mentioned in the source code of the webpage
-- Directory showed SSH user credentials
-- Found cronjob with backups.sh file running every 3 minutes
-- Found git-server directory in SSH session 
-- Git cloned the git server in tmp directory which made us able to review the backup.sh which was a placeholder file
-- Found a user named git and found the ssh private key id_rsa file is readable and executable by user git
-- Logged in with user git and found ssh private key and found it to be a git-shell
+- The directory displayed the SSH users credentials.
+- Discovered a cron job (backups.sh) that executes every three minutes
+- In the SSH session, a git-server directory was located.
+- We were able to examine the backup.sh script after git cloning the git server into the tmp directory. 
+- Identified the user git and discovered that the ssh private key id_rsa file is readable and executable by the user git.
+- After logging in as user git, I discovered an ssh private key and discovered it was a git-shell.
 - Git cloned the server onto kali machine
-- Modified the backup.sh file and input a reverse shell into the backup.sh file
-- Prior to pushing the changes to master brang setup a netcat listener
-- Pushed the changes and as the cronjob/backup.sh file runs every 3 minutes I waited and recieved a reverse shell as root in 3 minutes
+- Made modifications to the backup.sh file and added a reverse shell.sh file
+- Setup a netcat listener prior pushing the changes to the master branch
+- Pushed the changes. As the cronjob/backup.sh script would run every 3 minutes I waited and received a shell as root
+  
 ## Improved skills
-- Finding hidden directory on web page source code
-- Git cloning server to kali and modifying files and pushing changes
+- Finding hidden directories in the source code of web pages
+- Cloning a Git server to Kali, edit files, and push updates
 - Git-shell commands
 - Modifying cron jobs
 
@@ -237,9 +238,10 @@ Enumerated top 200 UDP ports:
 # Enumeration
 ## Port 8080  
 
-#### -Navigated to http://192.168.143.125:8080 and found the following web page and clicked on a link of a user's hauiku on the web page and right clicked and clicked "view page source" and found it had directory "/api"
+- We open a web browser, navigate to http://192.168.143.125:8080, locate the webpage below, and click on "the taste of rain" link. Next, we right click and view page source. Afterwards, we can see that it includes the directory "/api".
 
 ![](Images/Pasted%20image%2020221016220003.png)
+![[Pasted image 20240422172548.png]]
 ![](Images/Pasted%20image%2020221017173943.png)
 
 #### -Navigated to "/api" directory and found the following and clicked "raw data" and found  directory "/user":
