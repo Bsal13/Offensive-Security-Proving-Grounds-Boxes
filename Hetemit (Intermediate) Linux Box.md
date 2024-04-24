@@ -27,6 +27,59 @@ IP: 192.168.56.117
 - nmap
 - rustscan
 
+### **Vulnerability Explanation:** 
+### Initial Access
+## os.system Command Injection
+
+### Description:
+
+The command injection vulnerability associated with the `os.system` function in various programming languages (commonly Python) arises when this function is used to execute operating system commands with inputs taken from user input or other untrusted sources without proper sanitization. This function directly passes the command to the underlying operating system shell. If the user input is not properly sanitized, an attacker can inject and execute arbitrary commands on the host operating system with the privileges of the process running the script.
+
+### Impact:
+
+An attacker can leverage this vulnerability to execute arbitrary commands on the server, which may lead to unauthorized access to the system's data, alteration of system configurations, launching of further attacks, or taking control of the system to perform malicious activities. The impact level is particularly high if the application runs with elevated privileges.
+
+### **Vulnerability Fix:**
+### Initial Access
+## os.system Command Injection
+
+1. Input Validation and Sanitization:
+    - Implement strict input validation and data sanitization techniques to prevent command injection vulnerabilities.
+    - Use secure coding practices and frameworks (e.g., OWASP recommendations) to sanitize user inputs before passing them to system commands.
+2. Use Subprocess Module:
+    - Avoid using os.system for executing system commands and instead use the subprocess module with proper argument handling and escaping.
+3. Principle of Least Privilege:
+    - Limit the privileges of the application or user executing system commands to minimize the impact of potential command injection attacks.
+4. Regular Security Audits:
+    - Conduct regular security audits and code reviews to identify and remediate vulnerabilities, including command injection risks.
+5. Security Awareness:
+    - Educate developers and system administrators about the risks associated with command injection vulnerabilities and best practices for secure coding.
+
+### **Vulnerability Explanation:** 
+#### Privilege Escalation
+##### Writable pythonapp.service
+
+- Observed that the pythonapp.service file has incorrect permissions, allowing unauthorized users to modify its contents.
+
+- Successfully exploited the vulnerability to inject malicious commands into the service file and execute unauthorized actions.
+
+- Demonstrated the potential impact of the vulnerability, highlighting the risk of unauthorized code execution and service disruption.
+
+
+### **Vulnerability Fix:**
+
+#### Privilege Escalation
+##### Writable pythonapp.service
+
+1. Correct Permissions:
+    - Change the permissions of pythonapp.service to restrict write access to authorized users only (e.g., root).
+    - Set permissions to 644 (-rw-r--r--) to allow read access for everyone and write access only for the file owner.
+2. Access Control:
+    - Restrict access to directories containing systemd service files (/etc/systemd/system/, /lib/systemd/system/) to prevent unauthorized modifications.
+3. Regular Audits:
+    - Implement regular audits of system configurations and file permissions to detect and mitigate similar vulnerabilities proactively.
+4. Security Awareness:
+    - Educate system administrators and developers about secure file permissions and the potential risks associated with writable service files.
 
 
 ---
