@@ -40,6 +40,64 @@ IP: 192.168.142.122
 - cadaver
 - psexec.py
 
+### **Vulnerability Explanation:**
+
+### Initial Access
+##### LDAP Leaking Sensitive Information leading to logging into a webdav server to upload a web shell to root web server and executing a reverse shell
+
+1. LDAP Information Leak:
+    - Identified a misconfigured LDAP server that exposed sensitive information, including user credentials and server configurations.
+    - Exploited the LDAP information leak to gather valid credentials for accessing other systems.
+2. Webdav Upload and Reverse Shell:
+    - Leveraged the obtained credentials to access the webdav server and upload a web shell.
+    - Executed a reverse shell payload through the web shell to establish a reverse connection and gain remote access to the target system.
+    - Demonstrated the ability to execute arbitrary commands with elevated privileges.
+
+
+### **Vulnerability Fix:**
+### Initial Access
+
+##### LDAP Leaking Sensitive Information leading to logging into a webdav server to upload a web shell to root web server and executing a reverse shell
+
+1. LDAP Configuration:
+    - Secure the LDAP server configuration by implementing proper access controls, encryption (e.g., LDAPS), and regular security audits.
+    - Avoid exposing sensitive information through LDAP queries and ensure that only authorized users have access to required data.
+2. Webdav Server Security:
+    - Harden the webdav server configuration by enforcing strong authentication mechanisms, access controls, and file upload restrictions.
+    - Monitor and log webdav server activities to detect and respond to suspicious or unauthorized access attempts.
+3. Reverse Shell Prevention:
+    - Implement network segmentation and firewall rules to restrict inbound and outbound traffic, preventing unauthorized reverse shell connections.
+    - Regularly update and patch systems to mitigate known vulnerabilities that could be exploited to execute reverse shells.
+
+
+
+### **Vulnerability Explanation:**
+#### Privilege Escalation
+###### Retrieved administrator password by performing an ldapsearch query which led to logging in as administrator utilizing psexec.py
+
+1. LDAP Credential Retrieval:
+    - Exploited a misconfigured LDAP server to perform an ldapsearch query and retrieve administrator credentials.
+    - Demonstrated the risk of exposing sensitive information via LDAP queries and improper access controls.
+2. psexec.py Exploitation:
+    - Leveraged the obtained administrator credentials to exploit the psexec.py vulnerability in the Windows server.
+    - Successfully gained remote code execution as an administrator, allowing full control over the target system.
+
+
+### **Vulnerability Fix:**
+#### Privilege Escalation
+###### Retrieved administrator password by performing an ldapsearch query which led to logging in as administrator utilizing psexec.py
+
+1. LDAP Security:
+    - Secure the LDAP server configuration by implementing proper access controls, encryption (e.g., LDAPS), and regular security audits.
+    - Avoid exposing sensitive information through LDAP queries and ensure that only authorized users have access to required data.
+2. Windows Server Hardening:
+    - Patch and update the Windows server to mitigate known vulnerabilities like the psexec.py vulnerability.
+    - Implement strong authentication mechanisms, firewall rules, and intrusion detection systems to prevent unauthorized access and exploitation.
+3. Least Privilege Principle:
+    - Follow the principle of least privilege by granting minimal permissions necessary for users and services, including LDAP query access and administrator privileges.
+4. Security Awareness:
+    - Educate system administrators and users about the risks associated with LDAP misconfigurations, credential retrieval vulnerabilities, and remote code execution exploits.
+
 ---
 
 # Information Gathering
