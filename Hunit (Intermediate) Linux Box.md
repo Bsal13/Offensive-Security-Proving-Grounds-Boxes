@@ -14,7 +14,7 @@ IP: 192.168.127.125
 # Resolution summary
 - Found a directory mentioned in the source code of the webpage
 - The directory displayed the SSH users credentials.
-- Discovered a cron job (backups.sh) that executes every three minutes
+- Discovered a cron job (backups.sh) that executes every three minuteshttps://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/edit/main/Hunit%20(Intermediate)%20Linux%20Box.md
 - In the SSH session, a git-server directory was located.
 - We were able to examine the backup.sh script after git cloning the git server into the tmp directory. 
 - Identified the user git and discovered that the ssh private key id_rsa file is readable and executable by the user git.
@@ -33,6 +33,31 @@ IP: 192.168.127.125
 ## Used tools
 - Linpeas
 - Rustscan
+
+### **Vulnerability Explanation:**
+
+#### Privilege Escalation
+##### Writable Git-shell Cron Tab 
+
+1. Writable Git-shell Cron Tab Privilege Escalation Vulnerability:
+    - Identified a writable cron tab file associated with Git-shell, allowing low-privileged users to modify cron jobs and execute commands with elevated privileges.
+    - Successfully exploited the vulnerability to add a malicious cron job and execute privileged commands as the root user.
+    - Demonstrated the potential impact of the vulnerability, including unauthorized access and privilege escalation.
+
+### **Vulnerability Fix:**
+#### Privilege Escalation
+##### Writable Git-shell Cron Tab 
+
+1. Restrict Cron Tab Permissions:
+    - Change the permissions of the writable cron tab file to restrict write access to privileged users only (e.g., root).
+    - Set permissions to 600 (-rw-------) to allow read and write access only for the file owner.
+2. Regular Audits:
+    - Conduct regular audits of system configurations, cron tab files, and file permissions to detect and remediate similar vulnerabilities proactively.
+3. Least Privilege Principle:
+    - Follow the principle of least privilege by granting minimal permissions necessary for users to prevent unauthorized access and privilege escalation.
+4. Security Awareness:
+    - Educate system administrators and users about the risks associated with writable cron tab files and privilege escalation vulnerabilities.
+
 ---
 
 # Information Gathering
