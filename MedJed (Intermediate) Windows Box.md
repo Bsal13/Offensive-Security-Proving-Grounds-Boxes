@@ -447,17 +447,23 @@ Username: jerren.devops
 Reminder: paranoid
 
 
-![[Pasted image 20240430163857.png]]
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/60b3a2a9-e645-4e1d-8774-d551eac121f5)
 
 ![](Images/Pasted%20image%2020221020183508.png)
 
 - After logging in with the username jerren.devops and the newly created password “password,” we were directed to the following webpage.
   
-![](Images/Pasted%20image%2020221020183555.png)
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/0e9b4a6f-d951-4928-a219-bc2377c2eb2b)
 
-#### - Clicked "edit" link and was directed to the following web page and clicked "Request profile SLUG" link:
 
-![](Images/Pasted%20image%2020221020183649.png)
+We are regular users, with restricted access to sensitive data and restricted privileges. But as we investigated the web application, we found that a MySQL database was running and open to SQL injection attacks.
+
+
+- We click the "edit" link, which took us to the following web page.
+  
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/82ae87e8-da77-49d1-96e1-2dff1bbc0ff4)
+
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/4044307d-ec18-4edf-9af2-44b6e3c3f9e3)
 
 
 ---
