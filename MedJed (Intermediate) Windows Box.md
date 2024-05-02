@@ -394,57 +394,65 @@ Enumerated top 200 UDP ports:
 ---
 
 # Enumeration
-## Port 45332 - Apache httpd 2.4.46 
+## Port 45332 
 
-#### - Typed "feroxbuster -u http://192.168.114.127:45332/ -C 401 403 405 -x php,txt,json,docx,html" and found phpinfo.php file:
+- To perform a directory brute force search we enter the following command and locate the phpinfo.php file.
 
+“feroxbuster -u [http://192.168.114.127:45332/](http://192.168.114.127:45332/) -C 401 403 405 -x php,txt,json,docx,html”
+  
 ![](Images/Pasted%20image%2020221020170419.png)
 
-#### -Navigated to "http://192.168.114.127:45332/phpinfo.php" and found the root directory of the machine is "C:/xampp/htdocs"
-
+- We discover that the web server's root directory is "C:/xampp/htdocs" after visiting "http://192.168.114.127:45332/phpinfo.php".
+  
 ![](Images/Pasted%20image%2020221020170505.png)
 #phpinfo #WebRootDirectoryFindings
 
 
 ## PORT 44330 
 
-#### - Navigated to "http://192.168.114.127:44330" and was directed to the following webpage:
-
+- The webpage that appeared when we typed "http://192.168.114.127:44330" was as follows.
+  
 ![](Images/Pasted%20image%2020221020170735.png)
 
-#### - Googled "BarracudaDrive exploit" and found the following local privilege escalation exploit:
-
+- Our search for "Barracuda Drive exploit" lead us to the local privilege escalation exploit listed below.
+  
 ![](Images/Pasted%20image%2020221020170824.png)
 
 ## PORT 33033
 
-#### - Navigated to "http://192.168.114.127:33033" and found the following web page with team names, emails and pictures:
+- We visit "http://192.168.114.127:33033" and found the webpage below, which included team names, emails, and pictures.
 
 ![](Images/Pasted%20image%2020221020170955.png)
 
-#### - Found a picture of a cat in the team to be interesting:
-
+- An intriguing photo of a team cat caught our attention.
+  
 ![](Images/Pasted%20image%2020221020171034.png)
 
-#### - Clicked on the login link and was directed the following login page:
+- The following login screen appeared when we clicked on the login link.
 
 ![](Images/Pasted%20image%2020221020171114.png)
 
 
 ![](Images/Pasted%20image%2020221020183042.png)
 
-#### -Clicked on the "forgot password" link and was directed to the following page:
-
+- The following page appeared when we clicked on the "forgot password" link:
+  
 ![](Images/Pasted%20image%2020221020183337.png)
 
-#### - As the picture of the cat listed in the team was most odd I attempted multiple username and reminder alternatives found in the cats profile information and finally was able to find the correct username and reminder combination (username: jerren.devops reminder: paranoid):
+- We tried several username iterations and reminder alternatives located in the cat's profile information because the picture of the cat featured on the team seemed unusual.
 
-![](Images/Pasted%20image%2020221020183427.png)
+- Ultimately, we discovered that the following combinations updated the password.
+
+Username: jerren.devops
+Reminder: paranoid
+
+
+![[Pasted image 20240430163857.png]]
 
 ![](Images/Pasted%20image%2020221020183508.png)
 
-#### - Logged into the webpage with the username jerren.devops and the new created password "password" and was directed to the following web page:
-
+- After logging in with the username jerren.devops and the newly created password “password,” we were directed to the following webpage.
+  
 ![](Images/Pasted%20image%2020221020183555.png)
 
 #### - Clicked "edit" link and was directed to the following web page and clicked "Request profile SLUG" link:
