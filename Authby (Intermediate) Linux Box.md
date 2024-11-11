@@ -62,6 +62,19 @@ To mitigate this vulnerability, disable anonymous FTP access on the server and r
 
 To mitigate this risk, ensure that the root directory is not writable by non-administrative users. Properly configure file permissions so that only authorized personnel can write to specific directories. Implement access control mechanisms, restrict write access to essential directories, and regularly audit file permissions to prevent misconfigurations.
 
+Risk Level: High
+
+CVSS Vector String: AV
+/AC
+/PR
+/UI
+/S
+/C
+/I
+/A
+
+(Base Score: 9.8)
+
 ### **Privilege Escalation Vulnerability Explanation:** 
 
 #### MS11-046
@@ -73,6 +86,19 @@ The MS11-046 vulnerability pertains to a flaw in the Windows Ancillary Function 
 #### MS11-046
 
 To mitigate MS11-046, apply the official Microsoft security patch for the vulnerability. Additionally, restrict user access to sensitive kernel-mode resources and regularly update the operating system to ensure all security patches are applied. Limiting the use of kernel-mode drivers that are unnecessary can also reduce the potential attack surface.
+
+Risk Level: High
+
+CVSS Vector String: AV
+/AC
+/PR
+/UI
+/S
+/C
+/I
+/A
+
+(Base Score: 9.3)
 
 ---
 
