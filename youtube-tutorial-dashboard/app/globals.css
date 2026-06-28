@@ -1,0 +1,116 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --panel-2: #1e222b;
+  --border: #2a2f3a;
+  --text: #e6e9ef;
+  --muted: #8b93a3;
+  --accent: #ff3b30;
+  --good: #36c275;
+  --mid: #e0b341;
+  --bad: #e05a5a;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .2px; }
+.logo {
+  display: inline-grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 6px;
+  background: var(--accent); color: #fff; font-size: 13px;
+}
+
+.nav { display: flex; gap: 6px; }
+.nav-link {
+  padding: 6px 12px; border-radius: 6px; font-size: 14px; color: var(--muted);
+}
+.nav-link.active { background: var(--panel-2); color: var(--text); }
+.nav-link.disabled { opacity: .45; cursor: not-allowed; }
+
+.page { padding: 28px 24px; max-width: 1200px; margin: 0 auto; }
+
+.page-head { margin-bottom: 18px; }
+.page-head h1 { margin: 0 0 4px; font-size: 22px; }
+.page-head p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.toolbar {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  margin: 18px 0; padding: 14px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+}
+.search-input {
+  flex: 1; min-width: 220px;
+  background: var(--panel-2); border: 1px solid var(--border); color: var(--text);
+  padding: 9px 12px; border-radius: 8px; font-size: 14px;
+}
+.search-input::placeholder { color: var(--muted); }
+
+.weights { display: flex; gap: 16px; flex-wrap: wrap; }
+.weight {
+  display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted);
+}
+.weight input[type="range"] { width: 110px; accent-color: var(--accent); }
+.weight .wval { color: var(--text); font-variant-numeric: tabular-nums; }
+
+.table-wrap { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+thead th {
+  text-align: left; padding: 12px 14px; background: var(--panel);
+  color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .4px;
+  border-bottom: 1px solid var(--border);
+}
+tbody td { padding: 12px 14px; border-bottom: 1px solid var(--border); }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--panel); }
+
+.kw { font-weight: 600; }
+.niche-pill {
+  display: inline-block; margin-top: 4px; font-size: 11px; color: var(--muted);
+  background: var(--panel-2); border: 1px solid var(--border); padding: 2px 8px; border-radius: 999px;
+}
+
+.num { font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+
+.score {
+  display: inline-grid; place-items: center;
+  min-width: 44px; padding: 6px 10px; border-radius: 8px;
+  font-weight: 700; font-variant-numeric: tabular-nums;
+}
+.score.good { background: rgba(54,194,117,.15); color: var(--good); }
+.score.mid  { background: rgba(224,179,65,.15); color: var(--mid); }
+.score.bad  { background: rgba(224,90,90,.15); color: var(--bad); }
+
+.bar { height: 6px; border-radius: 4px; background: var(--panel-2); overflow: hidden; margin-top: 6px; }
+.bar > span { display: block; height: 100%; background: var(--accent); }
+
+.btn {
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+  padding: 7px 12px; border-radius: 8px; font-size: 13px; font-weight: 600;
+}
+.btn.ghost { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); }
+
+.state { padding: 40px; text-align: center; color: var(--muted); }
+.error { color: var(--bad); }
+
+.footnote { margin-top: 16px; font-size: 12px; color: var(--muted); }
+.footnote code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; }
