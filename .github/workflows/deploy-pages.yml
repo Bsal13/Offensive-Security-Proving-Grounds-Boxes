@@ -38,12 +38,11 @@ jobs:
           cache: npm
           cache-dependency-path: youtube-tutorial-dashboard/package-lock.json
 
-      # enablement: true turns Pages on via the API so no manual toggle is
-      # needed (requires the pages: write permission above).
+      # Reads the Pages config. Pages must be enabled once in the repo
+      # Settings (Settings -> Pages -> Source: "GitHub Actions"); the
+      # automation token isn't permitted to enable it on the owner's behalf.
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - run: npm ci
 
