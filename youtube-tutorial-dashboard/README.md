@@ -31,7 +31,23 @@ Weights are adjustable live in the UI (and via `?w_volume=` etc. on the API),
 so you can tune the model to your channel without touching code. Defaults live
 in `lib/scoring.ts`.
 
-## Run it
+## Live URL
+
+Deployed automatically to **GitHub Pages** on every push to the dashboard
+branch:
+
+```
+https://bsal13.github.io/Offensive-Security-Proving-Grounds-Boxes/
+```
+
+The deploy is a static export (data + scoring run client-side), so no server
+is required. See `.github/workflows/deploy-pages.yml`.
+
+> When live Nexlev/VidIQ data lands it needs server-side secrets, which a
+> static site can't hold — at that point move hosting to Vercel (the same repo
+> deploys there with no code changes; just unset `output: "export"`).
+
+## Run it locally (optional)
 
 ```bash
 npm install
@@ -56,9 +72,8 @@ The UI and scoring engine consume a single `TopicSignal` shape
 app/
   page.tsx                     Opportunity Radar page
   layout.tsx                   Shell + nav (Pipeline / Ledger stubbed)
-  api/opportunities/route.ts   Scored + ranked topics endpoint
 components/
-  RadarTable.tsx               Table, search, live weight sliders
+  RadarTable.tsx               Table, search, live weight sliders, client-side scoring
 lib/
   types.ts                     TopicSignal / ScoredTopic
   scoring.ts                   Blended Opportunity Score

@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { ScoredTopic } from "@/lib/types";
-import { DEFAULT_WEIGHTS } from "@/lib/scoring";
+import { DEFAULT_WEIGHTS, scoreAndRank } from "@/lib/scoring";
+import { DATA_PROVIDER } from "@/lib/providers";
 
 type Weights = typeof DEFAULT_WEIGHTS;
 
@@ -38,16 +39,15 @@ export default function RadarTable() {
     return () => clearTimeout(t);
   }, [query]);
 
+  // Data + scoring run entirely client-side, so the app is a static site with
+  // no backend. The provider seam (lib/providers) still decides where rows come
+  // from — swap in the live Nexlev/VidIQ provider when keys are available.
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const params = new URLSearchParams({ q: debounced });
-      for (const f of WEIGHT_FIELDS) params.set(`w_${f.key}`, String(weights[f.key]));
-      const res = await fetch(`/api/opportunities?${params.toString()}`);
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "Request failed");
-      setTopics(data.topics as ScoredTopic[]);
+      const signals = await DATA_PROVIDER.fetchTopics(debounced);
+      setTopics(scoreAndRank(signals, weights));
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to load");
       setTopics([]);
